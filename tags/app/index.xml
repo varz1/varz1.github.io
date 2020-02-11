@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>APP on varz1`s Blog</title>
+    <link>https://varz1.github.io/tags/app/</link>
+    <description>Recent content in APP on varz1`s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 11 Feb 2020 23:47:24 +0800</lastBuildDate>
+    
+	<atom:link href="https://varz1.github.io/tags/app/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>可能是Linux端最好的听歌体验：Spotify for Linux</title>
+      <link>https://varz1.github.io/01/</link>
+      <pubDate>Tue, 11 Feb 2020 23:47:24 +0800</pubDate>
+      
+      <guid>https://varz1.github.io/01/</guid>
+      <description>可能是Linux端最好的听歌体验：Spotify for Linux 一直以来很头疼linux端听音乐的问题，虽然网易云给出了网页端和客户端的解决方案但许多b</description>
+    </item>
+    
+  </channel>
+</rss>
