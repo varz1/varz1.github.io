@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<meta name="description" content="Linux下最好的音乐体验">
+
+		<title>可能是Linux端最好的听歌体验：Spotify for Linux &middot; varz1`s Blog</title>
+
+		
+  		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="/css/fonts.css">
+		
+		<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+		
+		<link href="" rel="alternate" type="application/rss+xml" title="varz1`s Blog" />
+	</head>
+
+    <body>
+        		<nav class="nav">
+			<div class="nav-container">
+				<a href="/">
+					<h2 class="nav-title">varz1`s Blog</h2>
+				</a>
+				<ul>
+    
+    
+        <li>
+            <a href="/about/">
+                
+                <span>About</span>
+                
+            </a>
+        </li>
+    
+        <li>
+            <a href="/posts/">
+                
+                <span>Posts</span>
+                
+            </a>
+        </li>
+    
+</ul>
+			</div>
+		</nav>
+
+        
+
+<main>
+	<div class="post">
+		<div class="post-info">
+    <span>Written by</span>
+        
+        <br>
+        <span>on&nbsp;</span><time datetime="2020-02-11 23:47:24 &#43;0800 CST">February 11, 2020</time>
+</div>
+		<h1 class="post-title">可能是Linux端最好的听歌体验：Spotify for Linux</h1>
+<div class="post-line"></div>
+
+		
+
+		
+
+<h1 id="可能是linux端最好的听歌体验-spotify-for-linux">可能是Linux端最好的听歌体验：Spotify for Linux</h1>
+
+<p><img src="https://raw.githubusercontent.com/varz1/pics/master/1.png" alt="1.png" /></p>
+
+<p>一直以来很头疼linux端听音乐的问题，虽然网易云给出了网页端和客户端的解决方案但许多bug也让人不适。偶然发现Spotify有Linux的版本，配合广告屏蔽插件体验出人意料。下面给出Debian / Ubuntu的具体安装体验过程。</p>
+
+<h2 id="debian-ubuntu-安装">Debian / Ubuntu 安装</h2>
+
+<p>详见官方文档<a href="https://www.spotify.com/tw/download/linux/" rel="nofollow noreferrer" target="_blank">Spotify for Linux</a>
+如要配合AD block请不要使用snap安装</p>
+
+<p>添加源</p>
+
+<p><code>$ curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add -</code><br />
+ <code>$ echo &quot;deb http://repository.spotify.com stable non-free&quot; |
+sudo tee /etc/apt/sources.list.d/spotify.list</code></p>
+
+<p>更新源并安装</p>
+
+<p><code>$ sudo apt update</code></p>
+
+<p><code>$ sudo apt install spotify-client</code></p>
+
+<h2 id="使用">使用</h2>
+
+<p>登录时添加代理
+<code>address:127.0.0.1</code> <code>port:1080</code>即可使用
+<img src="https://raw.githubusercontent.com/varz1/pics/master/20200211180205.png" alt="20200211180205.png" />
+如此突兀的广告实在是影响体验，作为一名苦穷学生党只好另寻他路，当然有能力的还是买会员的比较好。推荐github上一款广告屏蔽插件<a href="https://github.com/abba23/spotify-adblock-linux#spotify-adblock-linux" rel="nofollow noreferrer" target="_blank">spotify-adblock-linux</a></p>
+
+<h2 id="插件安装">插件安装</h2>
+
+<p>此处按官方文档给出安装过程</p>
+
+<h3 id="所需组件">所需组件</h3>
+
+<ul>
+<li>gcc</li>
+<li>Make</li>
+
+<li><p>libcurl headers (e.g. libcurl4-gnutls-dev on Debian/Ubuntu systems)</p>
+
+<p>未安装请先安装上述组件</p></li>
+</ul>
+
+<h3 id="编译与安装">编译与安装</h3>
+
+<p>先克隆仓库至本地</p>
+
+<p><code>$ git clone https://github.com/abba23/spotify-adblock-linux.git</code></p>
+
+<p>切换至仓库目录</p>
+
+<p><code>$ cd spotify-adblock-linux</code></p>
+
+<p>编译</p>
+
+<p><code>$ make</code></p>
+
+<p>安装</p>
+
+<p><code>$ sudo make install</code></p>
+
+<h2 id="无ad版使用">无AD版使用</h2>
+
+<h3 id="通过命令行打开无ad客户端">通过命令行打开无AD客户端</h3>
+
+<p><code>$ LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify</code></p>
+
+<h3 id="通过桌面快捷方式打开无ad客户端">通过桌面快捷方式打开无AD客户端</h3>
+
+<p>切换至目录<code>~/.local/share/applications</code></p>
+
+<p>运行<code>$ vim Spotify-adblock.desktop</code>插入内容</p>
+
+<p><code>[Desktop Entry]
+Type=Application
+Name=Spotify (adblock)
+GenericName=Music Player
+Icon=spotify-client
+TryExec=spotify
+Exec=env LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify %U
+Terminal=false
+MimeType=x-scheme-handler/spotify;
+Categories=Audio;Music;Player;AudioVideo;
+StartupWMClass=spotify</code></p>
+
+<p>保存退出即可看到快捷方式拖动至需要处使用</p>
+
+<h2 id="使用体验">使用体验</h2>
+
+<p>个人认为英文界面没有太多障碍。搭配adblock使用后体验感不输网易云。
+曲库方面个人使用的Apple music大多歌曲都能找到，中文曲库方面也很给力，周杰伦甚至国内原创rap都能找到。缺点就是可能是本人的问题搜索框无法输入中文还有没有像网易云那样的小窗口模式。</p>
+
+
+		
+	</div>
+
+	<div class="pagination">
+
+		<a href="#" class="top">Top</a>
+	</div>
+</main>
+
+
+        		<footer>
+			<span>
+			&copy; <time datetime="2020-02-11 23:57:38.976700243 &#43;0800 CST m=&#43;0.140354848">2020</time> . Made with <a href='https://gohugo.io'>Hugo</a> using the <a href='https://github.com/EmielH/tale-hugo/'>Tale</a> theme.
+			</span>
+		</footer>
+
+    </body>
+</html>
