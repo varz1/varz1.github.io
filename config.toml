@@ -1,4 +1,4 @@
-baseURL = "https://varz1.github.io"
+baseURL = "https://varz1.github.io/"
 languageCode = "zh-cn"
 title = "varz1's blog"
 theme = "ezhil"
@@ -84,5 +84,5 @@ url = "https://github.com/varz1"
 #url = "https://twitter.com/gohugoio"
 
 # Enable tags.
-[taxonomies]
-   tag = "tags"
+#[taxonomies]
+ #  tag = "tags"
