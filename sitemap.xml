@@ -3,33 +3,33 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>www.zboy.com/about/</loc>
+    <loc>http://varz1.github.io/about/</loc>
     <lastmod>2020-02-12T12:28:31+08:00</lastmod>
   </url>
   
   <url>
-    <loc>www.zboy.com/posts/01/</loc>
+    <loc>http://varz1.github.io/posts/01/</loc>
     <lastmod>2020-02-11T23:47:24+08:00</lastmod>
   </url>
   
   <url>
-    <loc>www.zboy.com/categories/</loc>
+    <loc>http://varz1.github.io/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>www.zboy.com/posts/</loc>
+    <loc>http://varz1.github.io/posts/</loc>
     <lastmod>2020-02-11T23:47:24+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>www.zboy.com/tags/</loc>
+    <loc>http://varz1.github.io/tags/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>www.zboy.com/</loc>
+    <loc>http://varz1.github.io/</loc>
     <lastmod>2020-02-12T12:28:31+08:00</lastmod>
     <priority>0</priority>
   </url>
