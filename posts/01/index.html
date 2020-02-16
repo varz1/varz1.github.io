@@ -137,17 +137,17 @@ sudo tee /etc/apt/sources.list.d/spotify.list</code></p>
 
 <p>运行<code>$ vim Spotify-adblock.desktop</code>插入内容</p>
 
-<p><code>[Desktop Entry]
-Type=Application
-Name=Spotify (adblock)
-GenericName=Music Player
-Icon=spotify-client
-TryExec=spotify
-Exec=env LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify %U
-Terminal=false
-MimeType=x-scheme-handler/spotify;
-Categories=Audio;Music;Player;AudioVideo;
-StartupWMClass=spotify</code></p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">`[Desktop Entry]
+	Type=Application
+	Name=Spotify (adblock)
+	GenericName=Music Player
+	Icon=spotify-client
+	TryExec=spotify
+	Exec=env LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify %U
+	Terminal=false
+	MimeType=x-scheme-handler/spotify;
+	Categories=Audio;Music;Player;AudioVideo;
+	StartupWMClass=spotify`</pre></div>
 
 <p>保存退出即可看到快捷方式拖动至需要处使用</p>
 
