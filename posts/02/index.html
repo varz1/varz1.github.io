@@ -2,37 +2,16 @@
 <html>
 <head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title> - varz1&#39;s blog</title><link rel="icon" type="image/png" href=icons/myicon.png /><meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta property="og:title" content="" />
-<meta property="og:description" content="Clash for Linux 不完全配置指南 Date Created: Feb 29, 2020 6:06 PM Status: Doing
-开始 由于ssr在linux环境体验较差，于是开始使用clash。在此记录下过程及过程中遇到的坑。
-环境 Linux debian 4.19.0-8-amd64
-安装Clash-core 选择相应版本下载二进制文件并解压重命名为clash #添加权限 chmod &#43;x ./clash 若服务方没有提供配置文件可用下列命令生成
-curl -f 你的托管地址 &gt;&gt; config.yml 详细配置文件见项目主页，按需配置。
-clash默认配置文件目录为/home/你的用户名/.config/clash
-我的配置文件目录有一个.yml文件和一个.yaml试了半天发现真正work的是.yaml
-./clash 成功后如图
-INFO[0000] SOCKS proxy listening at: 127.0.0.1:xxxx INFO[0000] RESTful API listening at: 127.0.0.1:xxxx INFO[0000] HTTP proxy listening at: 127.0.0.1:xxxx 可用浏览器打开http://clash.razord.top/#/proxies进行管理
-使用systemctl自动管理后台 新建clash管理文件
-sudo vim /etc/systemd/system/clash.service 写入配置
-[Unit] Description=clash service After=network.target [Service] User=zboy ExecStart=/usr/local/bin/clash Restart=on-abort [Install] WantedBy=multi-user." />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Clash for Linux - varz1&#39;s blog</title><link rel="icon" type="image/png" href=icons/myicon.png /><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:title" content="Clash for Linux" />
+<meta property="og:description" content="不完全配置指南" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://varz1.github.io/posts/02/" />
-
+<meta property="article:published_time" content="2020-03-01T15:25:32&#43;08:00"/>
+<meta property="article:modified_time" content="2020-03-01T15:25:32&#43;08:00"/>
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="Clash for Linux 不完全配置指南 Date Created: Feb 29, 2020 6:06 PM Status: Doing
-开始 由于ssr在linux环境体验较差，于是开始使用clash。在此记录下过程及过程中遇到的坑。
-环境 Linux debian 4.19.0-8-amd64
-安装Clash-core 选择相应版本下载二进制文件并解压重命名为clash #添加权限 chmod &#43;x ./clash 若服务方没有提供配置文件可用下列命令生成
-curl -f 你的托管地址 &gt;&gt; config.yml 详细配置文件见项目主页，按需配置。
-clash默认配置文件目录为/home/你的用户名/.config/clash
-我的配置文件目录有一个.yml文件和一个.yaml试了半天发现真正work的是.yaml
-./clash 成功后如图
-INFO[0000] SOCKS proxy listening at: 127.0.0.1:xxxx INFO[0000] RESTful API listening at: 127.0.0.1:xxxx INFO[0000] HTTP proxy listening at: 127.0.0.1:xxxx 可用浏览器打开http://clash.razord.top/#/proxies进行管理
-使用systemctl自动管理后台 新建clash管理文件
-sudo vim /etc/systemd/system/clash.service 写入配置
-[Unit] Description=clash service After=network.target [Service] User=zboy ExecStart=/usr/local/bin/clash Restart=on-abort [Install] WantedBy=multi-user."/>
+<meta name="twitter:title" content="Clash for Linux"/>
+<meta name="twitter:description" content="不完全配置指南"/>
 <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Raleway:200,300" rel="stylesheet">
 
 	<link rel="stylesheet" type="text/css" media="screen" href="http://varz1.github.io/css/normalize.css" />
@@ -78,21 +57,16 @@ sudo vim /etc/systemd/system/clash.service 写入配置
 
 
 		<div class="post-header">
-			<h1 class="title"></h1>
-			<div class="meta">Posted at &mdash; Jan 1, 0001</div>
+			<h1 class="title">Clash for Linux</h1>
+			<div class="meta">Posted at &mdash; Mar 1, 2020</div>
 		</div>
 
 		<div class="markdown">
 			
 
-<h1 id="clash-for-linux-不完全配置指南">Clash for Linux 不完全配置指南</h1>
-
-<p>Date Created: Feb 29, 2020 6:06 PM
-Status: Doing</p>
-
 <h1 id="开始">开始</h1>
 
-<p>由于ssr在linux环境体验较差，于是开始使用clash。在此记录下过程及过程中遇到的坑。</p>
+<p>由于ssr体验较差，于是开始使用clash。在此记录下过程及过程中遇到的坑。</p>
 
 <h1 id="环境">环境</h1>
 
@@ -172,24 +146,7 @@ service clash restart
 				
 			
 		</div>
-		<div id="disqus_thread"></div>
-<script type="text/javascript">
-	(function () {
-		
-		
-		if (window.location.hostname == "localhost")
-			return;
-
-		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-		var disqus_shortname = 'localhost';
-		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-	})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
-		Disqus.</a></noscript>
-<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
+		</div>
 	<div class="footer wrapper">
 	<nav class="nav">
 		<div> 友情链接 <a href="http://blog.5a6c.me">无聊博客</a> | <a href="https://offlineboy.site/">offlineboy</a> | Built with <a href="https://gohugo.io">Hugo</a></div>
