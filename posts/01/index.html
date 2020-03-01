@@ -137,17 +137,17 @@ sudo tee /etc/apt/sources.list.d/spotify.list</code></p>
 
 <p>运行<code>$ vim Spotify-adblock.desktop</code>插入内容</p>
 
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">`[Desktop Entry]
-	Type=Application
-	Name=Spotify (adblock)
-	GenericName=Music Player
-	Icon=spotify-client
-	TryExec=spotify
-	Exec=env LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify %U
-	Terminal=false
-	MimeType=x-scheme-handler/spotify;
-	Categories=Audio;Music;Player;AudioVideo;
-	StartupWMClass=spotify`</pre></div>
+<p><code>[Desktop Entry]
+Type=Application
+Name=Spotify (adblock)
+GenericName=Music Player
+Icon=spotify-client
+TryExec=spotify
+Exec=env LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify %U
+Terminal=false
+MimeType=x-scheme-handler/spotify;
+Categories=Audio;Music;Player;AudioVideo;
+StartupWMClass=spotify</code></p>
 
 <p>保存退出即可看到快捷方式拖动至需要处使用</p>
 
@@ -166,7 +166,7 @@ sudo tee /etc/apt/sources.list.d/spotify.list</code></p>
 		</div>
 	<div class="footer wrapper">
 	<nav class="nav">
-		<div> 友情链接 <a href="http://blog.5a6c.me">无聊博客</a> | <a href="https://offlineboy.site/">offlineboy</a> |  theme by <a href="https://github.com/vividvilla/ezhil">Ezhil theme</a> | Built with <a href="https://gohugo.io">Hugo</a></div>
+		<div> 友情链接 <a href="http://blog.5a6c.me">无聊博客</a> | <a href="https://offlineboy.site/">offlineboy</a> | Built with <a href="https://gohugo.io">Hugo</a></div>
 	</nav>
 </div>
 
