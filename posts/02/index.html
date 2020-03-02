@@ -66,13 +66,13 @@
 
 <h1 id="开始">开始</h1>
 
-<p>由于ssr体验较差，于是开始使用clash。在此记录下过程及过程中遇到的坑。</p>
+<p>由于ssr在linux环境体验较差，于是开始使用clash。在此记录下过程及过程中遇到的坑。</p>
 
-<h1 id="环境">环境</h1>
+<h3 id="环境">环境</h3>
 
 <p>Linux debian 4.19.0-8-amd64</p>
 
-<h1 id="安装clash-core">安装Clash-core</h1>
+<h2 id="安装clash-core">安装Clash-core</h2>
 
 <h3 id="选择相应版本下载-二进制文件-https-github-com-dreamacro-clash-releases-并解压重命名为clash">选择相应版本下载<a href="https://github.com/Dreamacro/clash/releases">二进制文件</a>并解压重命名为clash</h3>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">#添加权限
@@ -91,7 +91,9 @@ INFO[0000] RESTful API listening at: 127.0.0.1:xxxx
 INFO[0000] HTTP proxy listening at: 127.0.0.1:xxxx</pre></div>
 <p>可用浏览器打开<a href="http://clash.razord.top/#/proxies">http://clash.razord.top/#/proxies</a>进行管理</p>
 
-<h2 id="使用systemctl自动管理后台">使用systemctl自动管理后台</h2>
+<p>将clash添加到PATH</p>
+
+<h3 id="使用systemctl自动管理后台">使用systemctl自动管理后台</h3>
 
 <p>新建clash管理文件</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">sudo vim /etc/systemd/system/clash.service</pre></div>
@@ -113,7 +115,7 @@ WantedBy=multi-user.target</pre></div>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">service start clash.service</pre></div>
 <p>开机自启</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">systemctl enable clash.service</pre></div>
-<h1 id="添加脚本自动更新配置文件">添加脚本自动更新配置文件</h1>
+<h3 id="添加脚本自动更新配置文件">添加脚本自动更新配置文件</h3>
 
 <p>将预先个人配置存为custom.yml用于合成更新的配置</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">vim auto.sh
@@ -123,16 +125,18 @@ chmod +x auto.sh</pre></div>
 <p>贴上本人的垃圾脚本</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><span style="color:#719e07">#!/bin/zsh
 </span><span style="color:#719e07"></span>
-curl -f  订阅地址 &gt;&gt; config.yml <span style="color:#586e75">#将clash托管地址转化为配置文件</span>
+curl -f  https://www.plmb001.com/link/0sHaXyfXY3SJbpsO &gt;&gt; config.yml <span style="color:#586e75">#将clash托管地址转化为配置文件</span>
 <span style="color:#b58900">echo</span> <span style="color:#2aa198">&#34;获取订阅成功&#34;</span>
 cat custom.yml config.yml  &gt; config.yaml <span style="color:#586e75">#合并预先配置好的文件</span>
 mv -b -f config.yaml ~/.config/clash/ <span style="color:#586e75">#移动到clash配置目录</span>
 rm config.yml
-service clash restart
-<span style="color:#586e75">#echo &#34;重启clash更新配置文件&#34;</span></pre></div>
+sudo service clash restart <span style="color:#2aa198">&lt;&lt; EOF  #添加重定向自动输入sudo密码
+</span><span style="color:#2aa198">你的sudo密码
+</span><span style="color:#2aa198">EOF</span>
+<span style="color:#b58900">echo</span> <span style="color:#2aa198">&#34;配置成功&#34;</span></pre></div>
 <p>添加alias至.profile方便使用</p>
 
-<h1 id="to-do">TO DO</h1>
+<h2 id="to-do">TO DO</h2>
 
 <ul class="task-list">
 <li><label><input type="checkbox" checked disabled class="task-list-item">  脚本实现快速更新订阅</label></li>
