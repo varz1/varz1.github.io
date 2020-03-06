@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on varz1&#39;s blog</title>
+    <title>Posts on Zboy</title>
     <link>http://varz1.github.io/posts/</link>
-    <description>Recent content in Posts on varz1&#39;s blog</description>
+    <description>Recent content in Posts on Zboy</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <copyright>友情链接 http://blog.5a6c.me</copyright>
     <lastBuildDate>Sun, 01 Mar 2020 15:25:32 +0800</lastBuildDate>
     
 	<atom:link href="http://varz1.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
@@ -18,7 +17,7 @@
       <pubDate>Sun, 01 Mar 2020 15:25:32 +0800</pubDate>
       
       <guid>http://varz1.github.io/posts/02/</guid>
-      <description>开始 由于ssr体验较差，于是开始使用clash。在此记录下过程及过程中遇到的坑。
+      <description>开始 由于ssr在linux环境体验较差，于是开始使用clash。在此记录下过程及过程中遇到的坑。
 环境 Linux debian 4.19.0-8-amd64
 安装Clash-core 选择相应版本下载二进制文件并解压重命名为clash #添加权限 chmod +x ./clash 若服务方没有提供配置文件可用下列命令生成
 curl -f 你的托管地址 &amp;gt;&amp;gt; config.yml 详细配置文件见项目主页，按需配置。
@@ -26,6 +25,7 @@ clash默认配置文件目录为/home/你的用户名/.config/clash
 我的配置文件目录有一个.yml文件和一个.yaml试了半天发现真正work的是.yaml
 ./clash 成功后如图
 INFO[0000] SOCKS proxy listening at: 127.0.0.1:xxxx INFO[0000] RESTful API listening at: 127.0.0.1:xxxx INFO[0000] HTTP proxy listening at: 127.0.0.1:xxxx 可用浏览器打开http://clash.razord.top/#/proxies进行管理
+将clash添加到PATH
 使用systemctl自动管理后台 新建clash管理文件
 sudo vim /etc/systemd/system/clash.service 写入配置
 [Unit] Description=clash service After=network.target [Service] User=zboy ExecStart=/usr/local/bin/clash Restart=on-abort [Install] WantedBy=multi-user.target 加载service
