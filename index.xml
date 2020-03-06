@@ -2,21 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Zboy</title>
-    <link>http://varz1.github.io/</link>
+    <link>https://varz1.github.io/</link>
     <description>Recent content on Zboy</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
+    <copyright>1</copyright>
     <lastBuildDate>Sun, 01 Mar 2020 15:25:32 +0800</lastBuildDate>
     
-	<atom:link href="http://varz1.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://varz1.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Clash for Linux</title>
-      <link>http://varz1.github.io/posts/02/</link>
+      <link>https://varz1.github.io/posts/02/</link>
       <pubDate>Sun, 01 Mar 2020 15:25:32 +0800</pubDate>
       
-      <guid>http://varz1.github.io/posts/02/</guid>
+      <guid>https://varz1.github.io/posts/02/</guid>
       <description>开始 由于ssr在linux环境体验较差，于是开始使用clash。在此记录下过程及过程中遇到的坑。
 环境 Linux debian 4.19.0-8-amd64
 安装Clash-core 选择相应版本下载二进制文件并解压重命名为clash #添加权限 chmod +x ./clash 若服务方没有提供配置文件可用下列命令生成
@@ -36,19 +37,19 @@ systemctl enable clash.</description>
     
     <item>
       <title>About</title>
-      <link>http://varz1.github.io/about/</link>
+      <link>https://varz1.github.io/about/</link>
       <pubDate>Wed, 12 Feb 2020 12:28:31 +0800</pubDate>
       
-      <guid>http://varz1.github.io/about/</guid>
+      <guid>https://varz1.github.io/about/</guid>
       <description>梦想是不打工</description>
     </item>
     
     <item>
       <title>可能是Linux端最好的听歌体验：Spotify for Linux</title>
-      <link>http://varz1.github.io/posts/01/</link>
+      <link>https://varz1.github.io/posts/01/</link>
       <pubDate>Tue, 11 Feb 2020 23:47:24 +0800</pubDate>
       
-      <guid>http://varz1.github.io/posts/01/</guid>
+      <guid>https://varz1.github.io/posts/01/</guid>
       <description>一直以来很头疼linux端听音乐的问题，虽然网易云给出了网页端和客户端的解决方案但许多bug也让人不适。偶然发现Spotify有Linux的版本，配合广告屏蔽插件体验出人意料。下面给出Debian / Ubuntu的具体安装体验过程。
 Debian / Ubuntu 安装 详见官方文档Spotify for Linux 如要配合AD block请不要使用snap安装
 添加源
