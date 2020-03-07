@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>可能是Linux端最好的听歌体验：Spotify for Linux - Zboy</title><link rel="icon" type="image/png" href=/icons/tv.svg /><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:title" content="可能是Linux端最好的听歌体验：Spotify for Linux" />
+<meta property="og:description" content="Linux下最好的音乐体验" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.zboy.site/posts/01/" />
+<meta property="article:published_time" content="2020-02-11T23:47:24&#43;08:00"/>
+<meta property="article:modified_time" content="2020-02-11T23:47:24&#43;08:00"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="可能是Linux端最好的听歌体验：Spotify for Linux"/>
+<meta name="twitter:description" content="Linux下最好的音乐体验"/>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Raleway:200,300" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" media="screen" href="https://blog.zboy.site/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://blog.zboy.site/css/main.css" /><link rel="stylesheet" type="text/css" href="https://blog.zboy.site/css/dark.css" media="(prefers-color-scheme: dark)" />
+
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+	<script src="https://blog.zboy.site/js/main.js"></script>
+</head>
+
+<body>
+	<div class="container wrapper post">
+		<div class="header">
+	<h1 class="site-title"><a href="https://blog.zboy.site/">Zboy</a></h1>
+	<div class="site-description"><h2>废jb话</h2><nav class="nav social">
+			<ul class="flat"><a href="https://github.com/varz1" title="Github"><i data-feather="github"></i></a><a href="https://www.instagram.com/zzzzboy0/" title="Instgram"><i data-feather="instagram"></i></a><a href="/index.xml" title="RSS"><i data-feather="rss"></i></a></ul>
+		</nav>
+	</div>
+
+	<nav class="nav">
+		<ul class="flat">
+			
+			<li>
+				<a href="/">Home</a>
+			</li>
+			
+			<li>
+				<a href="/posts">All posts</a>
+			</li>
+			
+			<li>
+				<a href="/about">About</a>
+			</li>
+			
+		</ul>
+	</nav>
+</div>
+
+
+		<div class="post-header">
+			<h1 class="title">可能是Linux端最好的听歌体验：Spotify for Linux</h1>
+			<div class="meta">Posted at &mdash; Feb 11, 2020</div>
+		</div>
+
+		<div class="markdown">
+			
+
+<p><img src="https://raw.githubusercontent.com/varz1/pics/master/1.png" alt="1.png" /></p>
+
+<p>一直以来很头疼linux端听音乐的问题，虽然网易云给出了网页端和客户端的解决方案但许多bug也让人不适。偶然发现Spotify有Linux的版本，配合广告屏蔽插件体验出人意料。下面给出Debian / Ubuntu的具体安装体验过程。</p>
+
+<h2 id="debian-ubuntu-安装">Debian / Ubuntu 安装</h2>
+
+<p>详见官方文档<a href="https://www.spotify.com/tw/download/linux/">Spotify for Linux</a>
+如要配合AD block请不要使用snap安装</p>
+
+<p>添加源</p>
+
+<p><code>$ curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add -</code><br />
+ <code>$ echo &quot;deb http://repository.spotify.com stable non-free&quot; |
+sudo tee /etc/apt/sources.list.d/spotify.list</code></p>
+
+<p>更新源并安装</p>
+
+<p><code>$ sudo apt update</code></p>
+
+<p><code>$ sudo apt install spotify-client</code></p>
+
+<h2 id="使用">使用</h2>
+
+<p>登录时添加代理
+<code>address:127.0.0.1</code> <code>port:1080</code>即可使用
+<img src="https://raw.githubusercontent.com/varz1/pics/master/20200211180205.png" alt="20200211180205.png" />
+如此突兀的广告实在是影响体验，作为一名苦穷学生党只好另寻他路，当然有能力的付费体验更佳。推荐github上一款广告屏蔽插件<a href="https://github.com/abba23/spotify-adblock-linux#spotify-adblock-linux">spotify-adblock-linux</a></p>
+
+<h2 id="插件安装">插件安装</h2>
+
+<p>此处按官方文档给出安装过程</p>
+
+<h3 id="所需组件">所需组件</h3>
+
+<ul>
+<li>gcc</li>
+<li>Make</li>
+
+<li><p>libcurl headers (e.g. libcurl4-gnutls-dev on Debian/Ubuntu systems)</p>
+
+<p>未安装请先安装上述组件</p></li>
+</ul>
+
+<h3 id="编译与安装">编译与安装</h3>
+
+<p>先克隆仓库至本地</p>
+
+<p><code>$ git clone https://github.com/abba23/spotify-adblock-linux.git</code></p>
+
+<p>切换至仓库目录</p>
+
+<p><code>$ cd spotify-adblock-linux</code></p>
+
+<p>编译</p>
+
+<p><code>$ make</code></p>
+
+<p>安装</p>
+
+<p><code>$ sudo make install</code></p>
+
+<h2 id="无ad版使用">无AD版使用</h2>
+
+<h3 id="通过命令行打开无ad客户端">通过命令行打开无AD客户端</h3>
+
+<p><code>$ LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify</code></p>
+
+<h3 id="通过桌面快捷方式打开无ad客户端">通过桌面快捷方式打开无AD客户端</h3>
+
+<p>切换至目录<code>~/.local/share/applications</code></p>
+
+<p>运行<code>$ vim Spotify-adblock.desktop</code>插入内容</p>
+
+<p><code>[Desktop Entry]
+Type=Application
+Name=Spotify (adblock)
+GenericName=Music Player
+Icon=spotify-client
+TryExec=spotify
+Exec=env LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify %U
+Terminal=false
+MimeType=x-scheme-handler/spotify;
+Categories=Audio;Music;Player;AudioVideo;
+StartupWMClass=spotify</code></p>
+
+<p>保存退出即可看到快捷方式拖动至需要处使用</p>
+
+<h2 id="使用体验">使用体验</h2>
+
+<p>个人认为英文界面没有太多障碍。搭配adblock使用后体验感不输网易云。
+曲库方面个人使用的Apple music大多歌曲都能找到，中文曲库方面也很给力，周杰伦甚至国内原创rap都能找到。缺点就是可能是本人的问题搜索框无法输入中文还有没有像网易云那样的小窗口模式。</p>
+
+		</div>
+
+		<div class="post-tags">
+			
+				
+			
+		</div>
+		</div>
+	<div class="footer wrapper">
+	<nav class="nav">
+		<div> 友情链接 |  <a href="https://github.com/vividvilla/ezhil">Ezhil theme</a> | Built with <a href="https://gohugo.io">Hugo</a></div>
+	</nav>
+</div>
+
+
+
+<script>feather.replace()</script>
+</body>
+</html>
