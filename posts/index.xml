@@ -7,10 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>友情链接|offlineboy.site|blog.5a6c.me|</copyright>
-    <lastBuildDate>Sun, 01 Mar 2020 15:25:32 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 01 Apr 2020 20:13:09 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.zboy.site/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Golang学习日记day1</title>
+      <link>https://blog.zboy.site/posts/day1/</link>
+      <pubDate>Wed, 01 Apr 2020 20:13:09 +0800</pubDate>
+      
+      <guid>https://blog.zboy.site/posts/day1/</guid>
+      <description> 变量声明 1.单个声明
+var 变量名 数据类型 2.批量声明
+var ( a string b bool c int ) 3.除非全局变量所有变量声明需使用
+4.三种Print
+Print //无格式化 Printf //格式化输出 eg.fmt.Printf(&amp;#34;name:%s&amp;#34;,name) Println //自动换行 5.驼峰命名
+var studentName string</description>
+    </item>
     
     <item>
       <title>Clash for Linux</title>
