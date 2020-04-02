@@ -7,10 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>友情链接|offlineboy.site|blog.5a6c.me|</copyright>
-    <lastBuildDate>Wed, 01 Apr 2020 20:13:09 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 02 Apr 2020 15:40:19 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.zboy.site/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Golang学习日记Day2</title>
+      <link>https://blog.zboy.site/posts/day2/</link>
+      <pubDate>Thu, 02 Apr 2020 15:40:19 +0800</pubDate>
+      
+      <guid>https://blog.zboy.site/posts/day2/</guid>
+      <description>常量 声明 const pi = 3.14const ( statusOK = 200 not found = 404 )const ( n1 = 100 n2 n3	) iota 常量计数器，只能在常量的表达式中使用。
+iota在const关键字出现时重置为0.const中每新增一行常量声明将使iota计数一次。iota可简化定义，在枚举时很有用
+const ( a1 = iota //0 	a2 = iota //1 ) 四个例子 1.
+const( c1 = iota c2 _ c3 ) 2.
+const ( x1 =iota x2 =200 x3 =iota x4 =iota ) 3.
+const( d1,d2 = iota+1,iota+2 //1 2 d3,d4 = iota+1,iota+2// 2 3 ) 4.</description>
+    </item>
     
     <item>
       <title>Golang学习日记day1</title>
@@ -18,12 +32,12 @@
       <pubDate>Wed, 01 Apr 2020 20:13:09 +0800</pubDate>
       
       <guid>https://blog.zboy.site/posts/day1/</guid>
-      <description> 变量声明 1.单个声明
-var 变量名 数据类型 2.批量声明
-var ( a string b bool c int ) 3.除非全局变量所有变量声明需使用
-4.三种Print
-Print //无格式化 Printf //格式化输出 eg.fmt.Printf(&amp;#34;name:%s&amp;#34;,name) Println //自动换行 5.驼峰命名
-var studentName string</description>
+      <description>变量声明  单个声明
+var 变量名 数据类型 批量声明
+  var ( a string b bool c int )  除非全局变量所有变量声明需使用
+ 三种Print
+  fmt.Print //无格式化 fmt.Printf //格式化输出 eg.fmt.Printf(&amp;#34;name:%s&amp;#34;,name) fmt.Println //自动换行  驼峰命名  var studentName string  类型推导  var s2 = &amp;#34;halo&amp;#34;  短变量声明（函数内部）  s1 := 1  匿名变量  多重赋值中忽略某个值_
+func foo()(int , string){ return 2,&amp;#34;halo&amp;#34; } x,_ := foo() fmt.</description>
     </item>
     
     <item>

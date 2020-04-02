@@ -4,14 +4,14 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Golang学习日记day1 - Zboy</title><link rel="icon" type="image/png" href=/icons/tv.svg /><meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta property="og:title" content="Golang学习日记day1" />
-<meta property="og:description" content="Day1" />
+<meta property="og:description" content="变量声明" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://blog.zboy.site/posts/day1/" />
 <meta property="article:published_time" content="2020-04-01T20:13:09&#43;08:00"/>
 <meta property="article:modified_time" content="2020-04-01T20:13:09&#43;08:00"/>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Golang学习日记day1"/>
-<meta name="twitter:description" content="Day1"/>
+<meta name="twitter:description" content="变量声明"/>
 <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Raleway:200,300" rel="stylesheet">
 
 	<link rel="stylesheet" type="text/css" media="screen" href="https://blog.zboy.site/css/normalize.css" />
@@ -60,22 +60,47 @@
 
 <h2 id="变量声明">变量声明</h2>
 
-<p>1.单个声明</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">var 变量名 数据类型</pre></div>
-<p>2.批量声明</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">var (
-    a string
-    b bool
-    c int
-)</pre></div>
-<p>3.除非全局变量所有变量声明需使用</p>
+<ul>
+<li><p>单个声明</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">var 变量名 数据类型</pre></div></li>
 
-<p>4.三种Print</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">Print //无格式化
-Printf //格式化输出 eg.fmt.Printf(&#34;name:%s&#34;,name)
-Println //自动换行</pre></div>
-<p>5.驼峰命名</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">var studentName string</pre></div>
+<li><p><strong>批量声明</strong></p></li>
+</ul>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#268bd2">var</span> (
+    a <span style="color:#dc322f">string</span>
+    b <span style="color:#dc322f">bool</span>
+    c <span style="color:#dc322f">int</span>
+)</code></pre></div>
+<ul>
+<li><p>除非全局变量所有变量声明需使用</p></li>
+
+<li><p>三种Print</p></li>
+</ul>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">fmt.Print <span style="color:#586e75">//无格式化
+</span><span style="color:#586e75"></span>fmt.Printf <span style="color:#586e75">//格式化输出 eg.fmt.Printf(&#34;name:%s&#34;,name)
+</span><span style="color:#586e75"></span>fmt.Println <span style="color:#719e07">//</span>自动换行</code></pre></div>
+<ul>
+<li>驼峰命名</li>
+</ul>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#268bd2">var</span> studentName <span style="color:#dc322f">string</span></code></pre></div>
+<ul>
+<li>类型推导</li>
+</ul>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#268bd2">var</span> s2 = <span style="color:#2aa198">&#34;halo&#34;</span></code></pre></div>
+<ul>
+<li><strong>短变量声明</strong>（函数内部）</li>
+</ul>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">s1 <span style="color:#719e07">:=</span> <span style="color:#2aa198">1</span></code></pre></div>
+<ul>
+<li>匿名变量</li>
+</ul>
+
+<p>多重赋值中忽略某个值_</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#268bd2">func</span> <span style="color:#268bd2">foo</span>()(<span style="color:#dc322f">int</span> , <span style="color:#dc322f">string</span>){
+	<span style="color:#719e07">return</span> <span style="color:#2aa198">2</span>,<span style="color:#2aa198">&#34;halo&#34;</span>
+}
+x,_ <span style="color:#719e07">:=</span> <span style="color:#268bd2">foo</span>()
+	fmt.<span style="color:#268bd2">Println</span>(<span style="color:#2aa198">&#34;x=&#34;</span>,x)</code></pre></div>
 		</div>
 
 		<div class="post-tags">
