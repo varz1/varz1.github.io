@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>© Copyright notice</copyright>
-    <lastBuildDate>Fri, 03 Apr 2020 18:23:28 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 05 Apr 2020 12:13:04 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.zboy.site/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Golang学习日记Day4</title>
+      <link>https://blog.zboy.site/posts/day4/</link>
+      <pubDate>Sun, 05 Apr 2020 12:13:04 +0800</pubDate>
+      
+      <guid>https://blog.zboy.site/posts/day4/</guid>
+      <description>import &amp;#34;fmt&amp;#34; func main() { //https://www.liwenzhou.com/posts/Go/04_basic/ 	if age := 18; age &amp;gt;= 18 { fmt.Println(&amp;#34;wb欢迎你&amp;#34;) } else { fmt.Println(&amp;#34;该写作业啦&amp;#34;) } //for1 	fmt.Println(&amp;#34;for1&amp;#34;) for i := 0; i &amp;lt; 5; i++ { fmt.Printf(&amp;#34;第%d次循环\n&amp;#34;, i) } //for2 	fmt.Println(&amp;#34;for2&amp;#34;) i := 3 for ; i &amp;lt; 5; i++ { fmt.Printf(&amp;#34;第%d次循环\n&amp;#34;, i) } //for2 	fmt.Println(&amp;#34;for3&amp;#34;) for i &amp;gt; 3 { fmt.Println(&amp;#34;1&amp;#34;) i-- } //for range 	fmt.Println(&amp;#34;for range&amp;#34;) s := &amp;#34;halo 你好&amp;#34; for i, v := range s { fmt.</description>
+    </item>
     
     <item>
       <title>Golang学习日记Day3</title>
