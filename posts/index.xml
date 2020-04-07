@@ -6,11 +6,31 @@
     <description>Recent content in Posts on Zboy</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <copyright>© Copyright notice</copyright>
-    <lastBuildDate>Mon, 06 Apr 2020 23:09:07 +0800</lastBuildDate>
+    <copyright>Link:offlineboy.site</copyright>
+    <lastBuildDate>Tue, 07 Apr 2020 22:32:21 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.zboy.site/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Golang学习日记Day6</title>
+      <link>https://blog.zboy.site/posts/day6/</link>
+      <pubDate>Tue, 07 Apr 2020 22:32:21 +0800</pubDate>
+      
+      <guid>https://blog.zboy.site/posts/day6/</guid>
+      <description>切片 切片（Slice）是一个拥有相同类型元素的可变长度的序列。它是基于数组类型做的一层封装。它非常灵活，支持自动扩容。
+切片是一个引用类型，它的内部结构包含地址、长度和容量。切片一般用于快速地操作一块数据集合。
+定义 var name []T
+其中，
+ name:表示变量名 T:表示切片中的元素类型  切片的长度和容量 切片拥有自己的长度和容量，我们可以通过使用内置的len()函数求长度，使用内置的cap()函数求切片的容量是底层数组的长度。
+切片表达式 切片表达式从字符串、数组、指向数组或切片的指针构造子字符串或切片。它有两种变体：一种指定low和high两个索引界限值的简单的形式，另一种是除了low和high索引界限值外还指定容量的完整的形式。
+low默认为0；high则默认为切片操作数的长度
+使用make()函数构造切片 make([]T, size, cap) 其中：
+ T:切片的元素类型 size:切片中元素的数量 cap:切片的容量  a := make([]string, 3, 5) fmt.Println(a) fmt.Println(len(a)) fmt.Println(cap(a)) 切片的本质 切片的本质就是对底层数组的封装，它包含了三个信息：底层数组的指针、切片的长度（len）和切片的容量（cap）。
+举个例子，现在有一个数组a := [8]int{0, 1, 2, 3, 4, 5, 6, 7}，切片s1 := a[:5]，相应示意图如下。切片s2 := a[3:6]，相应示意图如下：append()方法为切片添加元素 每个切片会指向一个底层数组，这个数组的容量够用就添加新增元素。当底层数组不能容纳新增的元素时，切片就会自动按照一定的策略进行“扩容”，此时该切片指向的底层数组就会更换。“扩容”操作往往发生在append()函数调用时，所以我们通常都需要用原变量接收append函数的返回值。
+使用copy()函数复制切片 copy(destSlice, srcSlice []T) 从切片中删除元素 Go语言中并没有删除切片元素的专用方法，我们可以使用切片本身的特性来删除元素。 代码如下：
+func main() { // 从切片中删除元素 	a := []int{30, 31, 32, 33, 34, 35, 36, 37} // 要删除索引为2的元素 	a = append(a[:2], a[3:].</description>
+    </item>
     
     <item>
       <title>Golang学习日记Day5</title>
