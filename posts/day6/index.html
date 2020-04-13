@@ -58,9 +58,7 @@
 		<div class="markdown">
 			
 
-<h1 id="切片-https-www-liwenzhou-com-posts-go-06-slice"><a href="https://www.liwenzhou.com/posts/Go/06_slice/">切片</a></h1>
-
-<p>切片（Slice）是一个拥有相同类型元素的可变长度的序列。它是基于数组类型做的一层封装。它非常灵活，支持自动扩容。</p>
+<p><a href="https://www.liwenzhou.com/posts/Go/06_slice/">切片</a>（Slice）是一个拥有相同类型元素的可变长度的序列。它是基于数组类型做的一层封装。它非常灵活，支持自动扩容。</p>
 
 <p>切片是一个引用类型，它的内部结构包含<code>地址</code>、<code>长度</code>和<code>容量</code>。切片一般用于快速地操作一块数据集合。</p>
 
@@ -124,16 +122,10 @@ fmt.<span style="color:#268bd2">Println</span>(<span style="color:#b58900">cap</
 
 <h2 id="notice">Notice</h2>
 
-<ol>
-<li>所以要判断一个切片是否是空的，要是用<code>len(s) == 0</code>来判断，不应该使用<code>s == nil</code>来判断。</li>
-</ol>
+<p>要判断一个切片是否是空的，要是用<code>len(s) == 0</code>来判断，不应该使用<code>s == nil</code>来判断。</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">   <span style="color:#268bd2">var</span> s1 []<span style="color:#dc322f">int</span>         <span style="color:#586e75">//len(s1)=0;cap(s1)=0;s1==nil
 </span><span style="color:#586e75"></span>   s2 <span style="color:#719e07">:=</span> []<span style="color:#dc322f">int</span>{}        <span style="color:#586e75">//len(s2)=0;cap(s2)=0;s2!=nil
 </span><span style="color:#586e75"></span>   s3 <span style="color:#719e07">:=</span> <span style="color:#b58900">make</span>([]<span style="color:#dc322f">int</span>, <span style="color:#2aa198">0</span>) <span style="color:#719e07">//</span><span style="color:#b58900">len</span>(s3)=<span style="color:#2aa198">0</span>;<span style="color:#b58900">cap</span>(s3)=<span style="color:#2aa198">0</span>;s3<span style="color:#719e07">!=</span><span style="color:#cb4b16">nil</span></code></pre></div>
-<ol>
-<li></li>
-</ol>
-
 		</div>
 
 		<div class="post-tags">

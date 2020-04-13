@@ -7,10 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>Link:offlineboy.site</copyright>
-    <lastBuildDate>Tue, 07 Apr 2020 22:32:21 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 13 Apr 2020 23:57:58 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.zboy.site/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Golang学习日记Day7</title>
+      <link>https://blog.zboy.site/posts/day7/</link>
+      <pubDate>Mon, 13 Apr 2020 23:57:58 +0800</pubDate>
+      
+      <guid>https://blog.zboy.site/posts/day7/</guid>
+      <description>Map Go语言中提供的映射关系容器为map，其内部使用散列表（hash）实现。map是一种无序的基于key-value的数据结构，Go语言中的map是引用类型，必须初始化才能使用。
+使用 eg1.
+scoreMap :=make(map[string]int ,8) scoreMap[&amp;#34;小红&amp;#34;]=90 scoreMap[&amp;#34;小蓝&amp;#34;]=91 fmt.Println(scoreMap) 输出
+map[小红:90 小蓝:91] eg2.
+scoreMap := map[string]int{ &amp;#34;小红&amp;#34; : 90, &amp;#34;小蓝&amp;#34; : 91, } fmt.Println(scoreMap) 查找 v,ok := scoreMap[&amp;#34;小红&amp;#34;] if ok{ fmt.Printf(&amp;#34;对应值为%v\n&amp;#34;,v) } else { fmt.Println(&amp;#34;查无此人&amp;#34;) } 遍历 for k,v := range scoreMap{ fmt.Println(k,v) } 元素为map类型的切片 sliceMap1 := make([]map[string]string, 3) sliceMap1[0] = make(map[string]string, 10) sliceMap1[0][&amp;#34;name&amp;#34;] = &amp;#34;陈哈哈&amp;#34; sliceMap1[0][&amp;#34;age&amp;#34;] = &amp;#34;18&amp;#34; for i,v:=range sliceMap1{ fmt.Printf(&amp;#34;index:%v,value:%v&amp;#34;,i,v) } fmt.Println(sliceMap1) 元素为切片类型的map var mapSlice = make(map[string][]string, 3) fmt.</description>
+    </item>
     
     <item>
       <title>Golang学习日记Day6</title>
@@ -18,7 +31,7 @@
       <pubDate>Tue, 07 Apr 2020 22:32:21 +0800</pubDate>
       
       <guid>https://blog.zboy.site/posts/day6/</guid>
-      <description>切片 切片（Slice）是一个拥有相同类型元素的可变长度的序列。它是基于数组类型做的一层封装。它非常灵活，支持自动扩容。
+      <description>切片（Slice）是一个拥有相同类型元素的可变长度的序列。它是基于数组类型做的一层封装。它非常灵活，支持自动扩容。
 切片是一个引用类型，它的内部结构包含地址、长度和容量。切片一般用于快速地操作一块数据集合。
 定义 var name []T
 其中，
