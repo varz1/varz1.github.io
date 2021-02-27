@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Copyright notice</copyright>
-    <lastBuildDate>Mon, 22 Feb 2021 21:38:48 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 27 Feb 2021 20:20:44 +0800</lastBuildDate>
     
 	<atom:link href="https://varz1.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Html学习日记</title>
+      <link>https://varz1.github.io/posts/html/</link>
+      <pubDate>Sat, 27 Feb 2021 20:20:44 +0800</pubDate>
+      
+      <guid>https://varz1.github.io/posts/html/</guid>
+      <description>一、结构  文档声明 HTML标签 head标签 body标签  &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;utf-8&amp;#34; /&amp;gt; &amp;lt;title&amp;gt;这是网页的标题&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;p&amp;gt;这是网页的内容&amp;lt;/p&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; 二、基本标签 head标签 title标签 定义网页标题</description>
+    </item>
     
     <item>
       <title>leetcode算法day1-双指针</title>

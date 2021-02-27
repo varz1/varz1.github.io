@@ -3,13 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://varz1.github.io/posts/html/</loc>
+    <lastmod>2021-02-27T20:20:44+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://varz1.github.io/posts/leet1/</loc>
     <lastmod>2021-02-22T21:38:48+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://varz1.github.io/posts/</loc>
-    <lastmod>2021-02-22T21:38:48+08:00</lastmod>
+    <lastmod>2021-02-27T20:20:44+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -20,7 +25,7 @@
   
   <url>
     <loc>https://varz1.github.io/</loc>
-    <lastmod>2021-02-22T21:38:48+08:00</lastmod>
+    <lastmod>2021-02-27T20:20:44+08:00</lastmod>
     <priority>0</priority>
   </url>
   
