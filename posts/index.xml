@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Copyright notice</copyright>
-    <lastBuildDate>Sat, 27 Feb 2021 20:20:44 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 03 Mar 2021 20:45:58 +0800</lastBuildDate>
     
 	<atom:link href="https://varz1.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Spotify For Linux</title>
+      <link>https://varz1.github.io/posts/spotify/</link>
+      <pubDate>Wed, 03 Mar 2021 20:45:58 +0800</pubDate>
+      
+      <guid>https://varz1.github.io/posts/spotify/</guid>
+      <description>作为一个敲代码的，Linux端写代码的良好体验已经让我不想再打开Windows进行编程。苦寻许久发现Spotify或许是最佳的Linux端音乐播放器。 下面以本人Debian环境给出配置指南（不完全
+安装 详见Spotify官网，下面给出本人安装过程
+添加源
+$ curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add - $ echo &amp;#34;deb http://repository.spotify.com stable non-free&amp;#34; | sudo tee /etc/apt/sources.</description>
+    </item>
     
     <item>
       <title>Html学习日记</title>
