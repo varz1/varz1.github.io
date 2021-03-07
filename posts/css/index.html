@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Css - :)</title><link rel="icon" type="image/png" href=icons/myicon.png /><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:title" content="Css" />
+<meta property="og:description" content="css学习日记" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://varz1.github.io/posts/css/" />
+<meta property="article:published_time" content="2021-03-07T14:36:10&#43;08:00"/>
+<meta property="article:modified_time" content="2021-03-07T14:36:10&#43;08:00"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Css"/>
+<meta name="twitter:description" content="css学习日记"/>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Raleway:200,300" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" media="screen" href="https://varz1.github.io/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://varz1.github.io/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="https://varz1.github.io/css/custom.css" />
+	<link rel="stylesheet" type="text/css" href="https://varz1.github.io/css/dark.css" media="(prefers-color-scheme: dark)" />
+	<link rel="stylesheet" type="text/css" href="https://varz1.github.io/css/custom-dark.css" media="(prefers-color-scheme: dark)" />
+
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+	<script src="https://varz1.github.io/js/main.js"></script>
+	<script src="https://varz1.github.io/js/abc.js"></script>
+	<script src="https://varz1.github.io/js/xyz.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+	<div class="container wrapper post">
+		<div class="header">
+	<base href="https://varz1.github.io/">
+	<h1 class="site-title"><a href="https://varz1.github.io/">:)</a></h1>
+	<div class="site-description"><h2>你我都有光明的未来</h2><nav class="nav social">
+			<ul class="flat"><a href="https://github.com/vividvilla/ezhil" title="Github"><i data-feather="github"></i></a></ul>
+		</nav>
+	</div>
+
+	<nav class="nav">
+		<ul class="flat">
+			
+			<li>
+				<a href="/">Home</a>
+			</li>
+			
+			<li>
+				<a href="/posts">All posts</a>
+			</li>
+			
+			<li>
+				<a href="/about">About</a>
+			</li>
+			
+		</ul>
+	</nav>
+</div>
+
+
+		<div class="post-header">
+			<h1 class="title">Css</h1>
+			<div class="meta">Posted at &mdash; Mar 7, 2021</div>
+		</div>
+
+		<div class="markdown">
+			
+
+<blockquote>
+<p>编辑于2021-3-6</p>
+
+<h2 id="简介">简介</h2>
+
+<h3 id="css引入方式">css引入方式</h3>
+
+<p>实际开发通常使用外部样式表在此为方便说明使用内部
+- 外部样式表</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#719e07">&lt;!</span><span style="color:#268bd2">DOCTYPE</span> <span style="color:#268bd2">html</span><span style="color:#719e07">&gt;</span>
+<span style="color:#719e07">&lt;</span><span style="color:#268bd2">html</span><span style="color:#719e07">&gt;</span>
+<span style="color:#719e07">&lt;</span><span style="color:#268bd2">head</span><span style="color:#719e07">&gt;</span>
+    <span style="color:#719e07">&lt;</span><span style="color:#268bd2">meta</span> <span style="color:#268bd2">charset</span><span style="color:#719e07">=</span><span style="color:#2aa198">&#34;utf-8&#34;</span> <span style="color:#719e07">/&gt;</span>
+    <span style="color:#719e07">&lt;</span><span style="color:#268bd2">title</span><span style="color:#719e07">&gt;&lt;/</span><span style="color:#268bd2">title</span><span style="color:#719e07">&gt;</span>
+    <span style="color:#719e07">&lt;</span><span style="color:#268bd2">link</span> <span style="color:#268bd2">rel</span><span style="color:#719e07">=</span><span style="color:#2aa198">&#34;stylesheet&#34;</span> <span style="color:#268bd2">type</span><span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span> <span style="color:#268bd2">href</span><span style="color:#719e07">=</span><span style="color:#2aa198">&#34;css/index.css&#34;</span> <span style="color:#719e07">/&gt;</span>
+<span style="color:#719e07">&lt;/</span><span style="color:#268bd2">head</span><span style="color:#719e07">&gt;</span>
+<span style="color:#719e07">&lt;</span><span style="color:#268bd2">body</span><span style="color:#719e07">&gt;</span>
+<span style="color:#719e07">&lt;/</span><span style="color:#268bd2">body</span><span style="color:#719e07">&gt;</span>
+<span style="color:#719e07">&lt;/</span><span style="color:#268bd2">html</span><span style="color:#719e07">&gt;</span></code></pre></div>
+<ul>
+<li><p>内部样式表</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#719e07">&lt;!</span><span style="color:#268bd2">DOCTYPE</span> <span style="color:#268bd2">html</span><span style="color:#719e07">&gt;</span>
+<span style="color:#719e07">&lt;</span><span style="color:#268bd2">html</span><span style="color:#719e07">&gt;</span>
+<span style="color:#719e07">&lt;</span><span style="color:#268bd2">head</span><span style="color:#719e07">&gt;</span>
+<span style="color:#719e07">&lt;</span><span style="color:#268bd2">meta</span> <span style="color:#268bd2">charset</span><span style="color:#719e07">=</span><span style="color:#2aa198">&#34;utf-8&#34;</span><span style="color:#719e07">/&gt;</span>
+<span style="color:#719e07">&lt;</span><span style="color:#268bd2">title</span><span style="color:#719e07">&gt;&lt;/</span><span style="color:#268bd2">title</span><span style="color:#719e07">&gt;</span>
+<span style="color:#719e07">&lt;</span><span style="color:#268bd2">style</span> <span style="color:#268bd2">type</span><span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span><span style="color:#719e07">&gt;</span>
+    <span style="color:#268bd2">div</span>{<span style="color:#719e07">color</span>:<span style="color:#cb4b16">red</span>;}
+<span style="color:#719e07">&lt;/</span><span style="color:#268bd2">style</span><span style="color:#719e07">&gt;</span>
+<span style="color:#719e07">&lt;/</span><span style="color:#268bd2">head</span><span style="color:#719e07">&gt;</span>
+<span style="color:#719e07">&lt;</span><span style="color:#268bd2">body</span><span style="color:#719e07">&gt;</span>
+<span style="color:#719e07">&lt;</span><span style="color:#268bd2">div</span><span style="color:#719e07">&gt;</span><span style="color:#268bd2">绿叶</span>，<span style="color:#268bd2">给你初恋般的感觉</span>。<span style="color:#719e07">&lt;/</span><span style="color:#268bd2">div</span><span style="color:#719e07">&gt;</span>
+<span style="color:#719e07">&lt;</span><span style="color:#268bd2">div</span><span style="color:#719e07">&gt;</span><span style="color:#268bd2">绿叶</span>，<span style="color:#268bd2">给你初恋般的感觉</span>。<span style="color:#719e07">&lt;/</span><span style="color:#268bd2">div</span><span style="color:#719e07">&gt;</span>
+<span style="color:#719e07">&lt;</span><span style="color:#268bd2">div</span><span style="color:#719e07">&gt;</span><span style="color:#268bd2">绿叶</span>，<span style="color:#268bd2">给你初恋般的感觉</span>。<span style="color:#719e07">&lt;/</span><span style="color:#268bd2">div</span><span style="color:#719e07">&gt;</span>
+<span style="color:#719e07">&lt;/</span><span style="color:#268bd2">body</span><span style="color:#719e07">&gt;</span>
+<span style="color:#719e07">&lt;/</span><span style="color:#268bd2">html</span><span style="color:#719e07">&gt;</span></code></pre></div>
+<ul>
+<li>行内样式表
+<code>css
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;/&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div style=&quot;color:red;&quot;&gt;绿叶，给你初恋般的感觉。&lt;/div&gt;
+&lt;div style=&quot;color:red;&quot;&gt;绿叶，给你初恋般的感觉。&lt;/div&gt;
+&lt;div style=&quot;color:red;&quot;&gt;绿叶，给你初恋般的感觉。&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code>
+## CSS选择器
+### 元素的id和class
+在HTML中，id和class是元素最基本的两个属性。一般情况下，id和class都是用来选择元素，以便进行CSS操作或者JavaScript操作</li>
+</ul></li>
+
+<li><p>id属性
+在同一个页面中，是不允许出现两个相同id的元素。不过在不同页面中，是可以出现两个id相同的元素</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#719e07">&lt;</span><span style="color:#268bd2">body</span><span style="color:#719e07">&gt;</span>
+<span style="color:#719e07">&lt;</span><span style="color:#268bd2">div</span> <span style="color:#268bd2">id</span><span style="color:#719e07">=</span><span style="color:#2aa198">&#34;content&#34;</span><span style="color:#719e07">&gt;</span><span style="color:#268bd2">存在即合理</span><span style="color:#719e07">&lt;/</span><span style="color:#268bd2">div</span><span style="color:#719e07">&gt;</span>
+<span style="color:#719e07">&lt;</span><span style="color:#268bd2">p</span> <span style="color:#268bd2">id</span><span style="color:#719e07">=</span><span style="color:#2aa198">&#34;content&#34;</span><span style="color:#719e07">&gt;</span><span style="color:#268bd2">存在即合理</span><span style="color:#719e07">&lt;/</span><span style="color:#268bd2">p</span><span style="color:#719e07">&gt;</span>
+<span style="color:#719e07">&lt;/</span><span style="color:#268bd2">body</span><span style="color:#719e07">&gt;</span></code></pre></div>
+<p>错误、不允许出现相同id
+- class属性
+为同一个页面的相同元素或者不同元素设置相同的class，然后使得相同class的元素具有相同的CSS样式</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#719e07">&lt;</span><span style="color:#268bd2">body</span><span style="color:#719e07">&gt;</span>
+<span style="color:#719e07">&lt;</span><span style="color:#268bd2">div</span> <span style="color:#268bd2">class</span><span style="color:#719e07">=</span><span style="color:#2aa198">&#34;content&#34;</span><span style="color:#719e07">&gt;</span><span style="color:#268bd2">存在即合理</span><span style="color:#719e07">&lt;/</span><span style="color:#268bd2">div</span><span style="color:#719e07">&gt;</span>
+<span style="color:#719e07">&lt;</span><span style="color:#268bd2">p</span> <span style="color:#268bd2">class</span><span style="color:#719e07">=</span><span style="color:#2aa198">&#34;content&#34;</span><span style="color:#719e07">&gt;</span><span style="color:#268bd2">存在即合理</span><span style="color:#719e07">&lt;/</span><span style="color:#268bd2">p</span><span style="color:#719e07">&gt;</span>
+<span style="color:#719e07">&lt;/</span><span style="color:#268bd2">body</span><span style="color:#719e07">&gt;</span></code></pre></div>
+<p>正确、可以出现相同class</p>
+
+<h3 id="选择器类型">选择器类型</h3></li>
+
+<li><p>元素选择器</p></li>
+
+<li><p>id选择器</p></li>
+
+<li><p>class选择器</p></li>
+
+<li><p>后代选择器</p></li>
+
+<li><p>群组选择器</p></li>
+</ul>
+</blockquote>
+
+<p>选择器格式如下</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#268bd2">选择器</span>
+{
+    属性1 : 取值1;
+    ……
+    属性n : 取值n;
+}</code></pre></div>
+<h4 id="元素选择器">元素选择器</h4>
+
+<p>选中相同元素
+例：</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#719e07">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#268bd2">html</span>&gt;
+&lt;<span style="color:#268bd2">head</span>&gt;
+    &lt;<span style="color:#268bd2">meta</span> charset<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;utf-8&#34;</span>/&gt;
+    &lt;<span style="color:#268bd2">title</span>&gt;&lt;/<span style="color:#268bd2">title</span>&gt;
+    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
+        <span style="color:#268bd2">div</span>{<span style="color:#719e07">color</span>:<span style="color:#cb4b16">red</span>;}
+    &lt;/<span style="color:#268bd2">style</span>&gt;
+&lt;/<span style="color:#268bd2">head</span>&gt;
+&lt;<span style="color:#268bd2">body</span>&gt;
+    &lt;<span style="color:#268bd2">div</span>&gt;绿叶学习网&lt;/<span style="color:#268bd2">div</span>&gt;
+    &lt;<span style="color:#268bd2">p</span>&gt;绿叶学习网&lt;/<span style="color:#268bd2">p</span>&gt;
+    &lt;<span style="color:#268bd2">span</span>&gt;绿叶学习网&lt;/<span style="color:#268bd2">span</span>&gt;
+    &lt;<span style="color:#268bd2">div</span>&gt;绿叶学习网&lt;/<span style="color:#268bd2">div</span>&gt;
+&lt;/<span style="color:#268bd2">body</span>&gt;
+&lt;/<span style="color:#268bd2">html</span>&gt;</code></pre></div>
+<p>div{color:red;}表示把页面中所有的div元素选中，然后定义它们文本颜色为红色</p>
+
+<h4 id="id选择器">id选择器</h4>
+
+<p>例：</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#719e07">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#268bd2">html</span>&gt;
+&lt;<span style="color:#268bd2">head</span>&gt;
+    &lt;<span style="color:#268bd2">meta</span> charset<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;UTF-8&#34;</span>/&gt;
+    &lt;<span style="color:#268bd2">title</span>&gt;&lt;/<span style="color:#268bd2">title</span>&gt;
+    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
+        #color1{<span style="color:#719e07">color</span>: <span style="color:#cb4b16">antiquewhite</span>;}
+    &lt;/<span style="color:#268bd2">style</span>&gt;
+&lt;/<span style="color:#268bd2">head</span>&gt;
+&lt;<span style="color:#268bd2">body</span>&gt;
+&lt;<span style="color:#268bd2">div</span>&gt;my blog&lt;/<span style="color:#268bd2">div</span>&gt;
+&lt;<span style="color:#268bd2">div</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;color1&#34;</span>&gt;wd blog&lt;/<span style="color:#268bd2">div</span>&gt;
+&lt;<span style="color:#268bd2">div</span>&gt;sss&lt;/<span style="color:#268bd2">div</span>&gt;
+&lt;/<span style="color:#268bd2">body</span>&gt;
+&lt;/<span style="color:#268bd2">html</span>&gt;</code></pre></div>
+<p>选中的id调整为相应颜色</p>
+
+<h4 id="class选择器">class选择器</h4>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#719e07">&lt;!DOCTYPE html&gt;</span> 
+&lt;<span style="color:#268bd2">html</span>&gt;
+&lt;<span style="color:#268bd2">head</span>&gt;
+    &lt;<span style="color:#268bd2">meta</span> charset<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;utf-8&#34;</span> /&gt;
+    &lt;<span style="color:#268bd2">title</span>&gt;&lt;/<span style="color:#268bd2">title</span>&gt;
+    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
+        .<span style="color:#268bd2">lv</span>{<span style="color:#719e07">color</span>:<span style="color:#cb4b16">red</span>;}
+    &lt;/<span style="color:#268bd2">style</span>&gt;
+&lt;/<span style="color:#268bd2">head</span>&gt;
+&lt;<span style="color:#268bd2">body</span>&gt;
+    &lt;<span style="color:#268bd2">div</span>&gt;绿叶学习网&lt;/<span style="color:#268bd2">div</span>&gt;
+    &lt;<span style="color:#268bd2">div</span> class<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;lv&#34;</span>&gt;绿叶学习网&lt;/<span style="color:#268bd2">div</span>&gt;
+    &lt;<span style="color:#268bd2">div</span> class<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;lv&#34;</span>&gt;绿叶学习网&lt;/<span style="color:#268bd2">div</span>&gt;
+&lt;/<span style="color:#268bd2">body</span>&gt;
+&lt;/<span style="color:#268bd2">html</span>&gt;</code></pre></div>
+<p>需注意class名字前面加上.英文句号；class方便为多种元素定义样式</p>
+
+<h4 id="后代选择器">后代选择器</h4>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#719e07">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#268bd2">head</span>&gt;
+    &lt;<span style="color:#268bd2">meta</span> charset<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;UTF-8&#34;</span>&gt;
+    &lt;<span style="color:#268bd2">title</span>&gt;&lt;/<span style="color:#268bd2">title</span>&gt;
+    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
+        #father1 <span style="color:#268bd2">div</span>{<span style="color:#719e07">color</span>: <span style="color:#cb4b16">aqua</span>}
+        #father2 <span style="color:#268bd2">span</span>{<span style="color:#719e07">color</span>: <span style="color:#cb4b16">aquamarine</span>}
+    &lt;/<span style="color:#268bd2">style</span>&gt;
+&lt;/<span style="color:#268bd2">head</span>&gt;
+&lt;<span style="color:#268bd2">body</span>&gt;
+    &lt;<span style="color:#268bd2">div</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;father1&#34;</span>&gt;
+        &lt;<span style="color:#268bd2">div</span>&gt;hello&lt;/<span style="color:#268bd2">div</span>&gt;
+        &lt;<span style="color:#268bd2">div</span>&gt;world&lt;/<span style="color:#268bd2">div</span>&gt;
+    &lt;/<span style="color:#268bd2">div</span>&gt;
+    &lt;<span style="color:#268bd2">div</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;father2&#34;</span>&gt;
+        &lt;<span style="color:#268bd2">p</span>&gt;hhhh&lt;/<span style="color:#268bd2">p</span>&gt;
+        &lt;<span style="color:#268bd2">p</span>&gt;:)&lt;/<span style="color:#268bd2">p</span>&gt;
+        &lt;<span style="color:#268bd2">span</span>&gt;:(&lt;/<span style="color:#268bd2">span</span>&gt;
+    &lt;/<span style="color:#268bd2">div</span>&gt;
+&lt;/<span style="color:#268bd2">body</span>&gt;</code></pre></div>
+<p>#father1 div {color:red;}表示选择“id为father1的元素”下的所有div元素，然后定义它们的文本颜色为颜色1
+#father2 span{ color:blue;}表示选择“id为father2的元素”下的所有span元素，然后定义它们文本颜色为颜色2</p>
+
+<h4 id="群组选择器">群组选择器</h4>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#719e07">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#268bd2">html</span>&gt;
+&lt;<span style="color:#268bd2">head</span>&gt;
+    &lt;<span style="color:#268bd2">meta</span> charset<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;utf-8&#34;</span> /&gt;
+    &lt;<span style="color:#268bd2">title</span>&gt;&lt;/<span style="color:#268bd2">title</span>&gt;
+    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
+        #lvye<span style="color:#719e07">,</span>.<span style="color:#268bd2">lv</span><span style="color:#719e07">,</span><span style="color:#268bd2">span</span>{<span style="color:#719e07">color</span>:<span style="color:#cb4b16">red</span>;}
+    &lt;/<span style="color:#268bd2">style</span>&gt;
+&lt;/<span style="color:#268bd2">head</span>&gt;
+&lt;<span style="color:#268bd2">body</span>&gt;
+    &lt;<span style="color:#268bd2">div</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;lvye&#34;</span>&gt;绿叶学习网&lt;/<span style="color:#268bd2">div</span>&gt;
+    &lt;<span style="color:#268bd2">div</span>&gt;绿叶学习网&lt;/<span style="color:#268bd2">div</span>&gt;
+    &lt;<span style="color:#268bd2">p</span>&gt;绿叶学习网&lt;/<span style="color:#268bd2">p</span>&gt;
+    &lt;<span style="color:#268bd2">p</span> class<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;lv&#34;</span>&gt;绿叶学习网&lt;/<span style="color:#268bd2">p</span>&gt;
+    &lt;<span style="color:#268bd2">span</span>&gt;绿叶学习网&lt;/<span style="color:#268bd2">span</span>&gt;
+&lt;/<span style="color:#268bd2">body</span>&gt;
+&lt;/<span style="color:#268bd2">html</span>&gt;</code></pre></div>
+<h4 id="习题">习题</h4>
+
+<p>下面有一段代码，如果我们想要选中所有的div和p，请用至少两种不同的选择器方式来实现，并且选出最简单的一种。</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#719e07">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#268bd2">html</span>&gt;
+&lt;<span style="color:#268bd2">head</span>&gt;
+    &lt;<span style="color:#268bd2">meta</span> charset<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;utf-8&#34;</span> /&gt;
+    &lt;<span style="color:#268bd2">title</span>&gt;&lt;/<span style="color:#268bd2">title</span>&gt;
+&lt;/<span style="color:#268bd2">head</span>&gt;
+&lt;<span style="color:#268bd2">body</span>&gt;
+    &lt;<span style="color:#268bd2">div</span>&gt;&lt;/<span style="color:#268bd2">div</span>&gt;
+    &lt;<span style="color:#268bd2">p</span>&gt;&lt;/<span style="color:#268bd2">p</span>&gt;
+    &lt;<span style="color:#268bd2">p</span>&gt;&lt;/<span style="color:#268bd2">p</span>&gt;
+    &lt;<span style="color:#268bd2">strong</span>&gt;&lt;/<span style="color:#268bd2">strong</span>&gt;
+    &lt;<span style="color:#268bd2">span</span>&gt;&lt;/<span style="color:#268bd2">span</span>&gt;
+&lt;/<span style="color:#268bd2">body</span>&gt;
+&lt;/<span style="color:#268bd2">html</span>&gt;</code></pre></div>
+<p>答案：可使用后代选择器或者群组选择器</p>
+
+<p>后代选择器：</p>
+
+<p>需要注意全部使用div隔开所选后代id</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#719e07">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#268bd2">html</span>&gt;
+&lt;<span style="color:#268bd2">head</span>&gt;
+    &lt;<span style="color:#268bd2">meta</span> charset<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;utf-8&#34;</span>/&gt;
+    &lt;<span style="color:#268bd2">title</span>&gt;&lt;/<span style="color:#268bd2">title</span>&gt;
+    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
+        #group1 <span style="color:#268bd2">div</span> {
+            <span style="color:#719e07">color</span>: <span style="color:#cb4b16">aquamarine</span>
+        }
+
+        #group2 <span style="color:#268bd2">p</span> {
+            <span style="color:#719e07">color</span>: <span style="color:#cb4b16">blue</span>
+        }
+    &lt;/<span style="color:#268bd2">style</span>&gt;
+&lt;/<span style="color:#268bd2">head</span>&gt;
+&lt;<span style="color:#268bd2">body</span>&gt;
+&lt;<span style="color:#268bd2">div</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;group1&#34;</span>&gt;
+    &lt;<span style="color:#268bd2">div</span>&gt;div&lt;/<span style="color:#268bd2">div</span>&gt;
+&lt;/<span style="color:#268bd2">div</span>&gt;
+&lt;<span style="color:#268bd2">div</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;group2&#34;</span>&gt;
+    &lt;<span style="color:#268bd2">p</span>&gt;p1&lt;/<span style="color:#268bd2">p</span>&gt;
+    &lt;<span style="color:#268bd2">p</span>&gt;p2&lt;/<span style="color:#268bd2">p</span>&gt;
+&lt;/<span style="color:#268bd2">div</span>&gt;
+&lt;<span style="color:#268bd2">strong</span>&gt;&lt;/<span style="color:#268bd2">strong</span>&gt;
+&lt;<span style="color:#268bd2">span</span>&gt;&lt;/<span style="color:#268bd2">span</span>&gt;
+&lt;/<span style="color:#268bd2">body</span>&gt;
+&lt;/<span style="color:#268bd2">html</span>&gt;</code></pre></div>
+<p>群组选择器：</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#719e07">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#268bd2">html</span>&gt;
+&lt;<span style="color:#268bd2">head</span>&gt;
+    &lt;<span style="color:#268bd2">meta</span> charset<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;utf-8&#34;</span> /&gt;
+    &lt;<span style="color:#268bd2">title</span>&gt;&lt;/<span style="color:#268bd2">title</span>&gt;
+    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
+        .<span style="color:#268bd2">lvye</span>{<span style="color:#719e07">color</span>:<span style="color:#cb4b16">red</span>;}
+    &lt;/<span style="color:#268bd2">style</span>&gt;
+&lt;/<span style="color:#268bd2">head</span>&gt;
+&lt;<span style="color:#268bd2">body</span>&gt;
+&lt;<span style="color:#268bd2">div</span> class<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;lvye&#34;</span>&gt;div&lt;/<span style="color:#268bd2">div</span>&gt;
+&lt;<span style="color:#268bd2">p</span> class<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;lvye&#34;</span>&gt;p1&lt;/<span style="color:#268bd2">p</span>&gt;
+&lt;<span style="color:#268bd2">p</span> class<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;lvye&#34;</span>&gt;p2&lt;/<span style="color:#268bd2">p</span>&gt;
+&lt;<span style="color:#268bd2">strong</span>&gt;&lt;/<span style="color:#268bd2">strong</span>&gt;
+&lt;<span style="color:#268bd2">span</span>&gt;&lt;/<span style="color:#268bd2">span</span>&gt;
+&lt;/<span style="color:#268bd2">body</span>&gt;
+&lt;/<span style="color:#268bd2">html</span>&gt;</code></pre></div>
+<h2 id="字体样式">字体样式</h2>
+
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>font-family</td>
+<td>字体类型</td>
+</tr>
+
+<tr>
+<td>font-size</td>
+<td>字体大小</td>
+</tr>
+
+<tr>
+<td>font-weight</td>
+<td>字体粗细</td>
+</tr>
+
+<tr>
+<td>font-style</td>
+<td>字体风格</td>
+</tr>
+
+<tr>
+<td>color</td>
+<td>字体颜色</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="字体类型-font-family">字体类型：font-family</h3>
+
+<p>默认为宋体 设置语法</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt; 
+#div1{<span style="color:#719e07">font-family</span>: Arial;}
+        #div2{<span style="color:#719e07">font-family</span>: <span style="color:#2aa198">&#34;Times New Roman&#34;</span>;}
+        #div3{<span style="color:#719e07">font-family</span>: <span style="color:#2aa198">&#34;微软雅黑&#34;</span>;}
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<p>例子：</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#719e07">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#268bd2">html</span>&gt;
+&lt;<span style="color:#268bd2">head</span>&gt;
+    &lt;<span style="color:#268bd2">meta</span> charset<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;utf-8&#34;</span> /&gt;
+    &lt;<span style="color:#268bd2">title</span>&gt;&lt;/<span style="color:#268bd2">title</span>&gt;
+    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
+        #div1{<span style="color:#719e07">font-family</span>: Arial;}
+        #div2{<span style="color:#719e07">font-family</span>: <span style="color:#2aa198">&#34;Times New Roman&#34;</span>;}
+        #div3{<span style="color:#719e07">font-family</span>: <span style="color:#2aa198">&#34;微软雅黑&#34;</span>;}
+    &lt;/<span style="color:#268bd2">style</span>&gt;
+&lt;/<span style="color:#268bd2">head</span>&gt;
+&lt;<span style="color:#268bd2">body</span>&gt;
+    &lt;<span style="color:#268bd2">div</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;div1&#34;</span>&gt;Arial&lt;/<span style="color:#268bd2">div</span>&gt;
+    &lt;<span style="color:#268bd2">div</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;div2&#34;</span>&gt;Times New Roman&lt;/<span style="color:#268bd2">div</span>&gt;
+    &lt;<span style="color:#268bd2">div</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;div3&#34;</span>&gt;微软雅黑&lt;/<span style="color:#268bd2">div</span>&gt;
+&lt;/<span style="color:#268bd2">body</span>&gt;
+&lt;/<span style="color:#268bd2">html</span>&gt;</code></pre></div>
+<p>一个实践：</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#719e07">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#268bd2">html</span>&gt;
+&lt;<span style="color:#268bd2">head</span>&gt;
+    &lt;<span style="color:#268bd2">meta</span> charset<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;UTF-8&#34;</span>&gt;
+    &lt;<span style="color:#268bd2">title</span>&gt;: )&lt;/<span style="color:#268bd2">title</span>&gt;
+    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
+        .<span style="color:#268bd2">mycolor</span>{<span style="color:#719e07">color</span>: <span style="color:#cb4b16">blue</span>}
+        #font1{<span style="color:#719e07">font-family</span>: mononoki;}
+        #font2{<span style="color:#719e07">font-family</span>: <span style="color:#2aa198">&#34;Times New Roman&#34;</span>;}
+    &lt;/<span style="color:#268bd2">style</span>&gt;
+&lt;/<span style="color:#268bd2">head</span>&gt;
+&lt;<span style="color:#268bd2">body</span>&gt;
+    &lt;<span style="color:#268bd2">div</span> class<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;mycolor&#34;</span>&gt;
+    &lt;<span style="color:#268bd2">div</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;font&#34;</span>&gt;mononoki&lt;/<span style="color:#268bd2">div</span>&gt;
+    &lt;/<span style="color:#268bd2">div</span>&gt;
+&lt;/<span style="color:#268bd2">body</span>&gt;
+&lt;/<span style="color:#268bd2">html</span>&gt;</code></pre></div>
+<p>对于font-family属性，如果字体类型只有一个英文单词，则不需要加上双引号；如果字体类型是多个英文单词或者中文的，则需要加上双引号。注意，这里的双引号是英文双引号，而不是中文双引号。</p>
+
+<h3 id="字体大小-font-size">字体大小：font-size</h3>
+
+<p>通常采用px方式设置而不是关键字</p>
+
+<p>设置方式：</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
+        #p1 {<span style="color:#719e07">font-size</span>: <span style="color:#2aa198">10</span><span style="color:#dc322f">px</span>;}
+        #p2 {<span style="color:#719e07">font-size</span>: <span style="color:#2aa198">15</span><span style="color:#dc322f">px</span>;}
+        #p3 {<span style="color:#719e07">font-size</span>: <span style="color:#2aa198">20</span><span style="color:#dc322f">px</span>;}
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<p>一个例子：</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#719e07">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#268bd2">html</span>&gt;
+&lt;<span style="color:#268bd2">head</span>&gt;
+    &lt;<span style="color:#268bd2">meta</span> charset<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;utf-8&#34;</span> /&gt;
+    &lt;<span style="color:#268bd2">title</span>&gt;&lt;/<span style="color:#268bd2">title</span>&gt;
+    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
+        #p1 {<span style="color:#719e07">font-size</span>: <span style="color:#2aa198">10</span><span style="color:#dc322f">px</span>;}
+        #p2 {<span style="color:#719e07">font-size</span>: <span style="color:#2aa198">15</span><span style="color:#dc322f">px</span>;}
+        #p3 {<span style="color:#719e07">font-size</span>: <span style="color:#2aa198">20</span><span style="color:#dc322f">px</span>;}
+    &lt;/<span style="color:#268bd2">style</span>&gt;
+&lt;/<span style="color:#268bd2">head</span>&gt;
+&lt;<span style="color:#268bd2">body</span>&gt;
+    &lt;<span style="color:#268bd2">p</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;p1&#34;</span>&gt;字体大小为10px&lt;/<span style="color:#268bd2">p</span>&gt;
+    &lt;<span style="color:#268bd2">p</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;p2&#34;</span>&gt;字体大小为15px&lt;/<span style="color:#268bd2">p</span>&gt;
+    &lt;<span style="color:#268bd2">p</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;p3&#34;</span>&gt;字体大小为20px&lt;/<span style="color:#268bd2">p</span>&gt;
+&lt;/<span style="color:#268bd2">body</span>&gt;
+&lt;/<span style="color:#268bd2">html</span>&gt;</code></pre></div>
+<h3 id="字体粗细-font-weight">字体粗细：font-weight</h3>
+
+<p>取值方式有关键字和100-900的数值，实际开发通常只会使用到bold</p>
+
+<p>设置方式</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
+        #p1{<span style="color:#719e07">font-weight</span>:<span style="color:#cb4b16">lighter</span>;}
+        #p2{<span style="color:#719e07">font-weight</span>:<span style="color:#cb4b16">normal</span>;}
+        #p3{<span style="color:#719e07">font-weight</span>:<span style="color:#cb4b16">bold</span>;}
+        #p4{<span style="color:#719e07">font-weight</span>:<span style="color:#cb4b16">bolder</span>;}
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<h3 id="字体风格-font-style">字体风格：font-style</h3>
+
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>normal</td>
+<td>正常</td>
+</tr>
+
+<tr>
+<td>italic</td>
+<td>斜体</td>
+</tr>
+
+<tr>
+<td>oblique</td>
+<td>斜体</td>
+</tr>
+</tbody>
+</table>
+
+<p>设置方式</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
+        #p1{<span style="color:#719e07">font-style</span>:<span style="color:#cb4b16">normal</span>;}
+        #p2{<span style="color:#719e07">font-style</span>:<span style="color:#cb4b16">italic</span>;}
+        #p3{<span style="color:#719e07">font-style</span>:<span style="color:#cb4b16">oblique</span>;}
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<h3 id="字体颜色-color">字体颜色：color</h3>
+
+<p>取值方式：</p>
+
+<ul>
+<li>关键字</li>
+</ul>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
+        #p1{<span style="color:#719e07">color</span>:<span style="color:#cb4b16">gray</span>;}
+        #p2{<span style="color:#719e07">color</span>:<span style="color:#cb4b16">orange</span>;}
+        #p3{<span style="color:#719e07">color</span>:<span style="color:#cb4b16">red</span>;}
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<ul>
+<li>16进制RGB值</li>
+</ul>
+
+<p>:对于16进制颜色值，有两个我们需要知道的：#000000是黑色，#FFFFFF是白色。</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
+        #p1{<span style="color:#719e07">color</span>: <span style="color:#2aa198">#03FCA1</span>;}
+        #p2{<span style="color:#719e07">color</span>: <span style="color:#2aa198">#048C02</span>;}
+        #p3{<span style="color:#719e07">color</span>: <span style="color:#2aa198">#CE0592</span>;}
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<h3 id="css注释">CSS注释</h3>
+
+<ul>
+<li>css:使用/* &hellip; */</li>
+<li>html使用<!--...--></li>
+</ul>
+
+<p>一个例子：</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#719e07">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#268bd2">html</span>&gt;
+&lt;<span style="color:#268bd2">head</span>&gt;
+    &lt;<span style="color:#268bd2">meta</span> charset<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;utf-8&#34;</span> /&gt;
+    &lt;<span style="color:#268bd2">title</span>&gt;&lt;/<span style="color:#268bd2">title</span>&gt;
+    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
+        <span style="color:#586e75">/*使用元素选择器，定义所有p元素样式*/</span>
+        <span style="color:#268bd2">p</span>
+        {
+            <span style="color:#719e07">font-family</span>:微软雅黑;     <span style="color:#586e75">/*字体类型为微软雅黑*/</span>
+            <span style="color:#719e07">font-size</span>:<span style="color:#2aa198">14</span><span style="color:#dc322f">px</span>;          <span style="color:#586e75">/*字体大小为14px*/</span>
+            <span style="color:#719e07">font-weight</span>:<span style="color:#cb4b16">bold</span>;        <span style="color:#586e75">/*字体粗细为bold*/</span>
+            <span style="color:#719e07">color</span>:<span style="color:#cb4b16">red</span>;               <span style="color:#586e75">/*字体颜色为red*/</span>
+        }
+        <span style="color:#586e75">/*使用id选择器，定义个别样式*/</span>
+        #p2
+        {
+            <span style="color:#719e07">color</span>:<span style="color:#cb4b16">blue</span>;              <span style="color:#586e75">/*字体颜色为blue*/</span>
+        }
+    &lt;/<span style="color:#268bd2">style</span>&gt;
+&lt;/<span style="color:#268bd2">head</span>&gt;
+&lt;<span style="color:#268bd2">body</span>&gt;
+    &lt;<span style="color:#268bd2">p</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;p1&#34;</span>&gt;HTML控制网页的结构&lt;/<span style="color:#268bd2">p</span>&gt;
+    &lt;<span style="color:#268bd2">p</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;p2&#34;</span>&gt;CSS控制网页的外观&lt;/<span style="color:#268bd2">p</span>&gt;
+    &lt;<span style="color:#268bd2">p</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;p3&#34;</span>&gt;JavaScript控制网页的行为&lt;/<span style="color:#268bd2">p</span>&gt;
+&lt;/<span style="color:#268bd2">body</span>&gt;
+&lt;/<span style="color:#268bd2">html</span>&gt;</code></pre></div>
+<p>小技巧：浏览器先解析上一个color后解析下一个color属性所以最终color是blue</p>
+
+<h3 id="习题-1">习题</h3>
+
+<p>1、为下面这段文字定义字体样式，要求字体类型指定多种、大小为14px、粗细为粗体、颜色为蓝色。</p>
+
+<p><strong>“有规划的人生叫蓝图，没规划的人生叫拼图。”</strong></p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#719e07">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#268bd2">html</span>&gt;
+&lt;<span style="color:#268bd2">head</span>&gt;
+    &lt;<span style="color:#268bd2">meta</span> charset<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;UTF-8&#34;</span> /&gt;
+    &lt;<span style="color:#268bd2">title</span>&gt;: )&lt;/<span style="color:#268bd2">title</span>&gt;
+    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
+        <span style="color:#268bd2">p</span> {
+            <span style="color:#719e07">font-family</span>: mononoki,<span style="color:#2aa198">&#34;Noto Kufi Arabic&#34;</span>,微软雅黑;
+            <span style="color:#719e07">font-size</span>: <span style="color:#2aa198">14</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">font-weight</span>: <span style="color:#cb4b16">bold</span>;
+            <span style="color:#719e07">color</span>: <span style="color:#cb4b16">blue</span>;
+        }
+    &lt;/<span style="color:#268bd2">style</span>&gt;
+&lt;/<span style="color:#268bd2">head</span>&gt;
+&lt;<span style="color:#268bd2">body</span>&gt;
+&lt;<span style="color:#268bd2">p</span>&gt;有规划的人生叫蓝图，没规划的人生叫拼图。&lt;/<span style="color:#268bd2">p</span>&gt;
+&lt;/<span style="color:#268bd2">body</span>&gt;
+&lt;/<span style="color:#268bd2">html</span>&gt;</code></pre></div>
+		</div>
+
+		<div class="post-tags">
+			
+				
+			
+		</div>
+		</div>
+	<div class="footer wrapper">
+	<nav class="nav">
+		<div> © Copyright notice |  <a href="https://github.com/vividvilla/ezhil">Ezhil theme</a> | Built with <a href="https://gohugo.io">Hugo</a></div>
+	</nav>
+</div>
+
+
+
+<script>feather.replace()</script>
+</body>
+</html>
