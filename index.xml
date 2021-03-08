@@ -7,10 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Copyright notice</copyright>
-    <lastBuildDate>Sun, 07 Mar 2021 14:36:10 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 08 Mar 2021 22:57:26 +0800</lastBuildDate>
     
 	<atom:link href="https://varz1.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Telegram bot简易实现</title>
+      <link>https://varz1.github.io/posts/tg/</link>
+      <pubDate>Mon, 08 Mar 2021 22:57:26 +0800</pubDate>
+      
+      <guid>https://varz1.github.io/posts/tg/</guid>
+      <description>开始-创建机器人并获取token 在telegram界面@BotFather发送指令/newbot并根据界面一步步创建bot最终获取token
+实现发送消息需要获取
+ 你的机器人token chat_id 你要发送的消息  其中chat_id可通过@userinfobot获取自己的id
+获取telegram api 在这里使用github上的轮子 telegram-bot-api
+go get -u github.com/go-telegram-bot-api/telegram-bot-api 一个简单的Go程序 package main import ( &amp;#34;log&amp;#34; &amp;#34;github.</description>
+    </item>
     
     <item>
       <title>Css</title>
