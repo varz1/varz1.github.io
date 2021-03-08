@@ -570,6 +570,202 @@ father2 span{ color:blue;}表示选择“id为father2的元素”下的所有spa
 &lt;<span style="color:#268bd2">p</span>&gt;有规划的人生叫蓝图，没规划的人生叫拼图。&lt;/<span style="color:#268bd2">p</span>&gt;
 &lt;/<span style="color:#268bd2">body</span>&gt;
 &lt;/<span style="color:#268bd2">html</span>&gt;</code></pre></div>
+<h2 id="chapter4-文本样式">chapter4-文本样式</h2>
+
+<h4 id="简介-1">简介</h4>
+
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>text-indent</td>
+<td>首行缩进</td>
+</tr>
+
+<tr>
+<td>text-align</td>
+<td>水平对齐</td>
+</tr>
+
+<tr>
+<td>text-decoration</td>
+<td>文本修饰</td>
+</tr>
+
+<tr>
+<td>text-transform</td>
+<td>大小写转换</td>
+</tr>
+
+<tr>
+<td>line-height</td>
+<td>行高</td>
+</tr>
+
+<tr>
+<td>letter-spacing</td>
+<td>字母间距</td>
+</tr>
+
+<tr>
+<td>word-spaceing</td>
+<td>词间距</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="首行缩进-text-indent">首行缩进-text-indent</h4>
+
+<p>语法（实现缩进indent值是size的两倍）</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"> &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
+        <span style="color:#268bd2">p</span>
+        {
+            <span style="color:#719e07">font-size</span>:<span style="color:#2aa198">14</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">text-indent</span>:<span style="color:#2aa198">28</span><span style="color:#dc322f">px</span>;
+        }
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<h4 id="水平对齐-text-align">水平对齐：text-align</h4>
+
+<p>语法（同样对图片有效）</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
+        #p1{<span style="color:#719e07">text-align</span>:<span style="color:#cb4b16">left</span>;}
+        #p2{<span style="color:#719e07">text-align</span>:<span style="color:#cb4b16">center</span>;}
+        #p3{<span style="color:#719e07">text-align</span>:<span style="color:#cb4b16">right</span>;}
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<h4 id="文本修饰-text-decoration">文本修饰：text-decoration</h4>
+
+<p>语法：</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
+        #p1{<span style="color:#719e07">text-decoration</span>:<span style="color:#cb4b16">underline</span>;}
+        #p2{<span style="color:#719e07">text-decoration</span>:<span style="color:#cb4b16">line-through</span>;}
+        #p3{<span style="color:#719e07">text-decoration</span>:<span style="color:#cb4b16">overline</span>;}
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<table>
+<thead>
+<tr>
+<th align="left">属性值</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">none</td>
+<td align="left">去除所有的划线效果（默认值）</td>
+</tr>
+
+<tr>
+<td align="left">underline</td>
+<td align="left">下划线</td>
+</tr>
+
+<tr>
+<td align="left">line-through</td>
+<td align="left">中划线</td>
+</tr>
+
+<tr>
+<td align="left">overline</td>
+<td align="left">顶划线</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>html：结构控制</li>
+<li>css：外观控制</li>
+</ul>
+
+<h4 id="大小写-text-transform">大小写：text-transform</h4>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
+        #p1{<span style="color:#719e07">text-transform</span>:<span style="color:#cb4b16">uppercase</span>;}
+        #p2{<span style="color:#719e07">text-transform</span>:<span style="color:#cb4b16">lowercase</span>;}
+        #p3{<span style="color:#719e07">text-transform</span>:<span style="color:#cb4b16">capitalize</span>;}
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<table>
+<thead>
+<tr>
+<th align="left">属性值</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">none</td>
+<td align="left">无转换（默认值）</td>
+</tr>
+
+<tr>
+<td align="left">uppercase</td>
+<td align="left">转换为大写</td>
+</tr>
+
+<tr>
+<td align="left">lowercase</td>
+<td align="left">转换为小写</td>
+</tr>
+
+<tr>
+<td align="left">capitalize</td>
+<td align="left">只将每个英文单词首字母转换为大写</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="行高-line-height">行高：line-height</h4>
+
+<p>语法：</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
+        #p1{<span style="color:#719e07">line-height</span>:<span style="color:#2aa198">15</span><span style="color:#dc322f">px</span>;}
+        #p2{<span style="color:#719e07">line-height</span>:<span style="color:#2aa198">20</span><span style="color:#dc322f">px</span>;}
+        #p3{<span style="color:#719e07">line-height</span>:<span style="color:#2aa198">25</span><span style="color:#dc322f">px</span>;}
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<h4 id="词间距-letter-spacing-word-spacing">词间距:letter-spacing,word-spacing</h4>
+
+<p>字母间距：</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
+        #p1{<span style="color:#719e07">letter-spacing</span>:<span style="color:#2aa198">0</span><span style="color:#dc322f">px</span>;}
+        #p2{<span style="color:#719e07">letter-spacing</span>:<span style="color:#2aa198">3</span><span style="color:#dc322f">px</span>;}
+        #p3{<span style="color:#719e07">letter-spacing</span>:<span style="color:#2aa198">5</span><span style="color:#dc322f">px</span>;}
+    &lt;/<span style="color:#268bd2">style</span>&gt;
+&lt;/<span style="color:#268bd2">head</span>&gt;</code></pre></div>
+<p>单词间距：</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
+        #p1{<span style="color:#719e07">word-spacing</span>:<span style="color:#2aa198">0</span><span style="color:#dc322f">px</span>;}
+        #p2{<span style="color:#719e07">word-spacing</span>:<span style="color:#2aa198">3</span><span style="color:#dc322f">px</span>;}
+        #p3{<span style="color:#719e07">word-spacing</span>:<span style="color:#2aa198">5</span><span style="color:#dc322f">px</span>;}
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<h3 id="练习">练习</h3>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#719e07">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#268bd2">html</span>&gt;
+&lt;<span style="color:#268bd2">head</span>&gt;
+    &lt;<span style="color:#268bd2">meta</span> charset<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;utf-8&#34;</span> /&gt;
+    &lt;<span style="color:#268bd2">title</span>&gt;&lt;/<span style="color:#268bd2">title</span>&gt;
+    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
+        #p1{<span style="color:#719e07">font-size</span>: <span style="color:#2aa198">14</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">text-indent</span>: <span style="color:#2aa198">28</span><span style="color:#dc322f">px</span>;
+        }
+        <span style="color:#268bd2">span</span>{
+            <span style="color:#719e07">font-weight</span>: <span style="color:#cb4b16">bold</span>;
+            <span style="color:#719e07">text-decoration</span>: <span style="color:#cb4b16">underline</span>;
+        }
+        #p2{
+            <span style="color:#719e07">text-transform</span>: <span style="color:#cb4b16">uppercase</span>;
+        }
+    &lt;/<span style="color:#268bd2">style</span>&gt;
+&lt;/<span style="color:#268bd2">head</span>&gt;
+&lt;<span style="color:#268bd2">body</span>&gt;
+&lt;<span style="color:#268bd2">p</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;p1&#34;</span>&gt;很多人都喜欢用战术上的勤奋来掩盖战略上的懒惰，事实上这种“&lt;<span style="color:#268bd2">span</span>&gt;低水平的勤奋&lt;/<span style="color:#268bd2">span</span>&gt;”远远比懒惰可怕。&lt;/<span style="color:#268bd2">p</span>&gt;
+&lt;<span style="color:#268bd2">p</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;p2&#34;</span>&gt;Remember: no pain, no gain！&lt;/<span style="color:#268bd2">p</span>&gt;
+&lt;/<span style="color:#268bd2">body</span>&gt;
+&lt;/<span style="color:#268bd2">html</span>&gt;</code></pre></div>
 		</div>
 
 		<div class="post-tags">
