@@ -1198,6 +1198,407 @@ father2 span{ color:blue;}表示选择“id为father2的元素”下的所有spa
            <span style="color:#719e07">font-size</span>:<span style="color:#2aa198">12</span><span style="color:#dc322f">px</span>;
         }
     &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<blockquote>
+<p>编辑于3-10</p>
+</blockquote>
+
+<h2 id="chapter9-背景样式">Chapter9-背景样式</h2>
+
+<h3 id="简介-4">简介</h3>
+
+<p>在CSS中，背景样式包括两个方面：背景颜色和背景图片。在Web1.0时代，都是使用background或者bgcolor这两个“HTML属性”（不是CSS属性）来为元素定义背景颜色或背景图片。</p>
+
+<p>不过在Web2.0时代，对于元素的背景样式，我们都是使用CSS属性来实现。</p>
+
+<p>在CSS中，定义“背景颜色”使用的是background-color属性，而定义“背景图片”则比较复杂，往往涉及以下属性。</p>
+
+<table>
+<thead>
+<tr>
+<th align="left">属性</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">background-image</td>
+<td align="left">定义背景图片地址</td>
+</tr>
+
+<tr>
+<td align="left">background-repeat</td>
+<td align="left">定义背景图片重复，例如横向重复、纵向重复</td>
+</tr>
+
+<tr>
+<td align="left">background-position</td>
+<td align="left">定义背景图片位置</td>
+</tr>
+
+<tr>
+<td align="left">background-attachment</td>
+<td align="left">定义背景图片固定</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="背景颜色-background-color">背景颜色：background-color</h3>
+
+<p>举例</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#719e07">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#268bd2">html</span>&gt;
+&lt;<span style="color:#268bd2">head</span>&gt;
+    &lt;<span style="color:#268bd2">meta</span> charset<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;utf-8&#34;</span> /&gt;
+    &lt;<span style="color:#268bd2">title</span>&gt;&lt;/<span style="color:#268bd2">title</span>&gt;
+    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
+       <span style="color:#268bd2">div</span>
+       {
+           <span style="color:#719e07">width</span>:<span style="color:#2aa198">100</span><span style="color:#dc322f">px</span>;
+           <span style="color:#719e07">height</span>:<span style="color:#2aa198">60</span><span style="color:#dc322f">px</span>;
+       }
+       #div1{<span style="color:#719e07">background-color</span>: <span style="color:#cb4b16">hotpink</span>}
+       #div2{<span style="color:#719e07">background-color</span>: <span style="color:#2aa198">#87CEFA</span>;}
+    &lt;/<span style="color:#268bd2">style</span>&gt;
+&lt;/<span style="color:#268bd2">head</span>&gt;
+&lt;<span style="color:#268bd2">body</span>&gt;
+    &lt;<span style="color:#268bd2">div</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;div1&#34;</span>&gt;背景颜色为：hotpink&lt;/<span style="color:#268bd2">div</span>&gt;
+    &lt;<span style="color:#268bd2">div</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;div2&#34;</span>&gt;背景颜色为：#87CEFA&lt;/<span style="color:#268bd2">div</span>&gt;
+&lt;/<span style="color:#268bd2">body</span>&gt;
+&lt;/<span style="color:#268bd2">html</span>&gt;</code></pre></div>
+<h3 id="背景图片样式-background-image">背景图片样式：background-image</h3>
+
+<p>格式：</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">div
+{
+    width:250px;
+    height:170px;
+    background-image: url(img/haizei.png);
+}</code></pre></div>
+<p>需注意设置width和height值否则图片无法显示。</p>
+
+<p>背景图片与图片是不一样的，背景图片是通过css实现的，图片是通过html实现的。</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">/*方式1：路径加上引号*/
+background-image: url(&#34;img/haizei.png&#34;);
+/*方式2：路径没加引号*/
+background-image: url(img/haizei.png);</pre></div>
+<p>建议采用更为简介的方式2</p>
+
+<h3 id="背景图片重复-background-repeat">背景图片重复：background-repeat</h3>
+
+<table>
+<thead>
+<tr>
+<th align="left">属性值</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">repeat</td>
+<td align="left">在水平方向和垂直方向上同时平铺（默认值）</td>
+</tr>
+
+<tr>
+<td align="left">repeat-x</td>
+<td align="left">只在水平方向（x轴）上平铺</td>
+</tr>
+
+<tr>
+<td align="left">repeat-y</td>
+<td align="left">只在垂直方向（y轴）上平铺</td>
+</tr>
+
+<tr>
+<td align="left">no-repeat</td>
+<td align="left">不平铺</td>
+</tr>
+</tbody>
+</table>
+
+<p>实例：</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#719e07">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#268bd2">html</span>&gt;
+&lt;<span style="color:#268bd2">head</span>&gt;
+    &lt;<span style="color:#268bd2">meta</span> charset<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;utf-8&#34;</span> /&gt;
+    &lt;<span style="color:#268bd2">title</span>&gt;&lt;/<span style="color:#268bd2">title</span>&gt;
+    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
+        <span style="color:#268bd2">div</span>
+        {
+            <span style="color:#719e07">width</span>:<span style="color:#2aa198">200</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">height</span>:<span style="color:#2aa198">100</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">border</span>: <span style="color:#2aa198">1</span><span style="color:#dc322f">px</span> <span style="color:#cb4b16">solid</span> <span style="color:#cb4b16">silver</span>;
+            <span style="color:#719e07">background-image</span>: <span style="color:#b58900">url</span>(<span style="color:#2aa198">img/flower.png</span>);
+        }
+        #div2{<span style="color:#719e07">background-repeat</span>: <span style="color:#cb4b16">repeat</span><span style="color:#719e07">-</span>x}
+        #div3{<span style="color:#719e07">background-repeat</span>: <span style="color:#cb4b16">repeat</span><span style="color:#719e07">-</span>y}
+        #div4{<span style="color:#719e07">background-repeat</span>: <span style="color:#cb4b16">no-repeat</span>}
+    &lt;/<span style="color:#268bd2">style</span>&gt;
+&lt;/<span style="color:#268bd2">head</span>&gt;
+&lt;<span style="color:#268bd2">body</span>&gt;
+    &lt;<span style="color:#268bd2">div</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;div1&#34;</span>&gt;&lt;/<span style="color:#268bd2">div</span>&gt;
+    &lt;<span style="color:#268bd2">div</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;div2&#34;</span>&gt;&lt;/<span style="color:#268bd2">div</span>&gt;
+    &lt;<span style="color:#268bd2">div</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;div3&#34;</span>&gt;&lt;/<span style="color:#268bd2">div</span>&gt;
+    &lt;<span style="color:#268bd2">div</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;div4&#34;</span>&gt;&lt;/<span style="color:#268bd2">div</span>&gt;
+&lt;/<span style="color:#268bd2">body</span>&gt;
+&lt;/<span style="color:#268bd2">html</span>&gt;</code></pre></div>
+<p>注：div1由于没有设置值使用使用默认的值repeat</p>
+
+<h3 id="背景图片位置-background-position">背景图片位置：background-position</h3>
+
+<p>取值类型：</p>
+
+<ul>
+<li>像素值</li>
+</ul>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
+        <span style="color:#268bd2">div</span>
+        {
+            <span style="color:#719e07">width</span>:<span style="color:#2aa198">300</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">height</span>:<span style="color:#2aa198">200</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">border</span>:<span style="color:#2aa198">1</span><span style="color:#dc322f">px</span> <span style="color:#cb4b16">solid</span> <span style="color:#cb4b16">silver</span>;
+            <span style="color:#719e07">background-image</span>:<span style="color:#b58900">url</span>(<span style="color:#2aa198">img/judy.png</span>);
+            <span style="color:#719e07">background-repeat</span>:<span style="color:#cb4b16">no-repeat</span>;
+            <span style="color:#719e07">background-position</span>:<span style="color:#2aa198">40</span><span style="color:#dc322f">px</span> <span style="color:#2aa198">20</span><span style="color:#dc322f">px</span>;
+        }
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<ul>
+<li>关键字</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>top left</td>
+<td>左上</td>
+</tr>
+
+<tr>
+<td>top center</td>
+<td>靠上居中</td>
+</tr>
+
+<tr>
+<td>top right</td>
+<td>右上</td>
+</tr>
+
+<tr>
+<td>center left</td>
+<td>居中靠左</td>
+</tr>
+
+<tr>
+<td>center center</td>
+<td>正中</td>
+</tr>
+
+<tr>
+<td>center right</td>
+<td>居中靠右</td>
+</tr>
+
+<tr>
+<td>bottom left</td>
+<td>左下</td>
+</tr>
+
+<tr>
+<td>bottom center</td>
+<td>居中下</td>
+</tr>
+
+<tr>
+<td>bottom right</td>
+<td>右下</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="背景图片固定-background-attachment">背景图片固定：background-attachment</h3>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
+        <span style="color:#268bd2">div</span>
+        {
+            <span style="color:#719e07">width</span>:<span style="color:#2aa198">160</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">height</span>:<span style="color:#2aa198">1200</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">border</span>:<span style="color:#2aa198">1</span><span style="color:#dc322f">px</span> <span style="color:#cb4b16">solid</span> <span style="color:#cb4b16">silver</span>;
+            <span style="color:#719e07">background-image</span>:<span style="color:#b58900">url</span>(<span style="color:#2aa198">img/judy.png</span>);
+            <span style="color:#719e07">background-repeat</span>:<span style="color:#cb4b16">no-repeat</span>;
+            <span style="color:#719e07">background-attachment</span>:<span style="color:#cb4b16">fixed</span>;
+        }
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<h2 id="chapter10-超链接样式">chapter10：超链接样式</h2>
+
+<h3 id="超链接伪类">超链接伪类</h3>
+
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>a:link</td>
+<td>定义元素a未访问的样式</td>
+</tr>
+
+<tr>
+<td>a:visited</td>
+<td>定义元素a访问过的样式</td>
+</tr>
+
+<tr>
+<td>a:hover</td>
+<td>定义鼠标经过a的样式</td>
+</tr>
+
+<tr>
+<td>a:active</td>
+<td>定义鼠标点击激活的样式</td>
+</tr>
+</tbody>
+</table>
+
+<p>例：</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
+        <span style="color:#268bd2">a</span>{<span style="color:#719e07">text-decoration</span>:<span style="color:#cb4b16">none</span>;}
+        <span style="color:#268bd2">a</span>:<span style="color:#268bd2">link</span>{<span style="color:#719e07">color</span>:<span style="color:#cb4b16">red</span>;}
+        <span style="color:#268bd2">a</span>:<span style="color:#268bd2">visited</span>{<span style="color:#719e07">color</span>:<span style="color:#cb4b16">purple</span>;}
+        <span style="color:#268bd2">a</span>:<span style="color:#268bd2">hover</span>{<span style="color:#719e07">color</span>:<span style="color:#cb4b16">yellow</span>;}
+        <span style="color:#268bd2">a</span>:<span style="color:#268bd2">active</span>{<span style="color:#719e07">color</span>:<span style="color:#cb4b16">blue</span>;}
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<p>通常仅仅使用到未访问和鼠标经过状态如：</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#719e07">&lt;!DOCTYPE html&gt;</span> 
+&lt;<span style="color:#268bd2">html</span>&gt;
+&lt;<span style="color:#268bd2">head</span>&gt;
+    &lt;<span style="color:#268bd2">meta</span> charset<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;utf-8&#34;</span> /&gt;
+    &lt;<span style="color:#268bd2">title</span>&gt; &lt;/<span style="color:#268bd2">title</span>&gt;
+    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
+        <span style="color:#268bd2">a</span>
+        {
+            <span style="color:#719e07">color</span>:<span style="color:#cb4b16">red</span>;
+            <span style="color:#719e07">text-decoration</span>: <span style="color:#cb4b16">none</span>;
+        }
+        <span style="color:#268bd2">a</span>:<span style="color:#268bd2">hover</span>
+        {
+            <span style="color:#719e07">color</span>:<span style="color:#cb4b16">blue</span>;
+            <span style="color:#719e07">text-decoration</span>:<span style="color:#cb4b16">underline</span>;
+        }
+    &lt;/<span style="color:#268bd2">style</span>&gt;
+&lt;/<span style="color:#268bd2">head</span>&gt;
+&lt;<span style="color:#268bd2">body</span>&gt;
+    &lt;<span style="color:#268bd2">div</span>&gt;
+        &lt;<span style="color:#268bd2">a</span> href<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;http://www.lvyestudy.com&#34;</span> target<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;_blank&#34;</span>&gt;绿叶学习网&lt;/<span style="color:#268bd2">a</span>&gt;
+    &lt;/<span style="color:#268bd2">div</span>&gt;
+&lt;/<span style="color:#268bd2">body</span>&gt;
+&lt;/<span style="color:#268bd2">html</span>&gt;</code></pre></div>
+<h3 id="深入理解hover">深入理解hover</h3>
+
+<ul>
+<li>用于div 鼠标经过时就改变背景色</li>
+</ul>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
+        <span style="color:#268bd2">div</span>
+        {
+            <span style="color:#719e07">width</span>:<span style="color:#2aa198">100</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">height</span>:<span style="color:#2aa198">30</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">line-height</span>:<span style="color:#2aa198">30</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">text-align</span>:<span style="color:#cb4b16">center</span>;
+            <span style="color:#719e07">color</span>:<span style="color:#cb4b16">white</span>;
+            <span style="color:#719e07">background-color</span>: <span style="color:#cb4b16">lightskyblue</span>;
+        }
+        <span style="color:#268bd2">div</span>:<span style="color:#268bd2">hover</span>
+        {
+            <span style="color:#719e07">background-color</span>: <span style="color:#cb4b16">hotpink</span>;
+        }
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<ul>
+<li>用于鼠标经过时就加上一个边框</li>
+</ul>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
+        <span style="color:#268bd2">img</span>:<span style="color:#268bd2">hover</span>
+        {
+            <span style="color:#719e07">border</span>:<span style="color:#2aa198">2</span><span style="color:#dc322f">px</span> <span style="color:#cb4b16">solid</span> <span style="color:#cb4b16">red</span>;
+        }
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<h3 id="鼠标样式">鼠标样式</h3>
+
+<p>例子：</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
+        <span style="color:#268bd2">div</span>
+        {
+            <span style="color:#719e07">width</span>:<span style="color:#2aa198">100</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">height</span>:<span style="color:#2aa198">30</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">line-height</span>:<span style="color:#2aa198">30</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">text-align</span>:<span style="color:#cb4b16">center</span>;
+            <span style="color:#719e07">background-color</span>: <span style="color:#cb4b16">hotpink</span>;
+            <span style="color:#719e07">color</span>:<span style="color:#cb4b16">white</span>;
+            <span style="color:#719e07">font-size</span>:<span style="color:#2aa198">14</span><span style="color:#dc322f">px</span>;
+        }
+        #div_default{<span style="color:#719e07">cursor</span>:<span style="color:#cb4b16">default</span>;}
+        #div_pointer{<span style="color:#719e07">cursor</span>:<span style="color:#cb4b16">pointer</span>;}
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<p>常用样式</p>
+
+<ul>
+<li>cursor:default</li>
+<li>cursor:pointer</li>
+<li>cursor:text</li>
+</ul>
+
+<p>自定义鼠标样式</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
+        <span style="color:#268bd2">div</span>
+        {
+            <span style="color:#719e07">width</span>:<span style="color:#2aa198">100</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">height</span>:<span style="color:#2aa198">30</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">line-height</span>:<span style="color:#2aa198">30</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">text-align</span>:<span style="color:#cb4b16">center</span>;
+            <span style="color:#719e07">background-color</span>: <span style="color:#cb4b16">hotpink</span>;
+            <span style="color:#719e07">color</span>:<span style="color:#cb4b16">white</span>;
+            <span style="color:#719e07">font-size</span>:<span style="color:#2aa198">14</span><span style="color:#dc322f">px</span>;
+        }
+        #div_default{<span style="color:#719e07">cursor</span>:<span style="color:#b58900">url</span>(<span style="color:#2aa198">img/cursor/default.cur</span>),<span style="color:#cb4b16">default</span>;}
+        #div_pointer{<span style="color:#719e07">cursor</span>:<span style="color:#b58900">url</span>(<span style="color:#2aa198">img/cursor/pointer.cur</span>),<span style="color:#cb4b16">pointer</span>;}
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<h3 id="习题-2">习题</h3>
+
+<p>1．在网页中添加一段文本链接，并且设置其在不同的状态下显示不同的效果，要求如下。</p>
+
+<ul>
+<li>（1）未访问时：没有下划线，颜色为红色。</li>
+<li>（2）鼠标经过时：有下划线，颜色为蓝色。</li>
+</ul>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#719e07">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#268bd2">html</span>&gt;
+&lt;<span style="color:#268bd2">head</span>&gt;
+    &lt;<span style="color:#268bd2">meta</span> charset<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;UTF-8&#34;</span>&gt;
+    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
+        <span style="color:#268bd2">a</span>{
+            <span style="color:#719e07">color</span>: <span style="color:#cb4b16">red</span>;
+            <span style="color:#719e07">text-decoration</span>: <span style="color:#cb4b16">none</span>;
+        }
+        <span style="color:#268bd2">div</span>:<span style="color:#268bd2">hover</span>{
+            <span style="color:#719e07">color</span>: <span style="color:#cb4b16">blue</span>;
+            <span style="color:#719e07">text-decoration</span>: <span style="color:#cb4b16">underline</span>;
+        }
+    &lt;/<span style="color:#268bd2">style</span>&gt;
+&lt;/<span style="color:#268bd2">head</span>&gt;
+&lt;<span style="color:#268bd2">body</span>&gt;
+&lt;<span style="color:#268bd2">div</span>&gt;&lt;<span style="color:#268bd2">a</span> href<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;baidu.com&#34;</span>&gt;baidu&lt;/<span style="color:#268bd2">a</span>&gt;&lt;/<span style="color:#268bd2">div</span>&gt;
+&lt;/<span style="color:#268bd2">body</span>&gt;
+&lt;/<span style="color:#268bd2">html</span>&gt;</code></pre></div>
 		</div>
 
 		<div class="post-tags">
