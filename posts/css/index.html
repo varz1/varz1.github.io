@@ -2,16 +2,21 @@
 <html>
 <head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Css - : )</title><link rel="icon" type="image/png" href=icons/smile.svg /><meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta property="og:title" content="Css" />
-<meta property="og:description" content="css学习日记" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title> - : )</title><link rel="icon" type="image/png" href=icons/smile.svg /><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:title" content="" />
+<meta property="og:description" content="title: &ldquo;Css&rdquo; date: 2021-03-07T14:36:10&#43;08:00
+description: css学习日记  编辑于2021-3-6
+ 简介 css引入方式 实际开发通常使用外部样式表在此为方便说明使用内部 - 外部样式表
+&lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;meta charset=&#34;utf-8&#34; /&gt; &lt;title&gt;&lt;/title&gt; &lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;css/index." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://varz1.github.io/posts/css/" />
-<meta property="article:published_time" content="2021-03-07T14:36:10&#43;08:00"/>
-<meta property="article:modified_time" content="2021-03-07T14:36:10&#43;08:00"/>
+
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Css"/>
-<meta name="twitter:description" content="css学习日记"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="title: &ldquo;Css&rdquo; date: 2021-03-07T14:36:10&#43;08:00
+description: css学习日记  编辑于2021-3-6
+ 简介 css引入方式 实际开发通常使用外部样式表在此为方便说明使用内部 - 外部样式表
+&lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;meta charset=&#34;utf-8&#34; /&gt; &lt;title&gt;&lt;/title&gt; &lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;css/index."/>
 <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Raleway:200,300" rel="stylesheet">
 
 	<link rel="stylesheet" type="text/css" media="screen" href="https://varz1.github.io/css/normalize.css" />
@@ -58,12 +63,17 @@
 
 
 		<div class="post-header">
-			<h1 class="title">Css</h1>
-			<div class="meta">Posted at &mdash; Mar 7, 2021</div>
+			<h1 class="title"></h1>
+			<div class="meta">Posted at &mdash; Jan 1, 0001</div>
 		</div>
 
 		<div class="markdown">
 			
+
+<p>title: &ldquo;Css&rdquo;
+date: 2021-03-07T14:36:10+08:00</p>
+
+<h2 id="description-css学习日记">description: css学习日记</h2>
 
 <blockquote>
 <p>编辑于2021-3-6</p>
@@ -1599,6 +1609,398 @@ background-image: url(img/haizei.png);</pre></div>
 &lt;<span style="color:#268bd2">div</span>&gt;&lt;<span style="color:#268bd2">a</span> href<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;baidu.com&#34;</span>&gt;baidu&lt;/<span style="color:#268bd2">a</span>&gt;&lt;/<span style="color:#268bd2">div</span>&gt;
 &lt;/<span style="color:#268bd2">body</span>&gt;
 &lt;/<span style="color:#268bd2">html</span>&gt;</code></pre></div>
+<blockquote>
+<p>编辑与3-11</p>
+</blockquote>
+
+<h2 id="chapter11-盒子模型">chapter11：盒子模型</h2>
+
+<h3 id="概述">概述</h3>
+
+<p>使用元素都可以看成一个盒子</p>
+
+<table>
+<thead>
+<tr>
+<th align="left">属性</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">content</td>
+<td align="left">内容，可以是文本或图片</td>
+</tr>
+
+<tr>
+<td align="left">padding</td>
+<td align="left">内边距，用于定义内容与边框之间的距离</td>
+</tr>
+
+<tr>
+<td align="left">margin</td>
+<td align="left">外边距，用于定义当前元素与其他元素之间的距离</td>
+</tr>
+
+<tr>
+<td align="left">border</td>
+<td align="left">边框，用于定义元素的边框</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="内容区">内容区</h4>
+
+<p>内容区是CSS盒子模型的中心，它呈现了盒子的主要信息内容，这些内容可以是文本、图片等多种类型。内容区是盒子模型必备的组成部分，其他3个部分都是可选的。</p>
+
+<p>内容区有3个属性：width、height和overflow。使用width和height属性可以指定盒子内容区的高度和宽度。在这里注意一点，width和height这两个属性是针对内容区content而言，并不包括padding部分。</p>
+
+<p>当内容过多超出width和height时，可以使用overflow属性来指定溢出处理方式。</p>
+
+<h4 id="内边距">内边距</h4>
+
+<p>内边距，指的是内容区和边框之间的空间，可以看成是内容区的背景区域。</p>
+
+<p>关于内边距的属性有5种：padding-top、padding-bottom、padding-left、padding-right以及综合了以上4个方向的简写内边距属性padding。使用这5种属性可以指定内容区与各方向边框之间的距离。</p>
+
+<h4 id="外边距">外边距</h4>
+
+<p>外边距，指的是两个盒子之间的距离，它可能是子元素与父元素之间的距离，也可能是兄弟元素之间的距离。外边距使得元素之间不必紧凑地连接在一起，是CSS布局的一个重要手段。</p>
+
+<p>外边距的属性也有5种：margin-top、margin-bottom、margin-left、margin-right以及综合了以上4个方向的简写外边距属性margin。</p>
+
+<p>同时，CSS允许给外边距属性指定负数值，当外边距为负值时，整个盒子将向指定负值的相反方向移动，以此可以产生盒子的重叠效果，这就是传说中的“负margin技术”。</p>
+
+<h4 id="边框">边框</h4>
+
+<p>在CSS盒子模型中，边框跟我们之前学过的边框是一样的。</p>
+
+<p>边框属性有border-width、border-style、border-color以及综合了3类属性的简写边框属性border。</p>
+
+<h3 id="宽高-width-height">宽高：width、height</h3>
+
+<p>只有块元素才可以设置width和height，行内元素是无法设置width和height的。（我们这里不考虑inline-block元素）</p>
+
+<p>行元素span设置宽高无法生效最终结果为内容区支撑起来</p>
+
+<p>如果想要为行内元素设置可以通过display属性将行内元素转化为块元素也可以将块元素转换成行内元素</p>
+
+<h3 id="边框-border">边框：border</h3>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
+        <span style="color:#268bd2">div</span>
+        {
+            <span style="color:#719e07">width</span>:<span style="color:#2aa198">100</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">height</span>:<span style="color:#2aa198">80</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">border</span>: <span style="color:#2aa198">2</span><span style="color:#dc322f">px</span> <span style="color:#cb4b16">dashed</span> <span style="color:#cb4b16">red</span>;
+        }
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<p>第1个值指的是边框宽度（border-width），第2个值指的是边框外观（border-style），第3个值指的是边框颜色（border-color）</p>
+
+<h3 id="内边距-padding">内边距：padding</h3>
+
+<p>内边距分为四个方向</p>
+
+<ul>
+<li>padding-top</li>
+<li>padding-right</li>
+<li>padding-left</li>
+<li>padding-bottom</li>
+</ul>
+
+<p>两种写法：</p>
+
+<p>1</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#268bd2">style</span>&gt;    
+	{
+            <span style="color:#719e07">display</span>:<span style="color:#cb4b16">inline</span><span style="color:#719e07">-</span><span style="color:#cb4b16">block</span>;   <span style="color:#586e75">/*将块元素转换为inline-block元素*/</span>
+            <span style="color:#719e07">padding-top</span>:<span style="color:#2aa198">20</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">padding-right</span>:<span style="color:#2aa198">40</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">padding-bottom</span>:<span style="color:#2aa198">60</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">padding-left</span>:<span style="color:#2aa198">80</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">border</span>:<span style="color:#2aa198">2</span><span style="color:#dc322f">px</span> <span style="color:#cb4b16">solid</span> <span style="color:#cb4b16">red</span>;
+            <span style="color:#719e07">background-color</span>:<span style="color:#2aa198">#FFDEAD</span>;
+        }
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<p>2.简写</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
+        div
+        {
+            display:inline-block;   /*将块元素转换为inline-block元素*/
+            padding:40px 80px;
+            margin:40px;
+            border:2px solid red;
+            background-color:#FFDEAD;
+        }</code></pre></div>
+<p>简写时方向按顺时针</p>
+
+<h3 id="外边距-margin">外边距：margin</h3>
+
+<p>外边距分为四个方向</p>
+
+<ul>
+<li>margin-top</li>
+<li>margin-right</li>
+<li>margin-left</li>
+<li>margin-bottom</li>
+</ul>
+
+<p>外边距指的是两个盒子之间的距离，它可能是子元素与父元素之间的距离，也可能是兄弟元素之间的距离。上面我们没有加入其他元素当参考对象</p>
+
+<h4 id="局部样式-1">局部样式</h4>
+
+<p>1.（只有）：</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
+        <span style="color:#268bd2">div</span>
+        {
+            <span style="color:#719e07">display</span>:<span style="color:#cb4b16">inline</span><span style="color:#719e07">-</span><span style="color:#cb4b16">block</span>;   <span style="color:#586e75">/*将块元素转换为inline-block元素*/</span>
+            <span style="color:#719e07">padding</span>:<span style="color:#2aa198">20</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">margin-top</span>:<span style="color:#2aa198">20</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">margin-right</span>:<span style="color:#2aa198">40</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">margin-bottom</span>:<span style="color:#2aa198">60</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">margin-left</span>:<span style="color:#2aa198">80</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">border</span>:<span style="color:#2aa198">1</span><span style="color:#dc322f">px</span> <span style="color:#cb4b16">solid</span> <span style="color:#cb4b16">red</span>;
+            <span style="color:#719e07">background-color</span>:<span style="color:#2aa198">#FFDEAD</span>;
+        }
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<p>2.只有父元素没有兄弟元素:当只有父元素时，该元素设置的margin就是相对于父元素之间的距离。</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
+        #father
+        {
+            <span style="color:#719e07">display</span>: <span style="color:#cb4b16">inline</span><span style="color:#719e07">-</span><span style="color:#cb4b16">block</span>;      <span style="color:#586e75">/*将块元素转换为inline-block元素*/</span>
+            <span style="color:#719e07">border</span>:<span style="color:#2aa198">1</span><span style="color:#dc322f">px</span> <span style="color:#cb4b16">solid</span> <span style="color:#cb4b16">blue</span>;
+        }
+        #son
+        {
+            <span style="color:#719e07">display</span>:<span style="color:#cb4b16">inline</span><span style="color:#719e07">-</span><span style="color:#cb4b16">block</span>;       <span style="color:#586e75">/*将块元素转换为inline-block元素*/</span>
+            <span style="color:#719e07">padding</span>:<span style="color:#2aa198">20</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">margin-top</span>:<span style="color:#2aa198">20</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">margin-right</span>:<span style="color:#2aa198">40</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">margin-bottom</span>:<span style="color:#2aa198">60</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">margin-left</span>:<span style="color:#2aa198">80</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">border</span>:<span style="color:#2aa198">1</span><span style="color:#dc322f">px</span> <span style="color:#cb4b16">solid</span> <span style="color:#cb4b16">red</span>;
+            <span style="color:#719e07">background-color</span>:<span style="color:#2aa198">#FFDEAD</span>;
+        }
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<p>3.有兄弟元素时：</p>
+
+<p>当既有父元素，也有兄弟元素时，该元素会先看看四个方向有没有兄弟元素存在。如果该方向有兄弟元素，则这个方向的margin就是相对于兄弟元素而言。如果该方向没有兄弟元素，则这个方向的margin就是相对于父元素而言。</p>
+
+<p>padding和margin的区别在于：padding体现的是元素的“内部结构”，而margin体现的是元素之间的相互关系。</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#719e07">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#268bd2">html</span>&gt;
+&lt;<span style="color:#268bd2">head</span>&gt;
+    &lt;<span style="color:#268bd2">meta</span> charset<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;utf-8&#34;</span> /&gt;
+    &lt;<span style="color:#268bd2">title</span>&gt;&lt;/<span style="color:#268bd2">title</span>&gt;
+    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
+        #father
+        {
+            <span style="color:#719e07">display</span>: <span style="color:#cb4b16">inline</span><span style="color:#719e07">-</span><span style="color:#cb4b16">block</span>;      <span style="color:#586e75">/*将块元素转换为inline-block元素*/</span>
+            <span style="color:#719e07">border</span>:<span style="color:#2aa198">1</span><span style="color:#dc322f">px</span> <span style="color:#cb4b16">solid</span> <span style="color:#cb4b16">blue</span>;
+        }
+        #son
+        {
+            <span style="color:#719e07">display</span>:<span style="color:#cb4b16">inline</span><span style="color:#719e07">-</span><span style="color:#cb4b16">block</span>;   <span style="color:#586e75">/*将块元素转换为inline-block元素*/</span>
+            <span style="color:#719e07">padding</span>:<span style="color:#2aa198">20</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">margin-top</span>:<span style="color:#2aa198">20</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">margin-right</span>:<span style="color:#2aa198">40</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">margin-bottom</span>:<span style="color:#2aa198">60</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">margin-left</span>:<span style="color:#2aa198">80</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">border</span>:<span style="color:#2aa198">1</span><span style="color:#dc322f">px</span> <span style="color:#cb4b16">solid</span> <span style="color:#cb4b16">red</span>;
+            <span style="color:#719e07">background-color</span>:<span style="color:#2aa198">#FFDEAD</span>;
+        }
+        .<span style="color:#268bd2">brother</span>
+        {
+            <span style="color:#719e07">height</span>:<span style="color:#2aa198">50</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">background-color</span>:<span style="color:#cb4b16">lightskyblue</span>;
+        }
+    &lt;/<span style="color:#268bd2">style</span>&gt;
+&lt;/<span style="color:#268bd2">head</span>&gt;
+&lt;<span style="color:#268bd2">body</span>&gt;
+    &lt;<span style="color:#268bd2">div</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;father&#34;</span>&gt;
+        &lt;<span style="color:#268bd2">div</span> class<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;brother&#34;</span>&gt;&lt;/<span style="color:#268bd2">div</span>&gt;
+        &lt;<span style="color:#268bd2">div</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;son&#34;</span>&gt;绿叶学习网&lt;/<span style="color:#268bd2">div</span>&gt;
+        &lt;<span style="color:#268bd2">div</span> class<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;brother&#34;</span>&gt;&lt;/<span style="color:#268bd2">div</span>&gt;
+    &lt;/<span style="color:#268bd2">div</span>&gt;
+&lt;/<span style="color:#268bd2">body</span>&gt;
+&lt;/<span style="color:#268bd2">html</span>&gt;</code></pre></div>
+<h4 id="margin简写形式">margin简写形式</h4>
+
+<p>同padding</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
+        <span style="color:#268bd2">div</span>
+        {
+            <span style="color:#719e07">display</span>:<span style="color:#cb4b16">inline</span><span style="color:#719e07">-</span><span style="color:#cb4b16">block</span>;   <span style="color:#586e75">/*将块元素转换为inline-block元素*/</span>
+            <span style="color:#719e07">padding</span>:<span style="color:#2aa198">20</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">margin</span>:<span style="color:#2aa198">40</span><span style="color:#dc322f">px</span> <span style="color:#2aa198">80</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">border</span>:<span style="color:#2aa198">1</span><span style="color:#dc322f">px</span> <span style="color:#cb4b16">solid</span> <span style="color:#cb4b16">red</span>;
+            <span style="color:#719e07">background-color</span>:<span style="color:#2aa198">#FFDEAD</span>;
+        }
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<h2 id="浮动布局">浮动布局</h2>
+
+<h3 id="文档流简介">文档流简介</h3>
+
+<h4 id="正常文档流">正常文档流</h4>
+
+<p>正常文档流，又称为“普通文档流”或“普通流”，也就是W3C标准所说的“normal flow”。我们先来看一下正常文档流的简单定义：“正常文档流，将一个页面从上到下分为一行一行，其中块元素独占一行，相邻行内元素在每一行中按照从左到右排列直到该行排满。”也就是说，正常文档流指的就是默认情况下页面元素的布局情况。</p>
+
+<p>由于div、p、hr都是块元素，因此独占一行。而span、i、img都是行内元素，因此如果两个行内元素相邻，就会位于同一行，并且从左到右排列。</p>
+
+<h4 id="脱离文档流">脱离文档流</h4>
+
+<p>脱离文档流，指的是脱离正常文档流。正常文档流就是我们没有使用浮动或者定位去改变的默认情况下的HTML文档结构。换一句话说，如果我们想要改变正常文档流，可以使用有两种方法：<strong>浮动和定位</strong>。</p>
+
+<p>浮动和定位可改变正常文档结构</p>
+
+<h3 id="浮动-http-www-lvyestudy-com-css-float"><a href="http://www.lvyestudy.com/css/float">浮动</a></h3>
+
+<p>浮动会影响周围元素，可以用clear清除</p>
+
+<ul>
+<li>float：left</li>
+<li>float：right</li>
+</ul>
+
+<p>清除浮动</p>
+
+<p>使用clear属性</p>
+
+<ul>
+<li>clear:left</li>
+<li>clear:right</li>
+<li>clear:both</li>
+</ul>
+
+<p>实际开发只会用到both</p>
+
+<h3 id="习题-http-www-lvyestudy-com-css-exercise-12"><a href="http://www.lvyestudy.com/css/exercise-12">习题</a></h3>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#719e07">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#268bd2">html</span>&gt;
+&lt;<span style="color:#268bd2">head</span>&gt;
+    &lt;<span style="color:#268bd2">meta</span> charset<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;utf-8&#34;</span>/&gt;
+    &lt;<span style="color:#268bd2">title</span>&gt;&lt;/<span style="color:#268bd2">title</span>&gt;
+    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
+        #son1 {
+            <span style="color:#719e07">display</span>: <span style="color:#cb4b16">inline</span><span style="color:#719e07">-</span><span style="color:#cb4b16">block</span>; <span style="color:#586e75">/*将块元素转换为inline-block元素*/</span>
+            <span style="color:#719e07">padding</span>: <span style="color:#2aa198">100</span><span style="color:#dc322f">px</span> <span style="color:#2aa198">800</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">background-color</span>: <span style="color:#2aa198">#FFDEAD</span>;
+        }
+
+        #son2 {
+            <span style="color:#719e07">display</span>: <span style="color:#cb4b16">inline</span><span style="color:#719e07">-</span><span style="color:#cb4b16">block</span>; <span style="color:#586e75">/*将块元素转换为inline-block元素*/</span>
+            <span style="color:#719e07">float</span>: <span style="color:#cb4b16">left</span>;
+            <span style="color:#719e07">margin</span>: <span style="color:#2aa198">1</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">padding</span>: <span style="color:#2aa198">400</span><span style="color:#dc322f">px</span> <span style="color:#2aa198">595</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">background-color</span>: <span style="color:#cb4b16">blue</span>;
+        }
+
+        #son3 {
+            <span style="color:#719e07">display</span>: <span style="color:#cb4b16">inline</span><span style="color:#719e07">-</span><span style="color:#cb4b16">block</span>; <span style="color:#586e75">/*将块元素转换为inline-block元素*/</span>
+            <span style="color:#719e07">margin</span>: <span style="color:#2aa198">1</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">padding</span>: <span style="color:#2aa198">400</span><span style="color:#dc322f">px</span> <span style="color:#2aa198">205</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">background-color</span>: <span style="color:#cb4b16">blue</span>;
+        }
+
+        #son4 {
+            <span style="color:#719e07">display</span>: <span style="color:#cb4b16">inline</span><span style="color:#719e07">-</span><span style="color:#cb4b16">block</span>; <span style="color:#586e75">/*将块元素转换为inline-block元素*/</span>
+            <span style="color:#719e07">padding</span>: <span style="color:#2aa198">100</span><span style="color:#dc322f">px</span> <span style="color:#2aa198">800</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">background-color</span>: <span style="color:#2aa198">#FFDEAD</span>;
+        }
+
+        .<span style="color:#268bd2">clear</span> {
+            <span style="color:#719e07">clear</span>: <span style="color:#cb4b16">both</span>
+        }
+    &lt;/<span style="color:#268bd2">style</span>&gt;
+&lt;/<span style="color:#268bd2">head</span>&gt;
+&lt;<span style="color:#268bd2">body</span>&gt;
+&lt;<span style="color:#268bd2">div</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;son1&#34;</span>&gt;&lt;/<span style="color:#268bd2">div</span>&gt;
+&lt;<span style="color:#268bd2">div</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;son2&#34;</span>&gt;&lt;/<span style="color:#268bd2">div</span>&gt;
+&lt;<span style="color:#268bd2">div</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;son3&#34;</span>&gt;&lt;/<span style="color:#268bd2">div</span>&gt;
+&lt;<span style="color:#268bd2">div</span> class<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;clear&#34;</span>&gt;&lt;/<span style="color:#268bd2">div</span>&gt;
+&lt;<span style="color:#268bd2">div</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;son4&#34;</span>&gt;&lt;/<span style="color:#268bd2">div</span>&gt;
+&lt;/<span style="color:#268bd2">body</span>&gt;
+&lt;/<span style="color:#268bd2">html</span>&gt;</code></pre></div>
+<h2 id="定位布局">定位布局</h2>
+
+<p>浮动布局比较灵活，但是不容易控制。而定位布局的出现，使得用户精准定位页面中的任意元素成为可能，此时页面布局操作也变得更加随心所欲。当然了，由于定位布局缺乏灵活性，也给空间大小和位置不确定的版面布局带来困惑。因此在实际开发中，大家应该灵活使用这两种布局方式，这样才可以更好地满足开发需求。CSS定位使你可以将一个元素精确地放在页面上你指定的地方。联合使用定位和浮动，能够创建多种高级而精确地布局。</p>
+
+<p>position四种取值：</p>
+
+<ul>
+<li>fixed：固定定位</li>
+<li>relative：相对定位</li>
+<li>absolute：绝对定位</li>
+<li>static：静态定位</li>
+</ul>
+
+<h3 id="固定定位-fixed">固定定位：fixed</h3>
+
+<p>固定定位是最直观也是最容易理解的定位方式。为了更好的让大家感受什么是定位布局，我们先来介绍一下固定定位。</p>
+
+<p>在CSS中，我们可以使用“position:fixed;”来实现固定定位。所谓的固定定位，指的是被固定的元素不会随着滚动条的拖动而改变位置。</p>
+
+<p>例子：</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#719e07">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#268bd2">html</span>&gt;
+&lt;<span style="color:#268bd2">head</span>&gt;
+    &lt;<span style="color:#268bd2">meta</span> charset<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;utf-8&#34;</span> /&gt;
+    &lt;<span style="color:#268bd2">title</span>&gt;&lt;/<span style="color:#268bd2">title</span>&gt;
+    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
+        #first
+        {
+            <span style="color:#719e07">width</span>:<span style="color:#2aa198">120</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">height</span>:<span style="color:#2aa198">1800</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">border</span>:<span style="color:#2aa198">1</span><span style="color:#dc322f">px</span> <span style="color:#cb4b16">solid</span> <span style="color:#cb4b16">gray</span>;
+            <span style="color:#719e07">line-height</span>:<span style="color:#2aa198">600</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">background-color</span>:<span style="color:#2aa198">#B7F1FF</span>;
+        }
+        #second
+        {
+            <span style="color:#719e07">position</span>:<span style="color:#cb4b16">fixed</span>;    <span style="color:#586e75">/*设置元素为固定定位*/</span>
+            <span style="color:#719e07">top</span>:<span style="color:#2aa198">30</span><span style="color:#dc322f">px</span>;          <span style="color:#586e75">/*距离浏览器顶部30px*/</span>
+            <span style="color:#719e07">left</span>:<span style="color:#2aa198">160</span><span style="color:#dc322f">px</span>;        <span style="color:#586e75">/*距离浏览器左部160px*/</span>
+            <span style="color:#719e07">width</span>:<span style="color:#2aa198">60</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">height</span>:<span style="color:#2aa198">60</span><span style="color:#dc322f">px</span>;
+            <span style="color:#719e07">border</span>:<span style="color:#2aa198">1</span><span style="color:#dc322f">px</span> <span style="color:#cb4b16">solid</span> <span style="color:#cb4b16">silver</span>;
+            <span style="color:#719e07">background-color</span>:<span style="color:#cb4b16">hotpink</span>;
+        }
+    &lt;/<span style="color:#268bd2">style</span>&gt;
+&lt;/<span style="color:#268bd2">head</span>&gt;
+&lt;<span style="color:#268bd2">body</span>&gt;
+    &lt;<span style="color:#268bd2">div</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;first&#34;</span>&gt;无定位的div元素&lt;/<span style="color:#268bd2">div</span>&gt;
+    &lt;<span style="color:#268bd2">div</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;second&#34;</span>&gt;固定定位的div元素&lt;/<span style="color:#268bd2">div</span>&gt;
+&lt;/<span style="color:#268bd2">body</span>&gt;
+&lt;/<span style="color:#268bd2">html</span>&gt;</code></pre></div>
+<h3 id="相对定位-http-www-lvyestudy-com-css-position-relative"><a href="http://www.lvyestudy.com/css/position-relative">相对定位</a></h3>
+
+<p>说明：</p>
+
+<p>position:relative;也是结合top、bottom、left和right这4个属性一起使用的，其中，position:relative;使得元素成为相对定位元素，接着使用top、bottom、left和right这4个属性来设置元素相对原始的位置。top、bottom、left和right这4个属性不一定全部都用到，一般只会用到其中两个。这4个值的参考对象是该元素的原始位置。</p>
+
+<p>注意，在默认情况下，固定定位元素的位置是相对浏览器而言，而相对定位元素的位置是相对于原始位置而言！</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">#son2
+{
+    position:relative;
+    top:20px;
+    left:40px;
+}</code></pre></div>
+<h3 id="绝对定位-http-www-lvyestudy-com-css-position-absolute"><a href="http://www.lvyestudy.com/css/position-absolute">绝对定位</a></h3>
+
+<p>在CSS中，我们可以使用“position:absolute;”来实现绝对定位。绝对定位在几种定位方式中使用最为广泛，因为它能够很精确地把元素定位到任意你想要的位置。</p>
+
+<p>一个元素变成了绝对定位元素，这个元素就完全脱离文档流了，绝对定位元素的前面或后面的元素会认为这个元素并不存在，此时这个元素浮于其他元素上面，已经完全独立出来了。</p>
+
+<h3 id="静态定位">静态定位</h3>
+
+<p>在默认情况下，元素没有指定position属性时，这个元素就是静态定位的。也就是说，元素position属性的默认值是static。</p>
+
+<p>一般情况下我们使用不到position:static的，不过在使用JavaScript来控制元素定位时，如果想要使得元素从其他定位方式变成静态定位，就需要使用position:static来实现。</p>
+
+<p>在CSS入门中，我们只需要掌握固定定位、相对定位和绝对定位3种就可以了，静态定位了解一下就行。</p>
+
+<p><strong>最后的话：</strong>跟浮动布局一样，定位布局也是非常复杂的。这一章学到的只是一些基础知识而已，想要真正用好定位布局，我们还需要掌握更高级的开发技巧。对于高级部分以及开发技巧，我们在CSS进阶教程中再详细介绍。</p>
+
 		</div>
 
 		<div class="post-tags">
