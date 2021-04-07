@@ -67,5 +67,14 @@ $ curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-ke
 函数应该以长度为 2 的整数数组的形式返回这两个数的下标值。numbers 的下标 从 1 开始计数 ，所以答案数组应当满足 1 &amp;lt;= answer[0] &amp;lt; answer[1] &amp;lt;= numbers.</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>https://varz1.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://varz1.github.io/about/</guid>
+      <description>:)</description>
+    </item>
+    
   </channel>
 </rss>
