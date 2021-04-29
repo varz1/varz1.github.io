@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://varz1.github.io/posts/grub/</loc>
+    <lastmod>2021-04-29T18:28:59+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://varz1.github.io/posts/tg/</loc>
     <lastmod>2021-03-08T22:57:26+08:00</lastmod>
   </url>
@@ -33,13 +38,13 @@
   
   <url>
     <loc>https://varz1.github.io/</loc>
-    <lastmod>2021-03-08T22:57:26+08:00</lastmod>
+    <lastmod>2021-04-29T18:28:59+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://varz1.github.io/posts/</loc>
-    <lastmod>2021-03-08T22:57:26+08:00</lastmod>
+    <lastmod>2021-04-29T18:28:59+08:00</lastmod>
     <priority>0</priority>
   </url>
   

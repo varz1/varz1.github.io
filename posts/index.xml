@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Copyright notice</copyright>
-    <lastBuildDate>Mon, 08 Mar 2021 22:57:26 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 29 Apr 2021 18:28:59 +0800</lastBuildDate>
     
 	<atom:link href="https://varz1.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Grub</title>
+      <link>https://varz1.github.io/posts/grub/</link>
+      <pubDate>Thu, 29 Apr 2021 18:28:59 +0800</pubDate>
+      
+      <guid>https://varz1.github.io/posts/grub/</guid>
+      <description>win10更新导致debian双系统无法启动解决办法 原因 因为win10更新覆盖了Debian的grub所以丢失
+解决 制作live-cd并进入 这里我制作的是debin的live-cd，重启选择BIOS启动，进入livecd。
+fdisk -l 找到自己的根目录分区以及windows的EFI分区这里我的根目录分区是/dev/nvme0n1p6，EFI分区是/dev/nvme0n1p5。
+执行命令挂载分区重新安装grub $ mount /dev/nvme0n1p6 /mnt $ mount /dev/nvme0n1p5 /mnt/boot $ mount --rbind /proc proc $ mount --rbind /sys sys $ mount --rbind /dev dev $ mount --rbind /run run $ chroot /mnt $ grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub $ grub-mkconfig -o /boot/grub/grub.</description>
+    </item>
     
     <item>
       <title>Telegram bot简易实现</title>
