@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Copyright notice</copyright>
-    <lastBuildDate>Thu, 29 Apr 2021 18:28:59 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 05 May 2021 19:38:07 +0800</lastBuildDate>
     
 	<atom:link href="https://varz1.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Linux常用命令</title>
+      <link>https://varz1.github.io/posts/linux/</link>
+      <pubDate>Wed, 05 May 2021 19:38:07 +0800</pubDate>
+      
+      <guid>https://varz1.github.io/posts/linux/</guid>
+      <description>Systemctl  启动服务：systemctl start vsftpd.service 关闭服务：systemctl stop vsftpd.service 重启服务：systemctl restart vsftpd.service 显示服务的状态：systemctl status vsftpd.service 在开机时启用服务：systemctl enable vsftpd.service 在开机时禁用服务：systemctl disable vsftpd.</description>
+    </item>
     
     <item>
       <title>Grub</title>
