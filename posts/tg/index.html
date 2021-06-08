@@ -6,9 +6,10 @@
 	<meta property="og:title" content="Telegram bot简易实现" />
 <meta property="og:description" content="使用Go实现基于tg-bot的发送消息实现" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://varz1.github.io/posts/tg/" />
-<meta property="article:published_time" content="2021-03-08T22:57:26&#43;08:00"/>
-<meta property="article:modified_time" content="2021-03-08T22:57:26&#43;08:00"/>
+<meta property="og:url" content="https://varz1.github.io/posts/tg/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-03-08T22:57:26&#43;08:00" />
+<meta property="article:modified_time" content="2021-03-08T22:57:26&#43;08:00" />
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Telegram bot简易实现"/>
 <meta name="twitter:description" content="使用Go实现基于tg-bot的发送消息实现"/>
@@ -63,27 +64,19 @@
 		</div>
 
 		<div class="markdown">
-			
-
-<h2 id="开始-创建机器人并获取token">开始-创建机器人并获取token</h2>
-
+			<h2 id="开始-创建机器人并获取token">开始-创建机器人并获取token</h2>
 <p>在telegram界面@BotFather发送指令/newbot并根据界面一步步创建bot最终获取token</p>
-
 <p>实现发送消息需要获取</p>
-
 <ul>
 <li>你的机器人token</li>
 <li>chat_id</li>
 <li>你要发送的消息</li>
 </ul>
-
 <p>其中chat_id可通过@userinfobot获取自己的id</p>
-
 <h2 id="获取telegram-api">获取telegram api</h2>
-
 <p>在这里使用github上的轮子 <strong><a href="https://github.com/go-telegram-bot-api/telegram-bot-api"> telegram-bot-api</a></strong></p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">go get -u github.com/go-telegram-bot-api/telegram-bot-api</code></pre></div>
-<h2 id="一个简单的go程序">一个简单的Go程序</h2>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">go get -u github.com/go-telegram-bot-api/telegram-bot-api
+</code></pre></div><h2 id="一个简单的go程序">一个简单的Go程序</h2>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#719e07">package</span> main
 
 <span style="color:#719e07">import</span> (
@@ -104,7 +97,8 @@
 	NewMessage <span style="color:#719e07">:=</span> tgbotapi.<span style="color:#268bd2">NewMessage</span>(chat_id,Text)
 	bot.<span style="color:#268bd2">Send</span>(NewMessage)
 	log.<span style="color:#268bd2">Printf</span>(<span style="color:#2aa198">&#34;AlreadySend -&gt; %s&#34;</span>, Text)
-}</code></pre></div>
+}
+</code></pre></div>
 		</div>
 
 		<div class="post-tags">

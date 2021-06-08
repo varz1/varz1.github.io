@@ -6,9 +6,10 @@
 	<meta property="og:title" content="Grub" />
 <meta property="og:description" content="win10更新导致debian双系统无法启动解决办法" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://varz1.github.io/posts/grub/" />
-<meta property="article:published_time" content="2021-04-29T18:28:59&#43;08:00"/>
-<meta property="article:modified_time" content="2021-04-29T18:28:59&#43;08:00"/>
+<meta property="og:url" content="https://varz1.github.io/posts/grub/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-04-29T18:28:59&#43;08:00" />
+<meta property="article:modified_time" content="2021-04-29T18:28:59&#43;08:00" />
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Grub"/>
 <meta name="twitter:description" content="win10更新导致debian双系统无法启动解决办法"/>
@@ -63,22 +64,14 @@
 		</div>
 
 		<div class="markdown">
-			
-
-<h1 id="win10更新导致debian双系统无法启动解决办法">win10更新导致debian双系统无法启动解决办法</h1>
-
+			<h1 id="win10更新导致debian双系统无法启动解决办法">win10更新导致debian双系统无法启动解决办法</h1>
 <h2 id="原因">原因</h2>
-
 <p>因为win10更新覆盖了Debian的grub所以丢失</p>
-
 <h2 id="解决">解决</h2>
-
 <h3 id="制作live-cd并进入">制作live-cd并进入</h3>
-
 <p>这里我制作的是debin的<a href="https://www.debian.org/CD/live/index.zh-cn.html">live-cd</a>，重启选择BIOS启动，进入livecd。</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">fdisk -l</code></pre></div>
-<p>找到自己的根目录分区以及windows的EFI分区这里我的根目录分区是/dev/nvme0n1p6，EFI分区是/dev/nvme0n1p5。</p>
-
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">fdisk -l
+</code></pre></div><p>找到自己的根目录分区以及windows的EFI分区这里我的根目录分区是/dev/nvme0n1p6，EFI分区是/dev/nvme0n1p5。</p>
 <h2 id="执行命令挂载分区重新安装grub">执行命令挂载分区重新安装grub</h2>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ mount /dev/nvme0n1p6 /mnt
 $ mount /dev/nvme0n1p5 /mnt/boot
@@ -88,8 +81,8 @@ $ mount --rbind /dev dev
 $ mount --rbind /run run
 $ chroot /mnt
 $ grub-install --target<span style="color:#719e07">=</span>x86_64-efi --efi-directory<span style="color:#719e07">=</span>/boot --bootloader-id<span style="color:#719e07">=</span>grub
-$ grub-mkconfig -o /boot/grub/grub.cfg</code></pre></div>
-<p>重启完成</p>
+$ grub-mkconfig -o /boot/grub/grub.cfg
+</code></pre></div><p>重启完成</p>
 
 		</div>
 
