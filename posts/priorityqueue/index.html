@@ -89,7 +89,7 @@
 <p>堆也可以用于求解 Kth Element 问题，得到了大小为 K 的最小堆之后，因为使用了大顶堆来实现，因此堆顶元素就是第 K 大的元素。</p>
 <p><em>参考来自：<a href="https://www.cnblogs.com/CarpenterLee/p/5488070.html">博客园</a> / <a href="http://www.cyc2018.xyz/%E7%AE%97%E6%B3%95/Leetcode%20%E9%A2%98%E8%A7%A3/Leetcode%20%E9%A2%98%E8%A7%A3%20-%20%E6%8E%92%E5%BA%8F.html#%E5%BF%AB%E9%80%9F%E9%80%89%E6%8B%A9">CSNOTES</a></em></p>
 <h2 id="2重写compareto方法">2.重写CompareTo方法</h2>
-<p>**例子：**排序办公室等级</p>
+<p><strong>例子：</strong>  排序办公室等级</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">Main</span> <span style="color:#719e07">{</span>
     <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span><span style="color:#719e07">(</span>String<span style="color:#719e07">[]</span> args<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
         Queue<span style="color:#719e07">&lt;</span>User<span style="color:#719e07">&gt;</span> q <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> PriorityQueue<span style="color:#719e07">&lt;&gt;(</span><span style="color:#719e07">new</span> UserComparator<span style="color:#719e07">());</span>
