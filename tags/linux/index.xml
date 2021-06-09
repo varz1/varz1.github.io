@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on : )</title>
+    <link>https://varz1.github.io/tags/linux/</link>
+    <description>Recent content in Linux on : )</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Copyright notice</copyright>
+    <lastBuildDate>Wed, 05 May 2021 19:38:07 +0800</lastBuildDate><atom:link href="https://varz1.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux常用命令</title>
+      <link>https://varz1.github.io/posts/linux/</link>
+      <pubDate>Wed, 05 May 2021 19:38:07 +0800</pubDate>
+      
+      <guid>https://varz1.github.io/posts/linux/</guid>
+      <description>Systemctl  启动服务：systemctl start vsftpd.service 关闭服务：systemctl stop vsftpd.service 重启服务：systemctl restart vsftpd.service 显示服务的状态：systemctl status vsftpd.service 在开机时启用服务：systemctl enable vsftpd.service 在开机时禁用服务：systemctl disable vsftpd.service 查看服务是否开机启动：systemctl is-enabled vsftpd.</description>
+    </item>
+    
+    <item>
+      <title>Grub</title>
+      <link>https://varz1.github.io/posts/grub/</link>
+      <pubDate>Thu, 29 Apr 2021 18:28:59 +0800</pubDate>
+      
+      <guid>https://varz1.github.io/posts/grub/</guid>
+      <description>win10更新导致debian双系统无法启动解决办法 原因 因为win10更新覆盖了Debian的grub所以丢失
+解决 制作live-cd并进入 这里我制作的是debin的live-cd，重启选择BIOS启动，进入livecd。
+fdisk -l 找到自己的根目录分区以及windows的EFI分区这里我的根目录分区是/dev/nvme0n1p6，EFI分区是/dev/nvme0n1p5。
+执行命令挂载分区重新安装grub $ mount /dev/nvme0n1p6 /mnt $ mount /dev/nvme0n1p5 /mnt/boot $ mount --rbind /proc proc $ mount --rbind /sys sys $ mount --rbind /dev dev $ mount --rbind /run run $ chroot /mnt $ grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub $ grub-mkconfig -o /boot/grub/grub.</description>
+    </item>
+    
+  </channel>
+</rss>
