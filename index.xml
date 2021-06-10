@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Copyright notice</copyright>
-    <lastBuildDate>Wed, 09 Jun 2021 21:49:00 +0800</lastBuildDate><atom:link href="https://varz1.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Jun 2021 19:00:11 +0800</lastBuildDate><atom:link href="https://varz1.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Leet Data Linklist</title>
+      <link>https://varz1.github.io/posts/leet-data-linklist/</link>
+      <pubDate>Thu, 10 Jun 2021 19:00:11 +0800</pubDate>
+      
+      <guid>https://varz1.github.io/posts/leet-data-linklist/</guid>
+      <description>leetcode数据结构-链表 1. 找出两个链表的交点 Intersection of Two Linked Lists (Easy)  Leetcode / 力扣
+例如以下示例中 A 和 B 两个链表相交于 c1：
+A: a1 → a2 ↘ c1 → c2 → c3 ↗ B: b1 → b2 → b3 但是不会出现以下相交的情况，因为每个节点只有一个 next 指针，也就只能有一个后继节点，而以下示例中节点 c 有两个后继节点。</description>
+    </item>
+    
     <item>
       <title>leetcode算法-排序</title>
       <link>https://varz1.github.io/posts/leet2-sort/</link>
