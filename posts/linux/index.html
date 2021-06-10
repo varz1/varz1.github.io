@@ -208,7 +208,37 @@ Query OK, <span style="color:#2aa198">0</span> rows <span style="color:#268bd2">
 </li>
 </ul>
 <p><em>参考：<a href="https://www.runoob.com/linux/linux-vim.html">菜鸟教程</a></em></p>
-
+<h2 id="linux系统操作">Linux系统操作</h2>
+<h3 id="1find查找指定指定目录或文件">1.find：查找指定指定目录或文件</h3>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">find -name 文件名;按照指定名称查找在当前目录下查找文件
+find / -name 文件名按照指定名称全局查找文件
+find -name <span style="color:#2aa198">&#39;*文件名&#39;</span> ;任意前缀加上文件名在当前目录下查找文件
+find / -name <span style="color:#2aa198">&#39;*文件名*&#39;</span> ;全局进行模糊查询带文件名的文件 
+</code></pre></div><h3 id="2压缩文件">2.压缩文件</h3>
+<h4 id="21tar">2.1.tar</h4>
+<ul>
+<li>
+<p>命令选项：</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">-z<span style="color:#719e07">(</span>gzip<span style="color:#719e07">)</span>      用gzip来压缩/解压缩文件
+-j<span style="color:#719e07">(</span>bzip2<span style="color:#719e07">)</span>     用bzip2来压缩/解压缩文件
+-v<span style="color:#719e07">(</span>verbose<span style="color:#719e07">)</span>   详细报告tar处理的文件信息
+-c<span style="color:#719e07">(</span>create<span style="color:#719e07">)</span>    创建新的档案文件
+-x<span style="color:#719e07">(</span>extract<span style="color:#719e07">)</span>   解压缩文件或目录
+-f<span style="color:#719e07">(</span>file<span style="color:#719e07">)</span>      使用档案文件或设备，这个选项通常是必选的。
+</code></pre></div></li>
+<li>
+<p>命令举例</p>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">压缩：tar -zvcf dir.tar.gz dir
+解压：tar -xvf dir.tar.gz
+</code></pre></div><h4 id="22zip">2.2.zip</h4>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">压缩：zip dir.zip dir
+解压：zip dir.zip
+</code></pre></div><h4 id="23rar">2.3.rar</h4>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">压缩：rar a dir.rar dir
+解压：unrar e dir.rar //直接解压文件到当前目录
+</code></pre></div>
 		</div>
 
 		<div class="post-tags">
