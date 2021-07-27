@@ -6,10 +6,9 @@
 	<meta property="og:title" content="Css" />
 <meta property="og:description" content="css学习日记" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://varz1.github.io/posts/css/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-03-07T14:36:10&#43;08:00" />
-<meta property="article:modified_time" content="2021-03-07T14:36:10&#43;08:00" />
-
+<meta property="og:url" content="https://varz1.github.io/posts/css/" />
+<meta property="article:published_time" content="2021-03-07T14:36:10&#43;08:00"/>
+<meta property="article:modified_time" content="2021-03-07T14:36:10&#43;08:00"/>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Css"/>
 <meta name="twitter:description" content="css学习日记"/>
@@ -68,15 +67,18 @@
 		</div>
 
 		<div class="markdown">
-			<blockquote>
+			
+
+<blockquote>
 <p>编辑于2021-3-6</p>
 </blockquote>
+
 <h2 id="简介">简介</h2>
+
 <h3 id="css引入方式">css引入方式</h3>
-<p>实际开发通常使用外部样式表在此为方便说明使用内部</p>
-<ul>
-<li>外部样式表</li>
-</ul>
+
+<p>实际开发通常使用外部样式表在此为方便说明使用内部
+- 外部样式表</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#719e07">&lt;!</span><span style="color:#268bd2">DOCTYPE</span> <span style="color:#268bd2">html</span><span style="color:#719e07">&gt;</span>
 <span style="color:#719e07">&lt;</span><span style="color:#268bd2">html</span><span style="color:#719e07">&gt;</span>
 <span style="color:#719e07">&lt;</span><span style="color:#268bd2">head</span><span style="color:#719e07">&gt;</span>
@@ -86,77 +88,82 @@
 <span style="color:#719e07">&lt;/</span><span style="color:#268bd2">head</span><span style="color:#719e07">&gt;</span>
 <span style="color:#719e07">&lt;</span><span style="color:#268bd2">body</span><span style="color:#719e07">&gt;</span>
 <span style="color:#719e07">&lt;/</span><span style="color:#268bd2">body</span><span style="color:#719e07">&gt;</span>
-<span style="color:#719e07">&lt;/</span><span style="color:#268bd2">html</span><span style="color:#719e07">&gt;</span>
-</code></pre></div><ul>
-<li>内部样式表</li>
-</ul>
+<span style="color:#719e07">&lt;/</span><span style="color:#268bd2">html</span><span style="color:#719e07">&gt;</span></code></pre></div>
+<ul>
+<li><p>内部样式表</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#719e07">&lt;!</span><span style="color:#268bd2">DOCTYPE</span> <span style="color:#268bd2">html</span><span style="color:#719e07">&gt;</span>
 <span style="color:#719e07">&lt;</span><span style="color:#268bd2">html</span><span style="color:#719e07">&gt;</span>
 <span style="color:#719e07">&lt;</span><span style="color:#268bd2">head</span><span style="color:#719e07">&gt;</span>
-    <span style="color:#719e07">&lt;</span><span style="color:#268bd2">meta</span> <span style="color:#268bd2">charset</span><span style="color:#719e07">=</span><span style="color:#2aa198">&#34;utf-8&#34;</span><span style="color:#719e07">/&gt;</span>
-    <span style="color:#719e07">&lt;</span><span style="color:#268bd2">title</span><span style="color:#719e07">&gt;&lt;/</span><span style="color:#268bd2">title</span><span style="color:#719e07">&gt;</span>
-    <span style="color:#719e07">&lt;</span><span style="color:#268bd2">style</span> <span style="color:#268bd2">type</span><span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span><span style="color:#719e07">&gt;</span>
-        <span style="color:#268bd2">div</span>{<span style="color:#719e07">color</span>:<span style="color:#cb4b16">red</span>;}
-    <span style="color:#719e07">&lt;/</span><span style="color:#268bd2">style</span><span style="color:#719e07">&gt;</span>
+<span style="color:#719e07">&lt;</span><span style="color:#268bd2">meta</span> <span style="color:#268bd2">charset</span><span style="color:#719e07">=</span><span style="color:#2aa198">&#34;utf-8&#34;</span><span style="color:#719e07">/&gt;</span>
+<span style="color:#719e07">&lt;</span><span style="color:#268bd2">title</span><span style="color:#719e07">&gt;&lt;/</span><span style="color:#268bd2">title</span><span style="color:#719e07">&gt;</span>
+<span style="color:#719e07">&lt;</span><span style="color:#268bd2">style</span> <span style="color:#268bd2">type</span><span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span><span style="color:#719e07">&gt;</span>
+    <span style="color:#268bd2">div</span>{<span style="color:#719e07">color</span>:<span style="color:#cb4b16">red</span>;}
+<span style="color:#719e07">&lt;/</span><span style="color:#268bd2">style</span><span style="color:#719e07">&gt;</span>
 <span style="color:#719e07">&lt;/</span><span style="color:#268bd2">head</span><span style="color:#719e07">&gt;</span>
 <span style="color:#719e07">&lt;</span><span style="color:#268bd2">body</span><span style="color:#719e07">&gt;</span>
-    <span style="color:#719e07">&lt;</span><span style="color:#268bd2">div</span><span style="color:#719e07">&gt;</span><span style="color:#268bd2">绿叶</span>，<span style="color:#268bd2">给你初恋般的感觉</span>。<span style="color:#719e07">&lt;/</span><span style="color:#268bd2">div</span><span style="color:#719e07">&gt;</span>
-    <span style="color:#719e07">&lt;</span><span style="color:#268bd2">div</span><span style="color:#719e07">&gt;</span><span style="color:#268bd2">绿叶</span>，<span style="color:#268bd2">给你初恋般的感觉</span>。<span style="color:#719e07">&lt;/</span><span style="color:#268bd2">div</span><span style="color:#719e07">&gt;</span>
-    <span style="color:#719e07">&lt;</span><span style="color:#268bd2">div</span><span style="color:#719e07">&gt;</span><span style="color:#268bd2">绿叶</span>，<span style="color:#268bd2">给你初恋般的感觉</span>。<span style="color:#719e07">&lt;/</span><span style="color:#268bd2">div</span><span style="color:#719e07">&gt;</span>
+<span style="color:#719e07">&lt;</span><span style="color:#268bd2">div</span><span style="color:#719e07">&gt;</span><span style="color:#268bd2">绿叶</span>，<span style="color:#268bd2">给你初恋般的感觉</span>。<span style="color:#719e07">&lt;/</span><span style="color:#268bd2">div</span><span style="color:#719e07">&gt;</span>
+<span style="color:#719e07">&lt;</span><span style="color:#268bd2">div</span><span style="color:#719e07">&gt;</span><span style="color:#268bd2">绿叶</span>，<span style="color:#268bd2">给你初恋般的感觉</span>。<span style="color:#719e07">&lt;/</span><span style="color:#268bd2">div</span><span style="color:#719e07">&gt;</span>
+<span style="color:#719e07">&lt;</span><span style="color:#268bd2">div</span><span style="color:#719e07">&gt;</span><span style="color:#268bd2">绿叶</span>，<span style="color:#268bd2">给你初恋般的感觉</span>。<span style="color:#719e07">&lt;/</span><span style="color:#268bd2">div</span><span style="color:#719e07">&gt;</span>
 <span style="color:#719e07">&lt;/</span><span style="color:#268bd2">body</span><span style="color:#719e07">&gt;</span>
-<span style="color:#719e07">&lt;/</span><span style="color:#268bd2">html</span><span style="color:#719e07">&gt;</span>
-</code></pre></div><ul>
-<li>行内样式表</li>
-</ul>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#719e07">&lt;!</span><span style="color:#268bd2">DOCTYPE</span> <span style="color:#268bd2">html</span><span style="color:#719e07">&gt;</span>
-<span style="color:#719e07">&lt;</span><span style="color:#268bd2">html</span><span style="color:#719e07">&gt;</span>
-<span style="color:#719e07">&lt;</span><span style="color:#268bd2">head</span><span style="color:#719e07">&gt;</span>
-    <span style="color:#719e07">&lt;</span><span style="color:#268bd2">meta</span> <span style="color:#268bd2">charset</span><span style="color:#719e07">=</span><span style="color:#2aa198">&#34;utf-8&#34;</span><span style="color:#719e07">/&gt;</span>
-    <span style="color:#719e07">&lt;</span><span style="color:#268bd2">title</span><span style="color:#719e07">&gt;&lt;/</span><span style="color:#268bd2">title</span><span style="color:#719e07">&gt;</span>
-<span style="color:#719e07">&lt;/</span><span style="color:#268bd2">head</span><span style="color:#719e07">&gt;</span>
-<span style="color:#719e07">&lt;</span><span style="color:#268bd2">body</span><span style="color:#719e07">&gt;</span>
-    <span style="color:#719e07">&lt;</span><span style="color:#268bd2">div</span> <span style="color:#268bd2">style</span><span style="color:#719e07">=</span><span style="color:#2aa198">&#34;color:red;&#34;</span><span style="color:#719e07">&gt;</span><span style="color:#268bd2">绿叶</span>，<span style="color:#268bd2">给你初恋般的感觉</span>。<span style="color:#719e07">&lt;/</span><span style="color:#268bd2">div</span><span style="color:#719e07">&gt;</span>
-    <span style="color:#719e07">&lt;</span><span style="color:#268bd2">div</span> <span style="color:#268bd2">style</span><span style="color:#719e07">=</span><span style="color:#2aa198">&#34;color:red;&#34;</span><span style="color:#719e07">&gt;</span><span style="color:#268bd2">绿叶</span>，<span style="color:#268bd2">给你初恋般的感觉</span>。<span style="color:#719e07">&lt;/</span><span style="color:#268bd2">div</span><span style="color:#719e07">&gt;</span>
-    <span style="color:#719e07">&lt;</span><span style="color:#268bd2">div</span> <span style="color:#268bd2">style</span><span style="color:#719e07">=</span><span style="color:#2aa198">&#34;color:red;&#34;</span><span style="color:#719e07">&gt;</span><span style="color:#268bd2">绿叶</span>，<span style="color:#268bd2">给你初恋般的感觉</span>。<span style="color:#719e07">&lt;/</span><span style="color:#268bd2">div</span><span style="color:#719e07">&gt;</span>
-<span style="color:#719e07">&lt;/</span><span style="color:#268bd2">body</span><span style="color:#719e07">&gt;</span>
-<span style="color:#719e07">&lt;/</span><span style="color:#268bd2">html</span><span style="color:#719e07">&gt;</span>
-</code></pre></div><h2 id="css选择器">CSS选择器</h2>
-<h3 id="元素的id和class">元素的id和class</h3>
-<p>在HTML中，id和class是元素最基本的两个属性。一般情况下，id和class都是用来选择元素，以便进行CSS操作或者JavaScript操作</p>
+<span style="color:#719e07">&lt;/</span><span style="color:#268bd2">html</span><span style="color:#719e07">&gt;</span></code></pre></div>
 <ul>
-<li>id属性
-在同一个页面中，是不允许出现两个相同id的元素。不过在不同页面中，是可以出现两个id相同的元素</li>
-</ul>
+<li>行内样式表
+<code>css
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;/&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div style=&quot;color:red;&quot;&gt;绿叶，给你初恋般的感觉。&lt;/div&gt;
+&lt;div style=&quot;color:red;&quot;&gt;绿叶，给你初恋般的感觉。&lt;/div&gt;
+&lt;div style=&quot;color:red;&quot;&gt;绿叶，给你初恋般的感觉。&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code>
+## CSS选择器
+### 元素的id和class
+在HTML中，id和class是元素最基本的两个属性。一般情况下，id和class都是用来选择元素，以便进行CSS操作或者JavaScript操作</li>
+</ul></li>
+
+<li><p>id属性
+在同一个页面中，是不允许出现两个相同id的元素。不过在不同页面中，是可以出现两个id相同的元素</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#719e07">&lt;</span><span style="color:#268bd2">body</span><span style="color:#719e07">&gt;</span>
-    <span style="color:#719e07">&lt;</span><span style="color:#268bd2">div</span> <span style="color:#268bd2">id</span><span style="color:#719e07">=</span><span style="color:#2aa198">&#34;content&#34;</span><span style="color:#719e07">&gt;</span><span style="color:#268bd2">存在即合理</span><span style="color:#719e07">&lt;/</span><span style="color:#268bd2">div</span><span style="color:#719e07">&gt;</span>
-    <span style="color:#719e07">&lt;</span><span style="color:#268bd2">p</span> <span style="color:#268bd2">id</span><span style="color:#719e07">=</span><span style="color:#2aa198">&#34;content&#34;</span><span style="color:#719e07">&gt;</span><span style="color:#268bd2">存在即合理</span><span style="color:#719e07">&lt;/</span><span style="color:#268bd2">p</span><span style="color:#719e07">&gt;</span>
-<span style="color:#719e07">&lt;/</span><span style="color:#268bd2">body</span><span style="color:#719e07">&gt;</span>
-</code></pre></div><p>错误、不允许出现相同id</p>
-<ul>
-<li>class属性
-为同一个页面的相同元素或者不同元素设置相同的class，然后使得相同class的元素具有相同的CSS样式</li>
-</ul>
+<span style="color:#719e07">&lt;</span><span style="color:#268bd2">div</span> <span style="color:#268bd2">id</span><span style="color:#719e07">=</span><span style="color:#2aa198">&#34;content&#34;</span><span style="color:#719e07">&gt;</span><span style="color:#268bd2">存在即合理</span><span style="color:#719e07">&lt;/</span><span style="color:#268bd2">div</span><span style="color:#719e07">&gt;</span>
+<span style="color:#719e07">&lt;</span><span style="color:#268bd2">p</span> <span style="color:#268bd2">id</span><span style="color:#719e07">=</span><span style="color:#2aa198">&#34;content&#34;</span><span style="color:#719e07">&gt;</span><span style="color:#268bd2">存在即合理</span><span style="color:#719e07">&lt;/</span><span style="color:#268bd2">p</span><span style="color:#719e07">&gt;</span>
+<span style="color:#719e07">&lt;/</span><span style="color:#268bd2">body</span><span style="color:#719e07">&gt;</span></code></pre></div>
+<p>错误、不允许出现相同id
+- class属性
+为同一个页面的相同元素或者不同元素设置相同的class，然后使得相同class的元素具有相同的CSS样式</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#719e07">&lt;</span><span style="color:#268bd2">body</span><span style="color:#719e07">&gt;</span>
-    <span style="color:#719e07">&lt;</span><span style="color:#268bd2">div</span> <span style="color:#268bd2">class</span><span style="color:#719e07">=</span><span style="color:#2aa198">&#34;content&#34;</span><span style="color:#719e07">&gt;</span><span style="color:#268bd2">存在即合理</span><span style="color:#719e07">&lt;/</span><span style="color:#268bd2">div</span><span style="color:#719e07">&gt;</span>
-    <span style="color:#719e07">&lt;</span><span style="color:#268bd2">p</span> <span style="color:#268bd2">class</span><span style="color:#719e07">=</span><span style="color:#2aa198">&#34;content&#34;</span><span style="color:#719e07">&gt;</span><span style="color:#268bd2">存在即合理</span><span style="color:#719e07">&lt;/</span><span style="color:#268bd2">p</span><span style="color:#719e07">&gt;</span>
-<span style="color:#719e07">&lt;/</span><span style="color:#268bd2">body</span><span style="color:#719e07">&gt;</span>
-</code></pre></div><p>正确、可以出现相同class</p>
-<h3 id="选择器类型">选择器类型</h3>
-<ul>
-<li>元素选择器</li>
-<li>id选择器</li>
-<li>class选择器</li>
-<li>后代选择器</li>
-<li>群组选择器</li>
+<span style="color:#719e07">&lt;</span><span style="color:#268bd2">div</span> <span style="color:#268bd2">class</span><span style="color:#719e07">=</span><span style="color:#2aa198">&#34;content&#34;</span><span style="color:#719e07">&gt;</span><span style="color:#268bd2">存在即合理</span><span style="color:#719e07">&lt;/</span><span style="color:#268bd2">div</span><span style="color:#719e07">&gt;</span>
+<span style="color:#719e07">&lt;</span><span style="color:#268bd2">p</span> <span style="color:#268bd2">class</span><span style="color:#719e07">=</span><span style="color:#2aa198">&#34;content&#34;</span><span style="color:#719e07">&gt;</span><span style="color:#268bd2">存在即合理</span><span style="color:#719e07">&lt;/</span><span style="color:#268bd2">p</span><span style="color:#719e07">&gt;</span>
+<span style="color:#719e07">&lt;/</span><span style="color:#268bd2">body</span><span style="color:#719e07">&gt;</span></code></pre></div>
+<p>正确、可以出现相同class</p>
+
+<h3 id="选择器类型">选择器类型</h3></li>
+
+<li><p>元素选择器</p></li>
+
+<li><p>id选择器</p></li>
+
+<li><p>class选择器</p></li>
+
+<li><p>后代选择器</p></li>
+
+<li><p>群组选择器</p></li>
 </ul>
+
 <p>选择器格式如下</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#268bd2">选择器</span>
 {
     属性1 : 取值1;
     ……
     属性n : 取值n;
-}
-</code></pre></div><h4 id="元素选择器">元素选择器</h4>
+}</code></pre></div>
+<h4 id="元素选择器">元素选择器</h4>
+
 <p>选中相同元素
 例：</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#719e07">&lt;!DOCTYPE html&gt;</span>
@@ -174,9 +181,11 @@
     &lt;<span style="color:#268bd2">span</span>&gt;绿叶学习网&lt;/<span style="color:#268bd2">span</span>&gt;
     &lt;<span style="color:#268bd2">div</span>&gt;绿叶学习网&lt;/<span style="color:#268bd2">div</span>&gt;
 &lt;/<span style="color:#268bd2">body</span>&gt;
-&lt;/<span style="color:#268bd2">html</span>&gt;
-</code></pre></div><p>div{color:red;}表示把页面中所有的div元素选中，然后定义它们文本颜色为红色</p>
+&lt;/<span style="color:#268bd2">html</span>&gt;</code></pre></div>
+<p>div{color:red;}表示把页面中所有的div元素选中，然后定义它们文本颜色为红色</p>
+
 <h4 id="id选择器">id选择器</h4>
+
 <p>例：</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#719e07">&lt;!DOCTYPE html&gt;</span>
 &lt;<span style="color:#268bd2">html</span>&gt;
@@ -192,8 +201,9 @@
 &lt;<span style="color:#268bd2">div</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;color1&#34;</span>&gt;wd blog&lt;/<span style="color:#268bd2">div</span>&gt;
 &lt;<span style="color:#268bd2">div</span>&gt;sss&lt;/<span style="color:#268bd2">div</span>&gt;
 &lt;/<span style="color:#268bd2">body</span>&gt;
-&lt;/<span style="color:#268bd2">html</span>&gt;
-</code></pre></div><p>选中的id调整为相应颜色</p>
+&lt;/<span style="color:#268bd2">html</span>&gt;</code></pre></div>
+<p>选中的id调整为相应颜色</p>
+
 <h4 id="class选择器">class选择器</h4>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#719e07">&lt;!DOCTYPE html&gt;</span> 
 &lt;<span style="color:#268bd2">html</span>&gt;
@@ -209,8 +219,9 @@
     &lt;<span style="color:#268bd2">div</span> class<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;lv&#34;</span>&gt;绿叶学习网&lt;/<span style="color:#268bd2">div</span>&gt;
     &lt;<span style="color:#268bd2">div</span> class<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;lv&#34;</span>&gt;绿叶学习网&lt;/<span style="color:#268bd2">div</span>&gt;
 &lt;/<span style="color:#268bd2">body</span>&gt;
-&lt;/<span style="color:#268bd2">html</span>&gt;
-</code></pre></div><p>需注意class名字前面加上.英文句号；class方便为多种元素定义样式</p>
+&lt;/<span style="color:#268bd2">html</span>&gt;</code></pre></div>
+<p>需注意class名字前面加上.英文句号；class方便为多种元素定义样式</p>
+
 <h4 id="后代选择器">后代选择器</h4>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#719e07">&lt;!DOCTYPE html&gt;</span>
 &lt;<span style="color:#268bd2">head</span>&gt;
@@ -231,9 +242,10 @@
         &lt;<span style="color:#268bd2">p</span>&gt;:)&lt;/<span style="color:#268bd2">p</span>&gt;
         &lt;<span style="color:#268bd2">span</span>&gt;:(&lt;/<span style="color:#268bd2">span</span>&gt;
     &lt;/<span style="color:#268bd2">div</span>&gt;
-&lt;/<span style="color:#268bd2">body</span>&gt;
-</code></pre></div><p>father1 div {color:red;}表示选择“id为father1的元素”下的所有div元素，然后定义它们的文本颜色为颜色1
+&lt;/<span style="color:#268bd2">body</span>&gt;</code></pre></div>
+<p>father1 div {color:red;}表示选择“id为father1的元素”下的所有div元素，然后定义它们的文本颜色为颜色1
 father2 span{ color:blue;}表示选择“id为father2的元素”下的所有span元素，然后定义它们文本颜色为颜色2</p>
+
 <h4 id="群组选择器">群组选择器</h4>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#719e07">&lt;!DOCTYPE html&gt;</span>
 &lt;<span style="color:#268bd2">html</span>&gt;
@@ -251,8 +263,9 @@ father2 span{ color:blue;}表示选择“id为father2的元素”下的所有spa
     &lt;<span style="color:#268bd2">p</span> class<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;lv&#34;</span>&gt;绿叶学习网&lt;/<span style="color:#268bd2">p</span>&gt;
     &lt;<span style="color:#268bd2">span</span>&gt;绿叶学习网&lt;/<span style="color:#268bd2">span</span>&gt;
 &lt;/<span style="color:#268bd2">body</span>&gt;
-&lt;/<span style="color:#268bd2">html</span>&gt;
-</code></pre></div><h4 id="习题">习题</h4>
+&lt;/<span style="color:#268bd2">html</span>&gt;</code></pre></div>
+<h4 id="习题">习题</h4>
+
 <p>下面有一段代码，如果我们想要选中所有的div和p，请用至少两种不同的选择器方式来实现，并且选出最简单的一种。</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#719e07">&lt;!DOCTYPE html&gt;</span>
 &lt;<span style="color:#268bd2">html</span>&gt;
@@ -267,9 +280,11 @@ father2 span{ color:blue;}表示选择“id为father2的元素”下的所有spa
     &lt;<span style="color:#268bd2">strong</span>&gt;&lt;/<span style="color:#268bd2">strong</span>&gt;
     &lt;<span style="color:#268bd2">span</span>&gt;&lt;/<span style="color:#268bd2">span</span>&gt;
 &lt;/<span style="color:#268bd2">body</span>&gt;
-&lt;/<span style="color:#268bd2">html</span>&gt;
-</code></pre></div><p>答案：可使用后代选择器或者群组选择器</p>
+&lt;/<span style="color:#268bd2">html</span>&gt;</code></pre></div>
+<p>答案：可使用后代选择器或者群组选择器</p>
+
 <p>后代选择器：</p>
+
 <p>需要注意全部使用div隔开所选后代id</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#719e07">&lt;!DOCTYPE html&gt;</span>
 &lt;<span style="color:#268bd2">html</span>&gt;
@@ -297,8 +312,8 @@ father2 span{ color:blue;}表示选择“id为father2的元素”下的所有spa
 &lt;<span style="color:#268bd2">strong</span>&gt;&lt;/<span style="color:#268bd2">strong</span>&gt;
 &lt;<span style="color:#268bd2">span</span>&gt;&lt;/<span style="color:#268bd2">span</span>&gt;
 &lt;/<span style="color:#268bd2">body</span>&gt;
-&lt;/<span style="color:#268bd2">html</span>&gt;
-</code></pre></div><p>群组选择器：</p>
+&lt;/<span style="color:#268bd2">html</span>&gt;</code></pre></div>
+<p>群组选择器：</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#719e07">&lt;!DOCTYPE html&gt;</span>
 &lt;<span style="color:#268bd2">html</span>&gt;
 &lt;<span style="color:#268bd2">head</span>&gt;
@@ -315,11 +330,13 @@ father2 span{ color:blue;}表示选择“id为father2的元素”下的所有spa
 &lt;<span style="color:#268bd2">strong</span>&gt;&lt;/<span style="color:#268bd2">strong</span>&gt;
 &lt;<span style="color:#268bd2">span</span>&gt;&lt;/<span style="color:#268bd2">span</span>&gt;
 &lt;/<span style="color:#268bd2">body</span>&gt;
-&lt;/<span style="color:#268bd2">html</span>&gt;
-</code></pre></div><blockquote>
+&lt;/<span style="color:#268bd2">html</span>&gt;</code></pre></div>
+<blockquote>
 <p>编辑于3-7</p>
 </blockquote>
+
 <h2 id="字体样式">字体样式</h2>
+
 <table>
 <thead>
 <tr>
@@ -327,37 +344,44 @@ father2 span{ color:blue;}表示选择“id为father2的元素”下的所有spa
 <th>说明</th>
 </tr>
 </thead>
+
 <tbody>
 <tr>
 <td>font-family</td>
 <td>字体类型</td>
 </tr>
+
 <tr>
 <td>font-size</td>
 <td>字体大小</td>
 </tr>
+
 <tr>
 <td>font-weight</td>
 <td>字体粗细</td>
 </tr>
+
 <tr>
 <td>font-style</td>
 <td>字体风格</td>
 </tr>
+
 <tr>
 <td>color</td>
 <td>字体颜色</td>
 </tr>
 </tbody>
 </table>
-<h3 id="字体类型font-family">字体类型：font-family</h3>
+
+<h3 id="字体类型-font-family">字体类型：font-family</h3>
+
 <p>默认为宋体 设置语法</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt; 
 #div1{<span style="color:#719e07">font-family</span>: Arial;}
         #div2{<span style="color:#719e07">font-family</span>: <span style="color:#2aa198">&#34;Times New Roman&#34;</span>;}
         #div3{<span style="color:#719e07">font-family</span>: <span style="color:#2aa198">&#34;微软雅黑&#34;</span>;}
-    &lt;/<span style="color:#268bd2">style</span>&gt;
-</code></pre></div><p>例子：</p>
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<p>例子：</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#719e07">&lt;!DOCTYPE html&gt;</span>
 &lt;<span style="color:#268bd2">html</span>&gt;
 &lt;<span style="color:#268bd2">head</span>&gt;
@@ -374,8 +398,8 @@ father2 span{ color:blue;}表示选择“id为father2的元素”下的所有spa
     &lt;<span style="color:#268bd2">div</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;div2&#34;</span>&gt;Times New Roman&lt;/<span style="color:#268bd2">div</span>&gt;
     &lt;<span style="color:#268bd2">div</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;div3&#34;</span>&gt;微软雅黑&lt;/<span style="color:#268bd2">div</span>&gt;
 &lt;/<span style="color:#268bd2">body</span>&gt;
-&lt;/<span style="color:#268bd2">html</span>&gt;
-</code></pre></div><p>一个实践：</p>
+&lt;/<span style="color:#268bd2">html</span>&gt;</code></pre></div>
+<p>一个实践：</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#719e07">&lt;!DOCTYPE html&gt;</span>
 &lt;<span style="color:#268bd2">html</span>&gt;
 &lt;<span style="color:#268bd2">head</span>&gt;
@@ -392,17 +416,20 @@ father2 span{ color:blue;}表示选择“id为father2的元素”下的所有spa
     &lt;<span style="color:#268bd2">div</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;font&#34;</span>&gt;mononoki&lt;/<span style="color:#268bd2">div</span>&gt;
     &lt;/<span style="color:#268bd2">div</span>&gt;
 &lt;/<span style="color:#268bd2">body</span>&gt;
-&lt;/<span style="color:#268bd2">html</span>&gt;
-</code></pre></div><p>对于font-family属性，如果字体类型只有一个英文单词，则不需要加上双引号；如果字体类型是多个英文单词或者中文的，则需要加上双引号。注意，这里的双引号是英文双引号，而不是中文双引号。</p>
-<h3 id="字体大小font-size">字体大小：font-size</h3>
+&lt;/<span style="color:#268bd2">html</span>&gt;</code></pre></div>
+<p>对于font-family属性，如果字体类型只有一个英文单词，则不需要加上双引号；如果字体类型是多个英文单词或者中文的，则需要加上双引号。注意，这里的双引号是英文双引号，而不是中文双引号。</p>
+
+<h3 id="字体大小-font-size">字体大小：font-size</h3>
+
 <p>通常采用px方式设置而不是关键字</p>
+
 <p>设置方式：</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
         #p1 {<span style="color:#719e07">font-size</span>: <span style="color:#2aa198">10</span><span style="color:#dc322f">px</span>;}
         #p2 {<span style="color:#719e07">font-size</span>: <span style="color:#2aa198">15</span><span style="color:#dc322f">px</span>;}
         #p3 {<span style="color:#719e07">font-size</span>: <span style="color:#2aa198">20</span><span style="color:#dc322f">px</span>;}
-    &lt;/<span style="color:#268bd2">style</span>&gt;
-</code></pre></div><p>一个例子：</p>
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<p>一个例子：</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#719e07">&lt;!DOCTYPE html&gt;</span>
 &lt;<span style="color:#268bd2">html</span>&gt;
 &lt;<span style="color:#268bd2">head</span>&gt;
@@ -419,17 +446,20 @@ father2 span{ color:blue;}表示选择“id为father2的元素”下的所有spa
     &lt;<span style="color:#268bd2">p</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;p2&#34;</span>&gt;字体大小为15px&lt;/<span style="color:#268bd2">p</span>&gt;
     &lt;<span style="color:#268bd2">p</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;p3&#34;</span>&gt;字体大小为20px&lt;/<span style="color:#268bd2">p</span>&gt;
 &lt;/<span style="color:#268bd2">body</span>&gt;
-&lt;/<span style="color:#268bd2">html</span>&gt;
-</code></pre></div><h3 id="字体粗细font-weight">字体粗细：font-weight</h3>
+&lt;/<span style="color:#268bd2">html</span>&gt;</code></pre></div>
+<h3 id="字体粗细-font-weight">字体粗细：font-weight</h3>
+
 <p>取值方式有关键字和100-900的数值，实际开发通常只会使用到bold</p>
+
 <p>设置方式</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
         #p1{<span style="color:#719e07">font-weight</span>:<span style="color:#cb4b16">lighter</span>;}
         #p2{<span style="color:#719e07">font-weight</span>:<span style="color:#cb4b16">normal</span>;}
         #p3{<span style="color:#719e07">font-weight</span>:<span style="color:#cb4b16">bold</span>;}
         #p4{<span style="color:#719e07">font-weight</span>:<span style="color:#cb4b16">bolder</span>;}
-    &lt;/<span style="color:#268bd2">style</span>&gt;
-</code></pre></div><h3 id="字体风格font-style">字体风格：font-style</h3>
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<h3 id="字体风格-font-style">字体风格：font-style</h3>
+
 <table>
 <thead>
 <tr>
@@ -437,29 +467,35 @@ father2 span{ color:blue;}表示选择“id为father2的元素”下的所有spa
 <th>说明</th>
 </tr>
 </thead>
+
 <tbody>
 <tr>
 <td>normal</td>
 <td>正常</td>
 </tr>
+
 <tr>
 <td>italic</td>
 <td>斜体</td>
 </tr>
+
 <tr>
 <td>oblique</td>
 <td>斜体</td>
 </tr>
 </tbody>
 </table>
+
 <p>设置方式</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
         #p1{<span style="color:#719e07">font-style</span>:<span style="color:#cb4b16">normal</span>;}
         #p2{<span style="color:#719e07">font-style</span>:<span style="color:#cb4b16">italic</span>;}
         #p3{<span style="color:#719e07">font-style</span>:<span style="color:#cb4b16">oblique</span>;}
-    &lt;/<span style="color:#268bd2">style</span>&gt;
-</code></pre></div><h3 id="字体颜色color">字体颜色：color</h3>
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<h3 id="字体颜色-color">字体颜色：color</h3>
+
 <p>取值方式：</p>
+
 <ul>
 <li>关键字</li>
 </ul>
@@ -467,23 +503,24 @@ father2 span{ color:blue;}表示选择“id为father2的元素”下的所有spa
         #p1{<span style="color:#719e07">color</span>:<span style="color:#cb4b16">gray</span>;}
         #p2{<span style="color:#719e07">color</span>:<span style="color:#cb4b16">orange</span>;}
         #p3{<span style="color:#719e07">color</span>:<span style="color:#cb4b16">red</span>;}
-    &lt;/<span style="color:#268bd2">style</span>&gt;
-</code></pre></div><ul>
-<li>
-<p>16进制RGB值</p>
-<p>:对于16进制颜色值，有两个我们需要知道的：#000000是黑色，#FFFFFF是白色。</p>
-</li>
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<ul>
+<li>16进制RGB值</li>
 </ul>
+
+<p>:对于16进制颜色值，有两个我们需要知道的：#000000是黑色，#FFFFFF是白色。</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
         #p1{<span style="color:#719e07">color</span>: <span style="color:#2aa198">#03FCA1</span>;}
         #p2{<span style="color:#719e07">color</span>: <span style="color:#2aa198">#048C02</span>;}
         #p3{<span style="color:#719e07">color</span>: <span style="color:#2aa198">#CE0592</span>;}
-    &lt;/<span style="color:#268bd2">style</span>&gt;
-</code></pre></div><h3 id="css注释">CSS注释</h3>
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<h3 id="css注释">CSS注释</h3>
+
 <ul>
 <li>css:使用/* &hellip; */</li>
-<li>html使用<!-- raw HTML omitted --></li>
+<li>html使用<!--...--></li>
 </ul>
+
 <p>一个例子：</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#719e07">&lt;!DOCTYPE html&gt;</span>
 &lt;<span style="color:#268bd2">html</span>&gt;
@@ -511,10 +548,13 @@ father2 span{ color:blue;}表示选择“id为father2的元素”下的所有spa
     &lt;<span style="color:#268bd2">p</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;p2&#34;</span>&gt;CSS控制网页的外观&lt;/<span style="color:#268bd2">p</span>&gt;
     &lt;<span style="color:#268bd2">p</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;p3&#34;</span>&gt;JavaScript控制网页的行为&lt;/<span style="color:#268bd2">p</span>&gt;
 &lt;/<span style="color:#268bd2">body</span>&gt;
-&lt;/<span style="color:#268bd2">html</span>&gt;
-</code></pre></div><p>小技巧：浏览器先解析上一个color后解析下一个color属性所以最终color是blue</p>
+&lt;/<span style="color:#268bd2">html</span>&gt;</code></pre></div>
+<p>小技巧：浏览器先解析上一个color后解析下一个color属性所以最终color是blue</p>
+
 <h3 id="习题-1">习题</h3>
+
 <p>1、为下面这段文字定义字体样式，要求字体类型指定多种、大小为14px、粗细为粗体、颜色为蓝色。</p>
+
 <p><strong>“有规划的人生叫蓝图，没规划的人生叫拼图。”</strong></p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#719e07">&lt;!DOCTYPE html&gt;</span>
 &lt;<span style="color:#268bd2">html</span>&gt;
@@ -533,9 +573,11 @@ father2 span{ color:blue;}表示选择“id为father2的元素”下的所有spa
 &lt;<span style="color:#268bd2">body</span>&gt;
 &lt;<span style="color:#268bd2">p</span>&gt;有规划的人生叫蓝图，没规划的人生叫拼图。&lt;/<span style="color:#268bd2">p</span>&gt;
 &lt;/<span style="color:#268bd2">body</span>&gt;
-&lt;/<span style="color:#268bd2">html</span>&gt;
-</code></pre></div><h2 id="chapter4-文本样式">chapter4-文本样式</h2>
+&lt;/<span style="color:#268bd2">html</span>&gt;</code></pre></div>
+<h2 id="chapter4-文本样式">chapter4-文本样式</h2>
+
 <h4 id="简介-1">简介</h4>
+
 <table>
 <thead>
 <tr>
@@ -543,38 +585,47 @@ father2 span{ color:blue;}表示选择“id为father2的元素”下的所有spa
 <th>说明</th>
 </tr>
 </thead>
+
 <tbody>
 <tr>
 <td>text-indent</td>
 <td>首行缩进</td>
 </tr>
+
 <tr>
 <td>text-align</td>
 <td>水平对齐</td>
 </tr>
+
 <tr>
 <td>text-decoration</td>
 <td>文本修饰</td>
 </tr>
+
 <tr>
 <td>text-transform</td>
 <td>大小写转换</td>
 </tr>
+
 <tr>
 <td>line-height</td>
 <td>行高</td>
 </tr>
+
 <tr>
 <td>letter-spacing</td>
 <td>字母间距</td>
 </tr>
+
 <tr>
 <td>word-spaceing</td>
 <td>词间距</td>
 </tr>
 </tbody>
 </table>
+
 <h4 id="首行缩进-text-indent">首行缩进-text-indent</h4>
+
 <p>语法（实现缩进indent值是size的两倍）</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"> &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
         <span style="color:#268bd2">p</span>
@@ -582,105 +633,120 @@ father2 span{ color:blue;}表示选择“id为father2的元素”下的所有spa
             <span style="color:#719e07">font-size</span>:<span style="color:#2aa198">14</span><span style="color:#dc322f">px</span>;
             <span style="color:#719e07">text-indent</span>:<span style="color:#2aa198">28</span><span style="color:#dc322f">px</span>;
         }
-    &lt;/<span style="color:#268bd2">style</span>&gt;
-</code></pre></div><h4 id="水平对齐text-align">水平对齐：text-align</h4>
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<h4 id="水平对齐-text-align">水平对齐：text-align</h4>
+
 <p>语法（同样对图片有效）</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
         #p1{<span style="color:#719e07">text-align</span>:<span style="color:#cb4b16">left</span>;}
         #p2{<span style="color:#719e07">text-align</span>:<span style="color:#cb4b16">center</span>;}
         #p3{<span style="color:#719e07">text-align</span>:<span style="color:#cb4b16">right</span>;}
-    &lt;/<span style="color:#268bd2">style</span>&gt;
-</code></pre></div><h4 id="文本修饰text-decoration">文本修饰：text-decoration</h4>
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<h4 id="文本修饰-text-decoration">文本修饰：text-decoration</h4>
+
 <p>语法：</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
         #p1{<span style="color:#719e07">text-decoration</span>:<span style="color:#cb4b16">underline</span>;}
         #p2{<span style="color:#719e07">text-decoration</span>:<span style="color:#cb4b16">line-through</span>;}
         #p3{<span style="color:#719e07">text-decoration</span>:<span style="color:#cb4b16">overline</span>;}
-    &lt;/<span style="color:#268bd2">style</span>&gt;
-</code></pre></div><table>
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<table>
 <thead>
 <tr>
-<th style="text-align:left">属性值</th>
-<th style="text-align:left">说明</th>
+<th align="left">属性值</th>
+<th align="left">说明</th>
 </tr>
 </thead>
+
 <tbody>
 <tr>
-<td style="text-align:left">none</td>
-<td style="text-align:left">去除所有的划线效果（默认值）</td>
+<td align="left">none</td>
+<td align="left">去除所有的划线效果（默认值）</td>
 </tr>
+
 <tr>
-<td style="text-align:left">underline</td>
-<td style="text-align:left">下划线</td>
+<td align="left">underline</td>
+<td align="left">下划线</td>
 </tr>
+
 <tr>
-<td style="text-align:left">line-through</td>
-<td style="text-align:left">中划线</td>
+<td align="left">line-through</td>
+<td align="left">中划线</td>
 </tr>
+
 <tr>
-<td style="text-align:left">overline</td>
-<td style="text-align:left">顶划线</td>
+<td align="left">overline</td>
+<td align="left">顶划线</td>
 </tr>
 </tbody>
 </table>
+
 <ul>
 <li>html：结构控制</li>
 <li>css：外观控制</li>
 </ul>
-<h4 id="大小写text-transform">大小写：text-transform</h4>
+
+<h4 id="大小写-text-transform">大小写：text-transform</h4>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
         #p1{<span style="color:#719e07">text-transform</span>:<span style="color:#cb4b16">uppercase</span>;}
         #p2{<span style="color:#719e07">text-transform</span>:<span style="color:#cb4b16">lowercase</span>;}
         #p3{<span style="color:#719e07">text-transform</span>:<span style="color:#cb4b16">capitalize</span>;}
-    &lt;/<span style="color:#268bd2">style</span>&gt;
-</code></pre></div><table>
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<table>
 <thead>
 <tr>
-<th style="text-align:left">属性值</th>
-<th style="text-align:left">说明</th>
+<th align="left">属性值</th>
+<th align="left">说明</th>
 </tr>
 </thead>
+
 <tbody>
 <tr>
-<td style="text-align:left">none</td>
-<td style="text-align:left">无转换（默认值）</td>
+<td align="left">none</td>
+<td align="left">无转换（默认值）</td>
 </tr>
+
 <tr>
-<td style="text-align:left">uppercase</td>
-<td style="text-align:left">转换为大写</td>
+<td align="left">uppercase</td>
+<td align="left">转换为大写</td>
 </tr>
+
 <tr>
-<td style="text-align:left">lowercase</td>
-<td style="text-align:left">转换为小写</td>
+<td align="left">lowercase</td>
+<td align="left">转换为小写</td>
 </tr>
+
 <tr>
-<td style="text-align:left">capitalize</td>
-<td style="text-align:left">只将每个英文单词首字母转换为大写</td>
+<td align="left">capitalize</td>
+<td align="left">只将每个英文单词首字母转换为大写</td>
 </tr>
 </tbody>
 </table>
-<h4 id="行高line-height">行高：line-height</h4>
+
+<h4 id="行高-line-height">行高：line-height</h4>
+
 <p>语法：</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
         #p1{<span style="color:#719e07">line-height</span>:<span style="color:#2aa198">15</span><span style="color:#dc322f">px</span>;}
         #p2{<span style="color:#719e07">line-height</span>:<span style="color:#2aa198">20</span><span style="color:#dc322f">px</span>;}
         #p3{<span style="color:#719e07">line-height</span>:<span style="color:#2aa198">25</span><span style="color:#dc322f">px</span>;}
-    &lt;/<span style="color:#268bd2">style</span>&gt;
-</code></pre></div><h4 id="词间距letter-spacingword-spacing">词间距:letter-spacing,word-spacing</h4>
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<h4 id="词间距-letter-spacing-word-spacing">词间距:letter-spacing,word-spacing</h4>
+
 <p>字母间距：</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
         #p1{<span style="color:#719e07">letter-spacing</span>:<span style="color:#2aa198">0</span><span style="color:#dc322f">px</span>;}
         #p2{<span style="color:#719e07">letter-spacing</span>:<span style="color:#2aa198">3</span><span style="color:#dc322f">px</span>;}
         #p3{<span style="color:#719e07">letter-spacing</span>:<span style="color:#2aa198">5</span><span style="color:#dc322f">px</span>;}
     &lt;/<span style="color:#268bd2">style</span>&gt;
-&lt;/<span style="color:#268bd2">head</span>&gt;
-</code></pre></div><p>单词间距：</p>
+&lt;/<span style="color:#268bd2">head</span>&gt;</code></pre></div>
+<p>单词间距：</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
         #p1{<span style="color:#719e07">word-spacing</span>:<span style="color:#2aa198">0</span><span style="color:#dc322f">px</span>;}
         #p2{<span style="color:#719e07">word-spacing</span>:<span style="color:#2aa198">3</span><span style="color:#dc322f">px</span>;}
         #p3{<span style="color:#719e07">word-spacing</span>:<span style="color:#2aa198">5</span><span style="color:#dc322f">px</span>;}
-    &lt;/<span style="color:#268bd2">style</span>&gt;
-</code></pre></div><h3 id="练习">练习</h3>
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<h3 id="练习">练习</h3>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#719e07">&lt;!DOCTYPE html&gt;</span>
 &lt;<span style="color:#268bd2">html</span>&gt;
 &lt;<span style="color:#268bd2">head</span>&gt;
@@ -703,12 +769,15 @@ father2 span{ color:blue;}表示选择“id为father2的元素”下的所有spa
 &lt;<span style="color:#268bd2">p</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;p1&#34;</span>&gt;很多人都喜欢用战术上的勤奋来掩盖战略上的懒惰，事实上这种“&lt;<span style="color:#268bd2">span</span>&gt;低水平的勤奋&lt;/<span style="color:#268bd2">span</span>&gt;”远远比懒惰可怕。&lt;/<span style="color:#268bd2">p</span>&gt;
 &lt;<span style="color:#268bd2">p</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;p2&#34;</span>&gt;Remember: no pain, no gain！&lt;/<span style="color:#268bd2">p</span>&gt;
 &lt;/<span style="color:#268bd2">body</span>&gt;
-&lt;/<span style="color:#268bd2">html</span>&gt;
-</code></pre></div><blockquote>
+&lt;/<span style="color:#268bd2">html</span>&gt;</code></pre></div>
+<blockquote>
 <p>编辑于3-7</p>
 </blockquote>
+
 <h2 id="chapter5-边框样式">Chapter5-边框样式</h2>
+
 <h3 id="简介-2">简介</h3>
+
 <table>
 <thead>
 <tr>
@@ -716,33 +785,41 @@ father2 span{ color:blue;}表示选择“id为father2的元素”下的所有spa
 <th>说明</th>
 </tr>
 </thead>
+
 <tbody>
 <tr>
 <td>border-width</td>
 <td>边框的宽度</td>
 </tr>
+
 <tr>
 <td>border-style</td>
 <td>边框的外观</td>
 </tr>
+
 <tr>
 <td>border-color</td>
 <td>边框的颜色</td>
 </tr>
 </tbody>
 </table>
+
 <p>想要为一个元素定义边框样式，必须要同时设置border-width、border-style、border-color属性才会有效果</p>
+
 <h3 id="整体样式">整体样式</h3>
+
 <ul>
-<li>
-<p>border-width</p>
-<p>定义边框宽度，值是一个像素值 px</p>
-</li>
-<li>
-<p>border-style</p>
-<p>定义边框的外观常用取值如下</p>
-</li>
+<li>border-width</li>
 </ul>
+
+<p>定义边框宽度，值是一个像素值 px</p>
+
+<ul>
+<li>border-style</li>
+</ul>
+
+<p>定义边框的外观常用取值如下</p>
+
 <table>
 <thead>
 <tr>
@@ -750,27 +827,31 @@ father2 span{ color:blue;}表示选择“id为father2的元素”下的所有spa
 <th>取值</th>
 </tr>
 </thead>
+
 <tbody>
 <tr>
 <td>none</td>
 <td>无样式</td>
 </tr>
+
 <tr>
 <td>dashed</td>
 <td>虚线</td>
 </tr>
+
 <tr>
 <td>solid</td>
 <td>实线</td>
 </tr>
 </tbody>
 </table>
+
 <ul>
-<li>
-<p>border-color</p>
-<p>定义边框颜色，取值为16进制RGB</p>
-</li>
+<li>border-color</li>
 </ul>
+
+<p>定义边框颜色，取值为16进制RGB</p>
+
 <p>一个例子：</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
         <span style="color:#586e75">/*定义所有div样式*/</span>
@@ -792,12 +873,13 @@ father2 span{ color:blue;}表示选择“id为father2的元素”下的所有spa
             <span style="color:#719e07">border-style</span>:<span style="color:#cb4b16">solid</span>;
             <span style="color:#719e07">border-color</span>:<span style="color:#cb4b16">red</span>;
         }
-    &lt;/<span style="color:#268bd2">style</span>&gt;
-</code></pre></div><p>可简写为</p>
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<p>可简写为</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
         <span style="color:#268bd2">div</span>{ <span style="color:#719e07">border</span>: <span style="color:#2aa198">1</span><span style="color:#dc322f">px</span> <span style="color:#cb4b16">solid</span> <span style="color:#cb4b16">red</span>; }
-    &lt;/<span style="color:#268bd2">style</span>&gt;
-</code></pre></div><h3 id="局部样式">局部样式</h3>
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<h3 id="局部样式">局部样式</h3>
+
 <p>设置局部样式</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">	&lt;<span style="color:#268bd2">style</span>&gt;{
             <span style="color:#719e07">width</span>: <span style="color:#2aa198">100</span><span style="color:#dc322f">px</span>;                       <span style="color:#586e75">/*div元素宽为100px*/</span>
@@ -807,52 +889,63 @@ father2 span{ color:blue;}表示选择“id为father2的元素”下的所有spa
             <span style="color:#719e07">border-bottom</span>: <span style="color:#2aa198">2</span><span style="color:#dc322f">px</span> <span style="color:#cb4b16">solid</span> <span style="color:#cb4b16">blue</span>;      <span style="color:#586e75">/*下边框样式*/</span>
             <span style="color:#719e07">border-left</span>: <span style="color:#2aa198">2</span><span style="color:#dc322f">px</span> <span style="color:#cb4b16">solid</span> <span style="color:#cb4b16">green</span>;       <span style="color:#586e75">/*左边框样式*/</span>
          }
-    &lt;/<span style="color:#268bd2">style</span>&gt;
-</code></pre></div><p>border-bottom:0px;、border-bottom:0;和border-bottom:none;是等价的</p>
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<p>border-bottom:0px;、border-bottom:0;和border-bottom:none;是等价的</p>
+
 <h3 id="本章练习">本章练习</h3>
+
 <p>1．如果我们想要定义某一个元素的右边框，宽度为1px，外观为实线，颜色为红色，正确写法为（ C ）。</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">    A. border:1px solid red;
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-language" data-lang="language">    A. border:1px solid red;
     B. border:1px dashed red;
     C. border-right:1px solid red;
-    D. border-right:1px dashed red;
-</code></pre></div><p>2．如果我们想要去掉某一个元素的上边框，下面写法中不正确的是（ A ）。</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">    A. border-top:not;
+    D. border-right:1px dashed red;</code></pre></div>
+<p>2．如果我们想要去掉某一个元素的上边框，下面写法中不正确的是（ A ）。</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-language" data-lang="language">    A. border-top:not;
     B. border-top:none;
     C. border-top:0;
-    D. border-top:0px;
-</code></pre></div><h2 id="chapter6-列表样式">Chapter6-列表样式</h2>
-<h3 id="列表项符号list-style-type">列表项符号：list-style-type</h3>
+    D. border-top:0px;</code></pre></div>
+<h2 id="chapter6-列表样式">Chapter6-列表样式</h2>
+
+<h3 id="列表项符号-list-style-type">列表项符号：list-style-type</h3>
+
 <table>
 <thead>
 <tr>
-<th style="text-align:left">属性值</th>
-<th style="text-align:left">说明</th>
+<th align="left">属性值</th>
+<th align="left">说明</th>
 </tr>
 </thead>
+
 <tbody>
 <tr>
-<td style="text-align:left">decimal</td>
-<td style="text-align:left">阿拉伯数字：1、2、3…（默认值）</td>
+<td align="left">decimal</td>
+<td align="left">阿拉伯数字：1、2、3…（默认值）</td>
 </tr>
+
 <tr>
-<td style="text-align:left">lower-roman</td>
-<td style="text-align:left">小写罗马数字：i、ii、iii…</td>
+<td align="left">lower-roman</td>
+<td align="left">小写罗马数字：i、ii、iii…</td>
 </tr>
+
 <tr>
-<td style="text-align:left">upper-roman</td>
-<td style="text-align:left">大写罗马数字：I、II、III…</td>
+<td align="left">upper-roman</td>
+<td align="left">大写罗马数字：I、II、III…</td>
 </tr>
+
 <tr>
-<td style="text-align:left">lower-alpha</td>
-<td style="text-align:left">小写英文字母：a、b、c…</td>
+<td align="left">lower-alpha</td>
+<td align="left">小写英文字母：a、b、c…</td>
 </tr>
+
 <tr>
-<td style="text-align:left">upper-alpha</td>
-<td style="text-align:left">大写英文字母：A、B、C…</td>
+<td align="left">upper-alpha</td>
+<td align="left">大写英文字母：A、B、C…</td>
 </tr>
 </tbody>
 </table>
+
 <p>表1 ol的list-style-type属性取值</p>
+
 <table>
 <thead>
 <tr>
@@ -860,22 +953,27 @@ father2 span{ color:blue;}表示选择“id为father2的元素”下的所有spa
 <th>取值</th>
 </tr>
 </thead>
+
 <tbody>
 <tr>
 <td>disc</td>
 <td>实心圆</td>
 </tr>
+
 <tr>
 <td>circle</td>
 <td>空心圆</td>
 </tr>
+
 <tr>
 <td>square</td>
 <td>正方形</td>
 </tr>
 </tbody>
 </table>
+
 <p>表2 ul的属性取值</p>
+
 <p>有序列表举例</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#719e07">&lt;!DOCTYPE html&gt;</span>
 &lt;<span style="color:#268bd2">html</span>&gt;
@@ -894,8 +992,8 @@ father2 span{ color:blue;}表示选择“id为father2的元素”下的所有spa
         &lt;<span style="color:#268bd2">li</span>&gt;JavaScript&lt;/<span style="color:#268bd2">li</span>&gt;
     &lt;/<span style="color:#268bd2">ol</span>&gt;
 &lt;/<span style="color:#268bd2">body</span>&gt;
-&lt;/<span style="color:#268bd2">html</span>&gt;
-</code></pre></div><p>无序列表举例</p>
+&lt;/<span style="color:#268bd2">html</span>&gt;</code></pre></div>
+<p>无序列表举例</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#719e07">&lt;!DOCTYPE html&gt;</span>
 &lt;<span style="color:#268bd2">html</span>&gt;
 &lt;<span style="color:#268bd2">head</span>&gt;
@@ -913,18 +1011,21 @@ father2 span{ color:blue;}表示选择“id为father2的元素”下的所有spa
         &lt;<span style="color:#268bd2">li</span>&gt;JavaScript&lt;/<span style="color:#268bd2">li</span>&gt;
     &lt;/<span style="color:#268bd2">ul</span>&gt;
 &lt;/<span style="color:#268bd2">body</span>&gt;
-&lt;/<span style="color:#268bd2">html</span>&gt;
-</code></pre></div><p>同时，列表项符号的去除也是使用list-style-type实现</p>
+&lt;/<span style="color:#268bd2">html</span>&gt;</code></pre></div>
+<p>同时，列表项符号的去除也是使用list-style-type实现</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
         <span style="color:#268bd2">ol</span><span style="color:#719e07">,</span><span style="color:#268bd2">ul</span>{<span style="color:#719e07">list-style-type</span>:<span style="color:#cb4b16">none</span>;}
-    &lt;/<span style="color:#268bd2">style</span>&gt;
-</code></pre></div><h3 id="列表项图片list-style-image">列表项图片：list-style-image</h3>
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<h3 id="列表项图片-list-style-image">列表项图片：list-style-image</h3>
+
 <p>使用图片定义列表项</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
         <span style="color:#268bd2">ul</span>{<span style="color:#719e07">list-style-image</span>: <span style="color:#b58900">url</span>(<span style="color:#2aa198">img/leaf.png</span>);}
-    &lt;/<span style="color:#268bd2">style</span>&gt;
-</code></pre></div><h3 id="本章练习-1">本章练习</h3>
-<h2 id="二编程题">二、编程题</h2>
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<h3 id="本章练习-1">本章练习</h3>
+
+<h2 id="二-编程题">二、编程题</h2>
+
 <p>1．定义一个列表，每一个列表项都是一个超链接，并且要求去除以及列表项符号以及超链接下划线，超链接文本颜色为粉红色，并且点击某一个列表项会以新窗口的形式打开。</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#719e07">&lt;!DOCTYPE html&gt;</span>
 &lt;<span style="color:#268bd2">html</span>&gt;
@@ -948,9 +1049,11 @@ father2 span{ color:blue;}表示选择“id为father2的元素”下的所有spa
 &lt;/<span style="color:#268bd2">ul</span>&gt;
 &lt;/<span style="color:#268bd2">div</span>&gt;
 &lt;/<span style="color:#268bd2">body</span>&gt;
-&lt;/<span style="color:#268bd2">html</span>&gt;
-</code></pre></div><h2 id="chapter7-表格样式">Chapter7-表格样式</h2>
-<h3 id="表格标题位置caption-side">表格标题位置：caption-side</h3>
+&lt;/<span style="color:#268bd2">html</span>&gt;</code></pre></div>
+<h2 id="chapter7-表格样式">Chapter7-表格样式</h2>
+
+<h3 id="表格标题位置-caption-side">表格标题位置：caption-side</h3>
+
 <ul>
 <li>top:顶部</li>
 <li>bottom：底部</li>
@@ -958,29 +1061,31 @@ father2 span{ color:blue;}表示选择“id为father2的元素”下的所有spa
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
         <span style="color:#268bd2">table</span><span style="color:#719e07">,</span><span style="color:#268bd2">tr</span><span style="color:#719e07">,</span> <span style="color:#268bd2">td</span><span style="color:#719e07">,</span><span style="color:#268bd2">th</span>{<span style="color:#719e07">border</span>:<span style="color:#2aa198">1</span><span style="color:#dc322f">px</span> <span style="color:#cb4b16">solid</span> <span style="color:#cb4b16">silver</span>;}
         <span style="color:#268bd2">table</span>{<span style="color:#719e07">caption-side</span>:<span style="color:#cb4b16">bottom</span>;}
-    &lt;/<span style="color:#268bd2">style</span>&gt;
-</code></pre></div><h3 id="表格边框合并border-collapse">表格边框合并：border-collapse</h3>
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<h3 id="表格边框合并-border-collapse">表格边框合并：border-collapse</h3>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
         <span style="color:#268bd2">table</span><span style="color:#719e07">,</span><span style="color:#268bd2">th</span><span style="color:#719e07">,</span><span style="color:#268bd2">td</span>{<span style="color:#719e07">border</span>:<span style="color:#2aa198">1</span><span style="color:#dc322f">px</span> <span style="color:#cb4b16">solid</span> <span style="color:#cb4b16">silver</span>;}
         <span style="color:#268bd2">table</span>{<span style="color:#719e07">border-collapse</span>: <span style="color:#cb4b16">collapse</span>;}
-    &lt;/<span style="color:#268bd2">style</span>&gt;
-</code></pre></div><h3 id="表格边框间距border-spacing">表格边框间距：border-spacing</h3>
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<h3 id="表格边框间距-border-spacing">表格边框间距：border-spacing</h3>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
         <span style="color:#268bd2">table</span><span style="color:#719e07">,</span><span style="color:#268bd2">th</span><span style="color:#719e07">,</span><span style="color:#268bd2">td</span>{<span style="color:#719e07">border</span>:<span style="color:#2aa198">1</span><span style="color:#dc322f">px</span> <span style="color:#cb4b16">solid</span> <span style="color:#cb4b16">silver</span>;}
         <span style="color:#268bd2">table</span>{<span style="color:#719e07">border-spacing</span>: <span style="color:#2aa198">8</span><span style="color:#dc322f">px</span>;}
-    &lt;/<span style="color:#268bd2">style</span>&gt;
-</code></pre></div><h3 id="本章练习-2">本章练习</h3>
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<h3 id="本章练习-2">本章练习</h3>
+
 <p>1．CSS可以使用（ C ）属性来合并表格边框</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">    A. border-width                   
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-language" data-lang="language">    A. border-width                   
     B. border-style
     C. border-collapse                  
-    D. border-spacing
-</code></pre></div><p>2．下面有关表格样式，说法不正确的是（ A ）。</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">    A. border-collapse只限用于表格，不能用于其他元素
+    D. border-spacing</code></pre></div>
+<p>2．下面有关表格样式，说法不正确的是（ A ）。</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-language" data-lang="language">    A. border-collapse只限用于表格，不能用于其他元素
     B. caption-side、border-collapse、border-spacing一般在table元素中设置
     C. 可以使用border-collapse: separate;来将表格边框合并
-    D. 如果要为表格添加边框，我们一般需要同时对table、th、td这几个进行设置
-</code></pre></div><h2 id="chapter8-图片样式">Chapter8-图片样式</h2>
+    D. 如果要为表格添加边框，我们一般需要同时对table、th、td这几个进行设置</code></pre></div>
+<h2 id="chapter8-图片样式">Chapter8-图片样式</h2>
+
 <h3 id="简介-3">简介</h3>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
         <span style="color:#268bd2">img</span>
@@ -988,8 +1093,9 @@ father2 span{ color:blue;}表示选择“id为father2的元素”下的所有spa
             <span style="color:#719e07">width</span>: <span style="color:#2aa198">60</span><span style="color:#dc322f">px</span>;
             <span style="color:#719e07">height</span>: <span style="color:#2aa198">60</span><span style="color:#dc322f">px</span>;
         }
-    &lt;/<span style="color:#268bd2">style</span>&gt;
-</code></pre></div><p>在实际开发中，如果你需要多大的图片，就用Photoshop制作多大的图片。不建议使用一张大图片，然后再借助width和height来改变大小。因为一张大图片体积更大，会使页面加载速度变慢。这是性能优化方面的考虑，以后我们会慢慢接触</p>
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<p>在实际开发中，如果你需要多大的图片，就用Photoshop制作多大的图片。不建议使用一张大图片，然后再借助width和height来改变大小。因为一张大图片体积更大，会使页面加载速度变慢。这是性能优化方面的考虑，以后我们会慢慢接触</p>
+
 <h3 id="图片边框">图片边框</h3>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
         <span style="color:#268bd2">img</span>
@@ -998,32 +1104,39 @@ father2 span{ color:blue;}表示选择“id为father2的元素”下的所有spa
             <span style="color:#719e07">height</span>: <span style="color:#2aa198">60</span><span style="color:#dc322f">px</span>;
             <span style="color:#719e07">border</span>: <span style="color:#2aa198">1</span><span style="color:#dc322f">px</span> <span style="color:#cb4b16">solid</span> <span style="color:#cb4b16">red</span>;
         }
-    &lt;/<span style="color:#268bd2">style</span>&gt;
-</code></pre></div><h3 id="图片对齐">图片对齐</h3>
-<h4 id="水平对齐text-align-1">水平对齐：text-align</h4>
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<h3 id="图片对齐">图片对齐</h3>
+
+<h4 id="水平对齐-text-align-1">水平对齐：text-align</h4>
+
 <p>text-align属性一般只用于两个地方：文本水平对齐和图片水平对齐。</p>
+
 <table>
 <thead>
 <tr>
-<th style="text-align:left">属性值</th>
-<th style="text-align:left">说明</th>
+<th align="left">属性值</th>
+<th align="left">说明</th>
 </tr>
 </thead>
+
 <tbody>
 <tr>
-<td style="text-align:left">left</td>
-<td style="text-align:left">左对齐（默认值）</td>
+<td align="left">left</td>
+<td align="left">左对齐（默认值）</td>
 </tr>
+
 <tr>
-<td style="text-align:left">center</td>
-<td style="text-align:left">居中对齐</td>
+<td align="left">center</td>
+<td align="left">居中对齐</td>
 </tr>
+
 <tr>
-<td style="text-align:left">right</td>
-<td style="text-align:left">右对齐</td>
+<td align="left">right</td>
+<td align="left">右对齐</td>
 </tr>
 </tbody>
 </table>
+
 <p>例：</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
         <span style="color:#268bd2">div</span>
@@ -1036,8 +1149,9 @@ father2 span{ color:blue;}表示选择“id为father2的元素”下的所有spa
         .<span style="color:#268bd2">div2</span>{ <span style="color:#719e07">text-align</span>: <span style="color:#cb4b16">center</span>; }
         .<span style="color:#268bd2">div3</span>{ <span style="color:#719e07">text-align</span>: <span style="color:#cb4b16">right</span>; }
          <span style="color:#268bd2">img</span>{ <span style="color:#719e07">width</span>: <span style="color:#2aa198">60</span><span style="color:#dc322f">px</span>; <span style="color:#719e07">height</span>: <span style="color:#2aa198">60</span><span style="color:#dc322f">px</span>; }
-    &lt;/<span style="color:#268bd2">style</span>&gt;
-</code></pre></div><h4 id="垂直对齐">垂直对齐</h4>
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<h4 id="垂直对齐">垂直对齐</h4>
+
 <table>
 <thead>
 <tr>
@@ -1045,19 +1159,23 @@ father2 span{ color:blue;}表示选择“id为father2的元素”下的所有spa
 <th>取值</th>
 </tr>
 </thead>
+
 <tbody>
 <tr>
 <td>top</td>
 <td>顶部对齐</td>
 </tr>
+
 <tr>
 <td>middle</td>
 <td>中部对齐</td>
 </tr>
+
 <tr>
 <td>baseline</td>
 <td>基线对齐</td>
 </tr>
+
 <tr>
 <td>bottom</td>
 <td>底部对齐</td>
@@ -1070,8 +1188,9 @@ father2 span{ color:blue;}表示选择“id为father2的元素”下的所有spa
         #img2{ <span style="color:#719e07">vertical-align</span>: <span style="color:#cb4b16">middle</span>; }
         #img3{ <span style="color:#719e07">vertical-align</span>: <span style="color:#cb4b16">bottom</span>; }
         #img4{ <span style="color:#719e07">vertical-align</span>: <span style="color:#cb4b16">baseline</span>; }
-    &lt;/<span style="color:#268bd2">style</span>&gt;
-</code></pre></div><h3 id="文字环绕float">文字环绕：float</h3>
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<h3 id="文字环绕-float">文字环绕：float</h3>
+
 <ul>
 <li>left左浮动</li>
 <li>right右浮动</li>
@@ -1082,42 +1201,54 @@ father2 span{ color:blue;}表示选择“id为father2的元素”下的所有spa
            <span style="color:#719e07">font-family</span>:<span style="color:#2aa198">&#34;微软雅黑&#34;</span>;
            <span style="color:#719e07">font-size</span>:<span style="color:#2aa198">12</span><span style="color:#dc322f">px</span>;
         }
-    &lt;/<span style="color:#268bd2">style</span>&gt;
-</code></pre></div><blockquote>
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<blockquote>
 <p>编辑于3-10</p>
 </blockquote>
+
 <h2 id="chapter9-背景样式">Chapter9-背景样式</h2>
+
 <h3 id="简介-4">简介</h3>
+
 <p>在CSS中，背景样式包括两个方面：背景颜色和背景图片。在Web1.0时代，都是使用background或者bgcolor这两个“HTML属性”（不是CSS属性）来为元素定义背景颜色或背景图片。</p>
+
 <p>不过在Web2.0时代，对于元素的背景样式，我们都是使用CSS属性来实现。</p>
+
 <p>在CSS中，定义“背景颜色”使用的是background-color属性，而定义“背景图片”则比较复杂，往往涉及以下属性。</p>
+
 <table>
 <thead>
 <tr>
-<th style="text-align:left">属性</th>
-<th style="text-align:left">说明</th>
+<th align="left">属性</th>
+<th align="left">说明</th>
 </tr>
 </thead>
+
 <tbody>
 <tr>
-<td style="text-align:left">background-image</td>
-<td style="text-align:left">定义背景图片地址</td>
+<td align="left">background-image</td>
+<td align="left">定义背景图片地址</td>
 </tr>
+
 <tr>
-<td style="text-align:left">background-repeat</td>
-<td style="text-align:left">定义背景图片重复，例如横向重复、纵向重复</td>
+<td align="left">background-repeat</td>
+<td align="left">定义背景图片重复，例如横向重复、纵向重复</td>
 </tr>
+
 <tr>
-<td style="text-align:left">background-position</td>
-<td style="text-align:left">定义背景图片位置</td>
+<td align="left">background-position</td>
+<td align="left">定义背景图片位置</td>
 </tr>
+
 <tr>
-<td style="text-align:left">background-attachment</td>
-<td style="text-align:left">定义背景图片固定</td>
+<td align="left">background-attachment</td>
+<td align="left">定义背景图片固定</td>
 </tr>
 </tbody>
 </table>
-<h3 id="背景颜色background-color">背景颜色：background-color</h3>
+
+<h3 id="背景颜色-background-color">背景颜色：background-color</h3>
+
 <p>举例</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#719e07">&lt;!DOCTYPE html&gt;</span>
 &lt;<span style="color:#268bd2">html</span>&gt;
@@ -1138,49 +1269,58 @@ father2 span{ color:blue;}表示选择“id为father2的元素”下的所有spa
     &lt;<span style="color:#268bd2">div</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;div1&#34;</span>&gt;背景颜色为：hotpink&lt;/<span style="color:#268bd2">div</span>&gt;
     &lt;<span style="color:#268bd2">div</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;div2&#34;</span>&gt;背景颜色为：#87CEFA&lt;/<span style="color:#268bd2">div</span>&gt;
 &lt;/<span style="color:#268bd2">body</span>&gt;
-&lt;/<span style="color:#268bd2">html</span>&gt;
-</code></pre></div><h3 id="背景图片样式background-image">背景图片样式：background-image</h3>
+&lt;/<span style="color:#268bd2">html</span>&gt;</code></pre></div>
+<h3 id="背景图片样式-background-image">背景图片样式：background-image</h3>
+
 <p>格式：</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">div
 {
     width:250px;
     height:170px;
     background-image: url(img/haizei.png);
-}
-</code></pre></div><p>需注意设置width和height值否则图片无法显示。</p>
+}</code></pre></div>
+<p>需注意设置width和height值否则图片无法显示。</p>
+
 <p>背景图片与图片是不一样的，背景图片是通过css实现的，图片是通过html实现的。</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">/*方式1：路径加上引号*/
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">/*方式1：路径加上引号*/
 background-image: url(&#34;img/haizei.png&#34;);
 /*方式2：路径没加引号*/
-background-image: url(img/haizei.png);
-</code></pre></div><p>建议采用更为简介的方式2</p>
-<h3 id="背景图片重复background-repeat">背景图片重复：background-repeat</h3>
+background-image: url(img/haizei.png);</pre></div>
+<p>建议采用更为简介的方式2</p>
+
+<h3 id="背景图片重复-background-repeat">背景图片重复：background-repeat</h3>
+
 <table>
 <thead>
 <tr>
-<th style="text-align:left">属性值</th>
-<th style="text-align:left">说明</th>
+<th align="left">属性值</th>
+<th align="left">说明</th>
 </tr>
 </thead>
+
 <tbody>
 <tr>
-<td style="text-align:left">repeat</td>
-<td style="text-align:left">在水平方向和垂直方向上同时平铺（默认值）</td>
+<td align="left">repeat</td>
+<td align="left">在水平方向和垂直方向上同时平铺（默认值）</td>
 </tr>
+
 <tr>
-<td style="text-align:left">repeat-x</td>
-<td style="text-align:left">只在水平方向（x轴）上平铺</td>
+<td align="left">repeat-x</td>
+<td align="left">只在水平方向（x轴）上平铺</td>
 </tr>
+
 <tr>
-<td style="text-align:left">repeat-y</td>
-<td style="text-align:left">只在垂直方向（y轴）上平铺</td>
+<td align="left">repeat-y</td>
+<td align="left">只在垂直方向（y轴）上平铺</td>
 </tr>
+
 <tr>
-<td style="text-align:left">no-repeat</td>
-<td style="text-align:left">不平铺</td>
+<td align="left">no-repeat</td>
+<td align="left">不平铺</td>
 </tr>
 </tbody>
 </table>
+
 <p>实例：</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#719e07">&lt;!DOCTYPE html&gt;</span>
 &lt;<span style="color:#268bd2">html</span>&gt;
@@ -1206,10 +1346,13 @@ background-image: url(img/haizei.png);
     &lt;<span style="color:#268bd2">div</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;div3&#34;</span>&gt;&lt;/<span style="color:#268bd2">div</span>&gt;
     &lt;<span style="color:#268bd2">div</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;div4&#34;</span>&gt;&lt;/<span style="color:#268bd2">div</span>&gt;
 &lt;/<span style="color:#268bd2">body</span>&gt;
-&lt;/<span style="color:#268bd2">html</span>&gt;
-</code></pre></div><p>注：div1由于没有设置值使用使用默认的值repeat</p>
-<h3 id="背景图片位置background-position">背景图片位置：background-position</h3>
+&lt;/<span style="color:#268bd2">html</span>&gt;</code></pre></div>
+<p>注：div1由于没有设置值使用使用默认的值repeat</p>
+
+<h3 id="背景图片位置-background-position">背景图片位置：background-position</h3>
+
 <p>取值类型：</p>
+
 <ul>
 <li>像素值</li>
 </ul>
@@ -1223,10 +1366,11 @@ background-image: url(img/haizei.png);
             <span style="color:#719e07">background-repeat</span>:<span style="color:#cb4b16">no-repeat</span>;
             <span style="color:#719e07">background-position</span>:<span style="color:#2aa198">40</span><span style="color:#dc322f">px</span> <span style="color:#2aa198">20</span><span style="color:#dc322f">px</span>;
         }
-    &lt;/<span style="color:#268bd2">style</span>&gt;
-</code></pre></div><ul>
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<ul>
 <li>关键字</li>
 </ul>
+
 <table>
 <thead>
 <tr>
@@ -1234,46 +1378,56 @@ background-image: url(img/haizei.png);
 <th>说明</th>
 </tr>
 </thead>
+
 <tbody>
 <tr>
 <td>top left</td>
 <td>左上</td>
 </tr>
+
 <tr>
 <td>top center</td>
 <td>靠上居中</td>
 </tr>
+
 <tr>
 <td>top right</td>
 <td>右上</td>
 </tr>
+
 <tr>
 <td>center left</td>
 <td>居中靠左</td>
 </tr>
+
 <tr>
 <td>center center</td>
 <td>正中</td>
 </tr>
+
 <tr>
 <td>center right</td>
 <td>居中靠右</td>
 </tr>
+
 <tr>
 <td>bottom left</td>
 <td>左下</td>
 </tr>
+
 <tr>
 <td>bottom center</td>
 <td>居中下</td>
 </tr>
+
 <tr>
 <td>bottom right</td>
 <td>右下</td>
 </tr>
 </tbody>
 </table>
-<h3 id="背景图片固定background-attachment">背景图片固定：background-attachment</h3>
+
+<h3 id="背景图片固定-background-attachment">背景图片固定：background-attachment</h3>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
         <span style="color:#268bd2">div</span>
         {
@@ -1284,10 +1438,11 @@ background-image: url(img/haizei.png);
             <span style="color:#719e07">background-repeat</span>:<span style="color:#cb4b16">no-repeat</span>;
             <span style="color:#719e07">background-attachment</span>:<span style="color:#cb4b16">fixed</span>;
         }
-    &lt;/<span style="color:#268bd2">style</span>&gt;
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<h2 id="chapter10-超链接样式">chapter10：超链接样式</h2>
 
-</code></pre></div><h2 id="chapter10超链接样式">chapter10：超链接样式</h2>
 <h3 id="超链接伪类">超链接伪类</h3>
+
 <table>
 <thead>
 <tr>
@@ -1295,25 +1450,30 @@ background-image: url(img/haizei.png);
 <th>说明</th>
 </tr>
 </thead>
+
 <tbody>
 <tr>
 <td>a:link</td>
 <td>定义元素a未访问的样式</td>
 </tr>
+
 <tr>
 <td>a:visited</td>
 <td>定义元素a访问过的样式</td>
 </tr>
+
 <tr>
 <td>a:hover</td>
 <td>定义鼠标经过a的样式</td>
 </tr>
+
 <tr>
 <td>a:active</td>
 <td>定义鼠标点击激活的样式</td>
 </tr>
 </tbody>
 </table>
+
 <p>例：</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
         <span style="color:#268bd2">a</span>{<span style="color:#719e07">text-decoration</span>:<span style="color:#cb4b16">none</span>;}
@@ -1321,8 +1481,8 @@ background-image: url(img/haizei.png);
         <span style="color:#268bd2">a</span>:<span style="color:#268bd2">visited</span>{<span style="color:#719e07">color</span>:<span style="color:#cb4b16">purple</span>;}
         <span style="color:#268bd2">a</span>:<span style="color:#268bd2">hover</span>{<span style="color:#719e07">color</span>:<span style="color:#cb4b16">yellow</span>;}
         <span style="color:#268bd2">a</span>:<span style="color:#268bd2">active</span>{<span style="color:#719e07">color</span>:<span style="color:#cb4b16">blue</span>;}
-    &lt;/<span style="color:#268bd2">style</span>&gt;
-</code></pre></div><p>通常仅仅使用到未访问和鼠标经过状态如：</p>
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<p>通常仅仅使用到未访问和鼠标经过状态如：</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#719e07">&lt;!DOCTYPE html&gt;</span> 
 &lt;<span style="color:#268bd2">html</span>&gt;
 &lt;<span style="color:#268bd2">head</span>&gt;
@@ -1346,8 +1506,9 @@ background-image: url(img/haizei.png);
         &lt;<span style="color:#268bd2">a</span> href<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;http://www.lvyestudy.com&#34;</span> target<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;_blank&#34;</span>&gt;绿叶学习网&lt;/<span style="color:#268bd2">a</span>&gt;
     &lt;/<span style="color:#268bd2">div</span>&gt;
 &lt;/<span style="color:#268bd2">body</span>&gt;
-&lt;/<span style="color:#268bd2">html</span>&gt;
-</code></pre></div><h3 id="深入理解hover">深入理解hover</h3>
+&lt;/<span style="color:#268bd2">html</span>&gt;</code></pre></div>
+<h3 id="深入理解hover">深入理解hover</h3>
+
 <ul>
 <li>用于div 鼠标经过时就改变背景色</li>
 </ul>
@@ -1365,9 +1526,8 @@ background-image: url(img/haizei.png);
         {
             <span style="color:#719e07">background-color</span>: <span style="color:#cb4b16">hotpink</span>;
         }
-    &lt;/<span style="color:#268bd2">style</span>&gt;
-
-</code></pre></div><ul>
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<ul>
 <li>用于鼠标经过时就加上一个边框</li>
 </ul>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
@@ -1375,8 +1535,9 @@ background-image: url(img/haizei.png);
         {
             <span style="color:#719e07">border</span>:<span style="color:#2aa198">2</span><span style="color:#dc322f">px</span> <span style="color:#cb4b16">solid</span> <span style="color:#cb4b16">red</span>;
         }
-    &lt;/<span style="color:#268bd2">style</span>&gt;
-</code></pre></div><h3 id="鼠标样式">鼠标样式</h3>
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<h3 id="鼠标样式">鼠标样式</h3>
+
 <p>例子：</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
         <span style="color:#268bd2">div</span>
@@ -1391,13 +1552,15 @@ background-image: url(img/haizei.png);
         }
         #div_default{<span style="color:#719e07">cursor</span>:<span style="color:#cb4b16">default</span>;}
         #div_pointer{<span style="color:#719e07">cursor</span>:<span style="color:#cb4b16">pointer</span>;}
-    &lt;/<span style="color:#268bd2">style</span>&gt;
-</code></pre></div><p>常用样式</p>
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<p>常用样式</p>
+
 <ul>
 <li>cursor:default</li>
 <li>cursor:pointer</li>
 <li>cursor:text</li>
 </ul>
+
 <p>自定义鼠标样式</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
         <span style="color:#268bd2">div</span>
@@ -1412,9 +1575,11 @@ background-image: url(img/haizei.png);
         }
         #div_default{<span style="color:#719e07">cursor</span>:<span style="color:#b58900">url</span>(<span style="color:#2aa198">img/cursor/default.cur</span>),<span style="color:#cb4b16">default</span>;}
         #div_pointer{<span style="color:#719e07">cursor</span>:<span style="color:#b58900">url</span>(<span style="color:#2aa198">img/cursor/pointer.cur</span>),<span style="color:#cb4b16">pointer</span>;}
-    &lt;/<span style="color:#268bd2">style</span>&gt;
-</code></pre></div><h3 id="习题-2">习题</h3>
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<h3 id="习题-2">习题</h3>
+
 <p>1．在网页中添加一段文本链接，并且设置其在不同的状态下显示不同的效果，要求如下。</p>
+
 <ul>
 <li>（1）未访问时：没有下划线，颜色为红色。</li>
 <li>（2）鼠标经过时：有下划线，颜色为蓝色。</li>
@@ -1437,58 +1602,85 @@ background-image: url(img/haizei.png);
 &lt;<span style="color:#268bd2">body</span>&gt;
 &lt;<span style="color:#268bd2">div</span>&gt;&lt;<span style="color:#268bd2">a</span> href<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;baidu.com&#34;</span>&gt;baidu&lt;/<span style="color:#268bd2">a</span>&gt;&lt;/<span style="color:#268bd2">div</span>&gt;
 &lt;/<span style="color:#268bd2">body</span>&gt;
-&lt;/<span style="color:#268bd2">html</span>&gt;
-</code></pre></div><blockquote>
+&lt;/<span style="color:#268bd2">html</span>&gt;</code></pre></div>
+<blockquote>
 <p>编辑与3-11</p>
 </blockquote>
-<h2 id="chapter11盒子模型">chapter11：盒子模型</h2>
+
+<h2 id="chapter11-盒子模型">chapter11：盒子模型</h2>
+
 <h3 id="概述">概述</h3>
+
 <p>使用元素都可以看成一个盒子</p>
+
 <table>
 <thead>
 <tr>
-<th style="text-align:left">属性</th>
-<th style="text-align:left">说明</th>
+<th align="left">属性</th>
+<th align="left">说明</th>
 </tr>
 </thead>
+
 <tbody>
 <tr>
-<td style="text-align:left">content</td>
-<td style="text-align:left">内容，可以是文本或图片</td>
+<td align="left">content</td>
+<td align="left">内容，可以是文本或图片</td>
 </tr>
+
 <tr>
-<td style="text-align:left">padding</td>
-<td style="text-align:left">内边距，用于定义内容与边框之间的距离</td>
+<td align="left">padding</td>
+<td align="left">内边距，用于定义内容与边框之间的距离</td>
 </tr>
+
 <tr>
-<td style="text-align:left">margin</td>
-<td style="text-align:left">外边距，用于定义当前元素与其他元素之间的距离</td>
+<td align="left">margin</td>
+<td align="left">外边距，用于定义当前元素与其他元素之间的距离</td>
 </tr>
+
 <tr>
-<td style="text-align:left">border</td>
-<td style="text-align:left">边框，用于定义元素的边框</td>
+<td align="left">border</td>
+<td align="left">边框，用于定义元素的边框</td>
 </tr>
 </tbody>
 </table>
+
 <h4 id="内容区">内容区</h4>
+
 <p>内容区是CSS盒子模型的中心，它呈现了盒子的主要信息内容，这些内容可以是文本、图片等多种类型。内容区是盒子模型必备的组成部分，其他3个部分都是可选的。</p>
+
 <p>内容区有3个属性：width、height和overflow。使用width和height属性可以指定盒子内容区的高度和宽度。在这里注意一点，width和height这两个属性是针对内容区content而言，并不包括padding部分。</p>
+
 <p>当内容过多超出width和height时，可以使用overflow属性来指定溢出处理方式。</p>
+
 <h4 id="内边距">内边距</h4>
+
 <p>内边距，指的是内容区和边框之间的空间，可以看成是内容区的背景区域。</p>
+
 <p>关于内边距的属性有5种：padding-top、padding-bottom、padding-left、padding-right以及综合了以上4个方向的简写内边距属性padding。使用这5种属性可以指定内容区与各方向边框之间的距离。</p>
+
 <h4 id="外边距">外边距</h4>
+
 <p>外边距，指的是两个盒子之间的距离，它可能是子元素与父元素之间的距离，也可能是兄弟元素之间的距离。外边距使得元素之间不必紧凑地连接在一起，是CSS布局的一个重要手段。</p>
+
 <p>外边距的属性也有5种：margin-top、margin-bottom、margin-left、margin-right以及综合了以上4个方向的简写外边距属性margin。</p>
+
 <p>同时，CSS允许给外边距属性指定负数值，当外边距为负值时，整个盒子将向指定负值的相反方向移动，以此可以产生盒子的重叠效果，这就是传说中的“负margin技术”。</p>
+
 <h4 id="边框">边框</h4>
+
 <p>在CSS盒子模型中，边框跟我们之前学过的边框是一样的。</p>
+
 <p>边框属性有border-width、border-style、border-color以及综合了3类属性的简写边框属性border。</p>
-<h3 id="宽高widthheight">宽高：width、height</h3>
+
+<h3 id="宽高-width-height">宽高：width、height</h3>
+
 <p>只有块元素才可以设置width和height，行内元素是无法设置width和height的。（我们这里不考虑inline-block元素）</p>
+
 <p>行元素span设置宽高无法生效最终结果为内容区支撑起来</p>
+
 <p>如果想要为行内元素设置可以通过display属性将行内元素转化为块元素也可以将块元素转换成行内元素</p>
-<h3 id="边框border">边框：border</h3>
+
+<h3 id="边框-border">边框：border</h3>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
         <span style="color:#268bd2">div</span>
         {
@@ -1496,17 +1688,22 @@ background-image: url(img/haizei.png);
             <span style="color:#719e07">height</span>:<span style="color:#2aa198">80</span><span style="color:#dc322f">px</span>;
             <span style="color:#719e07">border</span>: <span style="color:#2aa198">2</span><span style="color:#dc322f">px</span> <span style="color:#cb4b16">dashed</span> <span style="color:#cb4b16">red</span>;
         }
-    &lt;/<span style="color:#268bd2">style</span>&gt;
-</code></pre></div><p>第1个值指的是边框宽度（border-width），第2个值指的是边框外观（border-style），第3个值指的是边框颜色（border-color）</p>
-<h3 id="内边距padding">内边距：padding</h3>
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<p>第1个值指的是边框宽度（border-width），第2个值指的是边框外观（border-style），第3个值指的是边框颜色（border-color）</p>
+
+<h3 id="内边距-padding">内边距：padding</h3>
+
 <p>内边距分为四个方向</p>
+
 <ul>
 <li>padding-top</li>
 <li>padding-right</li>
 <li>padding-left</li>
 <li>padding-bottom</li>
 </ul>
+
 <p>两种写法：</p>
+
 <p>1</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#268bd2">style</span>&gt;    
 	{
@@ -1518,8 +1715,8 @@ background-image: url(img/haizei.png);
             <span style="color:#719e07">border</span>:<span style="color:#2aa198">2</span><span style="color:#dc322f">px</span> <span style="color:#cb4b16">solid</span> <span style="color:#cb4b16">red</span>;
             <span style="color:#719e07">background-color</span>:<span style="color:#2aa198">#FFDEAD</span>;
         }
-    &lt;/<span style="color:#268bd2">style</span>&gt;
-</code></pre></div><p>2.简写</p>
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<p>2.简写</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
         div
         {
@@ -1528,18 +1725,24 @@ background-image: url(img/haizei.png);
             margin:40px;
             border:2px solid red;
             background-color:#FFDEAD;
-        }
-</code></pre></div><p>简写时方向按顺时针</p>
-<h3 id="外边距margin">外边距：margin</h3>
+        }</code></pre></div>
+<p>简写时方向按顺时针</p>
+
+<h3 id="外边距-margin">外边距：margin</h3>
+
 <p>外边距分为四个方向</p>
+
 <ul>
 <li>margin-top</li>
 <li>margin-right</li>
 <li>margin-left</li>
 <li>margin-bottom</li>
 </ul>
+
 <p>外边距指的是两个盒子之间的距离，它可能是子元素与父元素之间的距离，也可能是兄弟元素之间的距离。上面我们没有加入其他元素当参考对象</p>
+
 <h4 id="局部样式-1">局部样式</h4>
+
 <p>1.（只有）：</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
         <span style="color:#268bd2">div</span>
@@ -1553,8 +1756,8 @@ background-image: url(img/haizei.png);
             <span style="color:#719e07">border</span>:<span style="color:#2aa198">1</span><span style="color:#dc322f">px</span> <span style="color:#cb4b16">solid</span> <span style="color:#cb4b16">red</span>;
             <span style="color:#719e07">background-color</span>:<span style="color:#2aa198">#FFDEAD</span>;
         }
-    &lt;/<span style="color:#268bd2">style</span>&gt;
-</code></pre></div><p>2.只有父元素没有兄弟元素:当只有父元素时，该元素设置的margin就是相对于父元素之间的距离。</p>
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<p>2.只有父元素没有兄弟元素:当只有父元素时，该元素设置的margin就是相对于父元素之间的距离。</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
         #father
         {
@@ -1572,9 +1775,11 @@ background-image: url(img/haizei.png);
             <span style="color:#719e07">border</span>:<span style="color:#2aa198">1</span><span style="color:#dc322f">px</span> <span style="color:#cb4b16">solid</span> <span style="color:#cb4b16">red</span>;
             <span style="color:#719e07">background-color</span>:<span style="color:#2aa198">#FFDEAD</span>;
         }
-    &lt;/<span style="color:#268bd2">style</span>&gt;
-</code></pre></div><p>3.有兄弟元素时：</p>
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<p>3.有兄弟元素时：</p>
+
 <p>当既有父元素，也有兄弟元素时，该元素会先看看四个方向有没有兄弟元素存在。如果该方向有兄弟元素，则这个方向的margin就是相对于兄弟元素而言。如果该方向没有兄弟元素，则这个方向的margin就是相对于父元素而言。</p>
+
 <p>padding和margin的区别在于：padding体现的是元素的“内部结构”，而margin体现的是元素之间的相互关系。</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#719e07">&lt;!DOCTYPE html&gt;</span>
 &lt;<span style="color:#268bd2">html</span>&gt;
@@ -1612,8 +1817,9 @@ background-image: url(img/haizei.png);
         &lt;<span style="color:#268bd2">div</span> class<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;brother&#34;</span>&gt;&lt;/<span style="color:#268bd2">div</span>&gt;
     &lt;/<span style="color:#268bd2">div</span>&gt;
 &lt;/<span style="color:#268bd2">body</span>&gt;
-&lt;/<span style="color:#268bd2">html</span>&gt;
-</code></pre></div><h4 id="margin简写形式">margin简写形式</h4>
+&lt;/<span style="color:#268bd2">html</span>&gt;</code></pre></div>
+<h4 id="margin简写形式">margin简写形式</h4>
+
 <p>同padding</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#268bd2">style</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;text/css&#34;</span>&gt;
         <span style="color:#268bd2">div</span>
@@ -1624,30 +1830,45 @@ background-image: url(img/haizei.png);
             <span style="color:#719e07">border</span>:<span style="color:#2aa198">1</span><span style="color:#dc322f">px</span> <span style="color:#cb4b16">solid</span> <span style="color:#cb4b16">red</span>;
             <span style="color:#719e07">background-color</span>:<span style="color:#2aa198">#FFDEAD</span>;
         }
-    &lt;/<span style="color:#268bd2">style</span>&gt;
-</code></pre></div><h2 id="浮动布局">浮动布局</h2>
+    &lt;/<span style="color:#268bd2">style</span>&gt;</code></pre></div>
+<h2 id="浮动布局">浮动布局</h2>
+
 <h3 id="文档流简介">文档流简介</h3>
+
 <h4 id="正常文档流">正常文档流</h4>
+
 <p>正常文档流，又称为“普通文档流”或“普通流”，也就是W3C标准所说的“normal flow”。我们先来看一下正常文档流的简单定义：“正常文档流，将一个页面从上到下分为一行一行，其中块元素独占一行，相邻行内元素在每一行中按照从左到右排列直到该行排满。”也就是说，正常文档流指的就是默认情况下页面元素的布局情况。</p>
+
 <p>由于div、p、hr都是块元素，因此独占一行。而span、i、img都是行内元素，因此如果两个行内元素相邻，就会位于同一行，并且从左到右排列。</p>
+
 <h4 id="脱离文档流">脱离文档流</h4>
+
 <p>脱离文档流，指的是脱离正常文档流。正常文档流就是我们没有使用浮动或者定位去改变的默认情况下的HTML文档结构。换一句话说，如果我们想要改变正常文档流，可以使用有两种方法：<strong>浮动和定位</strong>。</p>
+
 <p>浮动和定位可改变正常文档结构</p>
-<h3 id="浮动httpwwwlvyestudycomcssfloat"><a href="http://www.lvyestudy.com/css/float">浮动</a></h3>
+
+<h3 id="浮动-http-www-lvyestudy-com-css-float"><a href="http://www.lvyestudy.com/css/float">浮动</a></h3>
+
 <p>浮动会影响周围元素，可以用clear清除</p>
+
 <ul>
 <li>float：left</li>
 <li>float：right</li>
 </ul>
+
 <p>清除浮动</p>
+
 <p>使用clear属性</p>
+
 <ul>
 <li>clear:left</li>
 <li>clear:right</li>
 <li>clear:both</li>
 </ul>
+
 <p>实际开发只会用到both</p>
-<h3 id="习题httpwwwlvyestudycomcssexercise-12"><a href="http://www.lvyestudy.com/css/exercise-12">习题</a></h3>
+
+<h3 id="习题-http-www-lvyestudy-com-css-exercise-12"><a href="http://www.lvyestudy.com/css/exercise-12">习题</a></h3>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#719e07">&lt;!DOCTYPE html&gt;</span>
 &lt;<span style="color:#268bd2">html</span>&gt;
 &lt;<span style="color:#268bd2">head</span>&gt;
@@ -1693,19 +1914,26 @@ background-image: url(img/haizei.png);
 &lt;<span style="color:#268bd2">div</span> class<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;clear&#34;</span>&gt;&lt;/<span style="color:#268bd2">div</span>&gt;
 &lt;<span style="color:#268bd2">div</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;son4&#34;</span>&gt;&lt;/<span style="color:#268bd2">div</span>&gt;
 &lt;/<span style="color:#268bd2">body</span>&gt;
-&lt;/<span style="color:#268bd2">html</span>&gt;
-</code></pre></div><h2 id="定位布局">定位布局</h2>
+&lt;/<span style="color:#268bd2">html</span>&gt;</code></pre></div>
+<h2 id="定位布局">定位布局</h2>
+
 <p>浮动布局比较灵活，但是不容易控制。而定位布局的出现，使得用户精准定位页面中的任意元素成为可能，此时页面布局操作也变得更加随心所欲。当然了，由于定位布局缺乏灵活性，也给空间大小和位置不确定的版面布局带来困惑。因此在实际开发中，大家应该灵活使用这两种布局方式，这样才可以更好地满足开发需求。CSS定位使你可以将一个元素精确地放在页面上你指定的地方。联合使用定位和浮动，能够创建多种高级而精确地布局。</p>
+
 <p>position四种取值：</p>
+
 <ul>
 <li>fixed：固定定位</li>
 <li>relative：相对定位</li>
 <li>absolute：绝对定位</li>
 <li>static：静态定位</li>
 </ul>
-<h3 id="固定定位fixed">固定定位：fixed</h3>
+
+<h3 id="固定定位-fixed">固定定位：fixed</h3>
+
 <p>固定定位是最直观也是最容易理解的定位方式。为了更好的让大家感受什么是定位布局，我们先来介绍一下固定定位。</p>
+
 <p>在CSS中，我们可以使用“position:fixed;”来实现固定定位。所谓的固定定位，指的是被固定的元素不会随着滚动条的拖动而改变位置。</p>
+
 <p>例子：</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#719e07">&lt;!DOCTYPE html&gt;</span>
 &lt;<span style="color:#268bd2">html</span>&gt;
@@ -1737,25 +1965,35 @@ background-image: url(img/haizei.png);
     &lt;<span style="color:#268bd2">div</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;first&#34;</span>&gt;无定位的div元素&lt;/<span style="color:#268bd2">div</span>&gt;
     &lt;<span style="color:#268bd2">div</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;second&#34;</span>&gt;固定定位的div元素&lt;/<span style="color:#268bd2">div</span>&gt;
 &lt;/<span style="color:#268bd2">body</span>&gt;
-&lt;/<span style="color:#268bd2">html</span>&gt;
-</code></pre></div><h3 id="相对定位httpwwwlvyestudycomcssposition-relative"><a href="http://www.lvyestudy.com/css/position-relative">相对定位</a></h3>
+&lt;/<span style="color:#268bd2">html</span>&gt;</code></pre></div>
+<h3 id="相对定位-http-www-lvyestudy-com-css-position-relative"><a href="http://www.lvyestudy.com/css/position-relative">相对定位</a></h3>
+
 <p>说明：</p>
+
 <p>position:relative;也是结合top、bottom、left和right这4个属性一起使用的，其中，position:relative;使得元素成为相对定位元素，接着使用top、bottom、left和right这4个属性来设置元素相对原始的位置。top、bottom、left和right这4个属性不一定全部都用到，一般只会用到其中两个。这4个值的参考对象是该元素的原始位置。</p>
+
 <p>注意，在默认情况下，固定定位元素的位置是相对浏览器而言，而相对定位元素的位置是相对于原始位置而言！</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">#son2
 {
     position:relative;
     top:20px;
     left:40px;
-}
-</code></pre></div><h3 id="绝对定位httpwwwlvyestudycomcssposition-absolute"><a href="http://www.lvyestudy.com/css/position-absolute">绝对定位</a></h3>
+}</code></pre></div>
+<h3 id="绝对定位-http-www-lvyestudy-com-css-position-absolute"><a href="http://www.lvyestudy.com/css/position-absolute">绝对定位</a></h3>
+
 <p>在CSS中，我们可以使用“position:absolute;”来实现绝对定位。绝对定位在几种定位方式中使用最为广泛，因为它能够很精确地把元素定位到任意你想要的位置。</p>
+
 <p>一个元素变成了绝对定位元素，这个元素就完全脱离文档流了，绝对定位元素的前面或后面的元素会认为这个元素并不存在，此时这个元素浮于其他元素上面，已经完全独立出来了。</p>
+
 <h3 id="静态定位">静态定位</h3>
+
 <p>在默认情况下，元素没有指定position属性时，这个元素就是静态定位的。也就是说，元素position属性的默认值是static。</p>
+
 <p>一般情况下我们使用不到position:static的，不过在使用JavaScript来控制元素定位时，如果想要使得元素从其他定位方式变成静态定位，就需要使用position:static来实现。</p>
+
 <p>在CSS入门中，我们只需要掌握固定定位、相对定位和绝对定位3种就可以了，静态定位了解一下就行。</p>
-<p>**最后的话：**跟浮动布局一样，定位布局也是非常复杂的。这一章学到的只是一些基础知识而已，想要真正用好定位布局，我们还需要掌握更高级的开发技巧。对于高级部分以及开发技巧，我们在CSS进阶教程中再详细介绍。</p>
+
+<p><strong>最后的话：</strong>跟浮动布局一样，定位布局也是非常复杂的。这一章学到的只是一些基础知识而已，想要真正用好定位布局，我们还需要掌握更高级的开发技巧。对于高级部分以及开发技巧，我们在CSS进阶教程中再详细介绍。</p>
 
 		</div>
 

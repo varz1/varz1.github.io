@@ -6,10 +6,9 @@
 	<meta property="og:title" content="Leet Data Linklist" />
 <meta property="og:description" content="Linklist" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://varz1.github.io/posts/leet-data-linklist/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-06-10T19:00:11&#43;08:00" />
-<meta property="article:modified_time" content="2021-06-10T19:00:11&#43;08:00" />
-
+<meta property="og:url" content="https://varz1.github.io/posts/leet-data-linklist/" />
+<meta property="article:published_time" content="2021-06-10T19:00:11&#43;08:00"/>
+<meta property="article:modified_time" content="2021-06-10T19:00:11&#43;08:00"/>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Leet Data Linklist"/>
 <meta name="twitter:description" content="Linklist"/>
@@ -68,26 +67,44 @@
 		</div>
 
 		<div class="markdown">
-			<h1 id="leetcode数据结构-链表">leetcode数据结构-链表</h1>
+			
+
+<h1 id="leetcode数据结构-链表">leetcode数据结构-链表</h1>
+
 <h2 id="1-找出两个链表的交点">1. 找出两个链表的交点</h2>
-<ol start="160">
+
+<ol>
 <li>Intersection of Two Linked Lists (Easy)</li>
 </ol>
+
 <p><a href="https://leetcode.com/problems/intersection-of-two-linked-lists/description/">Leetcode </a>/ <a href="https://leetcode-cn.com/problems/intersection-of-two-linked-lists/description/">力扣</a></p>
+
 <p>例如以下示例中 A 和 B 两个链表相交于 c1：</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">A:          a1 → a2
                     ↘
                       c1 → c2 → c3
                     ↗
-B:    b1 → b2 → b3
-</code></pre></div><p>但是不会出现以下相交的情况，因为每个节点只有一个 next 指针，也就只能有一个后继节点，而以下示例中节点 c 有两个后继节点。</p>
+B:    b1 → b2 → b3</code></pre></div>
+<p>但是不会出现以下相交的情况，因为每个节点只有一个 next 指针，也就只能有一个后继节点，而以下示例中节点 c 有两个后继节点。</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">A:          a1 → a2       d1 → d2
                     ↘  ↗
                       c
                     ↗  ↘
-B:    b1 → b2 → b3        e1 → e2
-</code></pre></div><p>要求时间复杂度为 O(N)，空间复杂度为 O(1)。如果不存在交点则返回 null。</p>
-<p>&hellip;.明天填坑</p>
+B:    b1 → b2 → b3        e1 → e2</code></pre></div>
+<p>要求时间复杂度为 O(N)，空间复杂度为 O(1)。如果不存在交点则返回 null。</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#268bd2">public</span> ListNode <span style="color:#268bd2">getIntersectionNode</span><span style="color:#719e07">(</span>ListNode headA<span style="color:#719e07">,</span> ListNode headB<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+    ListNode l1 <span style="color:#719e07">=</span> headA<span style="color:#719e07">,</span> l2 <span style="color:#719e07">=</span> headB<span style="color:#719e07">;</span>
+    <span style="color:#719e07">while</span> <span style="color:#719e07">(</span>l1 <span style="color:#719e07">!=</span> l2<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+        l1 <span style="color:#719e07">=</span> <span style="color:#719e07">(</span>l1 <span style="color:#719e07">==</span> <span style="color:#cb4b16">null</span><span style="color:#719e07">)</span> <span style="color:#719e07">?</span> headB <span style="color:#719e07">:</span> l1<span style="color:#719e07">.</span>next<span style="color:#719e07">;</span>
+        l2 <span style="color:#719e07">=</span> <span style="color:#719e07">(</span>l2 <span style="color:#719e07">==</span> <span style="color:#cb4b16">null</span><span style="color:#719e07">)</span> <span style="color:#719e07">?</span> headA <span style="color:#719e07">:</span> l2<span style="color:#719e07">.</span>next<span style="color:#719e07">;</span>
+    <span style="color:#719e07">}</span>
+    <span style="color:#719e07">return</span> l1<span style="color:#719e07">;</span>
+<span style="color:#719e07">}</span></code></pre></div>
+<p>设 A 的长度为 a + c，B 的长度为 b + c，其中 c 为尾部公共部分长度，可知 a + c + b = b + c + a。</p>
+
+<p>当访问 A 链表的指针访问到链表尾部时，令它从链表 B 的头部开始访问链表 B；同样地，当访问 B 链表的指针访问到链表尾部时，令它从链表 A 的头部开始访问链表 A。这样就能控制访问 A 和 B 两个链表的指针能同时访问到交点。</p>
+
+<p>如果不存在交点，那么 a + b = b + a，以下实现代码中 l1 和 l2 会同时为 null，从而退出循环。</p>
 
 		</div>
 

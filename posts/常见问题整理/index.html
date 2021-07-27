@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title> - : )</title><link rel="icon" type="image/png" href=icons/smile.svg /><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:title" content="" />
+<meta property="og:description" content="一、Java 1.==和equals的区别  对象类型不同  equals():是超类Object中的方法 ==:是操作符  比较的对象不同  equals():用来检测两个对象是否相等，即两个对象的内容是否相等 ==: 基础数据类型：比较的是他们的值是否相等，比如两个int类型的变量，比较的是变量的值是否一样 引用数据类型：比较的是引用的地址是否相同，比如说新建了两个User对象，比较的是两个User的地址是否一样  运行速度不同  ==快于equals因为==比较引用   public boolean equals(Object obj) { return (this == obj); }//equals source coed 由equals的源码可以看出这里定义的equals与==是等效的（Object类中的equals没什么区别），不同的原因就在于有些类（像String、Integer等类）对equals进行了重写。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://varz1.github.io/posts/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86/" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="一、Java 1.==和equals的区别  对象类型不同  equals():是超类Object中的方法 ==:是操作符  比较的对象不同  equals():用来检测两个对象是否相等，即两个对象的内容是否相等 ==: 基础数据类型：比较的是他们的值是否相等，比如两个int类型的变量，比较的是变量的值是否一样 引用数据类型：比较的是引用的地址是否相同，比如说新建了两个User对象，比较的是两个User的地址是否一样  运行速度不同  ==快于equals因为==比较引用   public boolean equals(Object obj) { return (this == obj); }//equals source coed 由equals的源码可以看出这里定义的equals与==是等效的（Object类中的equals没什么区别），不同的原因就在于有些类（像String、Integer等类）对equals进行了重写。"/>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Raleway:200,300" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" media="screen" href="https://varz1.github.io/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://varz1.github.io/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="https://varz1.github.io/css/custom.css" />
+	<link rel="stylesheet" type="text/css" href="https://varz1.github.io/css/dark.css" media="(prefers-color-scheme: dark)" />
+	<link rel="stylesheet" type="text/css" href="https://varz1.github.io/css/custom-dark.css" media="(prefers-color-scheme: dark)" />
+
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+	<script src="https://varz1.github.io/js/main.js"></script>
+	<script src="https://varz1.github.io/js/abc.js"></script>
+	<script src="https://varz1.github.io/js/xyz.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+	<div class="container wrapper post">
+		<div class="header">
+	<base href="https://varz1.github.io/">
+	<h1 class="site-title"><a href="https://varz1.github.io/">: )</a></h1>
+	<div class="site-description"><h2>你我都有光明的未来</h2><nav class="nav social">
+			<ul class="flat"><a href="https://github.com/varz1" title="Github"><i data-feather="github"></i></a></ul>
+		</nav>
+	</div>
+
+	<nav class="nav">
+		<ul class="flat">
+			
+			<li>
+				<a href="/">Home</a>
+			</li>
+			
+			<li>
+				<a href="/posts">All posts</a>
+			</li>
+			
+			<li>
+				<a href="/tags">Tags</a>
+			</li>
+			
+			<li>
+				<a href="/about">About</a>
+			</li>
+			
+		</ul>
+	</nav>
+</div>
+
+
+		<div class="post-header">
+			<h1 class="title"></h1>
+			<div class="meta">Posted at &mdash; Jan 1, 0001</div>
+		</div>
+
+		<div class="markdown">
+			
+
+<h2 id="一-java">一、Java</h2>
+
+<h3 id="1-和equals的区别-https-zhuanlan-zhihu-com-p-338350987">1.<a href="https://zhuanlan.zhihu.com/p/338350987">==和equals的区别</a></h3>
+
+<ul>
+<li><strong>对象类型不同</strong>
+
+<ul>
+<li>equals():是超类Object中的方法</li>
+<li>==:是操作符</li>
+</ul></li>
+<li><strong>比较的对象不同</strong>
+
+<ul>
+<li>equals():用来检测两个对象是否相等，即两个对象的内容是否相等</li>
+<li>==:</li>
+<li>基础数据类型：比较的是他们的值是否相等，比如两个int类型的变量，比较的是变量的值是否一样</li>
+<li>引用数据类型：比较的是引用的地址是否相同，比如说新建了两个User对象，比较的是两个User的地址是否一样</li>
+</ul></li>
+<li><strong>运行速度不同</strong>
+
+<ul>
+<li>==快于equals因为==比较引用</li>
+</ul></li>
+</ul>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#268bd2">public</span> <span style="color:#dc322f">boolean</span> <span style="color:#268bd2">equals</span><span style="color:#719e07">(</span>Object obj<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+
+<span style="color:#719e07">return</span> <span style="color:#719e07">(</span><span style="color:#719e07">this</span> <span style="color:#719e07">==</span> obj<span style="color:#719e07">);</span>
+
+<span style="color:#719e07">}//</span>equals source coed</code></pre></div>
+<p>由equals的源码可以看出这里定义的equals与==是等效的（Object类中的equals没什么区别），不同的原因就在于有些类（像String、Integer等类）对equals进行了重写。</p>
+
+<p>但是没有对equals进行重写的类就只能从Object类中继承equals方法，其equals方法与==就也是等效的，除非在此类中重写equals。</p>
+
+<h3 id="equals">equals：</h3>
+
+<p>equals用来比较的是两个对象的内容是否相等，由于所有的类都是继承自java.lang.Object类的，所以适用于所有对象，如果没有对该方法进行覆盖的话，调用的仍然是Object类中的方法，而Object中的equals方法返回的却是==的判断。</p>
+
+<p>String s=&ldquo;abce&rdquo;是一种非常特殊的形式,和new 有本质的区别。它是java中唯一不需要new 就可以产生对象的途径。</p>
+
+<p>以String s=&ldquo;abce&rdquo;;形式赋值在java中叫直接量,它是在常量池中而不是象new一样放在压缩堆中。这种形式的字符串，在JVM内部发生字符串拘留，即当声明这样的一个字符串后，JVM会在常量池中先查找有有没有一个值为&rdquo;abcd&rdquo;的对象。</p>
+
+<p>如果有，就会把它赋给当前引用.即原来那个引用和现在这个引用指点向了同一对象，如果没有，则在常量池中新创建一个“abcd&rdquo;”，下一次如果有Strings1=&ldquo;abcd&rdquo;；又会将s1指向“abcd”这个对象，即以这形式声明的字符串，只要值相等，任何多个引用都指向同一对象。</p>
+
+<p>而String s=new String（&rdquo;abcd”）；和其它任何对象一样.每调用一次就产生一个对象，只要它们调用。</p>
+
+<p>也可以这么理解：String str=&ldquo;hello”；先在内存中找是不是有“hello”这个对象，如果有，就让str指向那个“hello”。</p>
+
+<p>如果内存里没有&rdquo;hello&rdquo;，就创建一个新的对象保存&rdquo;hello”.String str=new String（“hello&rdquo;）就是不管内存里是不是已经有&rdquo;hello&rdquo;这个对象，都新建一个对象保存&rdquo;hello&rdquo;。</p>
+
+<h3 id="2">2.</h3>
+
+		</div>
+
+		<div class="post-tags">
+			
+				
+			
+		</div>
+		</div>
+	<div class="footer wrapper">
+	<nav class="nav">
+		<div> © Copyright notice |  <a href="https://github.com/vividvilla/ezhil">Ezhil theme</a> | Built with <a href="https://gohugo.io">Hugo</a></div>
+	</nav>
+</div>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-147515514-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+<script>feather.replace()</script>
+</body>
+</html>

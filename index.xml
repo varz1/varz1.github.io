@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>: )</title>
@@ -7,16 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Copyright notice</copyright>
-    <lastBuildDate>Thu, 10 Jun 2021 19:00:11 +0800</lastBuildDate><atom:link href="https://varz1.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Jun 2021 19:00:11 +0800</lastBuildDate>
+    
+	<atom:link href="https://varz1.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>Leet Data Linklist</title>
       <link>https://varz1.github.io/posts/leet-data-linklist/</link>
       <pubDate>Thu, 10 Jun 2021 19:00:11 +0800</pubDate>
       
       <guid>https://varz1.github.io/posts/leet-data-linklist/</guid>
-      <description>leetcode数据结构-链表 1. 找出两个链表的交点 Intersection of Two Linked Lists (Easy)  Leetcode / 力扣
-例如以下示例中 A 和 B 两个链表相交于 c1：
-A: a1 → a2 ↘ c1 → c2 → c3 ↗ B: b1 → b2 → b3 但是不会出现以下相交的情况，因为每个节点只有一个 next 指针，也就只能有一个后继节点，而以下示例中节点 c 有两个后继节点。</description>
+      <description>leetcode数据结构-链表 1. 找出两个链表的交点  Intersection of Two Linked Lists (Easy)  Leetcode / 力扣
+例如以下示例中 A 和 B 两个链表相交于 c1：</description>
     </item>
     
     <item>
@@ -25,7 +28,7 @@ A: a1 → a2 ↘ c1 → c2 → c3 ↗ B: b1 → b2 → b3 但是不会出现以�
       <pubDate>Wed, 09 Jun 2021 21:49:00 +0800</pubDate>
       
       <guid>https://varz1.github.io/posts/leet2-sort/</guid>
-      <description>1.数组中的第K个最大元素 Kth Largest Element in an Array (Medium)  Leetcode / 力扣
+      <description>1.数组中的第K个最大元素  Kth Largest Element in an Array (Medium)  Leetcode / 力扣
 Input: [3,2,1,5,6,4] and k = 2 Output: 5 题目描述：找到倒数第 k 个的元素。</description>
     </item>
     
@@ -37,8 +40,7 @@ Input: [3,2,1,5,6,4] and k = 2 Output: 5 题目描述：找到倒数第 k 个的
       <guid>https://varz1.github.io/posts/priorityqueue/</guid>
       <description>1.不重写CompareTo方法 背景：刷LeetCode重学了PriorityQueue
 在未排序的数组中找到第 k 个最大的元素。请注意，你需要找的是数组排序后的第 k 个最大的元素，而不是第 k 个不同的元素。 示例:
-输入: [3,2,1,5,6,4] 和 k = 2 输出: 5 题解：
-class Solution { public int findKthLargest(int[] nums, int k) { PriorityQueue&amp;lt;Integer&amp;gt; pq = new PriorityQueue&amp;lt;&amp;gt;(); for (int val : nums) { pq.</description>
+输入: [3,2,1,5,6,4] 和 k = 2 输出: 5 题解：</description>
     </item>
     
     <item>
@@ -47,7 +49,7 @@ class Solution { public int findKthLargest(int[] nums, int k) { PriorityQueue&am
       <pubDate>Wed, 05 May 2021 19:38:07 +0800</pubDate>
       
       <guid>https://varz1.github.io/posts/linux/</guid>
-      <description>一、Systemctl  启动服务：systemctl start vsftpd.service 关闭服务：systemctl stop vsftpd.service 重启服务：systemctl restart vsftpd.service 显示服务的状态：systemctl status vsftpd.service 在开机时启用服务：systemctl enable vsftpd.service 在开机时禁用服务：systemctl disable vsftpd.service 查看服务是否开机启动：systemctl is-enabled vsftpd.</description>
+      <description>一、Systemctl  启动服务：systemctl start vsftpd.service 关闭服务：systemctl stop vsftpd.service 重启服务：systemctl restart vsftpd.service 显示服务的状态：systemctl status vsftpd.service 在开机时启用服务：systemctl enable vsftpd.service 在开机时禁用服务：systemctl disable vsftpd.</description>
     </item>
     
     <item>
@@ -82,8 +84,8 @@ go get -u github.com/go-telegram-bot-api/telegram-bot-api 一个简单的Go程�
       
       <guid>https://varz1.github.io/posts/css/</guid>
       <description>编辑于2021-3-6
- 简介 css引入方式 实际开发通常使用外部样式表在此为方便说明使用内部
- 外部样式表  &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;utf-8&amp;#34; /&amp;gt; &amp;lt;title&amp;gt;&amp;lt;/title&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; type=&amp;#34;text/css&amp;#34; href=&amp;#34;css/index.</description>
+ 简介 css引入方式 实际开发通常使用外部样式表在此为方便说明使用内部 - 外部样式表
+&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;utf-8&amp;#34; /&amp;gt; &amp;lt;title&amp;gt;&amp;lt;/title&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; type=&amp;#34;text/css&amp;#34; href=&amp;#34;css/index.</description>
     </item>
     
     <item>
@@ -114,7 +116,7 @@ $ curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-ke
       
       <guid>https://varz1.github.io/posts/leet1/</guid>
       <description>1. 两数之和 II - 输入有序数组 给定一个已按照 升序排列 的整数数组 numbers ，请你从数组中找出两个数满足相加之和等于目标数 target 。
-函数应该以长度为 2 的整数数组的形式返回这两个数的下标值*。*numbers 的下标 **从 1 开始计数** ，所以答案数组应当满足 1 &amp;lt;= answer[0] &amp;lt; answer[1] &amp;lt;= numbers.</description>
+函数应该以长度为 2 的整数数组的形式返回这两个数的下标值。numbers 的下标 从 1 开始计数 ，所以答案数组应当满足 1 &amp;lt;= answer[0] &amp;lt; answer[1] &amp;lt;= numbers.</description>
     </item>
     
     <item>
@@ -124,6 +126,15 @@ $ curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-ke
       
       <guid>https://varz1.github.io/about/</guid>
       <description>:)</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://varz1.github.io/posts/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://varz1.github.io/posts/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86/</guid>
+      <description>一、Java 1.==和equals的区别  对象类型不同  equals():是超类Object中的方法 ==:是操作符  比较的对象不同  equals():用来检测两个对象是否相等，即两个对象的内容是否相等 ==: 基础数据类型：比较的是他们的值是否相等，比如两个int类型的变量，比较的是变量的值是否一样 引用数据类型：比较的是引用的地址是否相同，比如说新建了两个User对象，比较的是两个User的地址是否一样  运行速度不同  ==快于equals因为==比较引用   public boolean equals(Object obj) { return (this == obj); }//equals source coed 由equals的源码可以看出这里定义的equals与==是等效的（Object类中的equals没什么区别），不同的原因就在于有些类（像String、Integer等类）对equals进行了重写。</description>
     </item>
     
   </channel>

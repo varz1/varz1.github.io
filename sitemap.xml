@@ -1,62 +1,111 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://varz1.github.io/posts/leet-data-linklist/</loc>
+    <lastmod>2021-06-10T19:00:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://varz1.github.io/posts/leet2-sort/</loc>
+    <lastmod>2021-06-09T21:49:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://varz1.github.io/posts/priorityqueue/</loc>
+    <lastmod>2021-06-09T00:47:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://varz1.github.io/posts/linux/</loc>
+    <lastmod>2021-05-05T19:38:07+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://varz1.github.io/posts/grub/</loc>
+    <lastmod>2021-04-29T18:28:59+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://varz1.github.io/posts/tg/</loc>
+    <lastmod>2021-03-08T22:57:26+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://varz1.github.io/posts/css/</loc>
+    <lastmod>2021-03-07T14:36:10+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://varz1.github.io/posts/spotify/</loc>
+    <lastmod>2021-03-03T20:45:58+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://varz1.github.io/posts/html/</loc>
+    <lastmod>2021-02-27T20:20:44+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://varz1.github.io/posts/leet1/</loc>
+    <lastmod>2021-02-22T21:38:48+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://varz1.github.io/about/</loc>
+  </url>
+  
+  <url>
+    <loc>https://varz1.github.io/posts/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86/</loc>
+  </url>
+  
   <url>
     <loc>https://varz1.github.io/</loc>
     <lastmod>2021-06-10T19:00:11+08:00</lastmod>
-  </url><url>
-    <loc>https://varz1.github.io/posts/leet-data-linklist/</loc>
-    <lastmod>2021-06-10T19:00:11+08:00</lastmod>
-  </url><url>
-    <loc>https://varz1.github.io/posts/</loc>
-    <lastmod>2021-06-10T19:00:11+08:00</lastmod>
-  </url><url>
-    <loc>https://varz1.github.io/posts/leet2-sort/</loc>
-    <lastmod>2021-06-09T21:49:00+08:00</lastmod>
-  </url><url>
-    <loc>https://varz1.github.io/tags/</loc>
-    <lastmod>2021-06-09T21:49:00+08:00</lastmod>
-  </url><url>
-    <loc>https://varz1.github.io/tags/%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2021-06-09T21:49:00+08:00</lastmod>
-  </url><url>
-    <loc>https://varz1.github.io/posts/priorityqueue/</loc>
-    <lastmod>2021-06-09T00:47:13+08:00</lastmod>
-  </url><url>
-    <loc>https://varz1.github.io/tags/linux/</loc>
-    <lastmod>2021-05-05T19:38:07+08:00</lastmod>
-  </url><url>
-    <loc>https://varz1.github.io/posts/linux/</loc>
-    <lastmod>2021-05-05T19:38:07+08:00</lastmod>
-  </url><url>
-    <loc>https://varz1.github.io/posts/grub/</loc>
-    <lastmod>2021-04-29T18:28:59+08:00</lastmod>
-  </url><url>
-    <loc>https://varz1.github.io/tags/golang/</loc>
-    <lastmod>2021-03-08T22:57:26+08:00</lastmod>
-  </url><url>
-    <loc>https://varz1.github.io/posts/tg/</loc>
-    <lastmod>2021-03-08T22:57:26+08:00</lastmod>
-  </url><url>
-    <loc>https://varz1.github.io/posts/css/</loc>
-    <lastmod>2021-03-07T14:36:10+08:00</lastmod>
-  </url><url>
-    <loc>https://varz1.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2021-03-07T14:36:10+08:00</lastmod>
-  </url><url>
-    <loc>https://varz1.github.io/posts/spotify/</loc>
-    <lastmod>2021-03-03T20:45:58+08:00</lastmod>
-  </url><url>
-    <loc>https://varz1.github.io/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2021-03-03T20:45:58+08:00</lastmod>
-  </url><url>
-    <loc>https://varz1.github.io/posts/html/</loc>
-    <lastmod>2021-02-27T20:20:44+08:00</lastmod>
-  </url><url>
-    <loc>https://varz1.github.io/posts/leet1/</loc>
-    <lastmod>2021-02-22T21:38:48+08:00</lastmod>
-  </url><url>
-    <loc>https://varz1.github.io/about/</loc>
     <priority>0</priority>
   </url>
+  
+  <url>
+    <loc>https://varz1.github.io/tags/golang/</loc>
+    <lastmod>2021-03-08T22:57:26+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://varz1.github.io/tags/linux/</loc>
+    <lastmod>2021-05-05T19:38:07+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://varz1.github.io/posts/</loc>
+    <lastmod>2021-06-10T19:00:11+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://varz1.github.io/tags/</loc>
+    <lastmod>2021-03-08T22:57:26+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://varz1.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2021-03-07T14:36:10+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://varz1.github.io/tags/%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2021-06-09T21:49:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://varz1.github.io/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2021-03-03T20:45:58+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
 </urlset>
