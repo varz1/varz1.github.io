@@ -119,14 +119,5 @@ $ curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-ke
 函数应该以长度为 2 的整数数组的形式返回这两个数的下标值。numbers 的下标 从 1 开始计数 ，所以答案数组应当满足 1 &amp;lt;= answer[0] &amp;lt; answer[1] &amp;lt;= numbers.</description>
     </item>
     
-    <item>
-      <title></title>
-      <link>https://varz1.github.io/posts/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://varz1.github.io/posts/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86/</guid>
-      <description>一、Java 1.==和equals的区别  对象类型不同  equals():是超类Object中的方法 ==:是操作符  比较的对象不同  equals():用来检测两个对象是否相等，即两个对象的内容是否相等 ==: 基础数据类型：比较的是他们的值是否相等，比如两个int类型的变量，比较的是变量的值是否一样 引用数据类型：比较的是引用的地址是否相同，比如说新建了两个User对象，比较的是两个User的地址是否一样  运行速度不同  ==快于equals因为==比较引用   public boolean equals(Object obj) { return (this == obj); }//equals source coed 由equals的源码可以看出这里定义的equals与==是等效的（Object类中的equals没什么区别），不同的原因就在于有些类（像String、Integer等类）对equals进行了重写。</description>
-    </item>
-    
   </channel>
 </rss>
