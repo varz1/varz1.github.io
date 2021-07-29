@@ -7,10 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Copyright notice</copyright>
-    <lastBuildDate>Thu, 10 Jun 2021 19:00:11 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 11 Jun 2021 15:09:47 +0800</lastBuildDate>
     
 	<atom:link href="https://varz1.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Java基础</title>
+      <link>https://varz1.github.io/posts/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86/</link>
+      <pubDate>Fri, 11 Jun 2021 15:09:47 +0800</pubDate>
+      
+      <guid>https://varz1.github.io/posts/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86/</guid>
+      <description>一、==和 equals 的区别 1、概要 对于基本数据类型来说，==比较的是值。对于引用数据类型来说，==比较的是对象的内存地址。
+ 因为 Java 只有值传递，所以，对于 == 来说，不管是比较基本数据类型，还是引用数据类型的变量，其本质比较的都是值，只是引用类型变量存的值是对象的地址。
+ equals() 作用不能用于判断基本数据类型的变量，只能用来判断两个对象是否相等。equals()方法存在于Object类中，而Object类是所有类的直接或间接父类。
+Object 类 equals() 方法：
+public boolean equals(Object obj) { return (this == obj); } equals() 方法存在两种使用情况：</description>
+    </item>
     
     <item>
       <title>leetcode数据结构-链表</title>
@@ -18,8 +31,7 @@
       <pubDate>Thu, 10 Jun 2021 19:00:11 +0800</pubDate>
       
       <guid>https://varz1.github.io/posts/leet-data-linklist/</guid>
-      <description>1. 找出两个链表的交点  Intersection of Two Linked Lists (Easy)  Leetcode / 力扣
-例如以下示例中 A 和 B 两个链表相交于 c1：</description>
+      <description>复习链表 结点数据结构ListNode public class ListNode { int val; ListNode next; ListNode(int x) { val = x; } } 单链表的一个实现(这里摘自LeetCode的题解自己扩展了小部分) package ChapterLinkList; class MyLinkedList { int size; ListNode head; // sentinel node as pseudo-head  public MyLinkedList() { size = 0; head = new ListNode(0); } //输入数组构造链表  public MyLinkedList(int num[]) { size = 0; head = new ListNode(0); for (int i = 0; i &amp;lt; num.</description>
     </item>
     
     <item>

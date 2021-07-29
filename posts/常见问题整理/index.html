@@ -2,15 +2,16 @@
 <html>
 <head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title> - : )</title><link rel="icon" type="image/png" href=icons/smile.svg /><meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta property="og:title" content="" />
-<meta property="og:description" content="一、Java 1.==和equals的区别  对象类型不同  equals():是超类Object中的方法 ==:是操作符  比较的对象不同  equals():用来检测两个对象是否相等，即两个对象的内容是否相等 ==: 基础数据类型：比较的是他们的值是否相等，比如两个int类型的变量，比较的是变量的值是否一样 引用数据类型：比较的是引用的地址是否相同，比如说新建了两个User对象，比较的是两个User的地址是否一样  运行速度不同  ==快于equals因为==比较引用   public boolean equals(Object obj) { return (this == obj); }//equals source coed 由equals的源码可以看出这里定义的equals与==是等效的（Object类中的equals没什么区别），不同的原因就在于有些类（像String、Integer等类）对equals进行了重写。" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Java基础 - : )</title><link rel="icon" type="image/png" href=icons/smile.svg /><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:title" content="Java基础" />
+<meta property="og:description" content="Java基础复习" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://varz1.github.io/posts/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86/" />
-
+<meta property="article:published_time" content="2021-06-11T15:09:47&#43;08:00"/>
+<meta property="article:modified_time" content="2021-06-11T15:09:47&#43;08:00"/>
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="一、Java 1.==和equals的区别  对象类型不同  equals():是超类Object中的方法 ==:是操作符  比较的对象不同  equals():用来检测两个对象是否相等，即两个对象的内容是否相等 ==: 基础数据类型：比较的是他们的值是否相等，比如两个int类型的变量，比较的是变量的值是否一样 引用数据类型：比较的是引用的地址是否相同，比如说新建了两个User对象，比较的是两个User的地址是否一样  运行速度不同  ==快于equals因为==比较引用   public boolean equals(Object obj) { return (this == obj); }//equals source coed 由equals的源码可以看出这里定义的equals与==是等效的（Object类中的equals没什么区别），不同的原因就在于有些类（像String、Integer等类）对equals进行了重写。"/>
+<meta name="twitter:title" content="Java基础"/>
+<meta name="twitter:description" content="Java基础复习"/>
 <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Raleway:200,300" rel="stylesheet">
 
 	<link rel="stylesheet" type="text/css" media="screen" href="https://varz1.github.io/css/normalize.css" />
@@ -61,69 +62,156 @@
 
 
 		<div class="post-header">
-			<h1 class="title"></h1>
-			<div class="meta">Posted at &mdash; Jan 1, 0001</div>
+			<h1 class="title">Java基础</h1>
+			<div class="meta">Posted at &mdash; Jun 11, 2021</div>
 		</div>
 
 		<div class="markdown">
 			
 
-<h2 id="一-java">一、Java</h2>
+<h2 id="一-和-equals-的区别">一、==和 equals 的区别</h2>
 
-<h3 id="1-和equals的区别-https-zhuanlan-zhihu-com-p-338350987">1.<a href="https://zhuanlan.zhihu.com/p/338350987">==和equals的区别</a></h3>
+<h3 id="1-概要">1、概要</h3>
 
-<ul>
-<li><strong>对象类型不同</strong>
+<p>对于基本数据类型来说，==比较的是值。对于引用数据类型来说，==比较的是对象的内存地址。</p>
 
-<ul>
-<li>equals():是超类Object中的方法</li>
-<li>==:是操作符</li>
-</ul></li>
-<li><strong>比较的对象不同</strong>
+<blockquote>
+<p>因为 <a href="https://segmentfault.com/a/1190000021529503">Java 只有值传递</a>，所以，对于 == 来说，不管是比较基本数据类型，还是引用数据类型的变量，其本质比较的都是值，只是引用类型变量存的值是对象的地址。</p>
+</blockquote>
 
-<ul>
-<li>equals():用来检测两个对象是否相等，即两个对象的内容是否相等</li>
-<li>==:</li>
-<li>基础数据类型：比较的是他们的值是否相等，比如两个int类型的变量，比较的是变量的值是否一样</li>
-<li>引用数据类型：比较的是引用的地址是否相同，比如说新建了两个User对象，比较的是两个User的地址是否一样</li>
-</ul></li>
-<li><strong>运行速度不同</strong>
+<p><strong><code>equals()</code></strong> 作用不能用于判断基本数据类型的变量，只能用来判断两个对象是否相等。<code>equals()</code>方法存在于<code>Object</code>类中，而<code>Object</code>类是所有类的直接或间接父类。</p>
+
+<p><code>Object</code> 类 <code>equals()</code> 方法：</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">public boolean equals(Object obj) {
+     return (this == obj);
+}</pre></div>
+<p><code>equals()</code> 方法存在两种使用情况：</p>
 
 <ul>
-<li>==快于equals因为==比较引用</li>
-</ul></li>
+<li><strong>类没有覆盖 <code>equals()</code>方法</strong> ：通过<code>equals()</code>比较该类的两个对象时，等价于通过“==”比较这两个对象，使用的默认是 <code>Object</code>类<code>equals()</code>方法。</li>
+<li><strong>类覆盖了 <code>equals()</code>方法</strong> ：一般我们都覆盖 <code>equals()</code>方法来比较两个对象中的属性是否相等；若它们的属性相等，则返回 true(即，认为这两个对象相等)。</li>
 </ul>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#268bd2">public</span> <span style="color:#dc322f">boolean</span> <span style="color:#268bd2">equals</span><span style="color:#719e07">(</span>Object obj<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
 
-<span style="color:#719e07">return</span> <span style="color:#719e07">(</span><span style="color:#719e07">this</span> <span style="color:#719e07">==</span> obj<span style="color:#719e07">);</span>
+<p><strong>举个例子：</strong></p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">public class test1 {
+    public static void main(String[] args) {
+        String a = new String(&#34;ab&#34;); // a 为一个引用
+        String b = new String(&#34;ab&#34;); // b为另一个引用,对象的内容一样
+        String aa = &#34;ab&#34;; // 放在常量池中
+        String bb = &#34;ab&#34;; // 从常量池中查找
+        if (aa == bb) // true
+            System.out.println(&#34;aa==bb&#34;);
+        if (a == b) // false，非同一对象
+            System.out.println(&#34;a==b&#34;);
+        if (a.equals(b)) // true
+            System.out.println(&#34;aEQb&#34;);
+        if (42 == 42.0) { // true
+            System.out.println(&#34;true&#34;);
+        }
+    }
+}</pre></div>
+<p><strong>说明：</strong></p>
 
-<span style="color:#719e07">}//</span>equals source coed</code></pre></div>
-<p>由equals的源码可以看出这里定义的equals与==是等效的（Object类中的equals没什么区别），不同的原因就在于有些类（像String、Integer等类）对equals进行了重写。</p>
+<ul>
+<li><code>String</code> 中的 <code>equals</code> 方法是被重写过的，因为 <code>Object</code> 的 <code>equals</code> 方法是比较的对象的内存地址，而 <code>String</code> 的 <code>equals</code> 方法比较的是对象的值。</li>
+<li>当创建 <code>String</code> 类型的对象时，虚拟机会在常量池中查找有没有已经存在的值和要创建的值相同的对象，如果有就把它赋给当前引用。如果没有就在常量池中重新创建一个 <code>String</code> 对象。</li>
+</ul>
 
-<p>但是没有对equals进行重写的类就只能从Object类中继承equals方法，其equals方法与==就也是等效的，除非在此类中重写equals。</p>
+<p><code>String</code>类<code>equals()</code>方法：</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">public boolean equals(Object anObject) {
+    if (this == anObject) {
+        return true;
+    }
+    if (anObject instanceof String) {
+        String anotherString = (String)anObject;
+        int n = value.length;
+        if (n == anotherString.value.length) {
+            char v1[] = value;
+            char v2[] = anotherString.value;
+            int i = 0;
+            while (n-- != 0) {
+                if (v1[i] != v2[i])
+                    return false;
+                i++;
+            }
+            return true;
+        }
+    }
+    return false;
+}</pre></div>
+<h3 id="2-hashcode-与-equals">2、hashCode()与 equals()</h3>
 
-<h3 id="equals">equals：</h3>
+<p>面试官可能会问你：“你重写过 <code>hashcode</code> 和 <code>equals</code>么，为什么重写 <code>equals</code> 时必须重写 <code>hashCode</code> 方法？”</p>
 
-<p>equals用来比较的是两个对象的内容是否相等，由于所有的类都是继承自java.lang.Object类的，所以适用于所有对象，如果没有对该方法进行覆盖的话，调用的仍然是Object类中的方法，而Object中的equals方法返回的却是==的判断。</p>
+<p><strong>1)hashCode()介绍:</strong></p>
 
-<p>String s=&ldquo;abce&rdquo;是一种非常特殊的形式,和new 有本质的区别。它是java中唯一不需要new 就可以产生对象的途径。</p>
+<p><code>hashCode()</code> 的作用是获取哈希码，也称为散列码；它实际上是返回一个 int 整数。这个哈希码的作用是确定该对象在哈希表中的索引位置。<code>hashCode()</code>定义在 JDK 的 <code>Object</code> 类中，这就意味着 Java 中的任何类都包含有 <code>hashCode()</code> 函数。另外需要注意的是： <code>Object</code> 的 hashcode 方法是本地方法，也就是用 c 语言或 c++ 实现的，该方法通常用来将对象的 内存地址 转换为整数之后返回。</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">public native int hashCode();</pre></div>
+<p>散列表存储的是键值对(key-value)，它的特点是：能根据“键”快速的检索出对应的“值”。这其中就利用到了散列码！（可以快速找到所需要的对象）</p>
 
-<p>以String s=&ldquo;abce&rdquo;;形式赋值在java中叫直接量,它是在常量池中而不是象new一样放在压缩堆中。这种形式的字符串，在JVM内部发生字符串拘留，即当声明这样的一个字符串后，JVM会在常量池中先查找有有没有一个值为&rdquo;abcd&rdquo;的对象。</p>
+<p><strong>2)为什么要有 hashCode？</strong></p>
 
-<p>如果有，就会把它赋给当前引用.即原来那个引用和现在这个引用指点向了同一对象，如果没有，则在常量池中新创建一个“abcd&rdquo;”，下一次如果有Strings1=&ldquo;abcd&rdquo;；又会将s1指向“abcd”这个对象，即以这形式声明的字符串，只要值相等，任何多个引用都指向同一对象。</p>
+<p>我们以“<code>HashSet</code> 如何检查重复”为例子来说明为什么要有 hashCode？</p>
 
-<p>而String s=new String（&rdquo;abcd”）；和其它任何对象一样.每调用一次就产生一个对象，只要它们调用。</p>
+<p>当你把对象加入 <code>HashSet</code> 时，<code>HashSet</code> 会先计算对象的 hashcode 值来判断对象加入的位置，同时也会与其他已经加入的对象的 hashcode 值作比较，如果没有相符的 hashcode，<code>HashSet</code> 会假设对象没有重复出现。但是如果发现有相同 hashcode 值的对象，这时会调用 <code>equals()</code> 方法来检查 hashcode 相等的对象是否真的相同。如果两者相同，<code>HashSet</code> 就不会让其加入操作成功。如果不同的话，就会重新散列到其他位置。（摘自我的 Java 启蒙书《Head First Java》第二版）。这样我们就大大减少了 equals 的次数，相应就大大提高了执行速度。</p>
 
-<p>也可以这么理解：String str=&ldquo;hello”；先在内存中找是不是有“hello”这个对象，如果有，就让str指向那个“hello”。</p>
+<p><strong>3)为什么重写 <code>equals</code> 时必须重写 <code>hashCode</code> 方法？</strong></p>
 
-<p>如果内存里没有&rdquo;hello&rdquo;，就创建一个新的对象保存&rdquo;hello”.String str=new String（“hello&rdquo;）就是不管内存里是不是已经有&rdquo;hello&rdquo;这个对象，都新建一个对象保存&rdquo;hello&rdquo;。</p>
+<p>如果两个对象相等，则 hashcode 一定也是相同的。两个对象相等,对两个对象分别调用 equals 方法都返回 true。但是，两个对象有相同的 hashcode 值，它们也不一定是相等的 。<strong>因此，equals 方法被覆盖过，则 <code>hashCode</code> 方法也必须被覆盖。</strong></p>
 
-<h3 id="2">2.</h3>
+<blockquote>
+<p><code>hashCode()</code>的默认行为是对堆上的对象产生独特值。如果没有重写 <code>hashCode()</code>，则该 class 的两个对象无论如何都不会相等（即使这两个对象指向相同的数据）</p>
+</blockquote>
+
+<p><strong>4)为什么两个对象有相同的 hashcode 值，它们也不一定是相等的？</strong></p>
+
+<p>在这里解释一位小伙伴的问题。以下内容摘自《Head First Java》。</p>
+
+<p>因为 <code>hashCode()</code> 所使用的哈希算法也许刚好会让多个对象传回相同的哈希值。越糟糕的哈希算法越容易碰撞，但这也与数据值域分布的特性有关（所谓碰撞也就是指的是不同的对象得到相同的 <code>hashCode</code>。</p>
+
+<p>我们刚刚也提到了 <code>HashSet</code>,如果 <code>HashSet</code> 在对比的时候，同样的 hashcode 有多个对象，它会使用 <code>equals()</code> 来判断是否真的相同。也就是说 <code>hashcode</code> 只是用来缩小查找成本。</p>
+
+<p>更多关于 <code>hashcode()</code> 和 <code>equals()</code> 的内容可以查看：<a href="https://www.cnblogs.com/skywang12345/p/3324958.html">Java hashCode() 和 equals()的若干问题解答</a></p>
+
+<p>////////<em>摘自 <a href="https://github.com/Snailclimb/JavaGuide/blob/master/docs/java/basis/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86.md#%E5%92%8C-equals-%E7%9A%84%E5%8C%BA%E5%88%AB">JavaGuide</a></em></p>
+
+<h3 id="3-几个实例">3、几个实例</h3>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">test1</span> <span style="color:#719e07">{</span>
+    <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span><span style="color:#719e07">(</span>String<span style="color:#719e07">[]</span> args<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+        String a <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> String<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;ab&#34;</span><span style="color:#719e07">);</span> <span style="color:#586e75">// a 为一个引用
+</span><span style="color:#586e75"></span>        String b <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> String<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;ab&#34;</span><span style="color:#719e07">);</span> <span style="color:#586e75">// b为另一个引用,对象的内容一样
+</span><span style="color:#586e75"></span>        String aa <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;ab&#34;</span><span style="color:#719e07">;</span> <span style="color:#586e75">// 放在常量池中
+</span><span style="color:#586e75"></span>        String bb <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;ab&#34;</span><span style="color:#719e07">;</span> <span style="color:#586e75">// 从常量池中查找
+</span><span style="color:#586e75"></span>        <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>aa <span style="color:#719e07">==</span> bb<span style="color:#719e07">)</span> <span style="color:#586e75">// true
+</span><span style="color:#586e75"></span>            System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;aa==bb&#34;</span><span style="color:#719e07">);</span>
+        <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>a <span style="color:#719e07">==</span> b<span style="color:#719e07">)</span> <span style="color:#586e75">// false，非同一对象
+</span><span style="color:#586e75"></span>            System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;a==b&#34;</span><span style="color:#719e07">);</span>
+        <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>a<span style="color:#719e07">.</span>equals<span style="color:#719e07">(</span>b<span style="color:#719e07">))</span> <span style="color:#586e75">// true
+</span><span style="color:#586e75"></span>            System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;aEQb&#34;</span><span style="color:#719e07">);</span>
+        <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>42 <span style="color:#719e07">==</span> 42<span style="color:#719e07">.</span>0<span style="color:#719e07">)</span> <span style="color:#719e07">{</span> <span style="color:#586e75">// true
+</span><span style="color:#586e75"></span>            System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;true&#34;</span><span style="color:#719e07">);</span>
+        <span style="color:#719e07">}</span>
+    <span style="color:#719e07">}</span>
+<span style="color:#719e07">}</span></code></pre></div>
+<p><strong>说明：</strong></p>
+
+<ul>
+<li><code>String</code> 中的 <code>equals</code> 方法是被重写过的，因为 <code>Object</code> 的 <code>equals</code> 方法是比较的对象的内存地址，而 <code>String</code> 的 <code>equals</code> 方法比较的是对象的值。</li>
+<li>当创建 <code>String</code> 类型的对象时，虚拟机会在常量池中查找有没有已经存在的值和要创建的值相同的对象，如果有就把它赋给当前引用。如果没有就在常量池中重新创建一个 <code>String</code> 对象。</li>
+</ul>
 
 		</div>
 
 		<div class="post-tags">
 			
+				
+					<nav class="nav tags">
+							<ul class="flat">
+								
+								<li><a href="/tags/java">Java</a></li>
+								
+							</ul>
+					</nav>
 				
 			
 		</div>

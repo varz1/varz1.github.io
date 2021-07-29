@@ -69,6 +69,115 @@
 		<div class="markdown">
 			
 
+<h2 id="复习链表">复习链表</h2>
+
+<h5 id="结点数据结构listnode">结点数据结构ListNode</h5>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">ListNode</span> <span style="color:#719e07">{</span>
+    <span style="color:#dc322f">int</span> val<span style="color:#719e07">;</span>
+    ListNode next<span style="color:#719e07">;</span>
+    ListNode<span style="color:#719e07">(</span><span style="color:#dc322f">int</span> x<span style="color:#719e07">)</span> <span style="color:#719e07">{</span> val <span style="color:#719e07">=</span> x<span style="color:#719e07">;</span> <span style="color:#719e07">}</span>
+<span style="color:#719e07">}</span></code></pre></div>
+<h5 id="单链表的一个实现-这里摘自-leetcode-https-leetcode-cn-com-problems-design-linked-list-的题解自己扩展了小部分">单链表的一个实现(这里摘自<a href="https://leetcode-cn.com/problems/design-linked-list/">LeetCode</a>的题解自己扩展了小部分)</h5>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#719e07">package</span> ChapterLinkList<span style="color:#719e07">;</span>
+
+<span style="color:#268bd2">class</span> <span style="color:#268bd2">MyLinkedList</span> <span style="color:#719e07">{</span>
+    <span style="color:#dc322f">int</span> size<span style="color:#719e07">;</span>
+    ListNode head<span style="color:#719e07">;</span>  <span style="color:#586e75">// sentinel node as pseudo-head
+</span><span style="color:#586e75"></span>
+    <span style="color:#268bd2">public</span> <span style="color:#268bd2">MyLinkedList</span><span style="color:#719e07">()</span> <span style="color:#719e07">{</span>
+        size <span style="color:#719e07">=</span> 0<span style="color:#719e07">;</span>
+        head <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ListNode<span style="color:#719e07">(</span>0<span style="color:#719e07">);</span>
+    <span style="color:#719e07">}</span>
+	<span style="color:#586e75">//输入数组构造链表
+</span><span style="color:#586e75"></span>    <span style="color:#268bd2">public</span> <span style="color:#268bd2">MyLinkedList</span><span style="color:#719e07">(</span><span style="color:#dc322f">int</span> num<span style="color:#719e07">[])</span> <span style="color:#719e07">{</span>
+        size <span style="color:#719e07">=</span> 0<span style="color:#719e07">;</span>
+        head <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ListNode<span style="color:#719e07">(</span>0<span style="color:#719e07">);</span>
+        <span style="color:#719e07">for</span> <span style="color:#719e07">(</span><span style="color:#dc322f">int</span> i <span style="color:#719e07">=</span> 0<span style="color:#719e07">;</span> i <span style="color:#719e07">&lt;</span> num<span style="color:#719e07">.</span>length<span style="color:#719e07">;</span> i<span style="color:#719e07">++)</span> <span style="color:#719e07">{</span>
+            <span style="color:#719e07">this</span><span style="color:#719e07">.</span>addAtIndex<span style="color:#719e07">(</span>i<span style="color:#719e07">,</span>num<span style="color:#719e07">[</span>i<span style="color:#719e07">]);</span>
+        <span style="color:#719e07">}</span>
+    <span style="color:#719e07">}</span>
+
+    <span style="color:#586e75">/**
+</span><span style="color:#586e75">     * Get the value of the index-th node in the linked list. If the index is invalid, return -1.
+</span><span style="color:#586e75">     */</span>
+    <span style="color:#268bd2">public</span> <span style="color:#dc322f">int</span> <span style="color:#268bd2">get</span><span style="color:#719e07">(</span><span style="color:#dc322f">int</span> index<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+        <span style="color:#586e75">// if index is invalid
+</span><span style="color:#586e75"></span>        <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>index <span style="color:#719e07">&lt;</span> 0 <span style="color:#719e07">||</span> index <span style="color:#719e07">&gt;=</span> size<span style="color:#719e07">)</span> <span style="color:#719e07">return</span> <span style="color:#719e07">-</span>1<span style="color:#719e07">;</span>
+
+        ListNode curr <span style="color:#719e07">=</span> head<span style="color:#719e07">;</span>
+        <span style="color:#586e75">// index steps needed
+</span><span style="color:#586e75"></span>        <span style="color:#586e75">// to move from sentinel node to wanted index
+</span><span style="color:#586e75"></span>        <span style="color:#719e07">for</span> <span style="color:#719e07">(</span><span style="color:#dc322f">int</span> i <span style="color:#719e07">=</span> 0<span style="color:#719e07">;</span> i <span style="color:#719e07">&lt;</span> index <span style="color:#719e07">+</span> 1<span style="color:#719e07">;</span> <span style="color:#719e07">++</span>i<span style="color:#719e07">)</span> curr <span style="color:#719e07">=</span> curr<span style="color:#719e07">.</span>next<span style="color:#719e07">;</span>
+        <span style="color:#719e07">return</span> curr<span style="color:#719e07">.</span>val<span style="color:#719e07">;</span>
+    <span style="color:#719e07">}</span>
+
+    <span style="color:#586e75">/**
+</span><span style="color:#586e75">     * 获取某个结点
+</span><span style="color:#586e75">     */</span>
+    <span style="color:#268bd2">public</span> ListNode <span style="color:#268bd2">getNode</span><span style="color:#719e07">(</span><span style="color:#dc322f">int</span> index<span style="color:#719e07">){</span>
+        <span style="color:#586e75">// if index is invalid
+</span><span style="color:#586e75"></span>        <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>index <span style="color:#719e07">&lt;</span> 0 <span style="color:#719e07">||</span> index <span style="color:#719e07">&gt;=</span> size<span style="color:#719e07">)</span> <span style="color:#719e07">return</span> <span style="color:#cb4b16">null</span><span style="color:#719e07">;</span>
+
+        ListNode curr <span style="color:#719e07">=</span> head<span style="color:#719e07">;</span>
+        <span style="color:#586e75">// index steps needed
+</span><span style="color:#586e75"></span>        <span style="color:#586e75">// to move from sentinel node to wanted index
+</span><span style="color:#586e75"></span>        <span style="color:#719e07">for</span> <span style="color:#719e07">(</span><span style="color:#dc322f">int</span> i <span style="color:#719e07">=</span> 0<span style="color:#719e07">;</span> i <span style="color:#719e07">&lt;</span> index <span style="color:#719e07">+</span> 1<span style="color:#719e07">;</span> <span style="color:#719e07">++</span>i<span style="color:#719e07">)</span> curr <span style="color:#719e07">=</span> curr<span style="color:#719e07">.</span>next<span style="color:#719e07">;</span>
+        <span style="color:#719e07">return</span> curr<span style="color:#719e07">;</span>
+    <span style="color:#719e07">}</span>
+    <span style="color:#586e75">/**
+</span><span style="color:#586e75">     * Add a node of value val before the first element of the linked list. After the insertion, the new node will be the first node of the linked list.
+</span><span style="color:#586e75">     */</span>
+    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">addAtHead</span><span style="color:#719e07">(</span><span style="color:#dc322f">int</span> val<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+        addAtIndex<span style="color:#719e07">(</span>0<span style="color:#719e07">,</span> val<span style="color:#719e07">);</span>
+    <span style="color:#719e07">}</span>
+
+    <span style="color:#586e75">/**
+</span><span style="color:#586e75">     * Append a node of value val to the last element of the linked list.
+</span><span style="color:#586e75">     */</span>
+    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">addAtTail</span><span style="color:#719e07">(</span><span style="color:#dc322f">int</span> val<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+        addAtIndex<span style="color:#719e07">(</span>size<span style="color:#719e07">,</span> val<span style="color:#719e07">);</span>
+    <span style="color:#719e07">}</span>
+
+    <span style="color:#586e75">/**
+</span><span style="color:#586e75">     * Add a node of value val before the index-th node in the linked list. If index equals to the length of linked list, the node will be appended to the end of linked list. If index is greater than the length, the node will not be inserted.
+</span><span style="color:#586e75">     */</span>
+    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">addAtIndex</span><span style="color:#719e07">(</span><span style="color:#dc322f">int</span> index<span style="color:#719e07">,</span> <span style="color:#dc322f">int</span> val<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+        <span style="color:#586e75">// If index is greater than the length,
+</span><span style="color:#586e75"></span>        <span style="color:#586e75">// the node will not be inserted.
+</span><span style="color:#586e75"></span>        <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>index <span style="color:#719e07">&gt;</span> size<span style="color:#719e07">)</span> <span style="color:#719e07">return</span><span style="color:#719e07">;</span>
+
+        <span style="color:#586e75">// [so weird] If index is negative,
+</span><span style="color:#586e75"></span>        <span style="color:#586e75">// the node will be inserted at the head of the list.
+</span><span style="color:#586e75"></span>        <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>index <span style="color:#719e07">&lt;</span> 0<span style="color:#719e07">)</span> index <span style="color:#719e07">=</span> 0<span style="color:#719e07">;</span>
+
+        <span style="color:#719e07">++</span>size<span style="color:#719e07">;</span>
+        <span style="color:#586e75">// find predecessor of the node to be added
+</span><span style="color:#586e75"></span>        ListNode pred <span style="color:#719e07">=</span> head<span style="color:#719e07">;</span>
+        <span style="color:#719e07">for</span> <span style="color:#719e07">(</span><span style="color:#dc322f">int</span> i <span style="color:#719e07">=</span> 0<span style="color:#719e07">;</span> i <span style="color:#719e07">&lt;</span> index<span style="color:#719e07">;</span> <span style="color:#719e07">++</span>i<span style="color:#719e07">)</span> pred <span style="color:#719e07">=</span> pred<span style="color:#719e07">.</span>next<span style="color:#719e07">;</span>
+
+        <span style="color:#586e75">// node to be added
+</span><span style="color:#586e75"></span>        ListNode toAdd <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ListNode<span style="color:#719e07">(</span>val<span style="color:#719e07">);</span>
+        <span style="color:#586e75">// insertion itself
+</span><span style="color:#586e75"></span>        toAdd<span style="color:#719e07">.</span>next <span style="color:#719e07">=</span> pred<span style="color:#719e07">.</span>next<span style="color:#719e07">;</span>
+        pred<span style="color:#719e07">.</span>next <span style="color:#719e07">=</span> toAdd<span style="color:#719e07">;</span>
+    <span style="color:#719e07">}</span>
+
+    <span style="color:#586e75">/**
+</span><span style="color:#586e75">     * Delete the index-th node in the linked list, if the index is valid.
+</span><span style="color:#586e75">     */</span>
+    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">deleteAtIndex</span><span style="color:#719e07">(</span><span style="color:#dc322f">int</span> index<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+        <span style="color:#586e75">// if the index is invalid, do nothing
+</span><span style="color:#586e75"></span>        <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>index <span style="color:#719e07">&lt;</span> 0 <span style="color:#719e07">||</span> index <span style="color:#719e07">&gt;=</span> size<span style="color:#719e07">)</span> <span style="color:#719e07">return</span><span style="color:#719e07">;</span>
+
+        size<span style="color:#719e07">--;</span>
+        <span style="color:#586e75">// find predecessor of the node to be deleted
+</span><span style="color:#586e75"></span>        ListNode pred <span style="color:#719e07">=</span> head<span style="color:#719e07">;</span>
+        <span style="color:#719e07">for</span> <span style="color:#719e07">(</span><span style="color:#dc322f">int</span> i <span style="color:#719e07">=</span> 0<span style="color:#719e07">;</span> i <span style="color:#719e07">&lt;</span> index<span style="color:#719e07">;</span> <span style="color:#719e07">++</span>i<span style="color:#719e07">)</span> pred <span style="color:#719e07">=</span> pred<span style="color:#719e07">.</span>next<span style="color:#719e07">;</span>
+
+        <span style="color:#586e75">// delete pred.next
+</span><span style="color:#586e75"></span>        pred<span style="color:#719e07">.</span>next <span style="color:#719e07">=</span> pred<span style="color:#719e07">.</span>next<span style="color:#719e07">.</span>next<span style="color:#719e07">;</span>
+    <span style="color:#719e07">}</span>
+<span style="color:#719e07">}</span></code></pre></div>
 <h2 id="1-找出两个链表的交点">1. 找出两个链表的交点</h2>
 
 <ol>
