@@ -69,7 +69,106 @@
 		<div class="markdown">
 			
 
-<h2 id="复习链表">复习链表</h2>
+<h2 id="1-找出两个链表的交点">1. 找出两个链表的交点</h2>
+
+<ol>
+<li>Intersection of Two Linked Lists (Easy)</li>
+</ol>
+
+<p><a href="https://leetcode.com/problems/intersection-of-two-linked-lists/description/">Leetcode </a>/ <a href="https://leetcode-cn.com/problems/intersection-of-two-linked-lists/description/">力扣</a></p>
+
+<p>例如以下示例中 A 和 B 两个链表相交于 c1：</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">A:          a1 → a2
+                    ↘
+                      c1 → c2 → c3
+                    ↗
+B:    b1 → b2 → b3</code></pre></div>
+<p>但是不会出现以下相交的情况，因为每个节点只有一个 next 指针，也就只能有一个后继节点，而以下示例中节点 c 有两个后继节点。</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">A:          a1 → a2       d1 → d2
+                    ↘  ↗
+                      c
+                    ↗  ↘
+B:    b1 → b2 → b3        e1 → e2</code></pre></div>
+<p>要求时间复杂度为 O(N)，空间复杂度为 O(1)。如果不存在交点则返回 null。</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#268bd2">public</span> ListNode <span style="color:#268bd2">getIntersectionNode</span><span style="color:#719e07">(</span>ListNode headA<span style="color:#719e07">,</span> ListNode headB<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+    ListNode l1 <span style="color:#719e07">=</span> headA<span style="color:#719e07">,</span> l2 <span style="color:#719e07">=</span> headB<span style="color:#719e07">;</span>
+    <span style="color:#719e07">while</span> <span style="color:#719e07">(</span>l1 <span style="color:#719e07">!=</span> l2<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+        l1 <span style="color:#719e07">=</span> <span style="color:#719e07">(</span>l1 <span style="color:#719e07">==</span> <span style="color:#cb4b16">null</span><span style="color:#719e07">)</span> <span style="color:#719e07">?</span> headB <span style="color:#719e07">:</span> l1<span style="color:#719e07">.</span>next<span style="color:#719e07">;</span>
+        l2 <span style="color:#719e07">=</span> <span style="color:#719e07">(</span>l2 <span style="color:#719e07">==</span> <span style="color:#cb4b16">null</span><span style="color:#719e07">)</span> <span style="color:#719e07">?</span> headA <span style="color:#719e07">:</span> l2<span style="color:#719e07">.</span>next<span style="color:#719e07">;</span>
+    <span style="color:#719e07">}</span>
+    <span style="color:#719e07">return</span> l1<span style="color:#719e07">;</span>
+<span style="color:#719e07">}</span></code></pre></div>
+<p>设 A 的长度为 a + c，B 的长度为 b + c，其中 c 为尾部公共部分长度，可知 a + c + b = b + c + a。</p>
+
+<p>当访问 A 链表的指针访问到链表尾部时，令它从链表 B 的头部开始访问链表 B；同样地，当访问 B 链表的指针访问到链表尾部时，令它从链表 A 的头部开始访问链表 A。这样就能控制访问 A 和 B 两个链表的指针能同时访问到交点。</p>
+
+<p>如果不存在交点，那么 a + b = b + a，以下实现代码中 l1 和 l2 会同时为 null，从而退出循环。</p>
+
+<h2 id="2-链表反转">2. 链表反转</h2>
+
+<ol>
+<li>Reverse Linked List (Easy)</li>
+</ol>
+
+<p><a href="https://leetcode.com/problems/reverse-linked-list/description/">Leetcode</a>/ <a href="https://leetcode-cn.com/problems/reverse-linked-list/description/">力扣</a></p>
+
+<h4 id="头插法">头插法</h4>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#268bd2">public</span> ListNode <span style="color:#268bd2">reverseList</span><span style="color:#719e07">(</span>ListNode head<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+    ListNode newHead <span style="color:#719e07">=</span> <span style="color:#cb4b16">null</span><span style="color:#719e07">;</span>
+    <span style="color:#719e07">while</span> <span style="color:#719e07">(</span>head <span style="color:#719e07">!=</span> <span style="color:#cb4b16">null</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+        ListNode next <span style="color:#719e07">=</span> head<span style="color:#719e07">.</span>next<span style="color:#719e07">;</span>
+        head<span style="color:#719e07">.</span>next <span style="color:#719e07">=</span> newHead<span style="color:#719e07">;</span>
+        newHead <span style="color:#719e07">=</span> head<span style="color:#719e07">;</span>
+        head <span style="color:#719e07">=</span> next<span style="color:#719e07">;</span>
+    <span style="color:#719e07">}</span>
+    <span style="color:#719e07">return</span> newHead<span style="color:#719e07">;</span>
+<span style="color:#719e07">}</span></code></pre></div>
+<p>总结：遍历链表过程中,使用newHead保存原先的头结点</p>
+
+<h4 id="递归">递归</h4>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#268bd2">public</span> ListNode <span style="color:#268bd2">reverseList</span><span style="color:#719e07">(</span>ListNode head<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+    <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>head <span style="color:#719e07">==</span> <span style="color:#cb4b16">null</span> <span style="color:#719e07">||</span> head<span style="color:#719e07">.</span>next <span style="color:#719e07">==</span> <span style="color:#cb4b16">null</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+        <span style="color:#719e07">return</span> head<span style="color:#719e07">;</span>
+    <span style="color:#719e07">}</span>
+    ListNode next <span style="color:#719e07">=</span> head<span style="color:#719e07">.</span>next<span style="color:#719e07">;</span>
+    ListNode newHead <span style="color:#719e07">=</span> reverseList<span style="color:#719e07">(</span>next<span style="color:#719e07">);</span>
+    next<span style="color:#719e07">.</span>next <span style="color:#719e07">=</span> head<span style="color:#719e07">;</span>
+    head<span style="color:#719e07">.</span>next <span style="color:#719e07">=</span> <span style="color:#cb4b16">null</span><span style="color:#719e07">;</span>
+    <span style="color:#719e07">return</span> newHead<span style="color:#719e07">;</span>
+<span style="color:#719e07">}</span></code></pre></div>
+<p>总结:再议</p>
+
+<h2 id="3-归并两个有序的链表">3. 归并两个有序的链表</h2>
+
+<ol>
+<li>Merge Two Sorted Lists (Easy)</li>
+</ol>
+
+<p><a href="https://leetcode.com/problems/merge-two-sorted-lists/description/">Leetcode </a>/ <a href="https://leetcode-cn.com/problems/merge-two-sorted-lists/description/">力扣</a></p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#268bd2">public</span> ListNode <span style="color:#268bd2">mergeTwoLists</span><span style="color:#719e07">(</span>ListNode l1<span style="color:#719e07">,</span> ListNode l2<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+    <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>l1 <span style="color:#719e07">==</span> <span style="color:#cb4b16">null</span><span style="color:#719e07">)</span> <span style="color:#719e07">return</span> l2<span style="color:#719e07">;</span>
+    <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>l2 <span style="color:#719e07">==</span> <span style="color:#cb4b16">null</span><span style="color:#719e07">)</span> <span style="color:#719e07">return</span> l1<span style="color:#719e07">;</span>
+    <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>l1<span style="color:#719e07">.</span>val <span style="color:#719e07">&lt;</span> l2<span style="color:#719e07">.</span>val<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+        l1<span style="color:#719e07">.</span>next <span style="color:#719e07">=</span> mergeTwoLists<span style="color:#719e07">(</span>l1<span style="color:#719e07">.</span>next<span style="color:#719e07">,</span> l2<span style="color:#719e07">);</span>
+        <span style="color:#719e07">return</span> l1<span style="color:#719e07">;</span>
+    <span style="color:#719e07">}</span> <span style="color:#719e07">else</span> <span style="color:#719e07">{</span>
+        l2<span style="color:#719e07">.</span>next <span style="color:#719e07">=</span> mergeTwoLists<span style="color:#719e07">(</span>l1<span style="color:#719e07">,</span> l2<span style="color:#719e07">.</span>next<span style="color:#719e07">);</span>
+        <span style="color:#719e07">return</span> l2<span style="color:#719e07">;</span>
+    <span style="color:#719e07">}</span>
+<span style="color:#719e07">}</span></code></pre></div>
+<p>总结：</p>
+
+<ul>
+<li><p>递归出口：两个链表为空</p></li>
+
+<li><p>递归条件：L1和L2中较小结点和其余结点的比较结果比较。</p></li>
+</ul>
+
+<p><img src="https://pic.leetcode-cn.com/e59fd2981f3633cc70a90bd3136e07647ecf89c6f4eefb82159ea54db9772889-%E5%B9%BB%E7%81%AF%E7%89%875.JPG" alt="img" /></p>
+
+<h2 id="复习">复习</h2>
+
+<h3 id="链表">链表</h3>
 
 <h5 id="结点数据结构listnode">结点数据结构ListNode</h5>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">ListNode</span> <span style="color:#719e07">{</span>
@@ -178,40 +277,20 @@
 </span><span style="color:#586e75"></span>        pred<span style="color:#719e07">.</span>next <span style="color:#719e07">=</span> pred<span style="color:#719e07">.</span>next<span style="color:#719e07">.</span>next<span style="color:#719e07">;</span>
     <span style="color:#719e07">}</span>
 <span style="color:#719e07">}</span></code></pre></div>
-<h2 id="1-找出两个链表的交点">1. 找出两个链表的交点</h2>
+<h3 id="递归-1">递归</h3>
 
-<ol>
-<li>Intersection of Two Linked Lists (Easy)</li>
-</ol>
+<p>斐波那契数列</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#268bd2">public</span> <span style="color:#dc322f">int</span> <span style="color:#268bd2">fib</span><span style="color:#719e07">(</span><span style="color:#dc322f">int</span> n<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+   <span style="color:#719e07">return</span> <span style="color:#719e07">(</span>n <span style="color:#719e07">==</span> 1<span style="color:#719e07">)</span> <span style="color:#719e07">?</span> n <span style="color:#719e07">:</span> fib<span style="color:#719e07">(</span>n <span style="color:#719e07">-</span> 1<span style="color:#719e07">)</span> <span style="color:#719e07">+</span> n<span style="color:#719e07">;</span>
+<span style="color:#719e07">}</span>
+<span style="color:#586e75">//1  2  3  4  5  6   7   8   9
+</span><span style="color:#586e75"></span><span style="color:#719e07">//</span>1  1  2  3  5  8  13  21  34    </code></pre></div>
+<p>递归应考虑两点：</p>
 
-<p><a href="https://leetcode.com/problems/intersection-of-two-linked-lists/description/">Leetcode </a>/ <a href="https://leetcode-cn.com/problems/intersection-of-two-linked-lists/description/">力扣</a></p>
-
-<p>例如以下示例中 A 和 B 两个链表相交于 c1：</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">A:          a1 → a2
-                    ↘
-                      c1 → c2 → c3
-                    ↗
-B:    b1 → b2 → b3</code></pre></div>
-<p>但是不会出现以下相交的情况，因为每个节点只有一个 next 指针，也就只能有一个后继节点，而以下示例中节点 c 有两个后继节点。</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">A:          a1 → a2       d1 → d2
-                    ↘  ↗
-                      c
-                    ↗  ↘
-B:    b1 → b2 → b3        e1 → e2</code></pre></div>
-<p>要求时间复杂度为 O(N)，空间复杂度为 O(1)。如果不存在交点则返回 null。</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#268bd2">public</span> ListNode <span style="color:#268bd2">getIntersectionNode</span><span style="color:#719e07">(</span>ListNode headA<span style="color:#719e07">,</span> ListNode headB<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-    ListNode l1 <span style="color:#719e07">=</span> headA<span style="color:#719e07">,</span> l2 <span style="color:#719e07">=</span> headB<span style="color:#719e07">;</span>
-    <span style="color:#719e07">while</span> <span style="color:#719e07">(</span>l1 <span style="color:#719e07">!=</span> l2<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-        l1 <span style="color:#719e07">=</span> <span style="color:#719e07">(</span>l1 <span style="color:#719e07">==</span> <span style="color:#cb4b16">null</span><span style="color:#719e07">)</span> <span style="color:#719e07">?</span> headB <span style="color:#719e07">:</span> l1<span style="color:#719e07">.</span>next<span style="color:#719e07">;</span>
-        l2 <span style="color:#719e07">=</span> <span style="color:#719e07">(</span>l2 <span style="color:#719e07">==</span> <span style="color:#cb4b16">null</span><span style="color:#719e07">)</span> <span style="color:#719e07">?</span> headA <span style="color:#719e07">:</span> l2<span style="color:#719e07">.</span>next<span style="color:#719e07">;</span>
-    <span style="color:#719e07">}</span>
-    <span style="color:#719e07">return</span> l1<span style="color:#719e07">;</span>
-<span style="color:#719e07">}</span></code></pre></div>
-<p>设 A 的长度为 a + c，B 的长度为 b + c，其中 c 为尾部公共部分长度，可知 a + c + b = b + c + a。</p>
-
-<p>当访问 A 链表的指针访问到链表尾部时，令它从链表 B 的头部开始访问链表 B；同样地，当访问 B 链表的指针访问到链表尾部时，令它从链表 A 的头部开始访问链表 A。这样就能控制访问 A 和 B 两个链表的指针能同时访问到交点。</p>
-
-<p>如果不存在交点，那么 a + b = b + a，以下实现代码中 l1 和 l2 会同时为 null，从而退出循环。</p>
+<ul>
+<li>递归出口：何时结束递归</li>
+<li>递归条件：fib(n) = fib(n-1) + fib(n-2)</li>
+</ul>
 
 		</div>
 
