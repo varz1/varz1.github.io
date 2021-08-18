@@ -7,23 +7,10 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Copyright notice</copyright>
-    <lastBuildDate>Fri, 11 Jun 2021 15:09:47 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 10 Jun 2021 19:00:11 +0800</lastBuildDate>
     
 	<atom:link href="https://varz1.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Java基础</title>
-      <link>https://varz1.github.io/posts/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86/</link>
-      <pubDate>Fri, 11 Jun 2021 15:09:47 +0800</pubDate>
-      
-      <guid>https://varz1.github.io/posts/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86/</guid>
-      <description>一、==和 equals 的区别 1、概要 对于基本数据类型来说，==比较的是值。对于引用数据类型来说，==比较的是对象的内存地址。
- 因为 Java 只有值传递，所以，对于 == 来说，不管是比较基本数据类型，还是引用数据类型的变量，其本质比较的都是值，只是引用类型变量存的值是对象的地址。
- equals() 作用不能用于判断基本数据类型的变量，只能用来判断两个对象是否相等。equals()方法存在于Object类中，而Object类是所有类的直接或间接父类。
-Object 类 equals() 方法：
-public boolean equals(Object obj) { return (this == obj); } equals() 方法存在两种使用情况：</description>
-    </item>
     
     <item>
       <title>leetcode数据结构-链表</title>
@@ -71,10 +58,12 @@ Input: [3,2,1,5,6,4] and k = 2 Output: 5 题目描述：找到倒数第 k 个的
       <pubDate>Thu, 29 Apr 2021 18:28:59 +0800</pubDate>
       
       <guid>https://varz1.github.io/posts/grub/</guid>
-      <description>win10更新导致debian双系统无法启动解决办法 原因 因为win10更新覆盖了Debian的grub所以丢失
-解决 制作live-cd并进入 这里我制作的是debin的live-cd，重启选择BIOS启动，进入livecd。
-fdisk -l 找到自己的根目录分区以及windows的EFI分区这里我的根目录分区是/dev/nvme0n1p6，EFI分区是/dev/nvme0n1p5。
-执行命令挂载分区重新安装grub $ mount /dev/nvme0n1p6 /mnt $ mount /dev/nvme0n1p5 /mnt/boot $ mount --rbind /proc proc $ mount --rbind /sys sys $ mount --rbind /dev dev $ mount --rbind /run run $ chroot /mnt $ grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub $ grub-mkconfig -o /boot/grub/grub.</description>
+      <description>win10更新导致debian双系统无法启动解决办法 原因 因为win10更新覆盖了Debian的grub引导所以丢失启动
+解决一 制作live-cd并进入 这里我制作的是debin的live-cd，重启选择BIOS启动，进入livecd。
+fdisk -l 找到自己的根目录分区以及windows的EFI分区，这里以我的环境为例说明：
+根目录分区：/dev/nvme0n1p6
+EFI分区是/dev/nvme0n1p5
+执行命令挂载分区重新安装grub $ mount /dev/nvme0n1p6 /mnt # 挂载根目录 $ mount /dev/nvme0n1p5 /mnt/boot # 挂载boot $ mount --rbind /proc proc $ mount --rbind /sys sys $ mount --rbind /dev dev $ mount --rbind /run run $ chroot /mnt $ grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub $ grub-mkconfig -o /boot/grub/grub.</description>
     </item>
     
     <item>

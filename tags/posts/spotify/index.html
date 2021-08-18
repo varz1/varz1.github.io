@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Spotify For Linux - : )</title><link rel="icon" type="image/png" href=icons/smile.svg /><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:title" content="Spotify For Linux" />
+<meta property="og:description" content="可能是Linux最佳的音乐体验" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://varz1.github.io/posts/spotify/" />
+<meta property="article:published_time" content="2021-03-03T20:45:58&#43;08:00"/>
+<meta property="article:modified_time" content="2021-03-03T20:45:58&#43;08:00"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Spotify For Linux"/>
+<meta name="twitter:description" content="可能是Linux最佳的音乐体验"/>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Raleway:200,300" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" media="screen" href="https://varz1.github.io/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://varz1.github.io/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="https://varz1.github.io/css/custom.css" />
+	<link rel="stylesheet" type="text/css" href="https://varz1.github.io/css/dark.css" media="(prefers-color-scheme: dark)" />
+	<link rel="stylesheet" type="text/css" href="https://varz1.github.io/css/custom-dark.css" media="(prefers-color-scheme: dark)" />
+
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+	<script src="https://varz1.github.io/js/main.js"></script>
+	<script src="https://varz1.github.io/js/abc.js"></script>
+	<script src="https://varz1.github.io/js/xyz.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+	<div class="container wrapper post">
+		<div class="header">
+	<base href="https://varz1.github.io/">
+	<h1 class="site-title"><a href="https://varz1.github.io/">: )</a></h1>
+	<div class="site-description"><h2>你我都有光明的未来</h2><nav class="nav social">
+			<ul class="flat"><a href="https://github.com/varz1" title="Github"><i data-feather="github"></i></a></ul>
+		</nav>
+	</div>
+
+	<nav class="nav">
+		<ul class="flat">
+			
+			<li>
+				<a href="/">Home</a>
+			</li>
+			
+			<li>
+				<a href="/posts">All posts</a>
+			</li>
+			
+			<li>
+				<a href="/tags">Tags</a>
+			</li>
+			
+			<li>
+				<a href="/about">About</a>
+			</li>
+			
+		</ul>
+	</nav>
+</div>
+
+
+		<div class="post-header">
+			<h1 class="title">Spotify For Linux</h1>
+			<div class="meta">Posted at &mdash; Mar 3, 2021</div>
+		</div>
+
+		<div class="markdown">
+			
+
+<p>作为一个敲代码的，Linux端写代码的良好体验已经让我不想再打开Windows进行编程。苦寻许久发现Spotify或许是最佳的Linux端音乐播放器。
+下面以本人Debian环境给出配置指南（不完全</p>
+
+<h2 id="安装">安装</h2>
+
+<p>详见<a href="https://www.spotify.com/us/download/linux/">Spotify官网，</a>下面给出本人安装过程</p>
+
+<p>添加源</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add - 
+$ <span style="color:#b58900">echo</span> <span style="color:#2aa198">&#34;deb http://repository.spotify.com stable non-free&#34;</span> | sudo tee /etc/apt/sources.list.d/spotify.list</code></pre></div>
+<p>更新源并安装</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo apt-get update <span style="color:#719e07">&amp;&amp;</span> sudo apt-get install spotify-client</code></pre></div>
+<p>大功告成！</p>
+
+<p>若不是Spotify订阅用户，使用时会弹出广告且播放音乐时也有语音广告体验不佳。本学生党找到了一条歪路。。</p>
+
+<h2 id="配合去除广告插件提升听歌体验">配合去除广告插件提升听歌体验</h2>
+
+<p>官方插件在此-<a href="https://github.com/abba23/spotify-adblock-linux#spotify-adblock-linux%22%3Espotify-adblock-linux">Adblock</a>下面给出本人安装过程</p>
+
+<p>需要的依赖：</p>
+
+<ul>
+<li>Git</li>
+<li>Wget</li>
+<li>tar</li>
+<li>Make</li>
+<li>GCC</li>
+<li>libc headers (e.g. <code>libc-dev</code> on Debian-based distributions)</li>
+</ul>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ git clone https://github.com/abba23/spotify-adblock-linux.git     //下载包
+$ <span style="color:#b58900">cd</span> spotify-adblock-linux    //切换至目录
+$ wget -O cef.tar.bz2 https://cef-builds.spotifycdn.com/cef_binary_88.1.6%2Bg4fe33a1%2Bchromium-88.0.4324.96_linux64_minimal.tar.bz2    //下载文件
+$ tar -xf cef.tar.bz2 --wildcards <span style="color:#2aa198">&#39;*/include&#39;</span> --strip-components<span style="color:#719e07">=</span><span style="color:#2aa198">1</span>    //解压
+$ make   //make安装
+$ sudo make install   //安装</code></pre></div>
+<h3 id="使用command启动">使用command启动</h3>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ <span style="color:#268bd2">LD_PRELOAD</span><span style="color:#719e07">=</span>/usr/local/lib/spotify-adblock.so spotify</code></pre></div>
+<h3 id="添加快捷方式启动">添加快捷方式启动</h3>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ <span style="color:#b58900">cd</span> ~/.local/share/applications
+$ sudo vim spotify-adblock.desktop</code></pre></div>
+<p>粘贴以下</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#719e07">[</span>Desktop Entry<span style="color:#719e07">]</span>
+<span style="color:#268bd2">Type</span><span style="color:#719e07">=</span>Application
+<span style="color:#268bd2">Name</span><span style="color:#719e07">=</span>Spotify <span style="color:#719e07">(</span>adblock<span style="color:#719e07">)</span>
+<span style="color:#268bd2">GenericName</span><span style="color:#719e07">=</span>Music Player
+<span style="color:#268bd2">Icon</span><span style="color:#719e07">=</span>spotify-client
+<span style="color:#268bd2">TryExec</span><span style="color:#719e07">=</span>spotify
+<span style="color:#268bd2">Exec</span><span style="color:#719e07">=</span>env <span style="color:#268bd2">LD_PRELOAD</span><span style="color:#719e07">=</span>/usr/local/lib/spotify-adblock.so spotify %U
+<span style="color:#268bd2">Terminal</span><span style="color:#719e07">=</span><span style="color:#b58900">false</span>
+<span style="color:#268bd2">MimeType</span><span style="color:#719e07">=</span>x-scheme-handler/spotify;
+<span style="color:#268bd2">Categories</span><span style="color:#719e07">=</span>Audio;Music;Player;AudioVideo;
+<span style="color:#268bd2">StartupWMClass</span><span style="color:#719e07">=</span>spotify</code></pre></div>
+<p>退出vim安装完成，通过系统找到Spotify固定至任务栏开始享用</p>
+
+<p>大大功告成！</p>
+
+<p><img src="https://github.com/varz1/pics/blob/master/spotify.png?raw=true" alt="spotify.png" /></p>
+
+		</div>
+
+		<div class="post-tags">
+			
+				
+					<nav class="nav tags">
+							<ul class="flat">
+								
+								<li><a href="/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7">软件工具</a></li>
+								
+							</ul>
+					</nav>
+				
+			
+		</div>
+		</div>
+	<div class="footer wrapper">
+	<nav class="nav">
+		<div> © Copyright notice |  <a href="https://github.com/vividvilla/ezhil">Ezhil theme</a> | Built with <a href="https://gohugo.io">Hugo</a></div>
+	</nav>
+</div>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-147515514-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+<script>feather.replace()</script>
+</body>
+</html>

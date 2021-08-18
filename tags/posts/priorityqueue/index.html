@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>对于Java中PriorityQueue的理解 - : )</title><link rel="icon" type="image/png" href=icons/smile.svg /><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:title" content="对于Java中PriorityQueue的理解" />
+<meta property="og:description" content="刷LeetCode重学了PriorityQueue..." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://varz1.github.io/posts/priorityqueue/" />
+<meta property="article:published_time" content="2021-06-09T00:47:13&#43;08:00"/>
+<meta property="article:modified_time" content="2021-06-09T00:47:13&#43;08:00"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="对于Java中PriorityQueue的理解"/>
+<meta name="twitter:description" content="刷LeetCode重学了PriorityQueue..."/>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Raleway:200,300" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" media="screen" href="https://varz1.github.io/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://varz1.github.io/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="https://varz1.github.io/css/custom.css" />
+	<link rel="stylesheet" type="text/css" href="https://varz1.github.io/css/dark.css" media="(prefers-color-scheme: dark)" />
+	<link rel="stylesheet" type="text/css" href="https://varz1.github.io/css/custom-dark.css" media="(prefers-color-scheme: dark)" />
+
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+	<script src="https://varz1.github.io/js/main.js"></script>
+	<script src="https://varz1.github.io/js/abc.js"></script>
+	<script src="https://varz1.github.io/js/xyz.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+	<div class="container wrapper post">
+		<div class="header">
+	<base href="https://varz1.github.io/">
+	<h1 class="site-title"><a href="https://varz1.github.io/">: )</a></h1>
+	<div class="site-description"><h2>你我都有光明的未来</h2><nav class="nav social">
+			<ul class="flat"><a href="https://github.com/varz1" title="Github"><i data-feather="github"></i></a></ul>
+		</nav>
+	</div>
+
+	<nav class="nav">
+		<ul class="flat">
+			
+			<li>
+				<a href="/">Home</a>
+			</li>
+			
+			<li>
+				<a href="/posts">All posts</a>
+			</li>
+			
+			<li>
+				<a href="/tags">Tags</a>
+			</li>
+			
+			<li>
+				<a href="/about">About</a>
+			</li>
+			
+		</ul>
+	</nav>
+</div>
+
+
+		<div class="post-header">
+			<h1 class="title">对于Java中PriorityQueue的理解</h1>
+			<div class="meta">Posted at &mdash; Jun 9, 2021</div>
+		</div>
+
+		<div class="markdown">
+			
+
+<h2 id="1-不重写compareto方法">1.不重写CompareTo方法</h2>
+
+<p><strong>背景</strong>：刷LeetCode重学了PriorityQueue</p>
+
+<p>在未排序的数组中找到第 k 个最大的元素。请注意，你需要找的是数组排序后的第 k 个最大的元素，而不是第 k 个不同的元素。
+示例:</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">输入: [3,2,1,5,6,4] 和 k = 2
+输出: 5</pre></div>
+<p><strong>题解</strong>：</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#268bd2">class</span> <span style="color:#268bd2">Solution</span> <span style="color:#719e07">{</span>
+    <span style="color:#268bd2">public</span> <span style="color:#dc322f">int</span> <span style="color:#268bd2">findKthLargest</span><span style="color:#719e07">(</span><span style="color:#dc322f">int</span><span style="color:#719e07">[]</span> nums<span style="color:#719e07">,</span> <span style="color:#dc322f">int</span> k<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+        PriorityQueue<span style="color:#719e07">&lt;</span>Integer<span style="color:#719e07">&gt;</span> pq <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> PriorityQueue<span style="color:#719e07">&lt;&gt;();</span>
+        <span style="color:#719e07">for</span> <span style="color:#719e07">(</span><span style="color:#dc322f">int</span> val <span style="color:#719e07">:</span> nums<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+            pq<span style="color:#719e07">.</span>add<span style="color:#719e07">(</span>val<span style="color:#719e07">);</span>
+            System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>print<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;after add &#34;</span> <span style="color:#719e07">+</span> pq <span style="color:#719e07">+</span> <span style="color:#2aa198">&#34;\t&#34;</span><span style="color:#719e07">);</span>
+            <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>pq<span style="color:#719e07">.</span>size<span style="color:#719e07">()</span> <span style="color:#719e07">&gt;</span> k<span style="color:#719e07">)</span>
+                pq<span style="color:#719e07">.</span>poll<span style="color:#719e07">();</span>
+            System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>print<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;after poll &#34;</span> <span style="color:#719e07">+</span> pq <span style="color:#719e07">+</span> <span style="color:#2aa198">&#34;\n&#34;</span><span style="color:#719e07">);</span>
+        <span style="color:#719e07">}</span>
+        System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;last queue &#34;</span> <span style="color:#719e07">+</span> pq<span style="color:#719e07">);</span>
+        <span style="color:#719e07">return</span> pq<span style="color:#719e07">.</span>peek<span style="color:#719e07">();</span>
+    <span style="color:#719e07">}</span>
+<span style="color:#719e07">}</span>
+输出：
+after add <span style="color:#719e07">[</span>3<span style="color:#719e07">]</span>			after poll <span style="color:#719e07">[</span>3<span style="color:#719e07">]</span>
+after add <span style="color:#719e07">[</span>2<span style="color:#719e07">,</span> 3<span style="color:#719e07">]</span>		after poll <span style="color:#719e07">[</span>2<span style="color:#719e07">,</span> 3<span style="color:#719e07">]</span>
+after add <span style="color:#719e07">[</span>1<span style="color:#719e07">,</span> 3<span style="color:#719e07">,</span> 2<span style="color:#719e07">]</span>		after poll <span style="color:#719e07">[</span>2<span style="color:#719e07">,</span> 3<span style="color:#719e07">]</span>
+after add <span style="color:#719e07">[</span>2<span style="color:#719e07">,</span> 3<span style="color:#719e07">,</span> 5<span style="color:#719e07">]</span>		after poll <span style="color:#719e07">[</span>3<span style="color:#719e07">,</span> 5<span style="color:#719e07">]</span>
+after add <span style="color:#719e07">[</span>3<span style="color:#719e07">,</span> 5<span style="color:#719e07">,</span> 6<span style="color:#719e07">]</span>		after poll <span style="color:#719e07">[</span>5<span style="color:#719e07">,</span> 6<span style="color:#719e07">]</span>
+after add <span style="color:#719e07">[</span>4<span style="color:#719e07">,</span> 6<span style="color:#719e07">,</span> 5<span style="color:#719e07">]</span>		after poll <span style="color:#719e07">[</span>5<span style="color:#719e07">,</span> 6<span style="color:#719e07">]</span>
+last queue <span style="color:#719e07">[</span>5<span style="color:#719e07">,</span> 6<span style="color:#719e07">]</span>
+5</code></pre></div>
+<p><strong>概要</strong>：PriorityQueue与Queue的区别是按照优先级排列</p>
+
+<p>​           K为1时堆的大小为1，不断寻找比前一个数字大的数插入堆中最后将K peek</p>
+
+<p>​           K为2时堆的大小为2，不断寻找比前两个数字中最小数大的add，将最小数poll，最后将K peek</p>
+
+<p><strong>总结</strong>：用于求解 TopK Elements 问题，也就是 K 个最小元素的问题。使用最小堆来实现 TopK 问题，最小堆使用大顶堆来实现，大顶堆的堆顶元素为当前堆的最大元素。实现过程：不断地往大顶堆中插入新元素，当堆中元素的数量大于 k 时，移除堆顶元素，也就是当前堆中最大的元素，剩下的元素都为当前添加过的元素中最小的 K 个元素。插入和移除堆顶元素的时间复杂度都为 log2N。</p>
+
+<p>堆也可以用于求解 Kth Element 问题，得到了大小为 K 的最小堆之后，因为使用了大顶堆来实现，因此堆顶元素就是第 K 大的元素。</p>
+
+<p><em>参考来自：<a href="https://www.cnblogs.com/CarpenterLee/p/5488070.html">博客园</a> / <a href="http://www.cyc2018.xyz/%E7%AE%97%E6%B3%95/Leetcode%20%E9%A2%98%E8%A7%A3/Leetcode%20%E9%A2%98%E8%A7%A3%20-%20%E6%8E%92%E5%BA%8F.html#%E5%BF%AB%E9%80%9F%E9%80%89%E6%8B%A9">CSNOTES</a></em></p>
+
+<h2 id="2-重写compareto方法">2.重写CompareTo方法</h2>
+
+<p><strong>例子：</strong>  排序办公室等级</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">Main</span> <span style="color:#719e07">{</span>
+    <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span><span style="color:#719e07">(</span>String<span style="color:#719e07">[]</span> args<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+        Queue<span style="color:#719e07">&lt;</span>User<span style="color:#719e07">&gt;</span> q <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> PriorityQueue<span style="color:#719e07">&lt;&gt;(</span><span style="color:#719e07">new</span> UserComparator<span style="color:#719e07">());</span>
+        <span style="color:#586e75">// 添加3个元素到队列:
+</span><span style="color:#586e75"></span>        q<span style="color:#719e07">.</span>offer<span style="color:#719e07">(</span><span style="color:#719e07">new</span> User<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;Bob&#34;</span><span style="color:#719e07">,</span> <span style="color:#2aa198">&#34;A1&#34;</span><span style="color:#719e07">));</span>
+        q<span style="color:#719e07">.</span>offer<span style="color:#719e07">(</span><span style="color:#719e07">new</span> User<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;Jack&#34;</span><span style="color:#719e07">,</span> <span style="color:#2aa198">&#34;A10&#34;</span><span style="color:#719e07">));</span>
+        q<span style="color:#719e07">.</span>offer<span style="color:#719e07">(</span><span style="color:#719e07">new</span> User<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;Alice&#34;</span><span style="color:#719e07">,</span> <span style="color:#2aa198">&#34;A2&#34;</span><span style="color:#719e07">));</span>
+        q<span style="color:#719e07">.</span>offer<span style="color:#719e07">(</span><span style="color:#719e07">new</span> User<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;Boss&#34;</span><span style="color:#719e07">,</span> <span style="color:#2aa198">&#34;V1&#34;</span><span style="color:#719e07">));</span>
+        System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span>q<span style="color:#719e07">.</span>poll<span style="color:#719e07">());</span> <span style="color:#586e75">// Boss/V1
+</span><span style="color:#586e75"></span>        System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span>q<span style="color:#719e07">.</span>poll<span style="color:#719e07">());</span> <span style="color:#586e75">// Bob/A1
+</span><span style="color:#586e75"></span>        System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span>q<span style="color:#719e07">.</span>poll<span style="color:#719e07">());</span> <span style="color:#586e75">// Alice/A2
+</span><span style="color:#586e75"></span>        System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span>q<span style="color:#719e07">.</span>poll<span style="color:#719e07">());</span> <span style="color:#586e75">// Jack/A10
+</span><span style="color:#586e75"></span>        System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span>q<span style="color:#719e07">.</span>poll<span style="color:#719e07">());</span> <span style="color:#586e75">// null,因为队列为空
+</span><span style="color:#586e75"></span>    <span style="color:#719e07">}</span>
+<span style="color:#719e07">}</span>
+
+<span style="color:#268bd2">class</span> <span style="color:#268bd2">UserComparator</span> <span style="color:#268bd2">implements</span> Comparator<span style="color:#719e07">&lt;</span>User<span style="color:#719e07">&gt;</span> <span style="color:#719e07">{</span>
+    <span style="color:#268bd2">public</span> <span style="color:#dc322f">int</span> <span style="color:#268bd2">compare</span><span style="color:#719e07">(</span>User u1<span style="color:#719e07">,</span> User u2<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+        <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>u1<span style="color:#719e07">.</span>number<span style="color:#719e07">.</span>charAt<span style="color:#719e07">(</span>0<span style="color:#719e07">)</span> <span style="color:#719e07">==</span> u2<span style="color:#719e07">.</span>number<span style="color:#719e07">.</span>charAt<span style="color:#719e07">(</span>0<span style="color:#719e07">))</span> <span style="color:#719e07">{</span>
+            <span style="color:#586e75">// 如果两人的号都是A开头或者都是V开头,比较号的大小:
+</span><span style="color:#586e75"></span>            <span style="color:#719e07">return</span> u1<span style="color:#719e07">.</span>number<span style="color:#719e07">.</span>compareTo<span style="color:#719e07">(</span>u2<span style="color:#719e07">.</span>number<span style="color:#719e07">);</span>
+        <span style="color:#719e07">}</span>
+        <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>u1<span style="color:#719e07">.</span>number<span style="color:#719e07">.</span>charAt<span style="color:#719e07">(</span>0<span style="color:#719e07">)</span> <span style="color:#719e07">==</span> <span style="color:#2aa198">&#39;V&#39;</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+            <span style="color:#586e75">// u1的号码是V开头,优先级高:
+</span><span style="color:#586e75"></span>            <span style="color:#719e07">return</span> <span style="color:#719e07">-</span>1<span style="color:#719e07">;</span>
+        <span style="color:#719e07">}</span> <span style="color:#719e07">else</span> <span style="color:#719e07">{</span>
+            <span style="color:#719e07">return</span> 1<span style="color:#719e07">;</span>
+        <span style="color:#719e07">}</span>
+    <span style="color:#719e07">}</span>
+<span style="color:#719e07">}</span>
+
+<span style="color:#268bd2">class</span> <span style="color:#268bd2">User</span> <span style="color:#719e07">{</span>
+    <span style="color:#268bd2">public</span> <span style="color:#268bd2">final</span> String name<span style="color:#719e07">;</span>
+    <span style="color:#268bd2">public</span> <span style="color:#268bd2">final</span> String number<span style="color:#719e07">;</span>
+
+    <span style="color:#268bd2">public</span> <span style="color:#268bd2">User</span><span style="color:#719e07">(</span>String name<span style="color:#719e07">,</span> String number<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+        <span style="color:#719e07">this</span><span style="color:#719e07">.</span>name <span style="color:#719e07">=</span> name<span style="color:#719e07">;</span>
+        <span style="color:#719e07">this</span><span style="color:#719e07">.</span>number <span style="color:#719e07">=</span> number<span style="color:#719e07">;</span>
+    <span style="color:#719e07">}</span>
+
+    <span style="color:#268bd2">public</span> String <span style="color:#268bd2">toString</span><span style="color:#719e07">()</span> <span style="color:#719e07">{</span>
+        <span style="color:#719e07">return</span> name <span style="color:#719e07">+</span> <span style="color:#2aa198">&#34;/&#34;</span> <span style="color:#719e07">+</span> number<span style="color:#719e07">;</span>
+    <span style="color:#719e07">}</span>
+<span style="color:#719e07">}</span></code></pre></div>
+<p><em>参考来自：<a href="https://www.liaoxuefeng.com/wiki/1252599548343744/1265120632401152">廖雪峰</a></em></p>
+
+		</div>
+
+		<div class="post-tags">
+			
+				
+					<nav class="nav tags">
+							<ul class="flat">
+								
+								<li><a href="/tags/%E7%AE%97%E6%B3%95">算法</a></li>
+								
+							</ul>
+					</nav>
+				
+			
+		</div>
+		</div>
+	<div class="footer wrapper">
+	<nav class="nav">
+		<div> © Copyright notice |  <a href="https://github.com/vividvilla/ezhil">Ezhil theme</a> | Built with <a href="https://gohugo.io">Hugo</a></div>
+	</nav>
+</div>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-147515514-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+<script>feather.replace()</script>
+</body>
+</html>

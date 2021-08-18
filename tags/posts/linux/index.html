@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Linux常用命令 - : )</title><link rel="icon" type="image/png" href=icons/smile.svg /><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:title" content="Linux常用命令" />
+<meta property="og:description" content="我常使用的Linux命令" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://varz1.github.io/posts/linux/" />
+<meta property="article:published_time" content="2021-05-05T19:38:07&#43;08:00"/>
+<meta property="article:modified_time" content="2021-05-05T19:38:07&#43;08:00"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Linux常用命令"/>
+<meta name="twitter:description" content="我常使用的Linux命令"/>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Raleway:200,300" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" media="screen" href="https://varz1.github.io/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://varz1.github.io/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="https://varz1.github.io/css/custom.css" />
+	<link rel="stylesheet" type="text/css" href="https://varz1.github.io/css/dark.css" media="(prefers-color-scheme: dark)" />
+	<link rel="stylesheet" type="text/css" href="https://varz1.github.io/css/custom-dark.css" media="(prefers-color-scheme: dark)" />
+
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+	<script src="https://varz1.github.io/js/main.js"></script>
+	<script src="https://varz1.github.io/js/abc.js"></script>
+	<script src="https://varz1.github.io/js/xyz.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+	<div class="container wrapper post">
+		<div class="header">
+	<base href="https://varz1.github.io/">
+	<h1 class="site-title"><a href="https://varz1.github.io/">: )</a></h1>
+	<div class="site-description"><h2>你我都有光明的未来</h2><nav class="nav social">
+			<ul class="flat"><a href="https://github.com/varz1" title="Github"><i data-feather="github"></i></a></ul>
+		</nav>
+	</div>
+
+	<nav class="nav">
+		<ul class="flat">
+			
+			<li>
+				<a href="/">Home</a>
+			</li>
+			
+			<li>
+				<a href="/posts">All posts</a>
+			</li>
+			
+			<li>
+				<a href="/tags">Tags</a>
+			</li>
+			
+			<li>
+				<a href="/about">About</a>
+			</li>
+			
+		</ul>
+	</nav>
+</div>
+
+
+		<div class="post-header">
+			<h1 class="title">Linux常用命令</h1>
+			<div class="meta">Posted at &mdash; May 5, 2021</div>
+		</div>
+
+		<div class="markdown">
+			
+
+<h2 id="一-systemctl">一、Systemctl</h2>
+
+<ul>
+<li>启动服务：systemctl start vsftpd.service</li>
+<li>关闭服务：systemctl stop vsftpd.service</li>
+<li>重启服务：systemctl restart vsftpd.service</li>
+<li>显示服务的状态：systemctl status vsftpd.service</li>
+<li>在开机时启用服务：systemctl enable vsftpd.service</li>
+<li>在开机时禁用服务：systemctl disable vsftpd.service</li>
+<li>查看服务是否开机启动：systemctl is-enabled vsftpd.service</li>
+<li>查看已启动的服务列表：systemctl list-unit-files|grep enabled</li>
+<li>查看启动失败的服务列表：systemctl &ndash;failed</li>
+</ul>
+
+<h2 id="二-mysql">二、Mysql</h2>
+
+<p>这里以mysql为数据库示例，mytable为表名示例</p>
+
+<h5 id="1-基本操作">1.基本操作</h5>
+
+<ul>
+<li><p>登录：mysql -u root -p</p></li>
+
+<li><p>数据库操作：</p>
+
+<ul>
+<li><p>显示所有数据库：show databases;</p></li>
+
+<li><p>显示数据库中的表：use mysql;</p></li>
+</ul>
+
+<p>​                                   show tables;</p>
+
+<ul>
+<li><p>显示数据表的结构：describe mytable;l;</p></li>
+
+<li><p>建库：create database;</p></li>
+
+<li><p>建表：use mysql;</p></li>
+</ul>
+
+<p>​           create table mytable1;</p>
+
+<ul>
+<li><p>删库：drop database mysql;</p></li>
+
+<li><p>删表：drop table mytable1;</p></li>
+
+<li><p>清空表中记录：delete from mytable;</p></li>
+
+<li><p>删除表中所有记录：truncate mytable;</p></li>
+</ul></li>
+</ul>
+
+<h5 id="2-日志操作">2.日志操作</h5>
+
+<p>MySQL日志分类:</p>
+
+<ul>
+<li>错误日志</li>
+<li>查询日志</li>
+<li>慢查询日志</li>
+<li>事务日志(Redo log)</li>
+<li>二进制日志</li>
+<li>中继日志</li>
+</ul>
+
+<h6 id="2-1查询日志">2.1查询日志：</h6>
+
+<p>2.1.1查询配置</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-mysql" data-lang="mysql">mysql<span style="color:#719e07">&gt;</span> <span style="color:#719e07">show</span> variables <span style="color:#719e07">like</span> <span style="color:#2aa198">&#39;%general_log&#39;</span>;
+<span style="color:#719e07">+---------------+-------+</span>
+<span style="color:#719e07">|</span> Variable_name <span style="color:#719e07">|</span> Value <span style="color:#719e07">|</span>
+<span style="color:#719e07">+---------------+-------+</span>
+<span style="color:#719e07">|</span> general_log   <span style="color:#719e07">|</span> OFF   <span style="color:#719e07">|</span>
+<span style="color:#719e07">+---------------+-------+</span>
+<span style="color:#2aa198">1</span> row <span style="color:#719e07">in</span> <span style="color:#dc322f">set</span> (<span style="color:#2aa198">0</span>.<span style="color:#2aa198">00</span> sec)</code></pre></div>
+<p>如果开启了查询日志，参数log_output控制着查询日志的存储方式， log_output可以设置为以下4种值:</p>
+
+<ul>
+<li>FILE : 表示日志存储在文件中</li>
+<li>TABLE : 表示日志存储在mysql库中的general_log表中</li>
+<li>FILE, TABLE : 表示将日志同时存储在文件和general_log表中，改值会徒增很多IO压力，一般不会这样设置</li>
+<li>NONE : 表示不记录日志，即使general_log设置为ON， 如果log_output设置为NONE，也不会记录查询日志</li>
+</ul>
+
+<p>2.1.2开启查询日志</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-mysql" data-lang="mysql">mysql<span style="color:#719e07">&gt;</span> <span style="color:#dc322f">set</span> global general_log<span style="color:#719e07">=</span><span style="color:#2aa198">&#39;ON&#39;</span>;
+Query OK, <span style="color:#2aa198">0</span> rows <span style="color:#268bd2">affected</span> (<span style="color:#2aa198">0</span>.<span style="color:#2aa198">00</span> sec)</code></pre></div>
+<p>2.1.3 修改日志名称或位置</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-mysql" data-lang="mysql">mysql<span style="color:#719e07">&gt;</span> <span style="color:#719e07">show</span> variables <span style="color:#719e07">like</span> <span style="color:#2aa198">&#39;general_log%&#39;</span>;
+<span style="color:#719e07">+------------------+------------------------------+</span>
+<span style="color:#719e07">|</span> Variable_name    <span style="color:#719e07">|</span> Value                        <span style="color:#719e07">|</span>
+<span style="color:#719e07">+------------------+------------------------------+</span>
+<span style="color:#719e07">|</span> general_log      <span style="color:#719e07">|</span> <span style="color:#719e07">ON</span>                           <span style="color:#719e07">|</span>
+<span style="color:#719e07">|</span> general_log_file <span style="color:#719e07">|</span> <span style="color:#719e07">/</span>var<span style="color:#719e07">/</span>lib<span style="color:#719e07">/</span>mysql<span style="color:#719e07">/</span>DB<span style="color:#719e07">-</span>Server.log <span style="color:#719e07">|</span>
+<span style="color:#719e07">+------------------+------------------------------+</span>
+<span style="color:#2aa198">2</span> rows <span style="color:#719e07">in</span> <span style="color:#dc322f">set</span> (<span style="color:#2aa198">0</span>.<span style="color:#2aa198">00</span> sec)
+ 
+mysql<span style="color:#719e07">&gt;</span> <span style="color:#dc322f">set</span> global general_log<span style="color:#719e07">=</span><span style="color:#2aa198">&#39;OFF&#39;</span>;
+Query OK, <span style="color:#2aa198">0</span> rows <span style="color:#268bd2">affected</span> (<span style="color:#2aa198">0</span>.<span style="color:#2aa198">00</span> sec)
+
+mysql<span style="color:#719e07">&gt;</span> <span style="color:#dc322f">set</span> global general_log_file<span style="color:#719e07">=</span><span style="color:#2aa198">&#39;/u02/mysql_log.log&#39;</span>;
+Query OK, <span style="color:#2aa198">0</span> rows <span style="color:#268bd2">affected</span> (<span style="color:#2aa198">0</span>.<span style="color:#2aa198">00</span> sec)
+
+mysql<span style="color:#719e07">&gt;</span> <span style="color:#dc322f">set</span> global log_output<span style="color:#719e07">=</span><span style="color:#2aa198">&#39;table&#39;</span>;
+Query OK, <span style="color:#2aa198">0</span> rows <span style="color:#268bd2">affected</span> (<span style="color:#2aa198">0</span>.<span style="color:#2aa198">00</span> sec)
+
+mysql<span style="color:#719e07">&gt;</span> <span style="color:#dc322f">set</span> global general_log<span style="color:#719e07">=</span><span style="color:#2aa198">&#39;ON&#39;</span>;
+Query OK, <span style="color:#2aa198">0</span> rows <span style="color:#268bd2">affected</span> (<span style="color:#2aa198">0</span>.<span style="color:#2aa198">02</span> sec)</code></pre></div>
+<p><em>参考：<a href="https://zhuanlan.zhihu.com/p/58011817">知乎专栏</a></em></p>
+
+<h2 id="三-vim常用命令">三、VIM常用命令</h2>
+
+<ul>
+<li>三个模式：
+
+<ul>
+<li>一般指令模式（Command mode）：VIM 的默认模式，可以用于移动游标查看内容；</li>
+<li>编辑模式（Insert mode）：按下 &ldquo;i&rdquo; 等按键之后进入，可以对文本进行编辑；</li>
+<li>指令列模式（Bottom-line mode）：按下 &ldquo;:&rdquo; 按键之后进入，用于保存退出等操作。</li>
+</ul></li>
+<li>跳转
+
+<ul>
+<li>跳转至首行：gg</li>
+<li>跳转至尾行：G</li>
+<li>跳转到n行：nG</li>
+<li>跳转n个字符：n+space</li>
+</ul></li>
+
+<li><p>删除</p>
+
+<ul>
+<li>全部删除：一般指令模式下dG</li>
+<li>删除一行：dd</li>
+<li>删除选中：d</li>
+</ul></li>
+
+<li><p>全部复制：一般指令模式下ggyG</p></li>
+
+<li><p>全选：一般指令模式下ggvG</p></li>
+</ul>
+
+<p><em>参考：<a href="https://www.runoob.com/linux/linux-vim.html">菜鸟教程</a></em></p>
+
+<h2 id="linux系统操作">Linux系统操作</h2>
+
+<h3 id="1-find-查找指定指定目录或文件">1.find：查找指定指定目录或文件</h3>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">find -name 文件名;按照指定名称查找在当前目录下查找文件
+find / -name 文件名按照指定名称全局查找文件
+find -name <span style="color:#2aa198">&#39;*文件名&#39;</span> ;任意前缀加上文件名在当前目录下查找文件
+find / -name <span style="color:#2aa198">&#39;*文件名*&#39;</span> ;全局进行模糊查询带文件名的文件 </code></pre></div>
+<h3 id="2-压缩文件">2.压缩文件</h3>
+
+<h4 id="2-1-tar">2.1.tar</h4>
+
+<ul>
+<li>命令选项：</li>
+</ul>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">  -z<span style="color:#719e07">(</span>gzip<span style="color:#719e07">)</span>      用gzip来压缩/解压缩文件
+  -j<span style="color:#719e07">(</span>bzip2<span style="color:#719e07">)</span>     用bzip2来压缩/解压缩文件
+  -v<span style="color:#719e07">(</span>verbose<span style="color:#719e07">)</span>   详细报告tar处理的文件信息
+  -c<span style="color:#719e07">(</span>create<span style="color:#719e07">)</span>    创建新的档案文件
+  -x<span style="color:#719e07">(</span>extract<span style="color:#719e07">)</span>   解压缩文件或目录
+  -f<span style="color:#719e07">(</span>file<span style="color:#719e07">)</span>      使用档案文件或设备，这个选项通常是必选的。</code></pre></div>
+<ul>
+<li>命令举例</li>
+</ul>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">压缩：tar -zvcf dir.tar.gz dir
+解压：tar -xvf dir.tar.gz</code></pre></div>
+<h4 id="2-2-zip">2.2.zip</h4>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">压缩：zip dir.zip dir
+解压：zip dir.zip</code></pre></div>
+<h4 id="2-3-rar">2.3.rar</h4>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">压缩：rar a dir.rar dir
+解压：unrar e dir.rar //直接解压文件到当前目录</code></pre></div>
+		</div>
+
+		<div class="post-tags">
+			
+				
+					<nav class="nav tags">
+							<ul class="flat">
+								
+								<li><a href="/tags/linux">Linux</a></li>
+								
+							</ul>
+					</nav>
+				
+			
+		</div>
+		</div>
+	<div class="footer wrapper">
+	<nav class="nav">
+		<div> © Copyright notice |  <a href="https://github.com/vividvilla/ezhil">Ezhil theme</a> | Built with <a href="https://gohugo.io">Hugo</a></div>
+	</nav>
+</div>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-147515514-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+<script>feather.replace()</script>
+</body>
+</html>
