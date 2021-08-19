@@ -7,10 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Copyright notice</copyright>
-    <lastBuildDate>Thu, 10 Jun 2021 19:00:11 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 19 Aug 2021 17:37:15 +0800</lastBuildDate>
     
 	<atom:link href="https://varz1.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>无聊脚本</title>
+      <link>https://varz1.github.io/posts/bebop/</link>
+      <pubDate>Thu, 19 Aug 2021 17:37:15 +0800</pubDate>
+      
+      <guid>https://varz1.github.io/posts/bebop/</guid>
+      <description>动机 每次下饭看片的步骤如下：打开Chrome-&amp;gt;找到书签B站的位置-&amp;gt;找到历史记录-&amp;gt;找到星际牛仔
+现在：打开Shell-&amp;gt;Bebop
+有空就会扩展功能 瑞斯拜
+Git地址
+BebopGo A Shell To Watch Cowboy Bebop Fast
+A Shell For Fun
+Requirement  Linux Environment Google Chrome installed Connected to Internet A Bash  Usage $ git clone https://github.</description>
+    </item>
     
     <item>
       <title>leetcode数据结构-链表</title>
