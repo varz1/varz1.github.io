@@ -27,6 +27,16 @@ Requirement  Linux Environment Google Chrome installed Connected to Internet A B
     </item>
     
     <item>
+      <title>一步一步了解ThreadLocal</title>
+      <link>https://varz1.github.io/posts/threadlocal/</link>
+      <pubDate>Tue, 10 Aug 2021 21:59:59 +0800</pubDate>
+      
+      <guid>https://varz1.github.io/posts/threadlocal/</guid>
+      <description>一、为什么要使用ThreadLocal 先来读一下JDK中对ThreadLocal的注释
+This class provides thread-local variables. These variables differ from their normal counterparts in that each thread that accesses one (via its get or set method) has its own, independently initialized copy of the variable.</description>
+    </item>
+    
+    <item>
       <title>leetcode数据结构-链表</title>
       <link>https://varz1.github.io/posts/leet-data-linklist/</link>
       <pubDate>Thu, 10 Jun 2021 19:00:11 +0800</pubDate>
