@@ -171,7 +171,7 @@
     <span style="color:#719e07">.........</span></code></pre></div>
 <h2 id="二-探究threadlocal">二、探究ThreadLocal</h2>
 
-<h3 id="1-如何绑定线程">1.如何绑定线程？</h3>
+<h3 id="1-如何绑定线程"><strong><em>1.如何绑定线程？</em></strong></h3>
 
 <p>ThreadLocal中的get方法如下，我们可以发现每个实例通过获取当前线程对象名字作为入口从而实现与线程的绑定，即数据隔离。</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"> <span style="color:#268bd2">public</span> T <span style="color:#268bd2">get</span><span style="color:#719e07">()</span> <span style="color:#719e07">{</span>
@@ -187,7 +187,7 @@
         <span style="color:#719e07">}</span>
         <span style="color:#719e07">return</span> setInitialValue<span style="color:#719e07">();</span>
     <span style="color:#719e07">}</span></code></pre></div>
-<h3 id="2-如何实现存储变量">2.如何实现存储变量</h3>
+<h4 id="2-如何实现存储变量"><strong><em>2.如何实现存储变量</em></strong></h4>
 
 <p>打开源码我们可以发现ThreadLocal中维护了一个ThreadLocalMap的Key，Value结构，具体就是用它来实现的。具体原理可以参考最底部参考文章，看完之后应该能帮助你建立起对它的理解。</p>
 
