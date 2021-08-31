@@ -83,7 +83,7 @@
 
 <p>ThreadLocal为每个使用该变量的线程分配一个独立的变量副本。所以每一个线程都可以独立地改变自己的副本，而不会影响其他线程所对应的副本。</p>
 
-<p>从线程的角度看，这个变量就像是线程的本地变量，这也是类名中“Local”所要表达的意思。 线程局部变量并不是Java的新发明，很多语言（如IBM XL、FORTRAN）在语法层面就提供线程局部变量。在Java中没有提供语言级支持，而以一种变通的方法，通过ThreadLocal的类提供支持。所以，在Java中编写线程局部变量的代码相对来说要笨拙一些，这也是为什么线程局部变量没有在Java开发者中得到很好普及的原因。</p>
+<p><em>从线程的角度看，这个变量就像是线程的本地变量，这也是类名中“Local”所要表达的意思。 线程局部变量并不是Java的新发明，很多语言（如IBM XL、FORTRAN）在语法层面就提供线程局部变量。在Java中没有提供语言级支持，而以一种变通的方法，通过ThreadLocal的类提供支持。所以，在Java中编写线程局部变量的代码相对来说要笨拙一些，这也是为什么线程局部变量没有在Java开发者中得到很好普及的原因。</em></p>
 
 <p>&mdash;摘自<a href="https://blog.csdn.net/zengdeqing2012/article/details/77098994">博客</a></p>
 
@@ -132,7 +132,7 @@
 <span style="color:#719e07">}</span></code></pre></div>
 <h4 id="场景二-解决不优雅的-过度传递问题-https-segmentfault-com-a-1190000038600846"><strong><em>场景二：解决不优雅的<a href="https://segmentfault.com/a/1190000038600846">过度传递问题</a></em></strong></h4>
 
-<p>ThreadLocal为解决多线程程序的并发问题提供了一种新的思路。使用这个工具类可以很简洁地编写出优美的多线程程序。 ThreadLocal，顾名思义，它不是一个线程，而是线程的一个本地化对象。当工作于多线程中的对象使用ThreadLocal维护变量时，ThreadLocal为每个使用该变量的线程分配一个独立的变量副本。所以每一个线程都可以独立地改变自己的副本，而不会影响其他线程所对应的副本。</p>
+<p><em>ThreadLocal为解决多线程程序的并发问题提供了一种新的思路。使用这个工具类可以很简洁地编写出优美的多线程程序。 ThreadLocal，顾名思义，它不是一个线程，而是线程的一个本地化对象。当工作于多线程中的对象使用ThreadLocal维护变量时，ThreadLocal为每个使用该变量的线程分配一个独立的变量副本。所以每一个线程都可以独立地改变自己的副本，而不会影响其他线程所对应的副本。</em></p>
 
 <p>&mdash;摘自<a href="https://blog.csdn.net/zengdeqing2012/article/details/77098994">博客</a></p>
 
@@ -152,7 +152,7 @@
 
 <h4 id="场景三-spring中threadlocal的影子"><strong><em>场景三：Spring中ThreadLocal的影子</em></strong></h4>
 
-<p>在后端开发中，ThreadLocal也有它的应用场景，Spring采用Threadlocal的方式，来保证单个线程中的数据库操作使用的是同一个数据库连接。由此可见ThreadLocal在Java体系中占有着举足轻重的地位。</p>
+<p><em>在后端开发中，ThreadLocal也有它的应用场景，Spring采用Threadlocal的方式，来保证单个线程中的数据库操作使用的是同一个数据库连接。由此可见ThreadLocal在Java体系中占有着举足轻重的地位。</em></p>
 
 <p>&mdash;摘自<a href="https://juejin.cn/post/6986301941269659656">博客</a></p>
 
