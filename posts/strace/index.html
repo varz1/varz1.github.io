@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Strace - : )</title><link rel="icon" type="image/png" href=icons/smile.svg /><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:title" content="Strace" />
+<meta property="og:description" content="Linux系统调用分析利器" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://varz1.github.io/posts/strace/" />
+<meta property="article:published_time" content="2021-09-20T14:24:43&#43;08:00"/>
+<meta property="article:modified_time" content="2021-09-20T14:24:43&#43;08:00"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Strace"/>
+<meta name="twitter:description" content="Linux系统调用分析利器"/>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Raleway:200,300" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" media="screen" href="https://varz1.github.io/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://varz1.github.io/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="https://varz1.github.io/css/custom.css" />
+	<link rel="stylesheet" type="text/css" href="https://varz1.github.io/css/dark.css" media="(prefers-color-scheme: dark)" />
+	<link rel="stylesheet" type="text/css" href="https://varz1.github.io/css/custom-dark.css" media="(prefers-color-scheme: dark)" />
+
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+	<script src="https://varz1.github.io/js/main.js"></script>
+	<script src="https://varz1.github.io/js/abc.js"></script>
+	<script src="https://varz1.github.io/js/xyz.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+	<div class="container wrapper post">
+		<div class="header">
+	<base href="https://varz1.github.io/">
+	<h1 class="site-title"><a href="https://varz1.github.io/">: )</a></h1>
+	<div class="site-description"><h2>你我都有光明的未来</h2><nav class="nav social">
+			<ul class="flat"><a href="https://github.com/varz1" title="Github"><i data-feather="github"></i></a></ul>
+		</nav>
+	</div>
+
+	<nav class="nav">
+		<ul class="flat">
+			
+			<li>
+				<a href="/">Home</a>
+			</li>
+			
+			<li>
+				<a href="/posts">All posts</a>
+			</li>
+			
+			<li>
+				<a href="/tags">Tags</a>
+			</li>
+			
+			<li>
+				<a href="/about">About</a>
+			</li>
+			
+		</ul>
+	</nav>
+</div>
+
+
+		<div class="post-header">
+			<h1 class="title">Strace</h1>
+			<div class="meta">Posted at &mdash; Sep 20, 2021</div>
+		</div>
+
+		<div class="markdown">
+			
+
+<p>首先贴出strace命令的<a href="https://zh.wikipedia.org/zh-cn/Strace">维基百科</a>解释</p>
+
+<p><em>strace是Linux环境下的一款程序调试工具，用来监察一个应用程序所使用的系统调用及它所接收的系统信息。</em></p>
+
+<p>关于strace命令的详细使用方式可以参考这篇<a href="https://colobu.com/2021/04/30/strace-commands-for-troubleshooting-and-debugging-linux/">文章</a></p>
+
+<p>众所周知，Linux将内存分为内核态和用户态，大部分操作通常都需要调用系统完成相应调用，用户态和内核态就需要进行通信。接下来给出本人结合strace命令学习操作系统，了解Linux的系统调用的过程。</p>
+
+<h3 id="一些常用命令的系统调用">一些常用命令的系统调用</h3>
+
+<p><code>$ strace echo  &quot;hi&quot;</code></p>
+
+<p>本条命令分析echo hi即在命令行中打印出hi的系统调用过程</p>
+
+<p>给出执行结果如下：</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">execve<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;/usr/bin/echo&#34;</span>, <span style="color:#719e07">[</span><span style="color:#2aa198">&#34;echo&#34;</span>, <span style="color:#2aa198">&#34;hi&#34;</span><span style="color:#719e07">]</span>, 0x7ffc19e5d5e8 /* <span style="color:#2aa198">65</span> vars */<span style="color:#719e07">)</span> <span style="color:#719e07">=</span> <span style="color:#2aa198">0</span>
+brk<span style="color:#719e07">(</span>NULL<span style="color:#719e07">)</span>                               <span style="color:#719e07">=</span> 0x5624eb957000
+access<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;/etc/ld.so.preload&#34;</span>, R_OK<span style="color:#719e07">)</span>      <span style="color:#719e07">=</span> -1 ENOENT <span style="color:#719e07">(</span>没有那个文件或目录<span style="color:#719e07">)</span>
+openat<span style="color:#719e07">(</span>AT_FDCWD, <span style="color:#2aa198">&#34;/etc/ld.so.cache&#34;</span>, O_RDONLY|O_CLOEXEC<span style="color:#719e07">)</span> <span style="color:#719e07">=</span> <span style="color:#2aa198">3</span>
+fstat<span style="color:#719e07">(</span><span style="color:#2aa198">3</span>, <span style="color:#719e07">{</span><span style="color:#268bd2">st_mode</span><span style="color:#719e07">=</span>S_IFREG|<span style="color:#2aa198">0644</span>, <span style="color:#268bd2">st_size</span><span style="color:#719e07">=</span><span style="color:#2aa198">112173</span>, ...<span style="color:#719e07">})</span> <span style="color:#719e07">=</span> <span style="color:#2aa198">0</span>
+mmap<span style="color:#719e07">(</span>NULL, <span style="color:#2aa198">112173</span>, PROT_READ, MAP_PRIVATE, <span style="color:#2aa198">3</span>, <span style="color:#2aa198">0</span><span style="color:#719e07">)</span> <span style="color:#719e07">=</span> 0x7fe3e041b000
+close<span style="color:#719e07">(</span><span style="color:#2aa198">3</span><span style="color:#719e07">)</span>                                <span style="color:#719e07">=</span> <span style="color:#2aa198">0</span>
+openat<span style="color:#719e07">(</span>AT_FDCWD, <span style="color:#2aa198">&#34;/lib/x86_64-linux-gnu/libc.so.6&#34;</span>, O_RDONLY|O_CLOEXEC<span style="color:#719e07">)</span> <span style="color:#719e07">=</span> <span style="color:#2aa198">3</span>
+read<span style="color:#719e07">(</span><span style="color:#2aa198">3</span>, <span style="color:#2aa198">&#34;\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0&gt;\0\1\0\0\0\260A\2\0\0\0\0\0&#34;</span>..., <span style="color:#2aa198">832</span><span style="color:#719e07">)</span> <span style="color:#719e07">=</span> <span style="color:#2aa198">832</span>
+fstat<span style="color:#719e07">(</span><span style="color:#2aa198">3</span>, <span style="color:#719e07">{</span><span style="color:#268bd2">st_mode</span><span style="color:#719e07">=</span>S_IFREG|<span style="color:#2aa198">0755</span>, <span style="color:#268bd2">st_size</span><span style="color:#719e07">=</span><span style="color:#2aa198">1824496</span>, ...<span style="color:#719e07">})</span> <span style="color:#719e07">=</span> <span style="color:#2aa198">0</span>
+mmap<span style="color:#719e07">(</span>NULL, <span style="color:#2aa198">8192</span>, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, <span style="color:#2aa198">0</span><span style="color:#719e07">)</span> <span style="color:#719e07">=</span> 0x7fe3e0419000
+mmap<span style="color:#719e07">(</span>NULL, <span style="color:#2aa198">1837056</span>, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, <span style="color:#2aa198">3</span>, <span style="color:#2aa198">0</span><span style="color:#719e07">)</span> <span style="color:#719e07">=</span> 0x7fe3e0258000
+mprotect<span style="color:#719e07">(</span>0x7fe3e027a000, <span style="color:#2aa198">1658880</span>, PROT_NONE<span style="color:#719e07">)</span> <span style="color:#719e07">=</span> <span style="color:#2aa198">0</span>
+mmap<span style="color:#719e07">(</span>0x7fe3e027a000, <span style="color:#2aa198">1343488</span>, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, <span style="color:#2aa198">3</span>, 0x22000<span style="color:#719e07">)</span> <span style="color:#719e07">=</span> 0x7fe3e027a000
+mmap<span style="color:#719e07">(</span>0x7fe3e03c2000, <span style="color:#2aa198">311296</span>, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, <span style="color:#2aa198">3</span>, 0x16a000<span style="color:#719e07">)</span> <span style="color:#719e07">=</span> 0x7fe3e03c2000
+mmap<span style="color:#719e07">(</span>0x7fe3e040f000, <span style="color:#2aa198">24576</span>, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, <span style="color:#2aa198">3</span>, 0x1b6000<span style="color:#719e07">)</span> <span style="color:#719e07">=</span> 0x7fe3e040f000
+mmap<span style="color:#719e07">(</span>0x7fe3e0415000, <span style="color:#2aa198">14336</span>, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, <span style="color:#2aa198">0</span><span style="color:#719e07">)</span> <span style="color:#719e07">=</span> 0x7fe3e0415000
+close<span style="color:#719e07">(</span><span style="color:#2aa198">3</span><span style="color:#719e07">)</span>                                <span style="color:#719e07">=</span> <span style="color:#2aa198">0</span>
+arch_prctl<span style="color:#719e07">(</span>ARCH_SET_FS, 0x7fe3e041a540<span style="color:#719e07">)</span> <span style="color:#719e07">=</span> <span style="color:#2aa198">0</span>
+mprotect<span style="color:#719e07">(</span>0x7fe3e040f000, <span style="color:#2aa198">16384</span>, PROT_READ<span style="color:#719e07">)</span> <span style="color:#719e07">=</span> <span style="color:#2aa198">0</span>
+mprotect<span style="color:#719e07">(</span>0x5624eafd1000, <span style="color:#2aa198">4096</span>, PROT_READ<span style="color:#719e07">)</span> <span style="color:#719e07">=</span> <span style="color:#2aa198">0</span>
+mprotect<span style="color:#719e07">(</span>0x7fe3e045e000, <span style="color:#2aa198">4096</span>, PROT_READ<span style="color:#719e07">)</span> <span style="color:#719e07">=</span> <span style="color:#2aa198">0</span>
+munmap<span style="color:#719e07">(</span>0x7fe3e041b000, <span style="color:#2aa198">112173</span><span style="color:#719e07">)</span>          <span style="color:#719e07">=</span> <span style="color:#2aa198">0</span>
+brk<span style="color:#719e07">(</span>NULL<span style="color:#719e07">)</span>                               <span style="color:#719e07">=</span> 0x5624eb957000
+brk<span style="color:#719e07">(</span>0x5624eb978000<span style="color:#719e07">)</span>                     <span style="color:#719e07">=</span> 0x5624eb978000
+openat<span style="color:#719e07">(</span>AT_FDCWD, <span style="color:#2aa198">&#34;/usr/lib/locale/locale-archive&#34;</span>, O_RDONLY|O_CLOEXEC<span style="color:#719e07">)</span> <span style="color:#719e07">=</span> <span style="color:#2aa198">3</span>
+fstat<span style="color:#719e07">(</span><span style="color:#2aa198">3</span>, <span style="color:#719e07">{</span><span style="color:#268bd2">st_mode</span><span style="color:#719e07">=</span>S_IFREG|<span style="color:#2aa198">0644</span>, <span style="color:#268bd2">st_size</span><span style="color:#719e07">=</span><span style="color:#2aa198">3246832</span>, ...<span style="color:#719e07">})</span> <span style="color:#719e07">=</span> <span style="color:#2aa198">0</span>
+mmap<span style="color:#719e07">(</span>NULL, <span style="color:#2aa198">3246832</span>, PROT_READ, MAP_PRIVATE, <span style="color:#2aa198">3</span>, <span style="color:#2aa198">0</span><span style="color:#719e07">)</span> <span style="color:#719e07">=</span> 0x7fe3dff3f000
+close<span style="color:#719e07">(</span><span style="color:#2aa198">3</span><span style="color:#719e07">)</span>                                <span style="color:#719e07">=</span> <span style="color:#2aa198">0</span>
+fstat<span style="color:#719e07">(</span><span style="color:#2aa198">1</span>, <span style="color:#719e07">{</span><span style="color:#268bd2">st_mode</span><span style="color:#719e07">=</span>S_IFCHR|<span style="color:#2aa198">0600</span>, <span style="color:#268bd2">st_rdev</span><span style="color:#719e07">=</span>makedev<span style="color:#719e07">(</span>0x88, 0x3<span style="color:#719e07">)</span>, ...<span style="color:#719e07">})</span> <span style="color:#719e07">=</span> <span style="color:#2aa198">0</span>
+write<span style="color:#719e07">(</span><span style="color:#2aa198">1</span>, <span style="color:#2aa198">&#34;hi\n&#34;</span>, 3hi
+<span style="color:#719e07">)</span>                     <span style="color:#719e07">=</span> <span style="color:#2aa198">3</span>
+close<span style="color:#719e07">(</span><span style="color:#2aa198">1</span><span style="color:#719e07">)</span>                                <span style="color:#719e07">=</span> <span style="color:#2aa198">0</span>
+close<span style="color:#719e07">(</span><span style="color:#2aa198">2</span><span style="color:#719e07">)</span>                                <span style="color:#719e07">=</span> <span style="color:#2aa198">0</span>
+exit_group<span style="color:#719e07">(</span><span style="color:#2aa198">0</span><span style="color:#719e07">)</span>                           <span style="color:#719e07">=</span> ?
++++ exited with <span style="color:#2aa198">0</span> +++</code></pre></div>
+<p>可以看到第一个执行的系统调用是execve，其函数原型为</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#dc322f">int</span> <span style="color:#268bd2">execve</span>(<span style="color:#719e07">const</span> <span style="color:#dc322f">char</span> <span style="color:#719e07">*</span>filename, <span style="color:#dc322f">char</span> <span style="color:#719e07">*</span><span style="color:#719e07">const</span> argv[], <span style="color:#dc322f">char</span> <span style="color:#719e07">*</span><span style="color:#719e07">const</span> envp[]);</code></pre></div>
+<p>在命令输出中也能看见一些蛛丝马迹，即echo命令的位置为/usr/bin目录，hi作为一个参数传入。调用brk分配内存空间，acess检查权限，了解零拷贝的同学可以知道，mmap通常可用于减少read的系统调用次数，从而加快IO速度，mmap将内核缓冲区的数据映射到用户空间，这样可以操作系统和用户空间就不需要进行任何数据拷贝的操作。还有诸如read，open，close，write的基本调用，在许多命令中都可以见到他们的身影，大家可以去试试。</p>
+
+<h3 id="一个简单c程序的系统调用">一个简单c程序的系统调用</h3>
+
+<p>写一个简单的读取数字再输出的c程序</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#719e07">#include</span><span style="color:#719e07">&lt;stdio.h&gt;</span><span style="color:#719e07">
+</span><span style="color:#719e07"></span><span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span>(){
+        <span style="color:#dc322f">int</span> i;
+        scanf(<span style="color:#2aa198">&#34;%d&#34;</span>,<span style="color:#719e07">&amp;</span>i);
+        printf(<span style="color:#2aa198">&#34;%d&#34;</span>,i);
+}</code></pre></div>
+<p>使用gcc编译后执行命令<code>$ strace ./a</code>输出如下<img src="https://github.com/varz1/pics/blob/master/2021-09-20_15-14.png?raw=true" alt="" /></p>
+
+<p>其中在27行的位置调用read进行一次暂停等待用户输入数字，输入后打印完整调用过程。我们可以看到其中mprotect，munmap，lseek等调用就是Linux为了寻址，内存映射等进行的一系列操作。才学疏浅，欢迎指出错误。</p>
+
+		</div>
+
+		<div class="post-tags">
+			
+				
+			
+		</div>
+		</div>
+	<div class="footer wrapper">
+	<nav class="nav">
+		<div> © Copyright notice |  <a href="https://github.com/vividvilla/ezhil">Ezhil theme</a> | Built with <a href="https://gohugo.io">Hugo</a></div>
+	</nav>
+</div>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-147515514-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+<script>feather.replace()</script>
+</body>
+</html>

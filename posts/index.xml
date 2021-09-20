@@ -7,10 +7,26 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Copyright notice</copyright>
-    <lastBuildDate>Thu, 19 Aug 2021 17:37:15 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 20 Sep 2021 14:24:43 +0800</lastBuildDate>
     
 	<atom:link href="https://varz1.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Strace</title>
+      <link>https://varz1.github.io/posts/strace/</link>
+      <pubDate>Mon, 20 Sep 2021 14:24:43 +0800</pubDate>
+      
+      <guid>https://varz1.github.io/posts/strace/</guid>
+      <description>首先贴出strace命令的维基百科解释
+strace是Linux环境下的一款程序调试工具，用来监察一个应用程序所使用的系统调用及它所接收的系统信息。
+关于strace命令的详细使用方式可以参考这篇文章
+众所周知，Linux将内存分为内核态和用户态，大部分操作通常都需要调用系统完成相应调用，用户态和内核态就需要进行通信。接下来给出本人结合strace命令学习操作系统，了解Linux的系统调用的过程。
+一些常用命令的系统调用 $ strace echo &amp;quot;hi&amp;quot;
+本条命令分析echo hi即在命令行中打印出hi的系统调用过程
+给出执行结果如下：
+execve(&amp;#34;/usr/bin/echo&amp;#34;, [&amp;#34;echo&amp;#34;, &amp;#34;hi&amp;#34;], 0x7ffc19e5d5e8 /* 65 vars */) = 0 brk(NULL) = 0x5624eb957000 access(&amp;#34;/etc/ld.</description>
+    </item>
     
     <item>
       <title>无聊脚本</title>
