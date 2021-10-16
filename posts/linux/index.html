@@ -83,68 +83,7 @@
 <li>查看启动失败的服务列表：systemctl &ndash;failed</li>
 </ul>
 
-<h2 id="二-scp">二、Scp</h2>
-
-<p>Scp可用于Linux下服务器和主机之间传输文件</p>
-
-<h3 id="上传">上传</h3>
-
-<h4 id="单个文件">单个文件</h4>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">scp local_file remote_username@remote_ip:remote_folder 
-<span style="color:#586e75">#或者</span> 
-scp local_file remote_username@remote_ip:remote_file 
-<span style="color:#586e75">#或者</span> 
-scp local_file remote_ip:remote_folder 
-<span style="color:#586e75">#或者</span> 
-scp local_file remote_ip:remote_file </code></pre></div>
-<h4 id="文件夹">文件夹</h4>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">scp -r local_folder remote_username@remote_ip:remote_folder 
-<span style="color:#586e75">#或者</span> 
-scp -r local_folder remote_ip:remote_folder</code></pre></div>
-<h3 id="下载">下载</h3>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">scp root@www.runoob.com:/home/root/others/music /home/space/music/1.mp3 
-scp -r www.runoob.com:/home/root/others/ /home/space/music/</code></pre></div>
-<h2 id="三-mysql">三、Mysql</h2>
-
-<p>这里以mysql为数据库示例，mytable为表名示例</p>
-
-<h5 id="1-基本操作">1.基本操作</h5>
-
-<ul>
-<li><p>登录：mysql -u root -p</p></li>
-
-<li><p>数据库操作：</p>
-
-<ul>
-<li><p>显示所有数据库：show databases;</p></li>
-
-<li><p>显示数据库中的表：use mysql;</p></li>
-</ul>
-
-<p>​                                   show tables;</p>
-
-<ul>
-<li><p>显示数据表的结构：describe mytable;l;</p></li>
-
-<li><p>建库：create database;</p></li>
-
-<li><p>建表：use mysql;</p></li>
-</ul>
-
-<p>​           create table mytable1;</p>
-
-<ul>
-<li><p>删库：drop database mysql;</p></li>
-
-<li><p>删表：drop table mytable1;</p></li>
-
-<li><p>清空表中记录：delete from mytable;</p></li>
-
-<li><p>删除表中所有记录：truncate mytable;</p></li>
-</ul></li>
-</ul>
-
-<h2 id="三-vim常用命令">三、VIM常用命令</h2>
+<h2 id="二-vim常用命令">二、VIM常用命令</h2>
 
 <ul>
 <li>三个模式：
@@ -162,21 +101,23 @@ scp -r www.runoob.com:/home/root/others/ /home/space/music/</code></pre></div>
 <li>跳转到n行：nG</li>
 <li>跳转n个字符：n+space</li>
 </ul></li>
-<li>删除
+
+<li><p>删除</p>
 
 <ul>
 <li>全部删除：一般指令模式下dG</li>
 <li>删除一行：dd</li>
 <li>删除选中：d</li>
 </ul></li>
-<li>全部复制：一般指令模式下ggyG</li>
-<li>全选：一般指令模式下ggvG</li>
-<li>查询：/keyword   按n查找下一个</li>
+
+<li><p>全部复制：一般指令模式下ggyG</p></li>
+
+<li><p>全选：一般指令模式下ggvG</p></li>
 </ul>
 
 <p><em>参考：<a href="https://www.runoob.com/linux/linux-vim.html">菜鸟教程</a></em></p>
 
-<h2 id="linux系统操作">Linux系统操作</h2>
+<h2 id="三-linux系统操作">三、Linux系统操作</h2>
 
 <h3 id="1-find-查找指定指定目录或文件">1.find：查找指定指定目录或文件</h3>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">find -name 文件名;按照指定名称查找在当前目录下查找文件

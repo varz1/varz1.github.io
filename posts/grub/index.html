@@ -73,23 +73,19 @@
 
 <h2 id="原因">原因</h2>
 
-<p>因为win10更新覆盖了Debian的grub引导所以丢失启动</p>
+<p>因为win10更新覆盖了Debian的grub所以丢失</p>
 
-<h2 id="解决一">解决一</h2>
+<h2 id="解决">解决</h2>
 
 <h3 id="制作live-cd并进入">制作live-cd并进入</h3>
 
 <p>这里我制作的是debin的<a href="https://www.debian.org/CD/live/index.zh-cn.html">live-cd</a>，重启选择BIOS启动，进入livecd。</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">fdisk -l</code></pre></div>
-<p>找到自己的根目录分区以及windows的EFI分区，这里以我的环境为例说明：</p>
-
-<p>根目录分区：/dev/nvme0n1p6</p>
-
-<p>EFI分区是/dev/nvme0n1p5</p>
+<p>找到自己的根目录分区以及windows的EFI分区这里我的根目录分区是/dev/nvme0n1p6，EFI分区是/dev/nvme0n1p5。</p>
 
 <h2 id="执行命令挂载分区重新安装grub">执行命令挂载分区重新安装grub</h2>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ mount /dev/nvme0n1p6 /mnt <span style="color:#586e75"># 挂载根目录</span>
-$ mount /dev/nvme0n1p5 /mnt/boot <span style="color:#586e75"># 挂载boot</span>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ mount /dev/nvme0n1p6 /mnt
+$ mount /dev/nvme0n1p5 /mnt/boot
 $ mount --rbind /proc proc
 $ mount --rbind /sys sys
 $ mount --rbind /dev dev
@@ -99,14 +95,6 @@ $ grub-install --target<span style="color:#719e07">=</span>x86_64-efi --efi-dire
 $ grub-mkconfig -o /boot/grub/grub.cfg</code></pre></div>
 <p>重启完成</p>
 
-<h2 id="解决二">解决二</h2>
-
-<p>进入Bios主板设置添加启动项-&gt;找到linux位置的grub启动文件-&gt;重启进入</p>
-
-<h3 id="bios-https-s3-us-west-2-amazonaws-com-secure-notion-static-com-6f319e01-27d8-4d5c-98d9-0a7385f15621-untitled-png-x-amz-algorithm-aws4-hmac-sha256-x-amz-credential-akiat73l2g45o3ks52y5-2f20210818-2fus-west-2-2fs3-2faws4-request-x-amz-date-20210818t055623z-x-amz-expires-86400-x-amz-signature-5e2ba488638fb6ec47936d4965eeee973c80f1293c831358f3b1095c421b4d8f-x-amz-signedheaders-host-response-content-disposition-filename-20-3d-22untitled-png-22"><img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/6f319e01-27d8-4d5c-98d9-0a7385f15621/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210818%2Fus-west-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20210818T055623Z&amp;X-Amz-Expires=86400&amp;X-Amz-Signature=5e2ba488638fb6ec47936d4965eeee973c80f1293c831358f3b1095c421b4d8f&amp;X-Amz-SignedHeaders=host&amp;response-content-disposition=filename%20%3D%22Untitled.png%22" alt="BIOS" /></h3>
-
-<p>进入Linux后执行命令</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo update-grub</code></pre></div>
 		</div>
 
 		<div class="post-tags">

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Linux桌面环境使用不完全指南 - : )</title><link rel="icon" type="image/png" href=icons/smile.svg /><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:title" content="Linux桌面环境使用不完全指南" />
+<meta property="og:description" content="Linux桌面环境配置及美化" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://varz1.github.io/posts/configlinux/" />
+<meta property="article:published_time" content="2021-10-16T23:12:59&#43;08:00"/>
+<meta property="article:modified_time" content="2021-10-16T23:12:59&#43;08:00"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Linux桌面环境使用不完全指南"/>
+<meta name="twitter:description" content="Linux桌面环境配置及美化"/>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Raleway:200,300" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" media="screen" href="https://varz1.github.io/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://varz1.github.io/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="https://varz1.github.io/css/custom.css" />
+	<link rel="stylesheet" type="text/css" href="https://varz1.github.io/css/dark.css" media="(prefers-color-scheme: dark)" />
+	<link rel="stylesheet" type="text/css" href="https://varz1.github.io/css/custom-dark.css" media="(prefers-color-scheme: dark)" />
+
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+	<script src="https://varz1.github.io/js/main.js"></script>
+	<script src="https://varz1.github.io/js/abc.js"></script>
+	<script src="https://varz1.github.io/js/xyz.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+	<div class="container wrapper post">
+		<div class="header">
+	<base href="https://varz1.github.io/">
+	<h1 class="site-title"><a href="https://varz1.github.io/">: )</a></h1>
+	<div class="site-description"><h2>你我都有光明的未来</h2><nav class="nav social">
+			<ul class="flat"><a href="https://github.com/varz1" title="Github"><i data-feather="github"></i></a></ul>
+		</nav>
+	</div>
+
+	<nav class="nav">
+		<ul class="flat">
+			
+			<li>
+				<a href="/">Home</a>
+			</li>
+			
+			<li>
+				<a href="/posts">All posts</a>
+			</li>
+			
+			<li>
+				<a href="/tags">Tags</a>
+			</li>
+			
+			<li>
+				<a href="/about">About</a>
+			</li>
+			
+		</ul>
+	</nav>
+</div>
+
+
+		<div class="post-header">
+			<h1 class="title">Linux桌面环境使用不完全指南</h1>
+			<div class="meta">Posted at &mdash; Oct 16, 2021</div>
+		</div>
+
+		<div class="markdown">
+			
+
+<p>类Unix系统下的Shell对于开发者来说有多好用不用说，都懂。再者Linux的高度可定制也给了大家想象力的空间和编写以及使用脚本的环境。这里以debian为例给出安装配置过程。886 Windows</p>
+
+<h2 id="一-下载安装">一.下载安装</h2>
+
+<h3 id="1-下载">1.下载</h3>
+
+<p><a href="https://mirrors.tuna.tsinghua.edu.cn/">清华软件镜像站</a>等</p>
+
+<h3 id="2-烧录至u盘">2.烧录至U盘</h3>
+
+<p>这里使用<a href="https://rufus.ie/zh/">Rufus</a>工具进行烧录</p>
+
+<h3 id="3-安装">3.安装</h3>
+
+<p>插上U盘，重启。电脑开机按F12进入BIOS界面，选择你的U盘设备，进入debian安装界面。</p>
+
+<p>选择Graphics install图型界面安装，按照流程，这里我选择的桌面环境是KDE，再选上自己需要的环境，重启进入系统。</p>
+
+<h2 id="二-基本配置">二.基本配置</h2>
+
+<h3 id="1-添加当前用户进入管理员组">1.添加当前用户进入管理员组</h3>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ su    <span style="color:#586e75">#进入root</span>
+$ chmod +w /etc/sudoers
+$ sudo nano /etc/sudoers    <span style="color:#586e75">#将当前用户加入root下面，后面一样</span>
+$ chmod +r /etc/sudoers</code></pre></div>
+<h3 id="2-修改软件源">2.修改软件源</h3>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo nano /etc/apt/sources.list </code></pre></div>
+<p>注释或删除掉内容，加入新的软件源，这里使用<a href="https://mirrors.tuna.tsinghua.edu.cn/help/debian/">清华大学镜像站软件源</a></p>
+
+<p>由于我的软件包较旧，这里加入了https的软件源后出现了报错，将https改为http即可。</p>
+
+<p>修改完将不需要的自带软件删除掉后，运行apt update和upgrade，更新结束后将http改回去https。</p>
+
+<h3 id="3-添加无线模块驱动">3.添加无线模块驱动</h3>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt update
+$ sudo apt install firmware-iwlwifi
+$ su -
+$ modprobe -r iwlwifi
+$ modprobe iwlwifi</code></pre></div>
+<h3 id="4-安装基本软件">4.安装基本软件</h3>
+
+<p>根据个人需要安装软件，vim/git/等。</p>
+
+<h3 id="5-开机自动挂载硬盘">5.开机自动挂载硬盘</h3>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo fdisk -l <span style="color:#586e75">#找到需要挂载的硬盘的标志</span>
+$ sudo mount /dev/sda /media  <span style="color:#586e75"># 后面的media是你要挂载的位置</span>
+$ sudo blkid <span style="color:#586e75"># 记录下sda的UUID</span>
+$ sudo vim /etc/fstab <span style="color:#586e75">#添加下列记录 UUID=xxxxxxxxxx   /media  ntfs    defaults        0       2</span> </code></pre></div>
+<h3 id="6-安装中文输入法">6.安装中文输入法</h3>
+
+<p>个人习惯使用fcitx的google拼音，但是词库十分让人头疼，也可以尝试ibus。这里参考了这位博主详细的总结,<a href="https://blog.csdn.net/yanhanhui1/article/details/115128309">链接在此</a></p>
+
+<h3 id="7-安装配置代理服务器">7.安装配置代理服务器</h3>
+
+<p>这里使用<a href="https://github.com/Dreamacro/clash">clash</a>，一个使用go写的代理。这里给出安装好后使用systemctl来自动控制的过程。</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo vim /etc/systemd/system/clash.service</code></pre></div>
+<p>内容如下</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">[Unit]
+Description=Clash service
+After=network.target
+
+[Service]
+Type=simple
+User=skylee
+ExecStart=/usr/bin/clash
+Restart=on-failure
+RestartPreventExitStatus=23
+
+[Install]
+WantedBy=multi-user.target</pre></div>
+<p>user为用户名</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">$ sudo systemctl daemon-reload
+$ sudo systemctl enable clash#开机自动启动
+$ sudo systemctl start clash#开启服务
+$ sudo systemctl status clash# 查询服务状态</pre></div>
+<h2 id="三-个性化配置">三.个性化配置</h2>
+
+<h3 id="1-添加dns记录">1.添加DNS记录</h3>
+
+<p>发现无法访问dl.google和rawgithub等服务，添加下列记录到/etc/hosts</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">#git 
+185.199.108.154               github.githubassets.com
+140.82.113.22                 central.github.com
+185.199.108.133               desktop.githubusercontent.com
+185.199.108.153               assets-cdn.github.com
+185.199.108.133               camo.githubusercontent.com
+185.199.108.133               github.map.fastly.net
+199.232.69.194                github.global.ssl.fastly.net
+192.30.253.113                gist.github.com
+185.199.108.153               github.io
+140.82.114.4                  github.com
+140.82.113.5                  api.github.com
+185.199.108.133               raw.githubusercontent.com
+185.199.108.133               user-images.githubusercontent.com
+185.199.108.133               favicons.githubusercontent.com
+185.199.108.133               avatars5.githubusercontent.com
+185.199.108.133               avatars4.githubusercontent.com
+185.199.108.133               avatars3.githubusercontent.com
+185.199.108.133               avatars2.githubusercontent.com
+185.199.108.133               avatars1.githubusercontent.com
+185.199.108.133               avatars0.githubusercontent.com
+185.199.108.133               avatars.githubusercontent.com
+140.82.112.10                 codeload.github.com
+52.216.104.59                 github-cloud.s3.amazonaws.com
+52.216.164.131                github-com.s3.amazonaws.com
+52.216.29.28                  github-production-release-asset-2e65be.s3.amazonaws.com
+52.217.81.140                 github-production-user-asset-6210df.s3.amazonaws.com
+52.217.80.164                 github-production-repository-file-5c1aeb.s3.amazonaws.com
+185.199.108.153               githubstatus.com
+64.71.168.201                 github.community
+185.199.108.133               media.githubusercontent.com
+#google
+203.208.41.78 dl.google.com</pre></div>
+<p>也可以自行搜索。</p>
+
+<h3 id="2-安装配置shell">2.安装配置shell</h3>
+
+<p>debian默认的shell是bash，这里安装配置zsh,配置<a href="https://github.com/robbyrussell/oh-my-zsh">ohmyzsh</a>，就可以自行diy自己的shell啦</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt install zsh <span style="color:#586e75">#安装</span>
+$ chsh -s /bin/zsh# 设置为默认shell
+$ sh -c <span style="color:#2aa198">&#34;</span><span style="color:#719e07">$(</span>wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh<span style="color:#719e07">)</span><span style="color:#2aa198">&#34;</span>
+<span style="color:#586e75"># 使用ohmyzsh的脚本安装</span></code></pre></div>
+<p>shell的自动补全插件这里使用了incr</p>
+
+<h3 id="3-安装主题">3.安装主题</h3>
+
+<ul>
+<li>图标包推荐<a href="https://launchpad.net/~papirus/+archive/ubuntu/papirus/+packages?field.name_filter=papirus-icon-theme">papirus</a></li>
+<li>主题推荐<a href="https://store.kde.org/p/1229134">material kde</a></li>
+</ul>
+
+<h3 id="4-安装dock">4.安装dock</h3>
+
+<p>linux下的dock个人还是最喜欢latte-dock</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt install latte-dock <span style="color:#586e75">#通过shell运行，重启后就可以自动自启动</span></code></pre></div>
+<h3 id="5-安装spotify">5.安装Spotify</h3>
+
+<p>想在linux下听歌？想要更好体验？没有比spotify能打的。安装配置参考本人之前的<a href="https://varz1.github.io/posts/spotify/">文章</a></p>
+
+<h3 id="6-夜间模式">6.夜间模式</h3>
+
+<p>Linux也有夜间模式啦，使用redshift效果不输ios，详细配置<a href="https://zhuanlan.zhihu.com/p/34562682">参考文章</a></p>
+
+<p>结束！
+<img src="https://img2020.cnblogs.com/blog/2308680/202110/2308680-20211016211714713-122932655.png" alt="" /></p>
+
+<h2 id="四-常见问题及解决">四.常见问题及解决</h2>
+
+<h3 id="1-由于没有公钥-无法验证下列签名">1.由于没有公钥，无法验证下列签名</h3>
+
+<p>常常使用ppa添加完软件源后出现这样的问题，解决方法是添加提示的key导入公钥</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys YOURKEY</code></pre></div>
+<h2 id="五-todo">五.Todo</h2>
+
+<ul class="task-list">
+<li><label><input type="checkbox" disabled class="task-list-item">  更好的备份方案</label></li>
+</ul>
+
+		</div>
+
+		<div class="post-tags">
+			
+				
+					<nav class="nav tags">
+							<ul class="flat">
+								
+								<li><a href="/tags/linux">Linux</a></li>
+								
+							</ul>
+					</nav>
+				
+			
+		</div>
+		</div>
+	<div class="footer wrapper">
+	<nav class="nav">
+		<div> © Copyright notice |  <a href="https://github.com/vividvilla/ezhil">Ezhil theme</a> | Built with <a href="https://gohugo.io">Hugo</a></div>
+	</nav>
+</div>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-147515514-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+<script>feather.replace()</script>
+</body>
+</html>

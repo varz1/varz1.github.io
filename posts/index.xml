@@ -7,15 +7,29 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Copyright notice</copyright>
-    <lastBuildDate>Mon, 20 Sep 2021 14:24:43 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 16 Oct 2021 23:12:59 +0800</lastBuildDate>
     
 	<atom:link href="https://varz1.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Strace</title>
+      <title>Linux桌面环境使用不完全指南</title>
+      <link>https://varz1.github.io/posts/configlinux/</link>
+      <pubDate>Sat, 16 Oct 2021 23:12:59 +0800</pubDate>
+      
+      <guid>https://varz1.github.io/posts/configlinux/</guid>
+      <description>类Unix系统下的Shell对于开发者来说有多好用不用说，都懂。再者Linux的高度可定制也给了大家想象力的空间和编写以及使用脚本的环境。这里以debian为例给出安装配置过程。886 Windows
+一.下载安装 1.下载 清华软件镜像站等
+2.烧录至U盘 这里使用Rufus工具进行烧录
+3.安装 插上U盘，重启。电脑开机按F12进入BIOS界面，选择你的U盘设备，进入debian安装界面。
+选择Graphics install图型界面安装，按照流程，这里我选择的桌面环境是KDE，再选上自己需要的环境，重启进入系统。
+二.基本配置 1.添加当前用户进入管理员组 $ su #进入root $ chmod +w /etc/sudoers $ sudo nano /etc/sudoers #将当前用户加入root下面，后面一样 $ chmod +r /etc/sudoers 2.</description>
+    </item>
+    
+    <item>
+      <title>strace</title>
       <link>https://varz1.github.io/posts/strace/</link>
-      <pubDate>Mon, 20 Sep 2021 14:24:43 +0800</pubDate>
+      <pubDate>Mon, 20 Sep 2021 23:10:50 +0800</pubDate>
       
       <guid>https://varz1.github.io/posts/strace/</guid>
       <description>首先贴出strace命令的维基百科解释
@@ -29,23 +43,9 @@ execve(&amp;#34;/usr/bin/echo&amp;#34;, [&amp;#34;echo&amp;#34;, &amp;#34;hi&amp
     </item>
     
     <item>
-      <title>无聊脚本</title>
-      <link>https://varz1.github.io/posts/bebop/</link>
-      <pubDate>Thu, 19 Aug 2021 17:37:15 +0800</pubDate>
-      
-      <guid>https://varz1.github.io/posts/bebop/</guid>
-      <description>动机 每次下饭看片的步骤如下：打开Chrome-&amp;gt;找到书签B站的位置-&amp;gt;找到历史记录-&amp;gt;找到星际牛仔
-现在：打开Shell-&amp;gt;Bebop
-有空就会扩展功能 瑞斯拜
-BebopGo A Shell To Watch Cowboy Bebop Fast
-A Shell For Fun
-Requirement  Linux Environment Google Chrome installed Connected to Internet A Bash  Usage $ git clone https://github.</description>
-    </item>
-    
-    <item>
-      <title>一步一步了解ThreadLocal</title>
+      <title>ThreadLocal探究</title>
       <link>https://varz1.github.io/posts/threadlocal/</link>
-      <pubDate>Tue, 10 Aug 2021 21:59:59 +0800</pubDate>
+      <pubDate>Sun, 29 Aug 2021 23:09:38 +0800</pubDate>
       
       <guid>https://varz1.github.io/posts/threadlocal/</guid>
       <description>一、为什么要使用ThreadLocal 先来读一下JDK中对ThreadLocal的注释
@@ -53,12 +53,12 @@ This class provides thread-local variables. These variables differ from their no
     </item>
     
     <item>
-      <title>leetcode数据结构-链表</title>
+      <title>Leet Data Linklist</title>
       <link>https://varz1.github.io/posts/leet-data-linklist/</link>
       <pubDate>Thu, 10 Jun 2021 19:00:11 +0800</pubDate>
       
       <guid>https://varz1.github.io/posts/leet-data-linklist/</guid>
-      <description>1. 找出两个链表的交点  Intersection of Two Linked Lists (Easy)  Leetcode / 力扣
+      <description>leetcode数据结构-链表 1. 找出两个链表的交点  Intersection of Two Linked Lists (Easy)  Leetcode / 力扣
 例如以下示例中 A 和 B 两个链表相交于 c1：</description>
     </item>
     
@@ -98,12 +98,10 @@ Input: [3,2,1,5,6,4] and k = 2 Output: 5 题目描述：找到倒数第 k 个的
       <pubDate>Thu, 29 Apr 2021 18:28:59 +0800</pubDate>
       
       <guid>https://varz1.github.io/posts/grub/</guid>
-      <description>win10更新导致debian双系统无法启动解决办法 原因 因为win10更新覆盖了Debian的grub引导所以丢失启动
-解决一 制作live-cd并进入 这里我制作的是debin的live-cd，重启选择BIOS启动，进入livecd。
-fdisk -l 找到自己的根目录分区以及windows的EFI分区，这里以我的环境为例说明：
-根目录分区：/dev/nvme0n1p6
-EFI分区是/dev/nvme0n1p5
-执行命令挂载分区重新安装grub $ mount /dev/nvme0n1p6 /mnt # 挂载根目录 $ mount /dev/nvme0n1p5 /mnt/boot # 挂载boot $ mount --rbind /proc proc $ mount --rbind /sys sys $ mount --rbind /dev dev $ mount --rbind /run run $ chroot /mnt $ grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub $ grub-mkconfig -o /boot/grub/grub.</description>
+      <description>win10更新导致debian双系统无法启动解决办法 原因 因为win10更新覆盖了Debian的grub所以丢失
+解决 制作live-cd并进入 这里我制作的是debin的live-cd，重启选择BIOS启动，进入livecd。
+fdisk -l 找到自己的根目录分区以及windows的EFI分区这里我的根目录分区是/dev/nvme0n1p6，EFI分区是/dev/nvme0n1p5。
+执行命令挂载分区重新安装grub $ mount /dev/nvme0n1p6 /mnt $ mount /dev/nvme0n1p5 /mnt/boot $ mount --rbind /proc proc $ mount --rbind /sys sys $ mount --rbind /dev dev $ mount --rbind /run run $ chroot /mnt $ grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub $ grub-mkconfig -o /boot/grub/grub.</description>
     </item>
     
     <item>

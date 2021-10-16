@@ -2,16 +2,16 @@
 <html>
 <head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>leetcode数据结构-链表 - : )</title><link rel="icon" type="image/png" href=icons/smile.svg /><meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta property="og:title" content="leetcode数据结构-链表" />
-<meta property="og:description" content="链表专题加复习" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Leet Data Linklist - : )</title><link rel="icon" type="image/png" href=icons/smile.svg /><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:title" content="Leet Data Linklist" />
+<meta property="og:description" content="Linklist" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://varz1.github.io/posts/leet-data-linklist/" />
 <meta property="article:published_time" content="2021-06-10T19:00:11&#43;08:00"/>
 <meta property="article:modified_time" content="2021-06-10T19:00:11&#43;08:00"/>
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="leetcode数据结构-链表"/>
-<meta name="twitter:description" content="链表专题加复习"/>
+<meta name="twitter:title" content="Leet Data Linklist"/>
+<meta name="twitter:description" content="Linklist"/>
 <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Raleway:200,300" rel="stylesheet">
 
 	<link rel="stylesheet" type="text/css" media="screen" href="https://varz1.github.io/css/normalize.css" />
@@ -62,12 +62,14 @@
 
 
 		<div class="post-header">
-			<h1 class="title">leetcode数据结构-链表</h1>
+			<h1 class="title">Leet Data Linklist</h1>
 			<div class="meta">Posted at &mdash; Jun 10, 2021</div>
 		</div>
 
 		<div class="markdown">
 			
+
+<h1 id="leetcode数据结构-链表">leetcode数据结构-链表</h1>
 
 <h2 id="1-找出两个链表的交点">1. 找出两个链表的交点</h2>
 
@@ -103,308 +105,6 @@ B:    b1 → b2 → b3        e1 → e2</code></pre></div>
 <p>当访问 A 链表的指针访问到链表尾部时，令它从链表 B 的头部开始访问链表 B；同样地，当访问 B 链表的指针访问到链表尾部时，令它从链表 A 的头部开始访问链表 A。这样就能控制访问 A 和 B 两个链表的指针能同时访问到交点。</p>
 
 <p>如果不存在交点，那么 a + b = b + a，以下实现代码中 l1 和 l2 会同时为 null，从而退出循环。</p>
-
-<h2 id="2-链表反转">2. 链表反转</h2>
-
-<ol>
-<li>Reverse Linked List (Easy)</li>
-</ol>
-
-<p><a href="https://leetcode.com/problems/reverse-linked-list/description/">Leetcode</a>/ <a href="https://leetcode-cn.com/problems/reverse-linked-list/description/">力扣</a></p>
-
-<h4 id="头插法">头插法</h4>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#268bd2">public</span> ListNode <span style="color:#268bd2">reverseList</span><span style="color:#719e07">(</span>ListNode head<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-    ListNode newHead <span style="color:#719e07">=</span> <span style="color:#cb4b16">null</span><span style="color:#719e07">;</span>
-    <span style="color:#719e07">while</span> <span style="color:#719e07">(</span>head <span style="color:#719e07">!=</span> <span style="color:#cb4b16">null</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-        ListNode next <span style="color:#719e07">=</span> head<span style="color:#719e07">.</span>next<span style="color:#719e07">;</span>
-        head<span style="color:#719e07">.</span>next <span style="color:#719e07">=</span> newHead<span style="color:#719e07">;</span>
-        newHead <span style="color:#719e07">=</span> head<span style="color:#719e07">;</span>
-        head <span style="color:#719e07">=</span> next<span style="color:#719e07">;</span>
-    <span style="color:#719e07">}</span>
-    <span style="color:#719e07">return</span> newHead<span style="color:#719e07">;</span>
-<span style="color:#719e07">}</span></code></pre></div>
-<p>总结：遍历链表过程中,使用newHead保存原先的头结点</p>
-
-<h4 id="递归">递归</h4>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#268bd2">public</span> ListNode <span style="color:#268bd2">reverseList</span><span style="color:#719e07">(</span>ListNode head<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-    <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>head <span style="color:#719e07">==</span> <span style="color:#cb4b16">null</span> <span style="color:#719e07">||</span> head<span style="color:#719e07">.</span>next <span style="color:#719e07">==</span> <span style="color:#cb4b16">null</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-        <span style="color:#719e07">return</span> head<span style="color:#719e07">;</span>
-    <span style="color:#719e07">}</span>
-    ListNode next <span style="color:#719e07">=</span> head<span style="color:#719e07">.</span>next<span style="color:#719e07">;</span>
-    ListNode newHead <span style="color:#719e07">=</span> reverseList<span style="color:#719e07">(</span>next<span style="color:#719e07">);</span>
-    next<span style="color:#719e07">.</span>next <span style="color:#719e07">=</span> head<span style="color:#719e07">;</span>
-    head<span style="color:#719e07">.</span>next <span style="color:#719e07">=</span> <span style="color:#cb4b16">null</span><span style="color:#719e07">;</span>
-    <span style="color:#719e07">return</span> newHead<span style="color:#719e07">;</span>
-<span style="color:#719e07">}</span></code></pre></div>
-<p>总结:</p>
-
-<ul>
-<li>递归出口：遍历完成，head或者head.next为空；</li>
-<li>返回值：递归完成返回head；未完成返回newHead已经处理好的部分，继续递归；</li>
-<li>本级递归应该做什么：交换链表的完成交换部分和下一个节点；</li>
-</ul>
-
-<h2 id="3-归并两个有序的链表">3. 归并两个有序的链表</h2>
-
-<ol>
-<li>Merge Two Sorted Lists (Easy)</li>
-</ol>
-
-<p><a href="https://leetcode.com/problems/merge-two-sorted-lists/description/">Leetcode </a>/ <a href="https://leetcode-cn.com/problems/merge-two-sorted-lists/description/">力扣</a></p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#268bd2">public</span> ListNode <span style="color:#268bd2">mergeTwoLists</span><span style="color:#719e07">(</span>ListNode l1<span style="color:#719e07">,</span> ListNode l2<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-    <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>l1 <span style="color:#719e07">==</span> <span style="color:#cb4b16">null</span><span style="color:#719e07">)</span> <span style="color:#719e07">return</span> l2<span style="color:#719e07">;</span>
-    <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>l2 <span style="color:#719e07">==</span> <span style="color:#cb4b16">null</span><span style="color:#719e07">)</span> <span style="color:#719e07">return</span> l1<span style="color:#719e07">;</span>
-    <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>l1<span style="color:#719e07">.</span>val <span style="color:#719e07">&lt;</span> l2<span style="color:#719e07">.</span>val<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-        l1<span style="color:#719e07">.</span>next <span style="color:#719e07">=</span> mergeTwoLists<span style="color:#719e07">(</span>l1<span style="color:#719e07">.</span>next<span style="color:#719e07">,</span> l2<span style="color:#719e07">);</span>
-        <span style="color:#719e07">return</span> l1<span style="color:#719e07">;</span>
-    <span style="color:#719e07">}</span> <span style="color:#719e07">else</span> <span style="color:#719e07">{</span>
-        l2<span style="color:#719e07">.</span>next <span style="color:#719e07">=</span> mergeTwoLists<span style="color:#719e07">(</span>l1<span style="color:#719e07">,</span> l2<span style="color:#719e07">.</span>next<span style="color:#719e07">);</span>
-        <span style="color:#719e07">return</span> l2<span style="color:#719e07">;</span>
-    <span style="color:#719e07">}</span>
-<span style="color:#719e07">}</span></code></pre></div>
-<p>总结：</p>
-
-<ul>
-<li><p>递归出口：两个链表为空</p></li>
-
-<li><p>递归条件：L1和L2中较小结点和其余结点的比较结果比较。</p></li>
-</ul>
-
-<p><img src="https://github.com/varz1/pics/blob/master/recurse.jpeg?raw=true" alt="recurse.jpeg" /></p>
-
-<h2 id="4-从有序链表中删除重复节点">4. 从有序链表中删除重复节点</h2>
-
-<ol>
-<li>Remove Duplicates from Sorted List (Easy)</li>
-</ol>
-
-<p><a href="https://leetcode.com/problems/remove-duplicates-from-sorted-list/description/">Leetcode</a>/ <a href="https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/description/">力扣</a></p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">Given 1-&gt;1-&gt;2, return 1-&gt;2.
-Given 1-&gt;1-&gt;2-&gt;3-&gt;3, return 1-&gt;2-&gt;3.</code></pre></div>
-<p>题解：</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#268bd2">public</span> ListNode <span style="color:#268bd2">deleteDuplicates</span><span style="color:#719e07">(</span>ListNode head<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-    <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>head <span style="color:#719e07">==</span> <span style="color:#cb4b16">null</span> <span style="color:#719e07">||</span> head<span style="color:#719e07">.</span>next <span style="color:#719e07">==</span> <span style="color:#cb4b16">null</span><span style="color:#719e07">)</span> <span style="color:#719e07">return</span> head<span style="color:#719e07">;</span>
-    head<span style="color:#719e07">.</span>next <span style="color:#719e07">=</span> deleteDuplicates<span style="color:#719e07">(</span>head<span style="color:#719e07">.</span>next<span style="color:#719e07">);</span>
-    <span style="color:#719e07">return</span> head<span style="color:#719e07">.</span>val <span style="color:#719e07">==</span> head<span style="color:#719e07">.</span>next<span style="color:#719e07">.</span>val <span style="color:#719e07">?</span> head<span style="color:#719e07">.</span>next <span style="color:#719e07">:</span> head<span style="color:#719e07">;</span>
-<span style="color:#719e07">}</span></code></pre></div>
-<p>总结：</p>
-
-<ul>
-<li>递归出口：头节点为空或者下一个节点为空</li>
-<li>递归条件：不断递归头节点的下个指针，若前两个值相等则返回下一个节点否则返回头节点；</li>
-</ul>
-
-<h2 id="5-删除链表的倒数第-n-个节点">5. 删除链表的倒数第 n 个节点</h2>
-
-<ol>
-<li>Remove Nth Node From End of List (Medium)</li>
-</ol>
-
-<p><a href="https://leetcode.com/problems/remove-nth-node-from-end-of-list/description/">Leetcode</a>/ <a href="https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/description/">力扣</a></p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">Given linked list: 1-&gt;2-&gt;3-&gt;4-&gt;5, and n = 2.
-After removing the second node from the end, the linked list becomes 1-&gt;2-&gt;3-&gt;5.</code></pre></div>
-<p>题解：</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#268bd2">public</span> ListNode <span style="color:#268bd2">removeNthFromEnd</span><span style="color:#719e07">(</span>ListNode head<span style="color:#719e07">,</span> <span style="color:#dc322f">int</span> n<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-    ListNode fast <span style="color:#719e07">=</span> head<span style="color:#719e07">;</span>
-    <span style="color:#719e07">while</span> <span style="color:#719e07">(</span>n<span style="color:#719e07">--</span> <span style="color:#719e07">&gt;</span> 0<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-        fast <span style="color:#719e07">=</span> fast<span style="color:#719e07">.</span>next<span style="color:#719e07">;</span>
-    <span style="color:#719e07">}</span>
-    <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>fast <span style="color:#719e07">==</span> <span style="color:#cb4b16">null</span><span style="color:#719e07">)</span> <span style="color:#719e07">return</span> head<span style="color:#719e07">.</span>next<span style="color:#719e07">;</span>
-    ListNode slow <span style="color:#719e07">=</span> head<span style="color:#719e07">;</span>
-    <span style="color:#719e07">while</span> <span style="color:#719e07">(</span>fast<span style="color:#719e07">.</span>next <span style="color:#719e07">!=</span> <span style="color:#cb4b16">null</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-        fast <span style="color:#719e07">=</span> fast<span style="color:#719e07">.</span>next<span style="color:#719e07">;</span>
-        slow <span style="color:#719e07">=</span> slow<span style="color:#719e07">.</span>next<span style="color:#719e07">;</span>
-    <span style="color:#719e07">}</span>
-    slow<span style="color:#719e07">.</span>next <span style="color:#719e07">=</span> slow<span style="color:#719e07">.</span>next<span style="color:#719e07">.</span>next<span style="color:#719e07">;</span>
-    <span style="color:#719e07">return</span> head<span style="color:#719e07">;</span>
-<span style="color:#719e07">}</span></code></pre></div>
-<p>总结：使用双指针，控制前后指针的距离为n，当后指针的下一个节点为空时即前指针到达倒数第n个位置，此时删除下一个节点。</p>
-
-<h2 id="6-交换链表中的相邻结点">6. 交换链表中的相邻结点</h2>
-
-<ol>
-<li>Swap Nodes in Pairs (Medium)</li>
-</ol>
-
-<p><a href="https://leetcode.com/problems/swap-nodes-in-pairs/description/">Leetcode</a>/ <a href="https://leetcode-cn.com/problems/swap-nodes-in-pairs/description/">力扣</a></p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">Given 1-&gt;2-&gt;3-&gt;4, you should return the list as 2-&gt;1-&gt;4-&gt;3.</code></pre></div>
-<p>题目要求：不能修改结点的 val 值，O(1) 空间复杂度。</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#268bd2">public</span> ListNode <span style="color:#268bd2">swapPairs</span><span style="color:#719e07">(</span>ListNode head<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-    <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>head <span style="color:#719e07">==</span> <span style="color:#cb4b16">null</span> <span style="color:#719e07">||</span> head<span style="color:#719e07">.</span>next <span style="color:#719e07">==</span> <span style="color:#cb4b16">null</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-        <span style="color:#719e07">return</span> head<span style="color:#719e07">;</span>
-    <span style="color:#719e07">}</span>
-    ListNode next <span style="color:#719e07">=</span> head<span style="color:#719e07">.</span>next<span style="color:#719e07">;</span>
-    head<span style="color:#719e07">.</span>next <span style="color:#719e07">=</span> swapPairs<span style="color:#719e07">(</span>next<span style="color:#719e07">.</span>next<span style="color:#719e07">);</span>
-    next<span style="color:#719e07">.</span>next <span style="color:#719e07">=</span> head<span style="color:#719e07">;</span>
-    <span style="color:#719e07">return</span> next<span style="color:#719e07">;</span>
-<span style="color:#719e07">}</span></code></pre></div>
-<p>总结：</p>
-
-<p><img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/4ad7c209-9379-4cad-874c-862b808f9386/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210802%2Fus-west-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20210802T073333Z&amp;X-Amz-Expires=86400&amp;X-Amz-Signature=3ae30ccccd39b77d54037d14ad70a26d8a1188349d917e7766d9ba143146bbab&amp;X-Amz-SignedHeaders=host&amp;response-content-disposition=filename%20%3D%22Untitled.png%22" alt="img" /></p>
-
-<p>参考博客：<a href="https://lyl0724.github.io/2020/01/25/1/">https://lyl0724.github.io/2020/01/25/1/</a></p>
-
-<h2 id="7-链表求和">7. 链表求和</h2>
-
-<ol>
-<li>Add Two Numbers II (Medium)</li>
-</ol>
-
-<p><a href="https://leetcode.com/problems/add-two-numbers-ii/description/">Leetcode</a>/ <a href="https://leetcode-cn.com/problems/add-two-numbers-ii/description/">力扣(opens new window)</a></p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">Input: (7 -&gt; 2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)
-Output: 7 -&gt; 8 -&gt; 0 -&gt; 7</code></pre></div>
-<p>题目要求：不能修改原始链表。</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#268bd2">public</span> ListNode <span style="color:#268bd2">addTwoNumbers</span><span style="color:#719e07">(</span>ListNode l1<span style="color:#719e07">,</span> ListNode l2<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-    Stack<span style="color:#719e07">&lt;</span>Integer<span style="color:#719e07">&gt;</span> l1Stack <span style="color:#719e07">=</span> buildStack<span style="color:#719e07">(</span>l1<span style="color:#719e07">);</span>
-    Stack<span style="color:#719e07">&lt;</span>Integer<span style="color:#719e07">&gt;</span> l2Stack <span style="color:#719e07">=</span> buildStack<span style="color:#719e07">(</span>l2<span style="color:#719e07">);</span>
-    ListNode head <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ListNode<span style="color:#719e07">(-</span>1<span style="color:#719e07">);</span>
-    <span style="color:#dc322f">int</span> carry <span style="color:#719e07">=</span> 0<span style="color:#719e07">;</span>
-    <span style="color:#719e07">while</span> <span style="color:#719e07">(!</span>l1Stack<span style="color:#719e07">.</span>isEmpty<span style="color:#719e07">()</span> <span style="color:#719e07">||</span> <span style="color:#719e07">!</span>l2Stack<span style="color:#719e07">.</span>isEmpty<span style="color:#719e07">()</span> <span style="color:#719e07">||</span> carry <span style="color:#719e07">!=</span> 0<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-        <span style="color:#dc322f">int</span> x <span style="color:#719e07">=</span> l1Stack<span style="color:#719e07">.</span>isEmpty<span style="color:#719e07">()</span> <span style="color:#719e07">?</span> 0 <span style="color:#719e07">:</span> l1Stack<span style="color:#719e07">.</span>pop<span style="color:#719e07">();</span>
-        <span style="color:#dc322f">int</span> y <span style="color:#719e07">=</span> l2Stack<span style="color:#719e07">.</span>isEmpty<span style="color:#719e07">()</span> <span style="color:#719e07">?</span> 0 <span style="color:#719e07">:</span> l2Stack<span style="color:#719e07">.</span>pop<span style="color:#719e07">();</span>
-        <span style="color:#dc322f">int</span> sum <span style="color:#719e07">=</span> x <span style="color:#719e07">+</span> y <span style="color:#719e07">+</span> carry<span style="color:#719e07">;</span>
-        ListNode node <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ListNode<span style="color:#719e07">(</span>sum <span style="color:#719e07">%</span> 10<span style="color:#719e07">);</span>
-        node<span style="color:#719e07">.</span>next <span style="color:#719e07">=</span> head<span style="color:#719e07">.</span>next<span style="color:#719e07">;</span>
-        head<span style="color:#719e07">.</span>next <span style="color:#719e07">=</span> node<span style="color:#719e07">;</span>
-        carry <span style="color:#719e07">=</span> sum <span style="color:#719e07">/</span> 10<span style="color:#719e07">;</span>
-    <span style="color:#719e07">}</span>
-    <span style="color:#719e07">return</span> head<span style="color:#719e07">.</span>next<span style="color:#719e07">;</span>
-<span style="color:#719e07">}</span>
-
-<span style="color:#268bd2">private</span> Stack<span style="color:#719e07">&lt;</span>Integer<span style="color:#719e07">&gt;</span> <span style="color:#268bd2">buildStack</span><span style="color:#719e07">(</span>ListNode l<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-    Stack<span style="color:#719e07">&lt;</span>Integer<span style="color:#719e07">&gt;</span> stack <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Stack<span style="color:#719e07">&lt;&gt;();</span>
-    <span style="color:#719e07">while</span> <span style="color:#719e07">(</span>l <span style="color:#719e07">!=</span> <span style="color:#cb4b16">null</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-        stack<span style="color:#719e07">.</span>push<span style="color:#719e07">(</span>l<span style="color:#719e07">.</span>val<span style="color:#719e07">);</span>
-        l <span style="color:#719e07">=</span> l<span style="color:#719e07">.</span>next<span style="color:#719e07">;</span>
-    <span style="color:#719e07">}</span>
-    <span style="color:#719e07">return</span> stack<span style="color:#719e07">;</span>
-<span style="color:#719e07">}</span></code></pre></div>
-<h2 id="复习">复习</h2>
-
-<h3 id="链表">链表</h3>
-
-<h5 id="结点数据结构listnode">结点数据结构ListNode</h5>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">ListNode</span> <span style="color:#719e07">{</span>
-    <span style="color:#dc322f">int</span> val<span style="color:#719e07">;</span>
-    ListNode next<span style="color:#719e07">;</span>
-    ListNode<span style="color:#719e07">(</span><span style="color:#dc322f">int</span> x<span style="color:#719e07">)</span> <span style="color:#719e07">{</span> val <span style="color:#719e07">=</span> x<span style="color:#719e07">;</span> <span style="color:#719e07">}</span>
-<span style="color:#719e07">}</span></code></pre></div>
-<h5 id="单链表的一个实现-这里摘自-leetcode-https-leetcode-cn-com-problems-design-linked-list-的题解自己扩展了小部分">单链表的一个实现(这里摘自<a href="https://leetcode-cn.com/problems/design-linked-list/">LeetCode</a>的题解自己扩展了小部分)</h5>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#719e07">package</span> ChapterLinkList<span style="color:#719e07">;</span>
-
-<span style="color:#268bd2">class</span> <span style="color:#268bd2">MyLinkedList</span> <span style="color:#719e07">{</span>
-    <span style="color:#dc322f">int</span> size<span style="color:#719e07">;</span>
-    ListNode head<span style="color:#719e07">;</span>  <span style="color:#586e75">// sentinel node as pseudo-head
-</span><span style="color:#586e75"></span>
-    <span style="color:#268bd2">public</span> <span style="color:#268bd2">MyLinkedList</span><span style="color:#719e07">()</span> <span style="color:#719e07">{</span>
-        size <span style="color:#719e07">=</span> 0<span style="color:#719e07">;</span>
-        head <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ListNode<span style="color:#719e07">(</span>0<span style="color:#719e07">);</span>
-    <span style="color:#719e07">}</span>
-	<span style="color:#586e75">//输入数组构造链表
-</span><span style="color:#586e75"></span>    <span style="color:#268bd2">public</span> <span style="color:#268bd2">MyLinkedList</span><span style="color:#719e07">(</span><span style="color:#dc322f">int</span> num<span style="color:#719e07">[])</span> <span style="color:#719e07">{</span>
-        size <span style="color:#719e07">=</span> 0<span style="color:#719e07">;</span>
-        head <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ListNode<span style="color:#719e07">(</span>0<span style="color:#719e07">);</span>
-        <span style="color:#719e07">for</span> <span style="color:#719e07">(</span><span style="color:#dc322f">int</span> i <span style="color:#719e07">=</span> 0<span style="color:#719e07">;</span> i <span style="color:#719e07">&lt;</span> num<span style="color:#719e07">.</span>length<span style="color:#719e07">;</span> i<span style="color:#719e07">++)</span> <span style="color:#719e07">{</span>
-            <span style="color:#719e07">this</span><span style="color:#719e07">.</span>addAtIndex<span style="color:#719e07">(</span>i<span style="color:#719e07">,</span>num<span style="color:#719e07">[</span>i<span style="color:#719e07">]);</span>
-        <span style="color:#719e07">}</span>
-    <span style="color:#719e07">}</span>
-
-    <span style="color:#586e75">/**
-</span><span style="color:#586e75">     * Get the value of the index-th node in the linked list. If the index is invalid, return -1.
-</span><span style="color:#586e75">     */</span>
-    <span style="color:#268bd2">public</span> <span style="color:#dc322f">int</span> <span style="color:#268bd2">get</span><span style="color:#719e07">(</span><span style="color:#dc322f">int</span> index<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-        <span style="color:#586e75">// if index is invalid
-</span><span style="color:#586e75"></span>        <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>index <span style="color:#719e07">&lt;</span> 0 <span style="color:#719e07">||</span> index <span style="color:#719e07">&gt;=</span> size<span style="color:#719e07">)</span> <span style="color:#719e07">return</span> <span style="color:#719e07">-</span>1<span style="color:#719e07">;</span>
-
-        ListNode curr <span style="color:#719e07">=</span> head<span style="color:#719e07">;</span>
-        <span style="color:#586e75">// index steps needed
-</span><span style="color:#586e75"></span>        <span style="color:#586e75">// to move from sentinel node to wanted index
-</span><span style="color:#586e75"></span>        <span style="color:#719e07">for</span> <span style="color:#719e07">(</span><span style="color:#dc322f">int</span> i <span style="color:#719e07">=</span> 0<span style="color:#719e07">;</span> i <span style="color:#719e07">&lt;</span> index <span style="color:#719e07">+</span> 1<span style="color:#719e07">;</span> <span style="color:#719e07">++</span>i<span style="color:#719e07">)</span> curr <span style="color:#719e07">=</span> curr<span style="color:#719e07">.</span>next<span style="color:#719e07">;</span>
-        <span style="color:#719e07">return</span> curr<span style="color:#719e07">.</span>val<span style="color:#719e07">;</span>
-    <span style="color:#719e07">}</span>
-
-    <span style="color:#586e75">/**
-</span><span style="color:#586e75">     * 获取某个结点
-</span><span style="color:#586e75">     */</span>
-    <span style="color:#268bd2">public</span> ListNode <span style="color:#268bd2">getNode</span><span style="color:#719e07">(</span><span style="color:#dc322f">int</span> index<span style="color:#719e07">){</span>
-        <span style="color:#586e75">// if index is invalid
-</span><span style="color:#586e75"></span>        <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>index <span style="color:#719e07">&lt;</span> 0 <span style="color:#719e07">||</span> index <span style="color:#719e07">&gt;=</span> size<span style="color:#719e07">)</span> <span style="color:#719e07">return</span> <span style="color:#cb4b16">null</span><span style="color:#719e07">;</span>
-
-        ListNode curr <span style="color:#719e07">=</span> head<span style="color:#719e07">;</span>
-        <span style="color:#586e75">// index steps needed
-</span><span style="color:#586e75"></span>        <span style="color:#586e75">// to move from sentinel node to wanted index
-</span><span style="color:#586e75"></span>        <span style="color:#719e07">for</span> <span style="color:#719e07">(</span><span style="color:#dc322f">int</span> i <span style="color:#719e07">=</span> 0<span style="color:#719e07">;</span> i <span style="color:#719e07">&lt;</span> index <span style="color:#719e07">+</span> 1<span style="color:#719e07">;</span> <span style="color:#719e07">++</span>i<span style="color:#719e07">)</span> curr <span style="color:#719e07">=</span> curr<span style="color:#719e07">.</span>next<span style="color:#719e07">;</span>
-        <span style="color:#719e07">return</span> curr<span style="color:#719e07">;</span>
-    <span style="color:#719e07">}</span>
-    <span style="color:#586e75">/**
-</span><span style="color:#586e75">     * Add a node of value val before the first element of the linked list. After the insertion, the new node will be the first node of the linked list.
-</span><span style="color:#586e75">     */</span>
-    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">addAtHead</span><span style="color:#719e07">(</span><span style="color:#dc322f">int</span> val<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-        addAtIndex<span style="color:#719e07">(</span>0<span style="color:#719e07">,</span> val<span style="color:#719e07">);</span>
-    <span style="color:#719e07">}</span>
-
-    <span style="color:#586e75">/**
-</span><span style="color:#586e75">     * Append a node of value val to the last element of the linked list.
-</span><span style="color:#586e75">     */</span>
-    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">addAtTail</span><span style="color:#719e07">(</span><span style="color:#dc322f">int</span> val<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-        addAtIndex<span style="color:#719e07">(</span>size<span style="color:#719e07">,</span> val<span style="color:#719e07">);</span>
-    <span style="color:#719e07">}</span>
-
-    <span style="color:#586e75">/**
-</span><span style="color:#586e75">     * Add a node of value val before the index-th node in the linked list. If index equals to the length of linked list, the node will be appended to the end of linked list. If index is greater than the length, the node will not be inserted.
-</span><span style="color:#586e75">     */</span>
-    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">addAtIndex</span><span style="color:#719e07">(</span><span style="color:#dc322f">int</span> index<span style="color:#719e07">,</span> <span style="color:#dc322f">int</span> val<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-        <span style="color:#586e75">// If index is greater than the length,
-</span><span style="color:#586e75"></span>        <span style="color:#586e75">// the node will not be inserted.
-</span><span style="color:#586e75"></span>        <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>index <span style="color:#719e07">&gt;</span> size<span style="color:#719e07">)</span> <span style="color:#719e07">return</span><span style="color:#719e07">;</span>
-
-        <span style="color:#586e75">// [so weird] If index is negative,
-</span><span style="color:#586e75"></span>        <span style="color:#586e75">// the node will be inserted at the head of the list.
-</span><span style="color:#586e75"></span>        <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>index <span style="color:#719e07">&lt;</span> 0<span style="color:#719e07">)</span> index <span style="color:#719e07">=</span> 0<span style="color:#719e07">;</span>
-
-        <span style="color:#719e07">++</span>size<span style="color:#719e07">;</span>
-        <span style="color:#586e75">// find predecessor of the node to be added
-</span><span style="color:#586e75"></span>        ListNode pred <span style="color:#719e07">=</span> head<span style="color:#719e07">;</span>
-        <span style="color:#719e07">for</span> <span style="color:#719e07">(</span><span style="color:#dc322f">int</span> i <span style="color:#719e07">=</span> 0<span style="color:#719e07">;</span> i <span style="color:#719e07">&lt;</span> index<span style="color:#719e07">;</span> <span style="color:#719e07">++</span>i<span style="color:#719e07">)</span> pred <span style="color:#719e07">=</span> pred<span style="color:#719e07">.</span>next<span style="color:#719e07">;</span>
-
-        <span style="color:#586e75">// node to be added
-</span><span style="color:#586e75"></span>        ListNode toAdd <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ListNode<span style="color:#719e07">(</span>val<span style="color:#719e07">);</span>
-        <span style="color:#586e75">// insertion itself
-</span><span style="color:#586e75"></span>        toAdd<span style="color:#719e07">.</span>next <span style="color:#719e07">=</span> pred<span style="color:#719e07">.</span>next<span style="color:#719e07">;</span>
-        pred<span style="color:#719e07">.</span>next <span style="color:#719e07">=</span> toAdd<span style="color:#719e07">;</span>
-    <span style="color:#719e07">}</span>
-
-    <span style="color:#586e75">/**
-</span><span style="color:#586e75">     * Delete the index-th node in the linked list, if the index is valid.
-</span><span style="color:#586e75">     */</span>
-    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">deleteAtIndex</span><span style="color:#719e07">(</span><span style="color:#dc322f">int</span> index<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-        <span style="color:#586e75">// if the index is invalid, do nothing
-</span><span style="color:#586e75"></span>        <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>index <span style="color:#719e07">&lt;</span> 0 <span style="color:#719e07">||</span> index <span style="color:#719e07">&gt;=</span> size<span style="color:#719e07">)</span> <span style="color:#719e07">return</span><span style="color:#719e07">;</span>
-
-        size<span style="color:#719e07">--;</span>
-        <span style="color:#586e75">// find predecessor of the node to be deleted
-</span><span style="color:#586e75"></span>        ListNode pred <span style="color:#719e07">=</span> head<span style="color:#719e07">;</span>
-        <span style="color:#719e07">for</span> <span style="color:#719e07">(</span><span style="color:#dc322f">int</span> i <span style="color:#719e07">=</span> 0<span style="color:#719e07">;</span> i <span style="color:#719e07">&lt;</span> index<span style="color:#719e07">;</span> <span style="color:#719e07">++</span>i<span style="color:#719e07">)</span> pred <span style="color:#719e07">=</span> pred<span style="color:#719e07">.</span>next<span style="color:#719e07">;</span>
-
-        <span style="color:#586e75">// delete pred.next
-</span><span style="color:#586e75"></span>        pred<span style="color:#719e07">.</span>next <span style="color:#719e07">=</span> pred<span style="color:#719e07">.</span>next<span style="color:#719e07">.</span>next<span style="color:#719e07">;</span>
-    <span style="color:#719e07">}</span>
-<span style="color:#719e07">}</span></code></pre></div>
-<h3 id="递归-1">递归</h3>
-
-<p>斐波那契数列</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#268bd2">public</span> <span style="color:#dc322f">int</span> <span style="color:#268bd2">fib</span><span style="color:#719e07">(</span><span style="color:#dc322f">int</span> n<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-   <span style="color:#719e07">return</span> <span style="color:#719e07">(</span>n <span style="color:#719e07">==</span> 1<span style="color:#719e07">)</span> <span style="color:#719e07">?</span> n <span style="color:#719e07">:</span> fib<span style="color:#719e07">(</span>n <span style="color:#719e07">-</span> 1<span style="color:#719e07">)</span> <span style="color:#719e07">+</span> n<span style="color:#719e07">;</span>
-<span style="color:#719e07">}</span>
-<span style="color:#586e75">//1  2  3  4  5  6   7   8   9
-</span><span style="color:#586e75"></span><span style="color:#719e07">//</span>1  1  2  3  5  8  13  21  34    </code></pre></div>
-<p><strong>因此，也就有了我们解递归题的三部曲：</strong></p>
-
-<ul>
-<li><strong>找整个递归的终止条件：递归应该在什么时候结束？</strong></li>
-<li><strong>找返回值：应该给上一级返回什么信息？</strong></li>
-<li><strong>本级递归应该做什么：在这一级递归中，应该完成什么任务？</strong></li>
-</ul>
 
 		</div>
 

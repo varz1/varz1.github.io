@@ -7,22 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Copyright notice</copyright>
-    <lastBuildDate>Fri, 11 Jun 2021 15:09:47 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 29 Aug 2021 23:09:38 +0800</lastBuildDate>
     
 	<atom:link href="https://varz1.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Java基础</title>
-      <link>https://varz1.github.io/posts/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86/</link>
-      <pubDate>Fri, 11 Jun 2021 15:09:47 +0800</pubDate>
+      <title>ThreadLocal探究</title>
+      <link>https://varz1.github.io/posts/threadlocal/</link>
+      <pubDate>Sun, 29 Aug 2021 23:09:38 +0800</pubDate>
       
-      <guid>https://varz1.github.io/posts/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86/</guid>
-      <description>一、==和 equals 的区别 1、概要 对于基本数据类型来说，==比较的是值。对于引用数据类型来说，==比较的是对象的内存地址。
- 因为 Java 只有值传递，所以，对于 == 来说，不管是比较基本数据类型，还是引用数据类型的变量，其本质比较的都是值，只是引用类型变量存的值是对象的地址。
- equals() 作用不能用于判断基本数据类型的变量，只能用来判断两个对象是否相等。equals()方法存在于Object类中，而Object类是所有类的直接或间接父类。
-Object 类 equals() 方法：
-public boolean equals(Object obj) { return (this == obj); } equals() 方法存在两种使用情况：</description>
+      <guid>https://varz1.github.io/posts/threadlocal/</guid>
+      <description>一、为什么要使用ThreadLocal 先来读一下JDK中对ThreadLocal的注释
+This class provides thread-local variables. These variables differ from their normal counterparts in that each thread that accesses one (via its get or set method) has its own, independently initialized copy of the variable.</description>
     </item>
     
   </channel>
