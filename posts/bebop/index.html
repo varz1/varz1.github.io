@@ -7,8 +7,8 @@
 <meta property="og:description" content="快速打开b站看星际牛仔..." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://varz1.github.io/posts/bebop/" />
-<meta property="article:published_time" content="2021-08-19T17:37:15&#43;08:00"/>
-<meta property="article:modified_time" content="2021-08-19T17:37:15&#43;08:00"/>
+<meta property="article:published_time" content="2021-08-19T23:21:50&#43;08:00"/>
+<meta property="article:modified_time" content="2021-08-19T23:21:50&#43;08:00"/>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="无聊脚本"/>
 <meta name="twitter:description" content="快速打开b站看星际牛仔..."/>
@@ -69,82 +69,91 @@
 		<div class="markdown">
 			
 
-<h3 id="动机">动机</h3>
-
-<p>每次下饭看片的步骤如下：打开Chrome-&gt;找到书签B站的位置-&gt;找到历史记录-&gt;找到星际牛仔</p>
+<p>动机
+每次下饭看片的步骤如下：打开Chrome-&gt;找到书签B站的位置-&gt;找到历史记录-&gt;找到星际牛仔</p>
 
 <p>现在：打开Shell-&gt;Bebop</p>
 
 <p>有空就会扩展功能 瑞斯拜</p>
 
-<h3 id="bebopgo-https-github-com-varz1-bebopgo"><a href="https://github.com/varz1/BebopGo">BebopGo</a></h3>
-
-<p>A Shell To Watch Cowboy Bebop Fast</p>
+<p>BebopGo
+A Shell To Watch Cowboy Bebop Fast</p>
 
 <p>A Shell For Fun</p>
 
-<h3 id="requirement">Requirement</h3>
-
-<ul>
-<li>Linux Environment</li>
-<li>Google Chrome installed</li>
-<li>Connected to Internet</li>
-<li>A Bash</li>
-</ul>
-
-<h3 id="usage">Usage</h3>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">$ git clone https://github.com/varz1/BebopGo.git
+<p>Requirement
+Linux Environment
+Google Chrome installed
+Connected to Internet
+A Bash
+Usage
+$ git clone <a href="https://github.com/varz1/BebopGo.git">https://github.com/varz1/BebopGo.git</a>
 $ cd BebopGo/
 $ sudo chmod +x Cowboy.sh
-$ ./Cowboy.sh</pre></div>
-<p>U can also add it to alias</p>
+$ ./Cowboy.sh
+U can also add it to alias</p>
 
 <p>Enjoy!</p>
 
-<h3 id="code">Code</h3>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#719e07">#!/bin/bash
-</span><span style="color:#719e07"></span>
-<span style="color:#b58900">echo</span> <span style="color:#2aa198">&#34; #####                                    ######                              
-</span><span style="color:#2aa198">#        ####  #    # #####   ####  #   # #     # ###### #####   ####  #####  
-</span><span style="color:#2aa198">#       #    # #    # #    # #    #  # #  #     # #      #    # #    # #    # 
-</span><span style="color:#2aa198">#       #    # #    # #####  #    #   #   ######  #####  #####  #    # #    # 
-</span><span style="color:#2aa198">#       #    # # ## # #    # #    #   #   #     # #      #    # #    # #####  
-</span><span style="color:#2aa198">#       #    # ##  ## #    # #    #   #   #     # #      #    # #    # #      
-</span><span style="color:#2aa198"> #####   ####  #    # #####   ####    #   ######  ###### #####   ####  #&#34;</span>
-<span style="color:#719e07">if</span> <span style="color:#719e07">[[</span> <span style="color:#268bd2">$1</span> !<span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;NoColor&#34;</span> <span style="color:#719e07">&amp;&amp;</span> <span style="color:#268bd2">$2</span> !<span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;NoColor&#34;</span> <span style="color:#719e07">]]</span>; <span style="color:#719e07">then</span>
-    <span style="color:#268bd2">Color_R</span><span style="color:#719e07">=</span><span style="color:#719e07">$(</span>tput setaf <span style="color:#2aa198">9</span><span style="color:#719e07">)</span>
-    <span style="color:#268bd2">Color_G</span><span style="color:#719e07">=</span><span style="color:#719e07">$(</span>tput setaf <span style="color:#2aa198">10</span><span style="color:#719e07">)</span>
-    <span style="color:#268bd2">Color_B</span><span style="color:#719e07">=</span><span style="color:#719e07">$(</span>tput setaf <span style="color:#2aa198">12</span><span style="color:#719e07">)</span>
-    <span style="color:#268bd2">Color_Y</span><span style="color:#719e07">=</span><span style="color:#719e07">$(</span>tput setaf <span style="color:#2aa198">11</span><span style="color:#719e07">)</span>
-    <span style="color:#268bd2">Color_N</span><span style="color:#719e07">=</span><span style="color:#719e07">$(</span>tput sgr0<span style="color:#719e07">)</span>
-<span style="color:#719e07">fi</span>
+<p>Code
+#!/bin/bash</p>
 
-Echo<span style="color:#719e07">()</span> <span style="color:#719e07">{</span>
-    <span style="color:#b58900">echo</span> <span style="color:#2aa198">&#34;</span><span style="color:#2aa198">${</span><span style="color:#268bd2">Color_B</span><span style="color:#2aa198">}</span><span style="color:#268bd2">$1</span><span style="color:#2aa198"> </span><span style="color:#2aa198">${</span><span style="color:#268bd2">Color_N</span><span style="color:#2aa198">}</span><span style="color:#2aa198">&#34;</span>
-<span style="color:#719e07">}</span>
+<p>echo &ldquo; #####                                    ######</p>
 
-Error<span style="color:#719e07">()</span> <span style="color:#719e07">{</span>
-    <span style="color:#b58900">echo</span> -e <span style="color:#2aa198">&#34;\n</span><span style="color:#2aa198">${</span><span style="color:#268bd2">Color_R</span><span style="color:#2aa198">}</span><span style="color:#2aa198">[Error] </span><span style="color:#268bd2">$1</span><span style="color:#2aa198"> </span><span style="color:#2aa198">${</span><span style="color:#268bd2">Color_N</span><span style="color:#2aa198">}</span><span style="color:#2aa198">&#34;</span>
-    <span style="color:#719e07">[[</span> ! -z <span style="color:#268bd2">$2</span> <span style="color:#719e07">]]</span> <span style="color:#719e07">&amp;&amp;</span> <span style="color:#b58900">echo</span> <span style="color:#2aa198">&#34;</span><span style="color:#2aa198">${</span><span style="color:#268bd2">Color_R</span><span style="color:#2aa198">}</span><span style="color:#2aa198">* </span><span style="color:#268bd2">$2</span><span style="color:#2aa198"> </span><span style="color:#2aa198">${</span><span style="color:#268bd2">Color_N</span><span style="color:#2aa198">}</span><span style="color:#2aa198">&#34;</span>
-    <span style="color:#b58900">echo</span>
-    <span style="color:#b58900">exit</span> <span style="color:#2aa198">1</span>
-<span style="color:#719e07">}</span>
+<h1 id="toc_0">####  #    # #####   ####  #   # #     # ###### #####   ####  #####</h1>
 
-Input<span style="color:#719e07">()</span> <span style="color:#719e07">{</span>
-    <span style="color:#b58900">echo</span> <span style="color:#2aa198">&#34;</span><span style="color:#2aa198">${</span><span style="color:#268bd2">Color_G</span><span style="color:#2aa198">}</span><span style="color:#268bd2">$1</span><span style="color:#2aa198"> &#34;</span>
-<span style="color:#719e07">}</span>
+<h1 id="toc_1">#    # #    # #    # #    #  # #  #     # #      #    # #    # #    #</h1>
 
-<span style="color:#b58900">read</span> -p <span style="color:#2aa198">&#34;</span><span style="color:#719e07">$(</span>Input <span style="color:#2aa198">&#39;Please Enter Your Episode&#39;</span><span style="color:#719e07">)</span><span style="color:#2aa198">&#34;</span> e
-<span style="color:#719e07">if</span> <span style="color:#719e07">[</span> <span style="color:#268bd2">$e</span> -lt <span style="color:#2aa198">27</span> -a <span style="color:#268bd2">$e</span> -gt <span style="color:#2aa198">0</span> <span style="color:#719e07">]</span>
-<span style="color:#719e07">then</span>
-        google-chrome --app<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;https://www.bilibili.com/video/BV1Us411X7pH?p=</span><span style="color:#268bd2">$e</span><span style="color:#2aa198">&#34;</span>
-<span style="color:#719e07">else</span>
-        Error <span style="color:#2aa198">&#39;WRONG INPUT!&#39;</span>
-<span style="color:#719e07">fi</span></code></pre></div>
+<h1 id="toc_2">#    # #    # #####  #    #   #   ######  #####  #####  #    # #    #</h1>
+
+<h1 id="toc_3">#    # # ## # #    # #    #   #   #     # #      #    # #    # #####</h1>
+
+<h1 id="toc_4">#    # ##  ## #    # #    #   #   #     # #      #    # #    # #</h1>
+
+<p>#####   ####  #    # #####   ####    #   ######  ###### #####   ####  #&rdquo;
+if [[ $1 != &ldquo;NoColor&rdquo; &amp;&amp; $2 != &ldquo;NoColor&rdquo; ]]; then
+    Color_R=$(tput setaf 9)
+    Color_G=$(tput setaf 10)
+    Color_B=$(tput setaf 12)
+    Color_Y=$(tput setaf 11)
+    Color_N=$(tput sgr0)
+fi</p>
+
+<p>Echo() {
+    echo &ldquo;${Color_B}$1 ${Color_N}&rdquo;
+}</p>
+
+<p>Error() {
+    echo -e &ldquo;\n${Color_R}[Error] $1 ${Color_N}&rdquo;
+    [[ ! -z $2 ]] &amp;&amp; echo &ldquo;${Color_R}* $2 ${Color_N}&rdquo;
+    echo
+    exit 1
+}</p>
+
+<p>Input() {
+    echo &ldquo;${Color_G}$1 &ldquo;
+}</p>
+
+<p>read -p &ldquo;$(Input &lsquo;Please Enter Your Episode&rsquo;)&rdquo; e
+if [ $e -lt 27 -a $e -gt 0 ]
+then
+        google-chrome &ndash;app=&ldquo;<a href="https://www.bilibili.com/video/BV1Us411X7pH?p=$e&quot;">https://www.bilibili.com/video/BV1Us411X7pH?p=$e&quot;</a>
+else
+        Error &lsquo;WRONG INPUT!&rsquo;
+fi</p>
+
 		</div>
 
 		<div class="post-tags">
 			
+				
+					<nav class="nav tags">
+							<ul class="flat">
+								
+								<li><a href="/tags/shell">Shell</a></li>
+								
+							</ul>
+					</nav>
 				
 			
 		</div>

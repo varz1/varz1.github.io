@@ -53,13 +53,28 @@ This class provides thread-local variables. These variables differ from their no
     </item>
     
     <item>
-      <title>Leet Data Linklist</title>
+      <title>无聊脚本</title>
+      <link>https://varz1.github.io/posts/bebop/</link>
+      <pubDate>Thu, 19 Aug 2021 23:21:50 +0800</pubDate>
+      
+      <guid>https://varz1.github.io/posts/bebop/</guid>
+      <description>动机 每次下饭看片的步骤如下：打开Chrome-&amp;gt;找到书签B站的位置-&amp;gt;找到历史记录-&amp;gt;找到星际牛仔
+现在：打开Shell-&amp;gt;Bebop
+有空就会扩展功能 瑞斯拜
+BebopGo A Shell To Watch Cowboy Bebop Fast
+A Shell For Fun
+Requirement Linux Environment Google Chrome installed Connected to Internet A Bash Usage $ git clone https://github.</description>
+    </item>
+    
+    <item>
+      <title>leetcode数据结构-链表</title>
       <link>https://varz1.github.io/posts/leet-data-linklist/</link>
       <pubDate>Thu, 10 Jun 2021 19:00:11 +0800</pubDate>
       
       <guid>https://varz1.github.io/posts/leet-data-linklist/</guid>
-      <description>leetcode数据结构-链表 1. 找出两个链表的交点  Intersection of Two Linked Lists (Easy)  Leetcode / 力扣
-例如以下示例中 A 和 B 两个链表相交于 c1：</description>
+      <description>1. 找出两个链表的交点 Intersection of Two Linked Lists (Easy) Leetcode / 力扣
+例如以下示例中 A 和 B 两个链表相交于 c1：
+A: a1 → a2 ↘ c1 → c2 → c3 ↗ B: b1 → b2 → b3 但是不会出现以下相交的情况，因为每个节点只有一个 next 指针，也就只能有一个后继节点，而以下示例中节点 c 有两个后继节点。</description>
     </item>
     
     <item>
