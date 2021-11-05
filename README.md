@@ -1,2 +1,2 @@
 # varz1.github.io
-blog
+a blog
