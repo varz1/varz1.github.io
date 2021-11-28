@@ -74,73 +74,31 @@
 
 <p>现在：打开Shell-&gt;Bebop</p>
 
-<p>有空就会扩展功能 瑞斯拜</p>
-
 <p>BebopGo
 A Shell To Watch Cowboy Bebop Fast</p>
 
-<p>A Shell For Fun</p>
+<p>For Fun</p>
 
-<p>Requirement
-Linux Environment
-Google Chrome installed
-Connected to Internet
-A Bash
-Usage
-$ git clone <a href="https://github.com/varz1/BebopGo.git">https://github.com/varz1/BebopGo.git</a>
-$ cd BebopGo/
+<h3 id="requirement">Requirement</h3>
+
+<ul>
+<li><p>Linux Environment</p></li>
+
+<li><p>Google Chrome installed</p></li>
+
+<li><p>Connected to Internet</p></li>
+
+<li><p>A Bash</p></li>
+</ul>
+
+<h3 id="usage">Usage</h3>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git clone https://github.com/varz1/BebopGo.git
+$ <span style="color:#b58900">cd</span> BebopGo/
 $ sudo chmod +x Cowboy.sh
-$ ./Cowboy.sh
-U can also add it to alias</p>
+$ ./Cowboy.sh</code></pre></div>
+<p>U can also add it to alias</p>
 
 <p>Enjoy!</p>
-
-<p>Code
-#!/bin/bash</p>
-
-<p>echo &ldquo; #####                                    ######</p>
-
-<h1 id="toc_0">####  #    # #####   ####  #   # #     # ###### #####   ####  #####</h1>
-
-<h1 id="toc_1">#    # #    # #    # #    #  # #  #     # #      #    # #    # #    #</h1>
-
-<h1 id="toc_2">#    # #    # #####  #    #   #   ######  #####  #####  #    # #    #</h1>
-
-<h1 id="toc_3">#    # # ## # #    # #    #   #   #     # #      #    # #    # #####</h1>
-
-<h1 id="toc_4">#    # ##  ## #    # #    #   #   #     # #      #    # #    # #</h1>
-
-<p>#####   ####  #    # #####   ####    #   ######  ###### #####   ####  #&rdquo;
-if [[ $1 != &ldquo;NoColor&rdquo; &amp;&amp; $2 != &ldquo;NoColor&rdquo; ]]; then
-    Color_R=$(tput setaf 9)
-    Color_G=$(tput setaf 10)
-    Color_B=$(tput setaf 12)
-    Color_Y=$(tput setaf 11)
-    Color_N=$(tput sgr0)
-fi</p>
-
-<p>Echo() {
-    echo &ldquo;${Color_B}$1 ${Color_N}&rdquo;
-}</p>
-
-<p>Error() {
-    echo -e &ldquo;\n${Color_R}[Error] $1 ${Color_N}&rdquo;
-    [[ ! -z $2 ]] &amp;&amp; echo &ldquo;${Color_R}* $2 ${Color_N}&rdquo;
-    echo
-    exit 1
-}</p>
-
-<p>Input() {
-    echo &ldquo;${Color_G}$1 &ldquo;
-}</p>
-
-<p>read -p &ldquo;$(Input &lsquo;Please Enter Your Episode&rsquo;)&rdquo; e
-if [ $e -lt 27 -a $e -gt 0 ]
-then
-        google-chrome &ndash;app=&ldquo;<a href="https://www.bilibili.com/video/BV1Us411X7pH?p=$e&quot;">https://www.bilibili.com/video/BV1Us411X7pH?p=$e&quot;</a>
-else
-        Error &lsquo;WRONG INPUT!&rsquo;
-fi</p>
 
 		</div>
 
