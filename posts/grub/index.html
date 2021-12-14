@@ -84,10 +84,10 @@
 <h2 id="执行命令挂载分区重新安装grub">执行命令挂载分区重新安装grub</h2>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ mount /dev/nvme0n1p6 /mnt
 $ mount /dev/nvme0n1p5 /mnt/boot
-$ mount --rbind /proc proc
-$ mount --rbind /sys sys
-$ mount --rbind /dev dev
-$ mount --rbind /run run
+$ mount --rbind /mnt/proc proc
+$ mount --rbind /mnt/sys sys
+$ mount --rbind /mnt/dev dev
+$ mount --rbind /mnt/run run
 $ chroot /mnt
 $ grub-install --target<span style="color:#719e07">=</span>x86_64-efi --efi-directory<span style="color:#719e07">=</span>/boot --bootloader-id<span style="color:#719e07">=</span>grub
 $ grub-mkconfig -o /boot/grub/grub.cfg</code></pre></div>
