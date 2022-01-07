@@ -67,21 +67,21 @@
 		<div class="markdown">
 			
 
-<h1 id="win10更新导致debian双系统无法启动解决办法">win10更新导致debian双系统无法启动解决办法</h1>
+<h2 id="win10更新导致debian双系统无法启动解决办法">win10更新导致debian双系统无法启动解决办法</h2>
 
-<h2 id="原因">原因</h2>
+<h3 id="原因">原因</h3>
 
 <p>因为win10更新覆盖了Debian的grub所以丢失</p>
 
-<h2 id="解决">解决</h2>
+<h3 id="解决">解决</h3>
 
-<h3 id="制作live-cd并进入">制作live-cd并进入</h3>
+<h4 id="制作live-cd并进入">制作live-cd并进入</h4>
 
 <p>这里我制作的是debin的<a href="https://www.debian.org/CD/live/index.zh-cn.html">live-cd</a>，重启选择BIOS启动，进入livecd。</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">fdisk -l</code></pre></div>
 <p>找到自己的根目录分区以及windows的EFI分区这里我的根目录分区是/dev/nvme0n1p6，EFI分区是/dev/nvme0n1p5。</p>
 
-<h2 id="执行命令挂载分区重新安装grub">执行命令挂载分区重新安装grub</h2>
+<h3 id="执行命令挂载分区重新安装grub">执行命令挂载分区重新安装grub</h3>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ mount /dev/nvme0n1p6 /mnt
 $ mount /dev/nvme0n1p5 /mnt/boot
 $ mount --rbind /mnt/proc proc

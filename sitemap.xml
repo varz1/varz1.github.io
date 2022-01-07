@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://varz1.github.io/posts/ncovbot/</loc>
+    <lastmod>2021-12-26T20:48:54+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://varz1.github.io/posts/win11/</loc>
     <lastmod>2021-12-14T23:17:13+08:00</lastmod>
   </url>
@@ -73,13 +78,13 @@
   
   <url>
     <loc>https://varz1.github.io/</loc>
-    <lastmod>2021-12-14T23:17:13+08:00</lastmod>
+    <lastmod>2021-12-26T20:48:54+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://varz1.github.io/tags/golang/</loc>
-    <lastmod>2021-03-08T22:57:26+08:00</lastmod>
+    <lastmod>2021-12-26T20:48:54+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -97,7 +102,7 @@
   
   <url>
     <loc>https://varz1.github.io/posts/</loc>
-    <lastmod>2021-12-14T23:17:13+08:00</lastmod>
+    <lastmod>2021-12-26T20:48:54+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -109,7 +114,7 @@
   
   <url>
     <loc>https://varz1.github.io/tags/</loc>
-    <lastmod>2021-03-08T22:57:26+08:00</lastmod>
+    <lastmod>2021-12-26T20:48:54+08:00</lastmod>
     <priority>0</priority>
   </url>
   
