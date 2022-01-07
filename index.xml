@@ -28,9 +28,9 @@
       <pubDate>Tue, 14 Dec 2021 23:17:13 +0800</pubDate>
       
       <guid>https://varz1.github.io/posts/win11/</guid>
-      <description>故事开始 Windows11出来了，喜欢新鲜的我按耐不住了，想着安装完然后用上次win10更新导致grub失效的方法修复于是美美开始连数据都没备份（不过重要的代码都在github上了），没想成上次的方法不管用了，网上的帖子的方法也不是很是适用于我，搞了半天都没搞好，最后碰运气找对了我的debian启动文件。。
+      <description>故事开始 尝试安装Win11，想着安装完然后用上次win10更新导致grub失效的方法修复于是开始连数据都没备份（不过重要的代码都在github上了），没想成上次的方法不管用了，网上的帖子的方法也不是很是适用于我，搞了半天都没搞好，最后碰运气找对了我的debian启动文件。。
 遇到大坑 强迫症的我在安装win11的时候把所有之前的win10分区都删掉了，安装完毕尝试使用之前的方法，进入livecd&amp;mdash;挂载linux&amp;mdash;挂载boot分区&amp;mdash;chroot&amp;mdash;重新安装grub。重启发现grub自动生成的grub.cfg文件不起作用，仍然无法引导至我的debian。
-解决 最后使用网传的另一种方法，即进入livecd的grub界面，修改grub的参数改成自己linux的grub引导进入。这里由于我删除之前的所有分区安装win11所以导致uuid更改，也就是我的debian下的/etc/fstab下写的boot分区uuid失效，所以无法正常引导系统，只有shell界面，这里解决方法是重新编辑一下/etc/fstab改成对的uuid即可。但是进入系统update-grub后还是无法进入系统。本想进入BIOS设置界面把引导改成grub的系统界面然后每次开机手动引导，但是好巧不巧竟然改成了对的引导，引导文件位置是\EFI\grub\grubx64.efi</description>
+解决 最后使用网传的另一种方法，即进入livecd的grub界面，修改grub的参数改成自己linux的grub引导进入。这里由于我删除之前的所有分区安装win11所以导致uuid更改，也就是我的debian下的/etc/fstab下写的boot分区uuid失效，所以无法正常引导系统，只有shell界面，这里解决方法是重新编辑一下/etc/fstab改成对的uuid即可。但是进入系统update-grub后还是无法进入系统。本想进入BIOS设置界面把引导改成grub的系统界面然后每次开机手动引导，但是好巧不巧竟然改成了对的引导，引导文件位置是\EFI\grub\grubx64.efi，建议在BIOS里面手写一个引导位置，这样再更新也能进去。</description>
     </item>
     
     <item>
