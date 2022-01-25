@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Copyright notice</copyright>
-    <lastBuildDate>Tue, 14 Dec 2021 23:17:13 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 06 Jan 2022 20:48:54 +0800</lastBuildDate>
     
 	<atom:link href="https://varz1.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>nCovBot</title>
+      <link>https://varz1.github.io/posts/ncovbot/</link>
+      <pubDate>Thu, 06 Jan 2022 20:48:54 +0800</pubDate>
+      
+      <guid>https://varz1.github.io/posts/ncovbot/</guid>
+      <description>TODO 疫情图动态标签需要更新 优化日志  简介 一个Telegram的聊天机器人疫情信息聚合机器人,数据来自丁香园开放Api，图表来自百度，使用无头浏览器爬取。
+第三方模块  Http客户端 — Resty 前端 — Telegram bot 日志 — Logrus 无头浏览器—ChromeDp net框架—Fiber  主要功能  支持地区列表 国内疫情概览（包括中国疫情地图 本土疫情趋势图 最新新闻（返回新闻概览以及列表 中高风险地区查询 输入地区名称返回疫情数据  遇到的问题以及解决  无头浏览器无中文字体—添加字体文件 tgbot使用缓存图片不更新—添加时间戳参数 iding空转自动i休眠—cron自己ping自己 Heroku Go依赖错误—生成Go的Vendor依赖文件  我的环境以及用到的服务  Go 1.</description>
+    </item>
     
     <item>
       <title>Win11和debian双系统遇到的坑</title>
