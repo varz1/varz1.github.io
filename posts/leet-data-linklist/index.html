@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>leetcode数据结构-链表 - : )</title><link rel="icon" type="image/png" href=icons/bear.png /><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:title" content="leetcode数据结构-链表" />
+<meta property="og:description" content="链表专题加复习" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://varz1.github.io/posts/leet-data-linklist/" />
+<meta property="article:published_time" content="2021-06-10T19:00:11&#43;08:00"/>
+<meta property="article:modified_time" content="2021-06-10T19:00:11&#43;08:00"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="leetcode数据结构-链表"/>
+<meta name="twitter:description" content="链表专题加复习"/>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Raleway:200,300" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" media="screen" href="https://varz1.github.io/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://varz1.github.io/css/main.css" /><link rel="stylesheet" type="text/css" href="https://varz1.github.io/css/dark.css" media="(prefers-color-scheme: dark)" />
+
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+	<script src="https://varz1.github.io/js/main.js"></script>
+</head>
+
+<body>
+	<div class="container wrapper post">
+		<div class="header">
+	<base href="https://varz1.github.io/">
+	<h1 class="site-title"><a href="https://varz1.github.io/">: )</a></h1>
+	<div class="site-description"><h2>你我都有光明的未来</h2><nav class="nav social">
+			<ul class="flat"><a href="https://github.com/varz1" title="Github"><i data-feather="github"></i></a></ul>
+		</nav>
+	</div>
+
+	<nav class="nav">
+		<ul class="flat">
+			
+			<li>
+				<a href="/">Home</a>
+			</li>
+			
+			<li>
+				<a href="/posts">All posts</a>
+			</li>
+			
+			<li>
+				<a href="/tags">Tags</a>
+			</li>
+			
+			<li>
+				<a href="/game">T-Rex</a>
+			</li>
+			
+			<li>
+				<a href="/about">About</a>
+			</li>
+			
+		</ul>
+	</nav>
+</div>
+
+
+		<div class="post-header">
+			<h1 class="title">leetcode数据结构-链表</h1>
+			<div class="meta">Posted at &mdash; Jun 10, 2021</div>
+		</div>
+
+		<div class="markdown">
+			
+
+<h2 id="1-找出两个链表的交点">1. 找出两个链表的交点</h2>
+
+<p>Intersection of Two Linked Lists (Easy)
+Leetcode / 力扣</p>
+
+<p>例如以下示例中 A 和 B 两个链表相交于 c1：</p>
+
+<p>A:          a1 → a2
+                    ↘
+                      c1 → c2 → c3
+                    ↗
+B:    b1 → b2 → b3
+但是不会出现以下相交的情况，因为每个节点只有一个 next 指针，也就只能有一个后继节点，而以下示例中节点 c 有两个后继节点。</p>
+
+<p>A:          a1 → a2       d1 → d2
+                    ↘  ↗
+                      c
+                    ↗  ↘
+B:    b1 → b2 → b3        e1 → e2
+要求时间复杂度为 O(N)，空间复杂度为 O(1)。如果不存在交点则返回 null。</p>
+
+<p>public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+    ListNode l1 = headA, l2 = headB;
+    while (l1 != l2) {
+        l1 = (l1 == null) ? headB : l1.next;
+        l2 = (l2 == null) ? headA : l2.next;
+    }
+    return l1;
+}
+设 A 的长度为 a + c，B 的长度为 b + c，其中 c 为尾部公共部分长度，可知 a + c + b = b + c + a。</p>
+
+<p>当访问 A 链表的指针访问到链表尾部时，令它从链表 B 的头部开始访问链表 B；同样地，当访问 B 链表的指针访问到链表尾部时，令它从链表 A 的头部开始访问链表 A。这样就能控制访问 A 和 B 两个链表的指针能同时访问到交点。</p>
+
+<p>如果不存在交点，那么 a + b = b + a，以下实现代码中 l1 和 l2 会同时为 null，从而退出循环。</p>
+
+<h2 id="2-链表反转">2. 链表反转</h2>
+
+<p>Reverse Linked List (Easy)
+Leetcode/ 力扣</p>
+
+<p>头插法
+public ListNode reverseList(ListNode head) {
+    ListNode newHead = null;
+    while (head != null) {
+        ListNode next = head.next;
+        head.next = newHead;
+        newHead = head;
+        head = next;
+    }
+    return newHead;
+}
+总结：遍历链表过程中,使用newHead保存原先的头结点</p>
+
+<p>递归
+public ListNode reverseList(ListNode head) {
+    if (head == null || head.next == null) {
+        return head;
+    }
+    ListNode next = head.next;
+    ListNode newHead = reverseList(next);
+    next.next = head;
+    head.next = null;
+    return newHead;
+}
+总结:</p>
+
+<p>递归出口：遍历完成，head或者head.next为空；
+返回值：递归完成返回head；未完成返回newHead已经处理好的部分，继续递归；
+本级递归应该做什么：交换链表的完成交换部分和下一个节点；</p>
+
+<h2 id="3-归并两个有序的链表">3. 归并两个有序的链表</h2>
+
+<p>Merge Two Sorted Lists (Easy)
+Leetcode / 力扣</p>
+
+<p>public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+    if (l1 == null) return l2;
+    if (l2 == null) return l1;
+    if (l1.val &lt; l2.val) {
+        l1.next = mergeTwoLists(l1.next, l2);
+        return l1;
+    } else {
+        l2.next = mergeTwoLists(l1, l2.next);
+        return l2;
+    }
+}
+总结：</p>
+
+<p>递归出口：两个链表为空
+递归条件：L1和L2中较小结点和其余结点的比较结果比较。
+recurse.jpeg</p>
+
+<h2 id="4-从有序链表中删除重复节点">4. 从有序链表中删除重复节点</h2>
+
+<p>Remove Duplicates from Sorted List (Easy)
+Leetcode/ 力扣</p>
+
+<p>Given 1-&gt;1-&gt;2, return 1-&gt;2.
+Given 1-&gt;1-&gt;2-&gt;3-&gt;3, return 1-&gt;2-&gt;3.
+题解：</p>
+
+<p>public ListNode deleteDuplicates(ListNode head) {
+    if (head == null || head.next == null) return head;
+    head.next = deleteDuplicates(head.next);
+    return head.val == head.next.val ? head.next : head;
+}
+总结：</p>
+
+<p>递归出口：头节点为空或者下一个节点为空
+递归条件：不断递归头节点的下个指针，若前两个值相等则返回下一个节点否则返回头节点；</p>
+
+<h2 id="5-删除链表的倒数第-n-个节点">5. 删除链表的倒数第 n 个节点</h2>
+
+<p>Remove Nth Node From End of List (Medium)
+Leetcode/ 力扣</p>
+
+<p>Given linked list: 1-&gt;2-&gt;3-&gt;4-&gt;5, and n = 2.
+After removing the second node from the end, the linked list becomes 1-&gt;2-&gt;3-&gt;5.
+题解：</p>
+
+<p>public ListNode removeNthFromEnd(ListNode head, int n) {
+    ListNode fast = head;
+    while (n&ndash; &gt; 0) {
+        fast = fast.next;
+    }
+    if (fast == null) return head.next;
+    ListNode slow = head;
+    while (fast.next != null) {
+        fast = fast.next;
+        slow = slow.next;
+    }
+    slow.next = slow.next.next;
+    return head;
+}
+总结：使用双指针，控制前后指针的距离为n，当后指针的下一个节点为空时即前指针到达倒数第n个位置，此时删除下一个节点。</p>
+
+<h2 id="6-交换链表中的相邻结点">6. 交换链表中的相邻结点</h2>
+
+<p>Swap Nodes in Pairs (Medium)
+Leetcode/ 力扣</p>
+
+<p>Given 1-&gt;2-&gt;3-&gt;4, you should return the list as 2-&gt;1-&gt;4-&gt;3.
+题目要求：不能修改结点的 val 值，O(1) 空间复杂度。</p>
+
+<p>public ListNode swapPairs(ListNode head) {
+    if (head == null || head.next == null) {
+        return head;
+    }
+    ListNode next = head.next;
+    head.next = swapPairs(next.next);
+    next.next = head;
+    return next;
+}
+总结：</p>
+
+<p>img</p>
+
+<p>参考博客：<a href="https://lyl0724.github.io/2020/01/25/1/">https://lyl0724.github.io/2020/01/25/1/</a></p>
+
+<h2 id="7-链表求和">7. 链表求和</h2>
+
+<p>Add Two Numbers II (Medium)
+Leetcode/ 力扣(opens new window)</p>
+
+<p>Input: (7 -&gt; 2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)
+Output: 7 -&gt; 8 -&gt; 0 -&gt; 7
+题目要求：不能修改原始链表。</p>
+
+<p>public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+    Stack<Integer> l1Stack = buildStack(l1);
+    Stack<Integer> l2Stack = buildStack(l2);
+    ListNode head = new ListNode(-1);
+    int carry = 0;
+    while (!l1Stack.isEmpty() || !l2Stack.isEmpty() || carry != 0) {
+        int x = l1Stack.isEmpty() ? 0 : l1Stack.pop();
+        int y = l2Stack.isEmpty() ? 0 : l2Stack.pop();
+        int sum = x + y + carry;
+        ListNode node = new ListNode(sum % 10);
+        node.next = head.next;
+        head.next = node;
+        carry = sum / 10;
+    }
+    return head.next;
+}</p>
+
+<p>private Stack<Integer> buildStack(ListNode l) {
+    Stack<Integer> stack = new Stack&lt;&gt;();
+    while (l != null) {
+        stack.push(l.val);
+        l = l.next;
+    }
+    return stack;
+}</p>
+
+<h2 id="复习">复习</h2>
+
+<h3 id="链表">链表</h3>
+
+<p>结点数据结构ListNode
+public class ListNode {
+    int val;
+    ListNode next;
+    ListNode(int x) { val = x; }
+}
+单链表的一个实现(这里摘自LeetCode的题解自己扩展了小部分)
+package ChapterLinkList;</p>
+
+<p>class MyLinkedList {
+    int size;
+    ListNode head;  // sentinel node as pseudo-head</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">public MyLinkedList() {
+    size = 0;
+    head = new ListNode(0);
+}
+//输入数组构造链表
+public MyLinkedList(int num[]) {
+    size = 0;
+    head = new ListNode(0);
+    for (int i = 0; i &lt; num.length; i++) {
+        this.addAtIndex(i,num[i]);
+    }
+}
+
+/**
+ * Get the value of the index-th node in the linked list. If the index is invalid, return -1.
+ */
+public int get(int index) {
+    // if index is invalid
+    if (index &lt; 0 || index &gt;= size) return -1;
+
+    ListNode curr = head;
+    // index steps needed
+    // to move from sentinel node to wanted index
+    for (int i = 0; i &lt; index + 1; ++i) curr = curr.next;
+    return curr.val;
+}
+
+/**
+ * 获取某个结点
+ */
+public ListNode getNode(int index){
+    // if index is invalid
+    if (index &lt; 0 || index &gt;= size) return null;
+
+    ListNode curr = head;
+    // index steps needed
+    // to move from sentinel node to wanted index
+    for (int i = 0; i &lt; index + 1; ++i) curr = curr.next;
+    return curr;
+}
+/**
+ * Add a node of value val before the first element of the linked list. After the insertion, the new node will be the first node of the linked list.
+ */
+public void addAtHead(int val) {
+    addAtIndex(0, val);
+}
+
+/**
+ * Append a node of value val to the last element of the linked list.
+ */
+public void addAtTail(int val) {
+    addAtIndex(size, val);
+}
+
+/**
+ * Add a node of value val before the index-th node in the linked list. If index equals to the length of linked list, the node will be appended to the end of linked list. If index is greater than the length, the node will not be inserted.
+ */
+public void addAtIndex(int index, int val) {
+    // If index is greater than the length,
+    // the node will not be inserted.
+    if (index &gt; size) return;
+
+    // [so weird] If index is negative,
+    // the node will be inserted at the head of the list.
+    if (index &lt; 0) index = 0;
+
+    ++size;
+    // find predecessor of the node to be added
+    ListNode pred = head;
+    for (int i = 0; i &lt; index; ++i) pred = pred.next;
+
+    // node to be added
+    ListNode toAdd = new ListNode(val);
+    // insertion itself
+    toAdd.next = pred.next;
+    pred.next = toAdd;
+}
+
+/**
+ * Delete the index-th node in the linked list, if the index is valid.
+ */
+public void deleteAtIndex(int index) {
+    // if the index is invalid, do nothing
+    if (index &lt; 0 || index &gt;= size) return;
+
+    size--;
+    // find predecessor of the node to be deleted
+    ListNode pred = head;
+    for (int i = 0; i &lt; index; ++i) pred = pred.next;
+
+    // delete pred.next
+    pred.next = pred.next.next;
+}</pre></div>
+<p>}</p>
+
+<h3 id="递归">递归</h3>
+
+<p>斐波那契数列</p>
+
+<p>public int fib(int n) {
+   return (n == 1) ? n : fib(n - 1) + n;
+}
+//1  2  3  4  5  6   7   8   9
+//1  1  2  3  5  8  13  21  34<br />
+因此，也就有了我们解递归题的三部曲：</p>
+
+<p>找整个递归的终止条件：递归应该在什么时候结束？
+找返回值：应该给上一级返回什么信息？
+本级递归应该做什么：在这一级递归中，应该完成什么任务？</p>
+
+		</div>
+
+		<div class="post-tags">
+			
+				
+					<nav class="nav tags">
+							<ul class="flat">
+								
+								<li><a href="/tags/%E7%AE%97%E6%B3%95">算法</a></li>
+								
+							</ul>
+					</nav>
+				
+			
+		</div>
+		</div>
+	<div class="footer wrapper">
+	<nav class="nav">
+		<div> © Copyright notice |  <a href="https://github.com/vividvilla/ezhil">Ezhil theme</a> | Built with <a href="https://gohugo.io">Hugo</a></div>
+	</nav>
+</div>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-147515514-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+<script>feather.replace()</script>
+</body>
+</html>
