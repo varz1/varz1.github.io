@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Copyright notice</copyright>
-    <lastBuildDate>Thu, 06 Jan 2022 20:48:54 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 26 Dec 2021 20:48:54 +0800</lastBuildDate>
     
 	<atom:link href="https://varz1.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>nCovBot</title>
       <link>https://varz1.github.io/posts/ncovbot/</link>
-      <pubDate>Thu, 06 Jan 2022 20:48:54 +0800</pubDate>
+      <pubDate>Sun, 26 Dec 2021 20:48:54 +0800</pubDate>
       
       <guid>https://varz1.github.io/posts/ncovbot/</guid>
       <description>TODO 疫情图动态标签需要更新 优化日志  简介 一个Telegram的聊天机器人疫情信息聚合机器人,数据来自丁香园开放Api，图表来自百度，使用无头浏览器爬取。
