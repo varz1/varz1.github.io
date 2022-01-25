@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Copyright notice</copyright>
-    <lastBuildDate>Thu, 06 Jan 2022 20:48:54 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 25 Jan 2022 21:18:58 +0800</lastBuildDate>
     
 	<atom:link href="https://varz1.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title></title>
+      <link>https://varz1.github.io/about/</link>
+      <pubDate>Tue, 25 Jan 2022 21:18:58 +0800</pubDate>
+      
+      <guid>https://varz1.github.io/about/</guid>
+      <description>每天给这个世界一拳！</description>
+    </item>
     
     <item>
       <title>丁香疫情数据查询Bot（非官方</title>
@@ -173,15 +182,6 @@ $ curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-ke
       <guid>https://varz1.github.io/posts/leet1/</guid>
       <description>1. 两数之和 II - 输入有序数组 给定一个已按照 升序排列 的整数数组 numbers ，请你从数组中找出两个数满足相加之和等于目标数 target 。
 函数应该以长度为 2 的整数数组的形式返回这两个数的下标值。numbers 的下标 从 1 开始计数 ，所以答案数组应当满足 1 &amp;lt;= answer[0] &amp;lt; answer[1] &amp;lt;= numbers.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://varz1.github.io/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://varz1.github.io/about/</guid>
-      <description>每天给这个世界一拳！</description>
     </item>
     
   </channel>

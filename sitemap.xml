@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://varz1.github.io/about/</loc>
+    <lastmod>2022-01-25T21:18:58+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://varz1.github.io/posts/ncovbot/</loc>
     <lastmod>2022-01-06T20:48:54+08:00</lastmod>
   </url>
@@ -73,12 +78,8 @@
   </url>
   
   <url>
-    <loc>https://varz1.github.io/about/</loc>
-  </url>
-  
-  <url>
     <loc>https://varz1.github.io/</loc>
-    <lastmod>2022-01-06T20:48:54+08:00</lastmod>
+    <lastmod>2022-01-25T21:18:58+08:00</lastmod>
     <priority>0</priority>
   </url>
   
