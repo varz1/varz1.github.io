@@ -2,67 +2,67 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://varz1.github.io/about/</loc>
     <lastmod>2022-01-25T21:18:58+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://varz1.github.io/</loc>
     <lastmod>2022-01-25T21:18:58+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/golang/</loc>
+    <loc>https://varz1.github.io/tags/golang/</loc>
     <lastmod>2022-01-06T20:48:54+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://varz1.github.io/posts/</loc>
     <lastmod>2022-01-06T20:48:54+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://varz1.github.io/tags/</loc>
     <lastmod>2022-01-06T20:48:54+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/ncovbot/</loc>
+    <loc>https://varz1.github.io/posts/ncovbot/</loc>
     <lastmod>2022-01-06T20:48:54+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/linux/</loc>
+    <loc>https://varz1.github.io/tags/linux/</loc>
     <lastmod>2021-12-14T23:17:13+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/win11/</loc>
+    <loc>https://varz1.github.io/posts/win11/</loc>
     <lastmod>2021-12-14T23:17:13+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/configlinux/</loc>
+    <loc>https://varz1.github.io/posts/configlinux/</loc>
     <lastmod>2021-10-16T23:12:59+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/strace/</loc>
+    <loc>https://varz1.github.io/posts/strace/</loc>
     <lastmod>2021-09-20T23:10:50+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/java/</loc>
+    <loc>https://varz1.github.io/tags/java/</loc>
     <lastmod>2021-08-29T23:09:38+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/threadlocal/</loc>
+    <loc>https://varz1.github.io/posts/threadlocal/</loc>
     <lastmod>2021-08-29T23:09:38+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/shell/</loc>
+    <loc>https://varz1.github.io/tags/shell/</loc>
     <lastmod>2021-08-19T23:21:50+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/bebop/</loc>
+    <loc>https://varz1.github.io/posts/bebop/</loc>
     <lastmod>2021-08-19T23:21:50+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/priorityqueue/</loc>
+    <loc>https://varz1.github.io/posts/priorityqueue/</loc>
     <lastmod>2021-06-09T00:47:13+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/%E7%AE%97%E6%B3%95/</loc>
+    <loc>https://varz1.github.io/tags/%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2021-06-09T00:47:13+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/linux/</loc>
+    <loc>https://varz1.github.io/posts/linux/</loc>
     <lastmod>2021-05-05T19:38:07+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/grub/</loc>
+    <loc>https://varz1.github.io/posts/grub/</loc>
     <lastmod>2021-04-29T18:28:59+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/tg/</loc>
+    <loc>https://varz1.github.io/posts/tg/</loc>
     <lastmod>2021-03-08T22:57:26+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/spotify/</loc>
+    <loc>https://varz1.github.io/posts/spotify/</loc>
     <lastmod>2021-03-03T20:45:58+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/</loc>
+    <loc>https://varz1.github.io/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2021-03-03T20:45:58+08:00</lastmod>
   </url>
 </urlset>

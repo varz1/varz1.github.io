@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Golang on 一个博客</title>
-    <link>http://localhost:1313/tags/golang/</link>
+    <link>https://varz1.github.io/tags/golang/</link>
     <description>Recent content in Golang on 一个博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Copyright notice</copyright>
     <lastBuildDate>Thu, 06 Jan 2022 20:48:54 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://varz1.github.io/tags/golang/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>疫情数据查询 Bot</title>
-      <link>http://localhost:1313/posts/ncovbot/</link>
+      <link>https://varz1.github.io/posts/ncovbot/</link>
       <pubDate>Thu, 06 Jan 2022 20:48:54 +0800</pubDate>
-      <guid>http://localhost:1313/posts/ncovbot/</guid>
+      <guid>https://varz1.github.io/posts/ncovbot/</guid>
       <description>简介 一个Telegram Covid-19 Bot 定时缓存数据 渲染图表&#xA;第三方模块 Http客户端 — Resty 前端 — Telegram bot 日志 — Logrus 无头浏览器—ChromeDp net框架—Fiber 后台渲图—chart 遇到的问题以及解决 无头浏览器无中文字体—添加字体文件 tgbot使用缓存图片不更新—添加时间戳参数 iding空转自动i休眠—cron自己ping自己 Heroku Go依赖错误—生成Go的Vendor依赖文件 我的环境以及用到的服务 Go 1.</description>
     </item>
     <item>
       <title>Telegram bot 简易实现</title>
-      <link>http://localhost:1313/posts/tg/</link>
+      <link>https://varz1.github.io/posts/tg/</link>
       <pubDate>Mon, 08 Mar 2021 22:57:26 +0800</pubDate>
-      <guid>http://localhost:1313/posts/tg/</guid>
+      <guid>https://varz1.github.io/posts/tg/</guid>
       <description>开始-创建机器人并获取 token 在telegram界面@BotFather发送指令/newbot并根据界面一步步创建bot最终获取token&#xA;实现发送消息需要获取&#xA;你的机器人token chat_id 你要发送的消息 其中chat_id可通过@userinfobot获取自己的id&#xA;获取telegram api 在这里使用github上的轮子 telegram-bot-api&#xA;go get -u github.com/go-telegram-bot-api/telegram-bot-api 一个简单的Go程序 package main import ( &amp;#34;log&amp;#34; &amp;#34;github.</description>
     </item>
   </channel>

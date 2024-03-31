@@ -2,95 +2,95 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>一个博客</title>
-    <link>http://localhost:1313/</link>
+    <link>https://varz1.github.io/</link>
     <description>Recent content on 一个博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Copyright notice</copyright>
     <lastBuildDate>Tue, 25 Jan 2022 21:18:58 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://varz1.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>http://localhost:1313/about/</link>
+      <link>https://varz1.github.io/about/</link>
       <pubDate>Tue, 25 Jan 2022 21:18:58 +0800</pubDate>
-      <guid>http://localhost:1313/about/</guid>
+      <guid>https://varz1.github.io/about/</guid>
       <description>记录</description>
     </item>
     <item>
       <title>疫情数据查询 Bot</title>
-      <link>http://localhost:1313/posts/ncovbot/</link>
+      <link>https://varz1.github.io/posts/ncovbot/</link>
       <pubDate>Thu, 06 Jan 2022 20:48:54 +0800</pubDate>
-      <guid>http://localhost:1313/posts/ncovbot/</guid>
+      <guid>https://varz1.github.io/posts/ncovbot/</guid>
       <description>简介 一个Telegram Covid-19 Bot 定时缓存数据 渲染图表&#xA;第三方模块 Http客户端 — Resty 前端 — Telegram bot 日志 — Logrus 无头浏览器—ChromeDp net框架—Fiber 后台渲图—chart 遇到的问题以及解决 无头浏览器无中文字体—添加字体文件 tgbot使用缓存图片不更新—添加时间戳参数 iding空转自动i休眠—cron自己ping自己 Heroku Go依赖错误—生成Go的Vendor依赖文件 我的环境以及用到的服务 Go 1.</description>
     </item>
     <item>
       <title>安装 Win11 和 debian 双系统遇到的坑</title>
-      <link>http://localhost:1313/posts/win11/</link>
+      <link>https://varz1.github.io/posts/win11/</link>
       <pubDate>Tue, 14 Dec 2021 23:17:13 +0800</pubDate>
-      <guid>http://localhost:1313/posts/win11/</guid>
+      <guid>https://varz1.github.io/posts/win11/</guid>
       <description>背景 尝试安装Win11，想着安装完然后用上次win10更新导致grub失效的方法修复于是开始连数据都没备份，没想成上次的方法不管用了，网上的帖子的方法也不是很是适用于我，搞了半天都没搞好，最后碰运气找对了我的 debian 启动文件。&#xA;遇坑 在安装 win11 的时候把所有之前的 win10 分区都删掉了，安装完毕尝试使用之前的方法，进入livecd&amp;mdash;挂载linux&amp;mdash;挂载boot分区&amp;mdash;chroot&amp;mdash;重新安装 grub。重启发现 grub 自动生成的 grub.cfg 文件不起作用，仍然无法引导至我的 debian。&#xA;解决 最后使用网传的另一种方法，即进入 livecd 的 grub 界面，修改 grub 的参数改成自己 linux 的 grub 引导进入。这里由于我删除之前的所有分区安装win11 所以导致 uuid 更改，也就是我的 debian 下的 /etc/fstab 下写的 boot 分区 uuid 失效，所以无法正常引导系统，只有 shell 界面，这里解决方法是重新编辑一下 /etc/fstab 改成对的 uuid 即可。但是进入系统 update-grub 后还是无法进入系统。本想进入 BIOS 设置界面把引导改成 grub 的系统界面然后每次开机手动引导，但是好巧不巧竟然改成了对的引导，引导文件位置是 \EFI\grub\grubx64.</description>
     </item>
     <item>
       <title>Linux 桌面环境使用不完全指南</title>
-      <link>http://localhost:1313/posts/configlinux/</link>
+      <link>https://varz1.github.io/posts/configlinux/</link>
       <pubDate>Sat, 16 Oct 2021 23:12:59 +0800</pubDate>
-      <guid>http://localhost:1313/posts/configlinux/</guid>
+      <guid>https://varz1.github.io/posts/configlinux/</guid>
       <description>下面记录一下如何配置一个好用的 Linux 桌面环境&#xA;Preview 先看效果！&#xA;一.下载安装 1.下载 推荐从 清华软件镜像站 下载镜像源&#xA;2.烧录至U盘 这里使用 Rufus 工具进行烧录&#xA;3.安装 插上U盘，重启。电脑开机按F12进入BIOS界面，选择你的U盘设备，进入debian安装界面。&#xA;选择Graphics install图型界面安装，按照流程，这里我选择的桌面环境是KDE，再选上自己需要的环境，重启进入系统。&#xA;二.基本配置 1.添加当前用户进入管理员组 $ su #进入root $ chmod +w /etc/sudoers $ sudo nano /etc/sudoers #将当前用户加入root下面，后面一样 $ chmod +r /etc/sudoers 2.</description>
     </item>
     <item>
       <title>strace</title>
-      <link>http://localhost:1313/posts/strace/</link>
+      <link>https://varz1.github.io/posts/strace/</link>
       <pubDate>Mon, 20 Sep 2021 23:10:50 +0800</pubDate>
-      <guid>http://localhost:1313/posts/strace/</guid>
+      <guid>https://varz1.github.io/posts/strace/</guid>
       <description>首先贴出strace命令的维基百科解释&#xA;strace是Linux环境下的一款程序调试工具，用来监察一个应用程序所使用的系统调用及它所接收的系统信息。&#xA;关于strace命令的详细使用方式可以参考这篇文章&#xA;众所周知，Linux将内存分为内核态和用户态，大部分操作通常都需要调用系统完成相应调用，用户态和内核态就需要进行通信。接下来给出本人结合strace命令学习操作系统，了解Linux的系统调用的过程。&#xA;一些常用命令的系统调用 $ strace echo &amp;quot;hi&amp;quot;&#xA;本条命令分析echo hi即在命令行中打印出hi的系统调用过程&#xA;给出执行结果如下：&#xA;execve(&amp;#34;/usr/bin/echo&amp;#34;, [&amp;#34;echo&amp;#34;, &amp;#34;hi&amp;#34;], 0x7ffc19e5d5e8 /* 65 vars */) = 0 brk(NULL) = 0x5624eb957000 access(&amp;#34;/etc/ld.</description>
     </item>
     <item>
       <title>ThreadLocal 探究</title>
-      <link>http://localhost:1313/posts/threadlocal/</link>
+      <link>https://varz1.github.io/posts/threadlocal/</link>
       <pubDate>Sun, 29 Aug 2021 23:09:38 +0800</pubDate>
-      <guid>http://localhost:1313/posts/threadlocal/</guid>
+      <guid>https://varz1.github.io/posts/threadlocal/</guid>
       <description>一、为什么要使用ThreadLocal 先来读一下JDK中对ThreadLocal的注释&#xA;This class provides thread-local variables. These variables differ from their normal counterparts in that each thread that accesses one (via its get or set method) has its own, independently initialized copy of the variable.</description>
     </item>
     <item>
       <title>无聊脚本</title>
-      <link>http://localhost:1313/posts/bebop/</link>
+      <link>https://varz1.github.io/posts/bebop/</link>
       <pubDate>Thu, 19 Aug 2021 23:21:50 +0800</pubDate>
-      <guid>http://localhost:1313/posts/bebop/</guid>
+      <guid>https://varz1.github.io/posts/bebop/</guid>
       <description>动机 每次下饭看片的步骤如下：打开Chrome-&amp;gt;找到书签B站的位置-&amp;gt;找到历史记录-&amp;gt;找到星际牛仔&#xA;现在：打开Shell-&amp;gt;Bebop&#xA;BebopGo A Shell To Watch Cowboy Bebop Fast&#xA;For Fun&#xA;Requirement Linux Environment&#xA;Google Chrome installed&#xA;Connected to Internet</description>
     </item>
     <item>
       <title>对于 Java 中 PriorityQueue 的理解</title>
-      <link>http://localhost:1313/posts/priorityqueue/</link>
+      <link>https://varz1.github.io/posts/priorityqueue/</link>
       <pubDate>Wed, 09 Jun 2021 00:47:13 +0800</pubDate>
-      <guid>http://localhost:1313/posts/priorityqueue/</guid>
+      <guid>https://varz1.github.io/posts/priorityqueue/</guid>
       <description>1.不重写CompareTo方法 背景：刷LeetCode重学了PriorityQueue&#xA;在未排序的数组中找到第 k 个最大的元素。请注意，你需要找的是数组排序后的第 k 个最大的元素，而不是第 k 个不同的元素。 示例:&#xA;输入: [3,2,1,5,6,4] 和 k = 2 输出: 5 题解：&#xA;class Solution { public int findKthLargest(int[] nums, int k) { PriorityQueue&amp;lt;Integer&amp;gt; pq = new PriorityQueue&amp;lt;&amp;gt;(); for (int val : nums) { pq.</description>
     </item>
     <item>
       <title>Linux 常用命令</title>
-      <link>http://localhost:1313/posts/linux/</link>
+      <link>https://varz1.github.io/posts/linux/</link>
       <pubDate>Wed, 05 May 2021 19:38:07 +0800</pubDate>
-      <guid>http://localhost:1313/posts/linux/</guid>
+      <guid>https://varz1.github.io/posts/linux/</guid>
       <description>一、Systemctl 启动服务：systemctl start vsftpd.service 关闭服务：systemctl stop vsftpd.service 重启服务：systemctl restart vsftpd.service 显示服务的状态：systemctl status vsftpd.service 在开机时启用服务：systemctl enable vsftpd.service 在开机时禁用服务：systemctl disable vsftpd.service 查看服务是否开机启动：systemctl is-enabled vsftpd.</description>
     </item>
     <item>
       <title>Grub</title>
-      <link>http://localhost:1313/posts/grub/</link>
+      <link>https://varz1.github.io/posts/grub/</link>
       <pubDate>Thu, 29 Apr 2021 18:28:59 +0800</pubDate>
-      <guid>http://localhost:1313/posts/grub/</guid>
+      <guid>https://varz1.github.io/posts/grub/</guid>
       <description>win10更新导致debian双系统无法启动解决办法 原因 因为win10更新覆盖了Debian的grub所以丢失&#xA;解决 制作live-cd并进入 这里我制作的是debin的live-cd，重启选择BIOS启动，进入livecd。&#xA;fdisk -l 找到自己的根目录分区以及windows的EFI分区这里我的根目录分区是/dev/nvme0n1p6，EFI分区是/dev/nvme0n1p5。&#xA;执行命令挂载分区重新安装grub $ mount /dev/nvme0n1p6 /mnt $ mount /dev/nvme0n1p5 /mnt/boot $ mount --rbind /mnt/proc proc $ mount --rbind /mnt/sys sys $ mount --rbind /mnt/dev dev $ mount --rbind /mnt/run run $ chroot /mnt $ grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub $ grub-mkconfig -o /boot/grub/grub.</description>
     </item>
     <item>
       <title>Telegram bot 简易实现</title>
-      <link>http://localhost:1313/posts/tg/</link>
+      <link>https://varz1.github.io/posts/tg/</link>
       <pubDate>Mon, 08 Mar 2021 22:57:26 +0800</pubDate>
-      <guid>http://localhost:1313/posts/tg/</guid>
+      <guid>https://varz1.github.io/posts/tg/</guid>
       <description>开始-创建机器人并获取 token 在telegram界面@BotFather发送指令/newbot并根据界面一步步创建bot最终获取token&#xA;实现发送消息需要获取&#xA;你的机器人token chat_id 你要发送的消息 其中chat_id可通过@userinfobot获取自己的id&#xA;获取telegram api 在这里使用github上的轮子 telegram-bot-api&#xA;go get -u github.com/go-telegram-bot-api/telegram-bot-api 一个简单的Go程序 package main import ( &amp;#34;log&amp;#34; &amp;#34;github.</description>
     </item>
     <item>
       <title>Spotify For Linux</title>
-      <link>http://localhost:1313/posts/spotify/</link>
+      <link>https://varz1.github.io/posts/spotify/</link>
       <pubDate>Wed, 03 Mar 2021 20:45:58 +0800</pubDate>
-      <guid>http://localhost:1313/posts/spotify/</guid>
+      <guid>https://varz1.github.io/posts/spotify/</guid>
       <description>苦寻许久发现Spotify或许是最佳的Linux端音乐播放器。下面记录一下配置过程。&#xA;Preview 安装 详见Spotify官网，下面给出本人安装过程&#xA;添加源&#xA;$ curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add - $ echo &amp;#34;deb http://repository.spotify.com stable non-free&amp;#34; | sudo tee /etc/apt/sources.</description>
     </item>
   </channel>

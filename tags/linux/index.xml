@@ -2,46 +2,46 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux on 一个博客</title>
-    <link>http://localhost:1313/tags/linux/</link>
+    <link>https://varz1.github.io/tags/linux/</link>
     <description>Recent content in Linux on 一个博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Copyright notice</copyright>
     <lastBuildDate>Tue, 14 Dec 2021 23:17:13 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://varz1.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>安装 Win11 和 debian 双系统遇到的坑</title>
-      <link>http://localhost:1313/posts/win11/</link>
+      <link>https://varz1.github.io/posts/win11/</link>
       <pubDate>Tue, 14 Dec 2021 23:17:13 +0800</pubDate>
-      <guid>http://localhost:1313/posts/win11/</guid>
+      <guid>https://varz1.github.io/posts/win11/</guid>
       <description>背景 尝试安装Win11，想着安装完然后用上次win10更新导致grub失效的方法修复于是开始连数据都没备份，没想成上次的方法不管用了，网上的帖子的方法也不是很是适用于我，搞了半天都没搞好，最后碰运气找对了我的 debian 启动文件。&#xA;遇坑 在安装 win11 的时候把所有之前的 win10 分区都删掉了，安装完毕尝试使用之前的方法，进入livecd&amp;mdash;挂载linux&amp;mdash;挂载boot分区&amp;mdash;chroot&amp;mdash;重新安装 grub。重启发现 grub 自动生成的 grub.cfg 文件不起作用，仍然无法引导至我的 debian。&#xA;解决 最后使用网传的另一种方法，即进入 livecd 的 grub 界面，修改 grub 的参数改成自己 linux 的 grub 引导进入。这里由于我删除之前的所有分区安装win11 所以导致 uuid 更改，也就是我的 debian 下的 /etc/fstab 下写的 boot 分区 uuid 失效，所以无法正常引导系统，只有 shell 界面，这里解决方法是重新编辑一下 /etc/fstab 改成对的 uuid 即可。但是进入系统 update-grub 后还是无法进入系统。本想进入 BIOS 设置界面把引导改成 grub 的系统界面然后每次开机手动引导，但是好巧不巧竟然改成了对的引导，引导文件位置是 \EFI\grub\grubx64.</description>
     </item>
     <item>
       <title>Linux 桌面环境使用不完全指南</title>
-      <link>http://localhost:1313/posts/configlinux/</link>
+      <link>https://varz1.github.io/posts/configlinux/</link>
       <pubDate>Sat, 16 Oct 2021 23:12:59 +0800</pubDate>
-      <guid>http://localhost:1313/posts/configlinux/</guid>
+      <guid>https://varz1.github.io/posts/configlinux/</guid>
       <description>下面记录一下如何配置一个好用的 Linux 桌面环境&#xA;Preview 先看效果！&#xA;一.下载安装 1.下载 推荐从 清华软件镜像站 下载镜像源&#xA;2.烧录至U盘 这里使用 Rufus 工具进行烧录&#xA;3.安装 插上U盘，重启。电脑开机按F12进入BIOS界面，选择你的U盘设备，进入debian安装界面。&#xA;选择Graphics install图型界面安装，按照流程，这里我选择的桌面环境是KDE，再选上自己需要的环境，重启进入系统。&#xA;二.基本配置 1.添加当前用户进入管理员组 $ su #进入root $ chmod +w /etc/sudoers $ sudo nano /etc/sudoers #将当前用户加入root下面，后面一样 $ chmod +r /etc/sudoers 2.</description>
     </item>
     <item>
       <title>strace</title>
-      <link>http://localhost:1313/posts/strace/</link>
+      <link>https://varz1.github.io/posts/strace/</link>
       <pubDate>Mon, 20 Sep 2021 23:10:50 +0800</pubDate>
-      <guid>http://localhost:1313/posts/strace/</guid>
+      <guid>https://varz1.github.io/posts/strace/</guid>
       <description>首先贴出strace命令的维基百科解释&#xA;strace是Linux环境下的一款程序调试工具，用来监察一个应用程序所使用的系统调用及它所接收的系统信息。&#xA;关于strace命令的详细使用方式可以参考这篇文章&#xA;众所周知，Linux将内存分为内核态和用户态，大部分操作通常都需要调用系统完成相应调用，用户态和内核态就需要进行通信。接下来给出本人结合strace命令学习操作系统，了解Linux的系统调用的过程。&#xA;一些常用命令的系统调用 $ strace echo &amp;quot;hi&amp;quot;&#xA;本条命令分析echo hi即在命令行中打印出hi的系统调用过程&#xA;给出执行结果如下：&#xA;execve(&amp;#34;/usr/bin/echo&amp;#34;, [&amp;#34;echo&amp;#34;, &amp;#34;hi&amp;#34;], 0x7ffc19e5d5e8 /* 65 vars */) = 0 brk(NULL) = 0x5624eb957000 access(&amp;#34;/etc/ld.</description>
     </item>
     <item>
       <title>Linux 常用命令</title>
-      <link>http://localhost:1313/posts/linux/</link>
+      <link>https://varz1.github.io/posts/linux/</link>
       <pubDate>Wed, 05 May 2021 19:38:07 +0800</pubDate>
-      <guid>http://localhost:1313/posts/linux/</guid>
+      <guid>https://varz1.github.io/posts/linux/</guid>
       <description>一、Systemctl 启动服务：systemctl start vsftpd.service 关闭服务：systemctl stop vsftpd.service 重启服务：systemctl restart vsftpd.service 显示服务的状态：systemctl status vsftpd.service 在开机时启用服务：systemctl enable vsftpd.service 在开机时禁用服务：systemctl disable vsftpd.service 查看服务是否开机启动：systemctl is-enabled vsftpd.</description>
     </item>
     <item>
       <title>Grub</title>
-      <link>http://localhost:1313/posts/grub/</link>
+      <link>https://varz1.github.io/posts/grub/</link>
       <pubDate>Thu, 29 Apr 2021 18:28:59 +0800</pubDate>
-      <guid>http://localhost:1313/posts/grub/</guid>
+      <guid>https://varz1.github.io/posts/grub/</guid>
       <description>win10更新导致debian双系统无法启动解决办法 原因 因为win10更新覆盖了Debian的grub所以丢失&#xA;解决 制作live-cd并进入 这里我制作的是debin的live-cd，重启选择BIOS启动，进入livecd。&#xA;fdisk -l 找到自己的根目录分区以及windows的EFI分区这里我的根目录分区是/dev/nvme0n1p6，EFI分区是/dev/nvme0n1p5。&#xA;执行命令挂载分区重新安装grub $ mount /dev/nvme0n1p6 /mnt $ mount /dev/nvme0n1p5 /mnt/boot $ mount --rbind /mnt/proc proc $ mount --rbind /mnt/sys sys $ mount --rbind /mnt/dev dev $ mount --rbind /mnt/run run $ chroot /mnt $ grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub $ grub-mkconfig -o /boot/grub/grub.</description>
     </item>
   </channel>

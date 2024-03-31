@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Java on 一个博客</title>
-    <link>http://localhost:1313/tags/java/</link>
+    <link>https://varz1.github.io/tags/java/</link>
     <description>Recent content in Java on 一个博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Copyright notice</copyright>
     <lastBuildDate>Sun, 29 Aug 2021 23:09:38 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://varz1.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ThreadLocal 探究</title>
-      <link>http://localhost:1313/posts/threadlocal/</link>
+      <link>https://varz1.github.io/posts/threadlocal/</link>
       <pubDate>Sun, 29 Aug 2021 23:09:38 +0800</pubDate>
-      <guid>http://localhost:1313/posts/threadlocal/</guid>
+      <guid>https://varz1.github.io/posts/threadlocal/</guid>
       <description>一、为什么要使用ThreadLocal 先来读一下JDK中对ThreadLocal的注释&#xA;This class provides thread-local variables. These variables differ from their normal counterparts in that each thread that accesses one (via its get or set method) has its own, independently initialized copy of the variable.</description>
     </item>
   </channel>
