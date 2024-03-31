@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shell on 一个博客</title>
+    <link>http://localhost:1313/tags/shell/</link>
+    <description>Recent content in Shell on 一个博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Copyright notice</copyright>
+    <lastBuildDate>Thu, 19 Aug 2021 23:21:50 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/shell/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>无聊脚本</title>
+      <link>http://localhost:1313/posts/bebop/</link>
+      <pubDate>Thu, 19 Aug 2021 23:21:50 +0800</pubDate>
+      <guid>http://localhost:1313/posts/bebop/</guid>
+      <description>动机 每次下饭看片的步骤如下：打开Chrome-&amp;gt;找到书签B站的位置-&amp;gt;找到历史记录-&amp;gt;找到星际牛仔&#xA;现在：打开Shell-&amp;gt;Bebop&#xA;BebopGo A Shell To Watch Cowboy Bebop Fast&#xA;For Fun&#xA;Requirement Linux Environment&#xA;Google Chrome installed&#xA;Connected to Internet</description>
+    </item>
+  </channel>
+</rss>

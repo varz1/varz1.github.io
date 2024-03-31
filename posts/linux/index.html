@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Linux 常用命令 - 一个博客</title><link rel="icon" type="image/png" href=icons/cat.png /><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:title" content="Linux 常用命令" />
+<meta property="og:description" content="我常使用的 Linux command" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/posts/linux/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-05-05T19:38:07+08:00" />
+<meta property="article:modified_time" content="2021-05-05T19:38:07+08:00" />
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Linux 常用命令"/>
+<meta name="twitter:description" content="我常使用的 Linux command"/>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Raleway:200,300" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" media="screen" href="http://localhost:1313/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="http://localhost:1313/css/main.css" /><link rel="stylesheet" type="text/css" href="http://localhost:1313/css/dark.css" media="(prefers-color-scheme: dark)" />
+
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+	<script src="http://localhost:1313/js/main.js"></script>
+</head>
+
+<body>
+	<div class="container wrapper post">
+		<div class="header">
+	<base href="http://localhost:1313/">
+	<h1 class="site-title"><a href="http://localhost:1313/">一个博客</a></h1>
+	<div class="site-description"><h2></h2><nav class="nav social">
+			<ul class="flat"><a href="https://github.com/varz1" title="Github"><i data-feather="github"></i></a></ul>
+		</nav>
+	</div>
+
+	<nav class="nav">
+		<ul class="flat">
+			
+			<li>
+				<a href="/">Home</a>
+			</li>
+			
+			<li>
+				<a href="/posts">All posts</a>
+			</li>
+			
+			<li>
+				<a href="/tags">Tags</a>
+			</li>
+			
+			<li>
+				<a href="/about">About</a>
+			</li>
+			
+		</ul>
+	</nav>
+</div>
+
+
+		<div class="post-header">
+			<h1 class="title">Linux 常用命令</h1>
+			<div class="meta">Posted at &mdash; May 5, 2021</div>
+		</div>
+
+		<div class="markdown">
+			<h2 id="一systemctl">一、Systemctl</h2>
+<ul>
+<li>启动服务：systemctl start vsftpd.service</li>
+<li>关闭服务：systemctl stop vsftpd.service</li>
+<li>重启服务：systemctl restart vsftpd.service</li>
+<li>显示服务的状态：systemctl status vsftpd.service</li>
+<li>在开机时启用服务：systemctl enable vsftpd.service</li>
+<li>在开机时禁用服务：systemctl disable vsftpd.service</li>
+<li>查看服务是否开机启动：systemctl is-enabled vsftpd.service</li>
+<li>查看已启动的服务列表：systemctl list-unit-files|grep enabled</li>
+<li>查看启动失败的服务列表：systemctl &ndash;failed</li>
+</ul>
+<h2 id="二vim常用命令">二、VIM常用命令</h2>
+<ul>
+<li>
+<p>三个模式：</p>
+<ul>
+<li>一般指令模式（Command mode）：VIM 的默认模式，可以用于移动游标查看内容；</li>
+<li>编辑模式（Insert mode）：按下 &ldquo;i&rdquo; 等按键之后进入，可以对文本进行编辑；</li>
+<li>指令列模式（Bottom-line mode）：按下 &ldquo;:&rdquo; 按键之后进入，用于保存退出等操作。</li>
+</ul>
+</li>
+<li>
+<p>跳转</p>
+<ul>
+<li>跳转至首行：gg</li>
+<li>跳转至尾行：G</li>
+<li>跳转到n行：nG</li>
+<li>跳转n个字符：n+space</li>
+</ul>
+</li>
+<li>
+<p>删除</p>
+<ul>
+<li>全部删除：一般指令模式下dG</li>
+<li>删除一行：dd</li>
+<li>删除选中：d</li>
+</ul>
+</li>
+<li>
+<p>全部复制：一般指令模式下ggyG</p>
+</li>
+<li>
+<p>全选：一般指令模式下ggvG</p>
+</li>
+</ul>
+<p><em>参考：<a href="https://www.runoob.com/linux/linux-vim.html">菜鸟教程</a></em></p>
+<h2 id="三linux系统操作">三、Linux系统操作</h2>
+<h3 id="1find查找指定指定目录或文件">1.find：查找指定指定目录或文件</h3>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>find -name 文件名;按照指定名称查找在当前目录下查找文件
+</span></span><span style="display:flex;"><span>find / -name 文件名按照指定名称全局查找文件
+</span></span><span style="display:flex;"><span>find -name <span style="color:#2aa198">&#39;*文件名&#39;</span> ;任意前缀加上文件名在当前目录下查找文件
+</span></span><span style="display:flex;"><span>find / -name <span style="color:#2aa198">&#39;*文件名*&#39;</span> ;全局进行模糊查询带文件名的文件 
+</span></span></code></pre></div><h3 id="2压缩文件">2.压缩文件</h3>
+<h4 id="21tar">2.1.tar</h4>
+<ul>
+<li>
+<p>命令选项：</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>-z<span style="color:#719e07">(</span>gzip<span style="color:#719e07">)</span>      用gzip来压缩/解压缩文件
+</span></span><span style="display:flex;"><span>-j<span style="color:#719e07">(</span>bzip2<span style="color:#719e07">)</span>     用bzip2来压缩/解压缩文件
+</span></span><span style="display:flex;"><span>-v<span style="color:#719e07">(</span>verbose<span style="color:#719e07">)</span>   详细报告tar处理的文件信息
+</span></span><span style="display:flex;"><span>-c<span style="color:#719e07">(</span>create<span style="color:#719e07">)</span>    创建新的档案文件
+</span></span><span style="display:flex;"><span>-x<span style="color:#719e07">(</span>extract<span style="color:#719e07">)</span>   解压缩文件或目录
+</span></span><span style="display:flex;"><span>-f<span style="color:#719e07">(</span>file<span style="color:#719e07">)</span>      使用档案文件或设备，这个选项通常是必选的。
+</span></span></code></pre></div></li>
+<li>
+<p>命令举例</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>压缩：tar -zvcf dir.tar.gz dir
+</span></span><span style="display:flex;"><span>解压：tar -xvf dir.tar.gz
+</span></span></code></pre></div><h4 id="22zip">2.2.zip</h4>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>压缩：zip dir.zip dir
+</span></span><span style="display:flex;"><span>解压：zip dir.zip
+</span></span></code></pre></div><h4 id="23rar">2.3.rar</h4>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>压缩：rar a dir.rar dir
+</span></span><span style="display:flex;"><span>解压：unrar e dir.rar //直接解压文件到当前目录
+</span></span></code></pre></div><h3 id="查看目录文件树">查看目录文件树</h3>
+<h2 id="du--h---max-depth1">&mdash;shell
+du -h &ndash;max-depth=1</h2>
+<h2 id="四git">四、git</h2>
+<p>git clone 指定分支</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git clone -b <span style="color:#2aa198">&#34;分支&#34;</span> 
+</span></span></code></pre></div>
+		</div>
+
+		<div class="post-tags">
+			
+				
+					<nav class="nav tags">
+							<ul class="flat">
+								
+								<li><a href="/tags/linux">Linux</a></li>
+								
+							</ul>
+					</nav>
+				
+			
+		</div>
+		</div>
+	<div class="footer wrapper">
+	<nav class="nav">
+		<div> © Copyright notice |  <a href="https://github.com/vividvilla/ezhil">Ezhil theme</a> | Built with <a href="https://gohugo.io">Hugo</a></div>
+	</nav>
+</div>
+
+<script>feather.replace()</script>
+</body>
+</html>

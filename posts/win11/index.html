@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>安装 Win11 和 debian 双系统遇到的坑 - 一个博客</title><link rel="icon" type="image/png" href=icons/cat.png /><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:title" content="安装 Win11 和 debian 双系统遇到的坑" />
+<meta property="og:description" content="原先引导方式不作用！" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/posts/win11/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-12-14T23:17:13+08:00" />
+<meta property="article:modified_time" content="2021-12-14T23:17:13+08:00" />
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="安装 Win11 和 debian 双系统遇到的坑"/>
+<meta name="twitter:description" content="原先引导方式不作用！"/>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Raleway:200,300" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" media="screen" href="http://localhost:1313/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="http://localhost:1313/css/main.css" /><link rel="stylesheet" type="text/css" href="http://localhost:1313/css/dark.css" media="(prefers-color-scheme: dark)" />
+
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+	<script src="http://localhost:1313/js/main.js"></script>
+</head>
+
+<body>
+	<div class="container wrapper post">
+		<div class="header">
+	<base href="http://localhost:1313/">
+	<h1 class="site-title"><a href="http://localhost:1313/">一个博客</a></h1>
+	<div class="site-description"><h2></h2><nav class="nav social">
+			<ul class="flat"><a href="https://github.com/varz1" title="Github"><i data-feather="github"></i></a></ul>
+		</nav>
+	</div>
+
+	<nav class="nav">
+		<ul class="flat">
+			
+			<li>
+				<a href="/">Home</a>
+			</li>
+			
+			<li>
+				<a href="/posts">All posts</a>
+			</li>
+			
+			<li>
+				<a href="/tags">Tags</a>
+			</li>
+			
+			<li>
+				<a href="/about">About</a>
+			</li>
+			
+		</ul>
+	</nav>
+</div>
+
+
+		<div class="post-header">
+			<h1 class="title">安装 Win11 和 debian 双系统遇到的坑</h1>
+			<div class="meta">Posted at &mdash; Dec 14, 2021</div>
+		</div>
+
+		<div class="markdown">
+			<h2 id="背景">背景</h2>
+<p>尝试安装Win11，想着安装完然后用上次win10更新导致grub失效的<a href="https://varz1.github.io/posts/grub/">方法</a>修复于是开始连数据都没备份，没想成上次的方法不管用了，网上的帖子的方法也不是很是适用于我，搞了半天都没搞好，最后碰运气找对了我的 debian 启动文件。</p>
+<h2 id="遇坑">遇坑</h2>
+<p>在安装 win11 的时候把所有之前的 win10 分区都删掉了，安装完毕尝试使用之前的方法，进入livecd&mdash;挂载linux&mdash;挂载boot分区&mdash;chroot&mdash;重新安装 grub。重启发现 grub 自动生成的 grub.cfg 文件不起作用，仍然无法引导至我的 debian。</p>
+<h2 id="解决">解决</h2>
+<p>最后使用网传的另一种方法，即进入 livecd 的 grub 界面，修改 grub 的参数改成自己 linux 的 grub 引导进入。这里由于我删除之前的所有分区安装win11 所以导致 uuid 更改，也就是我的 debian 下的 /etc/fstab 下写的 boot 分区 uuid 失效，所以无法正常引导系统，只有 shell 界面，这里解决方法是重新编辑一下 /etc/fstab 改成对的 uuid 即可。但是进入系统 update-grub 后还是无法进入系统。本想进入 BIOS 设置界面把引导改成 grub 的系统界面然后每次开机手动引导，但是好巧不巧竟然改成了对的引导，引导文件位置是 \EFI\grub\grubx64.efi，建议在 BIOS 里面手写一个引导位置，这样再更新也能进去。</p>
+
+		</div>
+
+		<div class="post-tags">
+			
+				
+					<nav class="nav tags">
+							<ul class="flat">
+								
+								<li><a href="/tags/linux">Linux</a></li>
+								
+							</ul>
+					</nav>
+				
+			
+		</div>
+		</div>
+	<div class="footer wrapper">
+	<nav class="nav">
+		<div> © Copyright notice |  <a href="https://github.com/vividvilla/ezhil">Ezhil theme</a> | Built with <a href="https://gohugo.io">Hugo</a></div>
+	</nav>
+</div>
+
+<script>feather.replace()</script>
+</body>
+</html>
